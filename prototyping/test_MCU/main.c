@@ -7,7 +7,7 @@
  */ 
 
 //#define F_CPU 24000000UL //CPU frequency is 24MHz
-#define F_CPU 4000000UL //running at 4MHz make delay function work??
+#define F_CPU 4000000UL //running at 4MHz make delay function work at correct time??
 #include <avr/io.h>
 #include <util/delay.h>
 

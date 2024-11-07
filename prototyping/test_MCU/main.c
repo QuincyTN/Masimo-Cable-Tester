@@ -6,8 +6,8 @@
  * MCU: AVR128DB48 Curiosity Nano 24MHz
  */ 
 
-//#define F_CPU 24000000UL //CPU frequency is 24MHz
-#define F_CPU 4000000UL //running at 4MHz make delay function work at correct time??
+#define F_CPU 24000000UL //CPU frequency is 24MHz
+//#define F_CPU 4000000UL //running at 4MHz make delay function work at correct time??
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -18,6 +18,8 @@ void port_init(){
 	x can be A,B,C,D,E,F with register sizes PA[7:0], PB[5:0], PC[7:0], PD[7:0], PE[3:0], PF[6:0]
 	*/
 	PORTB.DIRSET |= (1<<3);		//set 3rd pin of PORTB to output, LED on board
+	
+	CLKCTRL.MCLKCTRLA |= 1<<3 | 1<<7;	//use external crystal oscillator (24MHz)
 }
 
 void blink_LED(){

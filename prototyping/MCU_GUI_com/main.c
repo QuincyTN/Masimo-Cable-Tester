@@ -16,17 +16,19 @@
 
 #define BAUDr 9600 
 
-volatile char transmitData[50];
-volatile uint8_t dataIndexTx = 0;
-volatile char receiveData[4];
-volatile uint8_t dataIndexRx = 0;
+char transmitData[50];
+uint8_t dataIndexTx = 0;
+char receiveData[4];
+uint8_t dataIndexRx = 0;
 
-volatile uint8_t enable = 0;
+uint8_t enable = 0;
 
-volatile char transmitData3[50];
-volatile uint8_t dataIndexTx3 = 0;
-volatile char receiveData3[4];
-volatile uint8_t dataIndexRx3 = 0;
+char transmitData3[50];
+uint8_t dataIndexTx3 = 0;
+char receiveData3[4];
+uint8_t dataIndexRx3 = 0;
+
+uint8_t receiveFlag = 0;
 
 void port_init(){
 	/*
@@ -64,33 +66,18 @@ void initUSART3(){
 }
 
 void transmit3(char* ID, char* str){
-	
-	sprintf(transmitData3, "%s.txt=\"%s\"%c%c%c", ID, str, 0xFF, 0xFF, 0xFF);
-	USART3.CTRLA = (1 << USART_DREIE_bp);	//turn on the data empty register interrupt
-	
-	
-	/*
 	char command[50];
-	int len = sprintf(command, "%s.txt=\"%s\"", ID, str);
-	
-	//PORTB.OUT |= (1<<3);	//turn LED off
-	//_delay_ms(500);
+	int len = sprintf(command, "%s.txt=\"%s\"%c%c%c", ID, str, 0xFF, 0xFF, 0xFF);
 			
 	for(int i = 0; i < len; i++){
 		while(!(USART3.STATUS & (1<<5)));	//wait until all data in buffer is sent
 		USART3.TXDATAL = (char)command[i];	//send new char
 	}
 	
-	for(int i = 0; i < 3; i++){
-		while(!(USART3.STATUS & (1<<5)));	//wait until all data in buffer is sent
-		USART3.TXDATAL = (char)0xFF;	//send terminating string
-	}
-	*/
-	//while(!(USART3.STATUS & (1<<5)));	//wait until all data in buffer is sent
+	//while(!(USART3.STATUS & (1<<5)));		//wait until all data in buffer is sent
 	//USART3.TXDATAL = "\n";
 	
-	//PORTB.OUT &= ~(1<<3);	//turn LED on
-	//_delay_ms(500);
+
 }
 
 void initUSART2(){
@@ -108,16 +95,19 @@ void initUSART2(){
 	USART2.BAUD = BAUDRATE;
 
 	USART2.CTRLB = (USART_RXEN_bm) | (USART_TXEN_bm);	//enable receiver and transmitter
-	
+	//USART2.CTRLB = (USART_RXEN_bm);
 	USART2.CTRLA = (USART_RXCIE_bm);	//enable receive complete interrupt and transmit complete interrupt, and data register empty interrupt
 
 }
 
 void transmit2(char* ID, char* str){
-	
-	sprintf(transmitData, "%s.txt=\"%s\"%c%c%c", ID, str, 0xFF, 0xFF, 0xFF);
-	USART2.CTRLA = (1 << USART_DREIE_bp);	//turn on the data empty register interrupt
-	
+	char command[50];
+	int len = sprintf(command, "%s.txt=\"%s\"%c%c%c", ID, str, 0xFF, 0xFF, 0xFF);
+		
+	for(int i = 0; i < len; i++){
+		while(!(USART2.STATUS & (1<<5)));	//wait until all data in buffer is sent
+		USART2.TXDATAL = (char)command[i];	//send new char
+	}
 }
 
 ISR(USART3_DRE_vect) {
@@ -156,6 +146,7 @@ ISR(USART3_RXC_vect){
 	PORTB.OUTTGL = 1<<3;
 	*/
 	
+	
 	receiveData3[dataIndexRx3] = USART3.RXDATAL;
 	dataIndexRx3++;
 	
@@ -172,6 +163,7 @@ ISR(USART3_RXC_vect){
 		//transmit3("test", receiveData3);
 		//memset(receiveData3, 0, sizeof(receiveData3));
 	}
+	
 	
 }
 
@@ -215,7 +207,6 @@ ISR(USART2_RXC_vect){
 	//transmit3("test", buffer);
 	//PORTB.OUT |= (1<<3);	//turn LED off
 	
-	/*
 	receiveData[dataIndexRx] = USART2.RXDATAL;
 	dataIndexRx++;
 
@@ -228,17 +219,22 @@ ISR(USART2_RXC_vect){
 		else
 			enable = 0;
 			
+		
+		receiveFlag = 1;
+		
 		//sprintf(data, "%c", test);
 		//transmit3("test", receiveData);
 		//memset(receiveData, 0, sizeof(receiveData));
 	}
-	*/
+
+
+	/*
 	    // Store received data
 	    receiveData[dataIndexRx] = USART2.RXDATAL;
 	    dataIndexRx++;
 
 	    // Check for end of message (three consecutive 0xFF bytes)
-	    if (dataIndexRx >= 3 &&
+	    if (dataIndexRx >= 4 &&
 	    receiveData[dataIndexRx - 1] == 0xFF &&
 	    receiveData[dataIndexRx - 2] == 0xFF &&
 	    receiveData[dataIndexRx - 3] == 0xFF) {
@@ -259,6 +255,7 @@ ISR(USART2_RXC_vect){
 		    memset(receiveData, 0, sizeof(receiveData));
 		    dataIndexRx = 0;
 	    }
+		*/
 }
 
 char receiver3(){
@@ -273,9 +270,12 @@ char receiver3(){
 	return a;
 }
 
-char receiver2(){
-	while(!(USART2.STATUS & USART_RXCIF_bm));
-	char a = USART2.RXDATAL;
+void receiver2(){
+	for(int i = 0; i < 4; i++){
+		while(!(USART2.STATUS & USART_RXCIF_bm));
+		receiveData[i] = USART2.RXDATAL;
+	}
+
 	
 	/*
 	if(a == '1')
@@ -284,7 +284,7 @@ char receiver2(){
 		enable = 0;
 	*/
 	
-	return a;
+
 }
 
 int main(void)
@@ -293,7 +293,7 @@ int main(void)
 	port_init();	//initialize ports
 	initUSART3();	//initialize USART3
 	initUSART2();	//initialize USART2
-	sei();	//turn on global interrupts
+	sei();			//turn on global interrupts
 	char data[50];
 	
 	//PORTB.OUT &= ~(1<<3);	//turn LED on
@@ -301,7 +301,6 @@ int main(void)
 	//PORTB.OUTSET = PIN3_bm;
 	
 	uint8_t counter = 0;
-	char receivedByte[1] = "X";
 	enable = 1;
     while (1) 
     {
@@ -315,11 +314,18 @@ int main(void)
 			counter = (counter+1)%100;
 			//_delay_ms(1000);
 		}
-		//strcpy(receivedByte, receiver3());
+		
+		if(receiveFlag == 1){
+			transmit3("success", "11");
+			receiveFlag = 0;
+		}
 		//receiver3();
 		//char test = receiver2();
 		//sprintf(data, "%c", test);
-		//transmit3("test", data);
+		//receiver2();
+		//char nice[4];
+		//strcpy(nice, receiveData);
+		//transmit3("test", receiveData);
     }
 }
 

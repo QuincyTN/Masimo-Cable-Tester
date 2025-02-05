@@ -15,11 +15,31 @@
 #include <stdlib.h>
 
 //HMI Objects
+/*
+The HMI and GUI is structured by pages and the attributes on it. These range from text fields, numbers, buttons, sliders, and other interactive elements.
+The MCU can be used to access values and change them by sending "commands" through the USART. Use the NEXTION Instruction set to find the appropriate
+commands.
+The definitions below will be used to access relevant attributes and their values from the HMI.
+The attribute is in the form of "[page].[ID].[field]" (eg "mcu.n0.val")
+*/
+#define VAL "val"	//used to get the value attribute of a number
+#define TXT "txt"	//used to get the text attribute of a text field
+
+//mcu page and attributes
 #define PAGE_MCU "mcu"
+#define N0 "n0"
+#define N1 "n1"
+#define T2 "t2"
+#define T3 "t3"
+
+//hmi page and attributes
 #define PAGE_HMI "hmi"
 
+//Constant Values
 #define BAUDr 9600
 #define BUFFER_SIZE 50
+#define PRESCALER 1024
+
 
 //USART2 transmitter and receiver buffer 
 char transmitData[BUFFER_SIZE];
@@ -34,6 +54,7 @@ uint8_t messageType = 0;	//0x71 for strings, 0x70 for ints
 uint8_t enable = 0;
 uint8_t sendMessage = 0;
 uint8_t receiveFlag = 0;
+uint8_t timer_flag = 0;
 
 //USART3 transmitter and receiver buffer 
 char transmitData3[BUFFER_SIZE];
@@ -96,21 +117,49 @@ void initUSART2(){
 	USART2.CTRLA = (USART_RXCIE_bm);	//enable receive complete interrupt and transmit complete interrupt, and data register empty interrupt
 }
 
-void transmit2(char* page, char* ID, char* str, uint8_t request){
+void transmit2(char* page, char* ID, char* field, char* value, uint8_t request){
+	/*
+	This function will send commands to the HMI. page
+	*/
 	char command[50];
 	int len = 0;
 
-	if(request){	//if the MCU needs a value from HMI
-		len = sprintf(command, "get %s.%%c%c%c", page, ID, str, 0xFF, 0xFF, 0xFF);
+	if(request){	//if the MCU needs a value from HMI (request is 1)
+		len = sprintf(command, "get %s.%s.%s%c%c%c", page, ID, field, 0xFF, 0xFF, 0xFF);
 	}
 	else {		//MCU update text box in HMI
-		len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, str, 0xFF, 0xFF, 0xFF);
+		len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, value, 0xFF, 0xFF, 0xFF);
 	}
 	for(int i = 0; i < len; i++){
 		while(!(USART2.STATUS & (1<<5)));	//wait until all data in buffer is sent
 		USART2.TXDATAL = (char)command[i];	//send new char
 	}
 		
+}
+
+
+void initTimer1s() {
+	//Set the period for 1 second
+	TCA0.SINGLE.PER = (F_CPU / PRESCALER) - 1; // 23437 for 1s
+
+	//Enable overflow interrupt
+	TCA0.SINGLE.INTCTRL = TCA_SINGLE_OVF_bm;
+
+	//Set prescaler to 1024 and enable timer
+	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV1024_gc | TCA_SINGLE_ENABLE_bm;
+}
+
+ISR(TCA0_OVF_vect) {
+	//get a value every second
+	switch((timer_flag++)%4){
+		case 0: transmit2(PAGE_MCU,N0,VAL,NULL, 1); break;
+		case 1: transmit2(PAGE_MCU,N1,VAL,NULL, 1); break;
+		case 2: transmit2(PAGE_MCU,T2,TXT,NULL, 1); break;
+		case 3: transmit2(PAGE_MCU,T3,TXT,NULL, 1); break;
+		default: transmit2(PAGE_MCU,N0,VAL,NULL, 1); break;
+	}
+		
+	TCA0.SINGLE.INTFLAGS = TCA_SINGLE_OVF_bm;	//reset overflow flag
 }
 
 ISR(USART3_RXC_vect){
@@ -193,10 +242,12 @@ int main(void)
 	port_init();
     initUSART3();	//initialize USART3 to display information received from HMI
     initUSART2();	//initialize USART2 to transmit and receive from HMI
+	initTimer1s();	//initialize 1s timer
     sei();			//turn on global interrupts
     
     while (1) 
     {
+		//Display the message on the terminal using USART 3
 		if(sendMessage){
 			if(messageType == 0x70)
 				transmit3("new", parseUsartStr(receiveData));

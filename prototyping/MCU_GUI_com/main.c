@@ -67,7 +67,7 @@ void initUSART3(){
 
 void transmit3(char* ID, char* str){
 	char command[50];
-	int len = sprintf(command, "%s.txt=\"%s\"%c%c%c", ID, str, 0xFF, 0xFF, 0xFF);
+	int len = sprintf(command, "%s.txt=\"%s\"%c%c%c\n", ID, str, 0xFF, 0xFF, 0xFF);
 			
 	for(int i = 0; i < len; i++){
 		while(!(USART3.STATUS & (1<<5)));	//wait until all data in buffer is sent
@@ -307,7 +307,7 @@ int main(void)
 		if(enable){
 			sprintf(data, "%d", counter);
 			
-			transmit2("t0", data);
+			transmit3("t0", data);
 			//transmit3("test", receiveData);
 			
 			//transmit3("test", receiveData);
@@ -316,7 +316,7 @@ int main(void)
 		}
 		
 		if(receiveFlag == 1){
-			transmit3("success", "11");
+			//	transmit3("success", "11");
 			receiveFlag = 0;
 		}
 		//receiver3();

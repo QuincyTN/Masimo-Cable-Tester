@@ -9276,7 +9276,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_1.00mm:PinSocket_1x08_P1.00mm_Vertical"
 			(at 134.62 48.26 0)
 			(effects
 				(font
@@ -10723,7 +10723,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x28_P2.54mm_Vertical"
 			(at 59.69 153.67 0)
 			(effects
 				(font
@@ -10942,7 +10942,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x28_P2.54mm_Vertical"
 			(at 48.26 151.13 0)
 			(effects
 				(font

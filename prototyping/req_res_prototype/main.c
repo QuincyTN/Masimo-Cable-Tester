@@ -104,7 +104,7 @@ void transmitTerminal(char* str){
 	}
 	
 	while(!(USART3.STATUS & (1<<5)));		//wait until all data in buffer is sent
-	USART3.TXDATAL = '\f';
+	USART3.TXDATAL = '\r';
 }
 
 void initUSART2(){
@@ -178,11 +178,18 @@ ISR(USART3_RXC_vect){
 	if (terminalReceiving) {
 		receiveData3[dataIndexRx3++] = data;
 		if (data == '\r') {
+			USART3.CTRLB &= ~USART_RXEN_bm;	//turn off the receiver
+			USART3.CTRLA &= ~USART_RXCIE_bm;	//turn off the receive interrupt
+			
 			receiveData3[dataIndexRx3-1] = '\0';
 			terminalReceiving = 0;  //Stop receiving
 			dataIndexRx3 = 0;  //Reset buffer index
 			newTerminalMessage = 1;
+			
+			strcpy(terminalBuffer, receiveData3);
 			//PORTB.OUTTGL = 1<<3;	//toggle LED
+			USART3.CTRLB = USART_RXEN_bm;	//turn off the receiver
+			USART3.CTRLA = USART_RXCIE_bm;	//turn off the receive interrupt
 		}
 	
 		//Prevent buffer overflow
@@ -215,10 +222,18 @@ ISR(USART2_RXC_vect){
 		receiveData[dataIndexRx - 2] == 0xFF &&
 		receiveData[dataIndexRx - 3] == 0xFF) {
 			
+			USART2.CTRLB &= ~USART_RXEN_bm;	//turn off the receiver
+			USART2.CTRLA &= ~USART_RXCIE_bm;	//turn off the receive interrupt
+			
+			
+			strcpy(hmiBuffer, receiveData);
+			
 			hmiReceiving = 0;  //Stop receiving
 			dataIndexRx = 0;  //Reset buffer index
 			newHmiMessage = 1;
 			//PORTB.OUTTGL = 1<<3;	//toggle LED
+			USART2.CTRLB = USART_RXEN_bm;	//turn off the receiver
+			USART2.CTRLA = USART_RXCIE_bm;	//turn off the receive interrupt
 		}
 		
 		//Prevent buffer overflow
@@ -230,21 +245,34 @@ ISR(USART2_RXC_vect){
 }
 
 void parseHmiData(char* strData){
-	memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
-	uint8_t dataLength = strlen(strData);		//get length of data
+	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
+	//uint8_t dataLength = strlen(strData);		//get length of data
+	int dataLength = strlen(strData);
 	if(strData[0] == STRING_MESSAGE){
-		for(int i = 1; i <= dataLength-4; i++)
-			hmiBuffer[i-1] = strData[i];	//extract string between 1 and ending 0xFF
+		char string[dataLength];
+		//for(int i = 1; i <= dataLength-4; i++)
+			//hmiBuffer[i-1] = strData[i];	//extract string between 1 and ending 0xFF
+		strncpy(string, strData+1, dataLength+1);
+			//strcat(string, "\r");
+		string[dataLength-4] = "\0";
+		transmitTerminal(string);
+			//transmitTerminal(strData[i]);
 	}
 	else if(strData[0] == NUM_MESSAGE){
+		char number[BUFFER_SIZE];
+		//test
 		uint32_t intValue = ((uint32_t)strData[1]) + ((uint32_t)strData[2]*256) + ((uint32_t)strData[3]*65536) + ((uint32_t)strData[4]*16777216);
-		sprintf(hmiBuffer, "%lu", intValue);	//convert the integer to a string of characters
+		sprintf(number, "%lu", intValue);	//convert the integer to a string of characters
+		//sprintf("911", %lu, intValue)
+		//transmitTerminal(911);
+		transmitTerminal(number);
 	}
+	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
 }
 
 void parseTerminalData(char* strData){
-	memset(terminalBuffer, 0, sizeof(terminalBuffer));	//clear the terminalBuffer
-	strcpy(terminalBuffer, strData);	//copy data to new buffer
+	//memset(terminalBuffer, 0, sizeof(terminalBuffer));	//clear the terminalBuffer
+	//strcpy(terminalBuffer, strData);	//copy data to new buffer
 	
 	if(strcmp(terminalBuffer, "led on") == 0) {
 		PORTB.OUTCLR = PIN3_bm;	//turn on led
@@ -267,26 +295,16 @@ int main(void)
     {
 		//Display the message on the terminal using USART3
 		if(newHmiMessage){
-			USART2.CTRLB &= ~USART_RXEN_bm;	//turn off the receiver
-			USART2.CTRLA &= ~USART_RXCIE_bm;	//turn off the receive interrupt
-
-			parseHmiData(receiveData);	//parse data and store in hmiBuffer
-			transmitTerminal(hmiBuffer);	//display data on the terminal
+			//parseHmiData(receiveData);	//parse data and store in hmiBuffer
+			parseHmiData(hmiBuffer);
+			//transmitTerminal(hmiBuffer);	//display data on the terminal
 			newHmiMessage = 0;	//reset flag
-
-			USART2.CTRLB = USART_RXEN_bm;	//turn off the receiver
-			USART2.CTRLA = USART_RXCIE_bm;	//turn off the receive interrupt
 		}
 
 		if(newTerminalMessage){
-			USART3.CTRLB &= ~USART_RXEN_bm;	//turn off the receiver
-			USART3.CTRLA &= ~USART_RXCIE_bm;	//turn off the receive interrupt
-			
-			parseTerminalData(receiveData3);	//parse data
+			//parseTerminalData(receiveData3);	//parse data
+			parseTerminalData(terminalBuffer);
 			newTerminalMessage = 0;	//reset flag
-
-			USART3.CTRLB = USART_RXEN_bm;	//turn off the receiver
-			USART3.CTRLA = USART_RXCIE_bm;	//turn off the receive interrupt
 		}
     }
 }

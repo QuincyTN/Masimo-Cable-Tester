@@ -71,6 +71,15 @@ uint8_t dataIndexRx3 = 0;
 char terminalBuffer[BUFFER_SIZE];
 char hmiBuffer[BUFFER_SIZE];
 
+const char helpMenu[] =
+"Terminal Functions\n"
+"__________________________________________________\n"
+"led on     - Turns the LED on\n"
+"led off    - Turns the LED off\n"
+"help       - Display a menu of terminal functions\n"
+"get [arg]  - Get data from the MCU page on the HMI\n"
+"	- Valid arguments: n0, n1, t2, t3\n";
+
 void portInit(){
 	/*
 	Purpose: initialize port and pin directions (as input/output)
@@ -99,11 +108,11 @@ void initUSART3(){
 
 void transmitTerminal(char* str){
 	for(int i = 0; i < strlen(str); i++){
-		while(!(USART3.STATUS & (1<<5)));	//wait until all data in buffer is sent
+		while(!(USART3.STATUS & (USART_DREIF_bm)));	//wait until all data in buffer is sent
 		USART3.TXDATAL = (char)str[i];		//send new char
 	}
 	
-	while(!(USART3.STATUS & (1<<5)));		//wait until all data in buffer is sent
+	while(!(USART3.STATUS & (USART_DREIF_bm)));		//wait until all data in buffer is sent
 	USART3.TXDATAL = '\r';
 }
 
@@ -136,7 +145,7 @@ void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t request
 		len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, value, 0xFF, 0xFF, 0xFF);
 	}
 	for(int i = 0; i < len; i++){
-		while(!(USART2.STATUS & (1<<5)));	//wait until all data in buffer is sent
+		while(!(USART2.STATUS & (USART_DREIF_bm)));	//wait until all data in buffer is sent
 		USART2.TXDATAL = (char)command[i];	//send new char
 	}
 		
@@ -184,18 +193,20 @@ ISR(USART3_RXC_vect){
 			receiveData3[dataIndexRx3-1] = '\0';
 			terminalReceiving = 0;  //Stop receiving
 			dataIndexRx3 = 0;  //Reset buffer index
-			newTerminalMessage = 1;
+			newTerminalMessage = 1;	//set flag in main
 			
-			strcpy(terminalBuffer, receiveData3);
-			//PORTB.OUTTGL = 1<<3;	//toggle LED
-			USART3.CTRLB = USART_RXEN_bm;	//turn off the receiver
-			USART3.CTRLA = USART_RXCIE_bm;	//turn off the receive interrupt
+			memset(terminalBuffer, 0, sizeof(terminalBuffer));	//reset buffer
+			strcpy(terminalBuffer, receiveData3);	//copy data into buffer
+
+			USART3.CTRLB |= USART_RXEN_bm;	//turn on the receiver
+			USART3.CTRLA |= USART_RXCIE_bm;	//turn on the receive interrupt
 		}
 	
 		//Prevent buffer overflow
 		if (dataIndexRx3 >= BUFFER_SIZE) {
 			dataIndexRx3 = 0;
 			terminalReceiving = 0;
+			newTerminalMessage = 1;
 		}
 	}
 	
@@ -225,21 +236,22 @@ ISR(USART2_RXC_vect){
 			USART2.CTRLB &= ~USART_RXEN_bm;	//turn off the receiver
 			USART2.CTRLA &= ~USART_RXCIE_bm;	//turn off the receive interrupt
 			
-			
-			strcpy(hmiBuffer, receiveData);
+			memset(hmiBuffer, 0, sizeof(hmiBuffer));	//reset buffer
+			strcpy(hmiBuffer, receiveData);			//copy data into buffer
 			
 			hmiReceiving = 0;  //Stop receiving
 			dataIndexRx = 0;  //Reset buffer index
-			newHmiMessage = 1;
-			//PORTB.OUTTGL = 1<<3;	//toggle LED
-			USART2.CTRLB = USART_RXEN_bm;	//turn off the receiver
-			USART2.CTRLA = USART_RXCIE_bm;	//turn off the receive interrupt
+			newHmiMessage = 1;	//set flag in main
+
+			USART2.CTRLB |= USART_RXEN_bm;	//turn on the receiver
+			USART2.CTRLA |= USART_RXCIE_bm;	//turn on the receive interrupt
 		}
 		
 		//Prevent buffer overflow
 		if (dataIndexRx >= BUFFER_SIZE) {
 			dataIndexRx = 0;
 			hmiReceiving = 0;
+			newHmiMessage = 1;
 		}
 	}
 }
@@ -250,35 +262,40 @@ void parseHmiData(char* strData){
 	int dataLength = strlen(strData);
 	if(strData[0] == STRING_MESSAGE){
 		char string[dataLength];
-		//for(int i = 1; i <= dataLength-4; i++)
-			//hmiBuffer[i-1] = strData[i];	//extract string between 1 and ending 0xFF
 		strncpy(string, strData+1, dataLength+1);
-			//strcat(string, "\r");
 		string[dataLength-4] = "\0";
 		transmitTerminal(string);
-			//transmitTerminal(strData[i]);
 	}
 	else if(strData[0] == NUM_MESSAGE){
 		char number[BUFFER_SIZE];
-		//test
-		uint32_t intValue = ((uint32_t)strData[1]) + ((uint32_t)strData[2]*256) + ((uint32_t)strData[3]*65536) + ((uint32_t)strData[4]*16777216);
+		uint32_t intValue = ((uint32_t)strData[1]) | ((uint32_t)strData[2]<<8) | ((uint32_t)strData[3]<<16) | ((uint32_t)strData[4]<<24);
 		sprintf(number, "%lu", intValue);	//convert the integer to a string of characters
-		//sprintf("911", %lu, intValue)
-		//transmitTerminal(911);
 		transmitTerminal(number);
 	}
 	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
 }
 
 void parseTerminalData(char* strData){
-	//memset(terminalBuffer, 0, sizeof(terminalBuffer));	//clear the terminalBuffer
-	//strcpy(terminalBuffer, strData);	//copy data to new buffer
-	
 	if(strcmp(terminalBuffer, "led on") == 0) {
 		PORTB.OUTCLR = PIN3_bm;	//turn on led
 	}
 	else if(strcmp(terminalBuffer, "led off") == 0) {
 		PORTB.OUTSET = PIN3_bm;	//turn off led
+	}
+	else if(strcmp(terminalBuffer, "help") == 0) {
+		transmitTerminal(helpMenu);	//display help menu
+	}
+	else if(strcmp(terminalBuffer, "get n0") == 0) {
+		transmitHmi(PAGE_MCU,N0,VAL,NULL, 1);	//get n0.val value
+	}
+	else if(strcmp(terminalBuffer, "get n1") == 0) {
+		transmitHmi(PAGE_MCU,N1,VAL,NULL, 1);	//get n1.val value
+	}
+	else if(strcmp(terminalBuffer, "get t2") == 0) {
+		transmitHmi(PAGE_MCU,T2,TXT,NULL, 1);	//get t2.txt text
+	}
+	else if(strcmp(terminalBuffer, "get t3") == 0) {
+		transmitHmi(PAGE_MCU,T3,TXT,NULL, 1);	//get t3.txt text
 	}
 }
 
@@ -291,18 +308,16 @@ int main(void)
 	//initTimer1s();	//initialize 1s timer
     sei();			//turn on global interrupts
 	
+	transmitTerminal(helpMenu);
     while (1) 
     {
 		//Display the message on the terminal using USART3
 		if(newHmiMessage){
-			//parseHmiData(receiveData);	//parse data and store in hmiBuffer
 			parseHmiData(hmiBuffer);
-			//transmitTerminal(hmiBuffer);	//display data on the terminal
 			newHmiMessage = 0;	//reset flag
 		}
 
 		if(newTerminalMessage){
-			//parseTerminalData(receiveData3);	//parse data
 			parseTerminalData(terminalBuffer);
 			newTerminalMessage = 0;	//reset flag
 		}

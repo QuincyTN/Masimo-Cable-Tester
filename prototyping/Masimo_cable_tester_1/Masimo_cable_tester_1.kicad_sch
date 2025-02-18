@@ -8390,7 +8390,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 71.628 90)
 			(effects
 				(font
@@ -8458,7 +8458,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 91.948 90)
 			(effects
 				(font
@@ -8526,7 +8526,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 131.318 90)
 			(effects
 				(font
@@ -8730,7 +8730,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 102.108 90)
 			(effects
 				(font
@@ -8867,7 +8867,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 141.478 90)
 			(effects
 				(font
@@ -8935,7 +8935,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 110.998 90)
 			(effects
 				(font
@@ -10232,7 +10232,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 62.738 90)
 			(effects
 				(font
@@ -10366,7 +10366,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 121.158 90)
 			(effects
 				(font
@@ -10666,7 +10666,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 151.638 90)
 			(effects
 				(font
@@ -10800,7 +10800,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
 			(at 222.25 81.788 90)
 			(effects
 				(font

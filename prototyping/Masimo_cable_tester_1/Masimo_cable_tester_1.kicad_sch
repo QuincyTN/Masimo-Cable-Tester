@@ -8734,7 +8734,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CL05B104KP5NNNC:CAP_CL05_SAM"
 			(at 91.1352 48.26 0)
 			(effects
 				(font
@@ -9567,7 +9567,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "footprints:RC0402N_PAN"
+		(property "Footprint" "ERJ_2RKF1002X:RC0402N_PAN"
 			(at 160.782 31.75 90)
 			(effects
 				(font
@@ -9778,7 +9778,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CL10B105KP8NNNC:CAP_CL10_SAM"
 			(at 70.1548 48.26 0)
 			(effects
 				(font
@@ -10569,7 +10569,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:RELAY8_J104D2C5VDC.20S_CRS"
+		(property "Footprint" "J104D2C5VDC.20S:RELAY8_J104D2C5VDC.20S_CRS"
 			(at 125.73 143.51 0)
 			(effects
 				(font

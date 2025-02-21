@@ -8462,7 +8462,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 71.628 90)
 			(effects
 				(font
@@ -8530,7 +8530,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 91.948 90)
 			(effects
 				(font
@@ -8598,7 +8598,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 131.318 90)
 			(effects
 				(font
@@ -8725,7 +8725,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "0.1µF"
+		(property "Value" "0.1 µF ±10% 10V"
 			(at 91.186 46.736 0)
 			(effects
 				(font
@@ -8734,7 +8734,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CL05B104KP5NNNC:CAP_CL05_SAM"
+		(property "Footprint" "KiCad Symbols and Footprints:CAP_CL05_SAM"
 			(at 91.1352 48.26 0)
 			(effects
 				(font
@@ -8802,7 +8802,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 102.108 90)
 			(effects
 				(font
@@ -8873,7 +8873,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 101.6 35.56 0)
 			(effects
 				(font
@@ -9010,7 +9010,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 141.478 90)
 			(effects
 				(font
@@ -9078,7 +9078,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 110.998 90)
 			(effects
 				(font
@@ -9213,7 +9213,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SFML_110_02_L_D_A:SAMTEC_SFML-110-02-L-D-A"
+		(property "Footprint" "KiCad Symbols and Footprints:SAMTEC_SFML-110-02-L-D-A"
 			(at 153.67 92.71 0)
 			(effects
 				(font
@@ -9567,7 +9567,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ERJ_2RKF1002X:RC0402N_PAN"
+		(property "Footprint" "KiCad Symbols and Footprints:RC0402N_PAN"
 			(at 160.782 31.75 90)
 			(effects
 				(font
@@ -9769,7 +9769,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "1µF"
+		(property "Value" "1 µF ±10% 10V"
 			(at 70.358 46.99 0)
 			(effects
 				(font
@@ -9778,7 +9778,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CL10B105KP8NNNC:CAP_CL10_SAM"
+		(property "Footprint" "KiCad Symbols and Footprints:CAP_CL10_SAM"
 			(at 70.1548 48.26 0)
 			(effects
 				(font
@@ -10007,7 +10007,7 @@
 				)
 			)
 		)
-		(property "Footprint" "54_00129:TENSILITY_54-00129"
+		(property "Footprint" "KiCad Symbols and Footprints:TENSILITY_54-00129"
 			(at 36.83 43.18 0)
 			(effects
 				(font
@@ -10289,7 +10289,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 62.738 90)
 			(effects
 				(font
@@ -10423,7 +10423,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 121.158 90)
 			(effects
 				(font
@@ -10569,7 +10569,7 @@
 				)
 			)
 		)
-		(property "Footprint" "J104D2C5VDC.20S:RELAY8_J104D2C5VDC.20S_CRS"
+		(property "Footprint" "KiCad Symbols and Footprints:RELAY8_J104D2C5VDC.20S_CRS"
 			(at 125.73 143.51 0)
 			(effects
 				(font
@@ -10726,7 +10726,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 90.17 115.57 0)
 			(effects
 				(font
@@ -10794,7 +10794,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 151.638 90)
 			(effects
 				(font
@@ -10928,7 +10928,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RG1608P-102-B-T5:RES_0816_SUS"
+		(property "Footprint" "KiCad Symbols and Footprints:RES_0816_SUS"
 			(at 222.25 81.788 90)
 			(effects
 				(font
@@ -11352,7 +11352,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 87.63 135.89 0)
 			(effects
 				(font

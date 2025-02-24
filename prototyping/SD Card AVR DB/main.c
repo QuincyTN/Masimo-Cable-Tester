@@ -34,6 +34,10 @@
 #include <stdint.h>
 #include <avr/cpufunc.h> // needed to write to CCP protected registers
 #include <avr/delay.h>
+#include <stdlib.h>
+#include <avr/io.h>
+#include <inttypes.h>
+#include <string.h>
 
 #include "utils.h"		// string conversion utilities used to communicate w/ terminal
 #include "uart.h"		// sets and uses up the local debug uart for communication w/ terminal
@@ -64,6 +68,239 @@ extern bool new_data;				// set by the receive UART interrupt when
 extern char USART_ReceiveBuffer[];  // buffer containing received data
 char cmd_buffer[RX_BUF_MAX];		// local buffer to copy a received command into
 
+///////////////////////////////////////////// **added start** ///////////////////////////////////////////////////////
+#define VAL "val"	//used to get the value attribute of a number
+#define TXT "txt"	//used to get the text attribute of a text field
+
+//mcu page and attributes
+#define PAGE_MCU "mcu"
+#define N0 "n0"
+#define N1 "n1"
+#define T2 "t2"
+#define T3 "t3"
+
+//hmi page and attributes
+#define PAGE_HMI "hmi"
+
+//Constant Values
+#define BAUDr 9600
+#define BUFFER_SIZE 50
+#define PRESCALER 1024
+
+//HMI starting return message
+#define STRING_MESSAGE 0x70		//message has a string
+#define NUM_MESSAGE 0x71		//message is an integer 
+
+
+//USART2 transmitter and receiver buffer 
+char transmitData[BUFFER_SIZE];
+uint8_t dataIndexTx = 0;
+char receiveData[BUFFER_SIZE];
+uint8_t dataIndexRx = 0;
+
+uint8_t hmiReceiving = 0;			//flag for HMI
+uint8_t terminalReceiving = 0;		//flag for terminal
+
+//Flags for USART 
+uint8_t enable = 0;
+uint8_t newHmiMessage = 0;
+uint8_t newTerminalMessage = 0;
+uint8_t receiveFlag = 0;
+uint8_t timerFlag = 0;
+
+//USART3 transmitter and receiver buffer 
+char transmitData3[BUFFER_SIZE];
+uint8_t dataIndexTx3 = 0;
+char receiveData3[BUFFER_SIZE];
+uint8_t dataIndexRx3 = 0;
+
+//Buffers for the receiver of the terminal and HMI
+char terminalBuffer[BUFFER_SIZE];
+char hmiBuffer[BUFFER_SIZE];
+
+const char helpMenu[] =
+"Terminal Functions\n"
+"__________________________________________________\n"
+"led on     - Turns the LED on\n"
+"led off    - Turns the LED off\n"
+"help       - Display a menu of terminal functions\n"
+"get [arg]  - Get data from the MCU page on the HMI\n"
+"	- Valid arguments: n0, n1, t2, t3\n";
+
+void portInit(){
+	/*
+	Purpose: initialize port and pin directions (as input/output)
+	PORTx.DIRSET is the register to set port x's pin directions
+	x can be A,B,C,D,E,F with register sizes PA[7:0], PB[5:0], PC[7:0], PD[7:0], PE[3:0], PF[6:0]
+	*/
+	PORTB.DIRSET = (1<<3);		//set 3rd pin of PORTB to output, LED on board
+	PORTB.OUT |= (1<<3);		//turn LED off
+}
+
+void transmitTerminal(char* str){
+	for(int i = 0; i < strlen(str); i++){
+		while(!(USART3.STATUS & (USART_DREIF_bm)));	//wait until all data in buffer is sent
+		USART3.TXDATAL = (char)str[i];		//send new char
+	}
+	
+	while(!(USART3.STATUS & (USART_DREIF_bm)));		//wait until all data in buffer is sent
+	USART3.TXDATAL = '\r';
+}
+
+void initUSART2(){
+	//Initialize USART2 in ASynchronous mode with baudrate 9600
+	
+	uint16_t BAUDRATEE = 64UL * F_CPU / (16UL * BAUDr);	//calculate aysynchronous baudrate
+	PORTMUX.USARTROUTEA = PORTMUX_USART2_ALT1_gc;	//USART2 using PF4 as TxD and PF5 as RxD
+	PORTF.DIRSET = (1 << 4);    //Set PF4 as output (TxD)
+	PORTF.DIRCLR = (1 << 5);	//Set PF5 as input (RxD)
+
+	USART2.BAUD = BAUDRATEE;
+
+	USART2.CTRLB = (USART_RXEN_bm) | (USART_TXEN_bm);	//enable receiver and transmitter
+
+	USART2.CTRLA = (USART_RXCIE_bm);	//enable receive complete interrupt
+}
+
+void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t request){
+	/*
+	This function will send commands to the HMI. page
+	*/
+	char command[50];
+	int len = 0;
+
+	if(request){	//if the MCU needs a value from HMI (request is 1)
+		len = sprintf(command, "get %s.%s.%s%c%c%c", page, ID, field, 0xFF, 0xFF, 0xFF);
+	}
+	else {		//MCU update text box in HMI
+		//len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, value, 0xFF, 0xFF, 0xFF);
+		int my_int = atoi(value);
+		len = sprintf(command, "%s.%s.val=%d%c%c%c", page, ID, my_int, 0xFF, 0xFF, 0xFF);
+	}
+	for(int i = 0; i < len; i++){
+		while(!(USART2.STATUS & (USART_DREIF_bm)));	//wait until all data in buffer is sent
+		USART2.TXDATAL = (char)command[i];	//send new char
+	}
+		
+}
+
+void initTimer1s() {
+	//Set the period for 1 second
+	TCA0.SINGLE.PER = (F_CPU / PRESCALER) - 1; // 23437 for 1s
+
+	//Enable overflow interrupt
+	TCA0.SINGLE.INTCTRL = TCA_SINGLE_OVF_bm;
+
+	//Set prescaler to 1024 and enable timer
+	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV1024_gc | TCA_SINGLE_ENABLE_bm;
+}
+
+ISR(TCA0_OVF_vect) {
+	//get a value every second
+	switch((timerFlag++)%4){
+		case 0: transmitHmi(PAGE_MCU,N0,VAL,NULL, 1); break;
+		case 1: transmitHmi(PAGE_MCU,N1,VAL,NULL, 1); break;
+		case 2: transmitHmi(PAGE_MCU,T2,TXT,NULL, 1); break;
+		case 3: transmitHmi(PAGE_MCU,T3,TXT,NULL, 1); break;
+		default: transmitHmi(PAGE_MCU,N0,VAL,NULL, 1); break;
+	}
+		
+	TCA0.SINGLE.INTFLAGS = TCA_SINGLE_OVF_bm;	//reset overflow flag
+}
+
+
+ISR(USART2_RXC_vect){
+	/*
+	Interrupt occurs when HMI receives data (a command or action) from USART2 receiver
+	*/
+	
+	uint8_t data = USART2.RXDATAL;
+
+	//Check for start identifiers (0x70 or 0x71)
+	if ((data != NULL) && !hmiReceiving) {
+		dataIndexRx = 0;   //Reset index
+		hmiReceiving = 1;      //Start recording message
+		memset(receiveData, 0, sizeof(receiveData));	//clear buffer before new message
+	}
+
+	if (hmiReceiving) {
+		receiveData[dataIndexRx++] = data;
+		if (dataIndexRx >= 3 &&
+		receiveData[dataIndexRx - 1] == 0xFF &&
+		receiveData[dataIndexRx - 2] == 0xFF &&
+		receiveData[dataIndexRx - 3] == 0xFF) {
+			
+			USART2.CTRLB &= ~USART_RXEN_bm;	//turn off the receiver
+			USART2.CTRLA &= ~USART_RXCIE_bm;	//turn off the receive interrupt
+			
+			memset(hmiBuffer, 0, sizeof(hmiBuffer));	//reset buffer
+			strcpy(hmiBuffer, receiveData);			//copy data into buffer
+			
+			hmiReceiving = 0;  //Stop receiving
+			dataIndexRx = 0;  //Reset buffer index
+			newHmiMessage = 1;	//set flag in main
+
+			USART2.CTRLB |= USART_RXEN_bm;	//turn on the receiver
+			USART2.CTRLA |= USART_RXCIE_bm;	//turn on the receive interrupt
+		}
+		
+		//Prevent buffer overflow
+		if (dataIndexRx >= BUFFER_SIZE) {
+			dataIndexRx = 0;
+			hmiReceiving = 0;
+			newHmiMessage = 1;
+		}
+	}
+}
+
+void parseHmiData(char* strData){
+	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
+	//uint8_t dataLength = strlen(strData);		//get length of data
+	int dataLength = strlen(strData);
+	if(strData[0] == STRING_MESSAGE){
+		char string[dataLength];
+		strncpy(string, strData+1, dataLength+1);
+		string[dataLength-4] = "\0";
+		transmitTerminal(string);
+	}
+	else if(strData[0] == NUM_MESSAGE){
+		char number[BUFFER_SIZE];
+		uint32_t intValue = ((uint32_t)strData[1]) | ((uint32_t)strData[2]<<8) | ((uint32_t)strData[3]<<16) | ((uint32_t)strData[4]<<24);
+		sprintf(number, "%lu", intValue);	//convert the integer to a string of characters
+		transmitTerminal(number);
+	}
+	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
+}
+
+void parseTerminalData(char* strData){
+	if(strcmp(terminalBuffer, "led on") == 0) {
+		PORTB.OUTCLR = PIN3_bm;	//turn on led
+	}
+	else if(strcmp(terminalBuffer, "led off") == 0) {
+		PORTB.OUTSET = PIN3_bm;	//turn off led
+	}
+	else if(strcmp(terminalBuffer, "help") == 0) {
+		transmitTerminal(helpMenu);	//display help menu
+	}
+	else if(strcmp(terminalBuffer, "get n0") == 0) {
+		transmitHmi(PAGE_MCU,N0,VAL,NULL, 1);	//get n0.val value
+	}
+	else if(strcmp(terminalBuffer, "get n1") == 0) {
+		transmitHmi(PAGE_MCU,N1,VAL,NULL, 1);	//get n1.val value
+	}
+	else if(strcmp(terminalBuffer, "get t2") == 0) {
+		transmitHmi(PAGE_MCU,T2,TXT,NULL, 1);	//get t2.txt text
+	}
+	else if(strcmp(terminalBuffer, "get t3") == 0) {
+		transmitHmi(PAGE_MCU,T3,TXT,NULL, 1);	//get t3.txt text
+	}
+}
+
+
+////////////////////////////////////**added end**////////////////////////////////////////////////////////////////////
+
+
+
 /* ***************************************************************************	 
    ********************************** main ***********************************
    *************************************************************************** */
@@ -72,17 +309,29 @@ int main(void)
 	volatile bool CARD_IN = false;		// variables for determining state of the SD card insertion
     volatile bool CARD_OUT = false;
 
+	portInit();
 	clk_init();			// sets up main and peripheral clocks
 	uart_init();		// sets up UART 3 - 115200 baud, 1 stop bit,  no parity, no flow control
+	initUSART2();
 
 	UART_sendString("\n\n");	// reset terminal lines
 	
 	while(1){  // main loop  
+	//transmitHmi("page0", "c0", NULL, "1", 0);
 
     SD_demo();			// call the SD card initialization/file write demo functions.
 						// this will be replaced by the SD card functions to support the 
 						// short/break detector.  Functions follow main.
-
+		
+	//if(return_code==1) {					      // makes sure the requirement is not checked off if
+	//	transmitHmi("page0", "c0", NULL, "0", 0); // there was a mounting error
+	//}
+	
+	//if(FAT_getFileSize(&file) >= 10) {
+	//	transmitHmi("page0", "c0", NULL, "1", 0);
+	//}
+	
+	//transmitHmi("page0", "c0", NULL, "0", 0);
     while (1){  // inner loop.  Only broken out of back to main loop if the 
 				// SD card has been removed and re-inserted
 		
@@ -90,12 +339,17 @@ int main(void)
 		 //_delay_ms(1000);						    // execute this loop approximately once per second
 		
 		if(sd_detected()){
+			
 			if (!CARD_IN){
 				UART_sendString("Card connected\n");
 				CARD_IN = true;
+				//transmitHmi("page0", "c0", NULL, "1", 0); // changes requirement to true since sd card was inserted
+				
+				
 				if (CARD_OUT)   // can only get here if SD card was inserted, removed, and reinserted
 					{
 						CARD_OUT = false;
+						//transmitHmi("page0", "c0", NULL, "1", 0);
 						break;  // returns to checking for an SD Card
 					}
 				CARD_OUT = false;
@@ -103,12 +357,13 @@ int main(void)
 			}
 		else{
 			if(!CARD_OUT) {
+				transmitHmi("page0", "c0", NULL, "0", 0); // changed requirement to false since sd card was removed
 				UART_sendString("Card disconnected\n");
 				CARD_OUT = true;
 				CARD_IN = false;
 				}
 			} // end of card has been read and is in place
-			
+			/*
 			if(new_data){  // data has been received from the keyboard
 				// copy the received string into a local buffer and re-enable the receiver
 				copy_data((uint8_t *)cmd_buffer,(uint8_t *)USART_ReceiveBuffer,strlen(USART_ReceiveBuffer)+1);	// add 1 to count to copy the null character
@@ -127,12 +382,13 @@ int main(void)
 	
 				// parse the receive data here if you want to command special functions
 				// do this by comparing the data in the cmd_buffer with string values
-				if (strcmp(cmd_buffer, "testsd") == 0) {
-					SD_demo();		// run the SD demo again w/o changing state of the SD card
+				//if (strcmp(cmd_buffer, "testsd") == 0) {
+				//	SD_demo();		// run the SD demo again w/o changing state of the SD card
 					//SD_card_read(cmd_buffer);
-					}
+				//	}
 				
 			}	// end of new data received from terminal 
+			*/
 			
 		}	// only breaks out if card inserted state has changed
 			// returns to initializing and reading the SD card
@@ -615,6 +871,7 @@ void SD_demo(void){
 		UART_sendString(" Return code: ");
 		UART_sendInt(return_code);
 		UART_sendString("\n\n");
+		//transmitHmi("page0", "c0", NULL, "0", 0);
 	}
 	//FAT_fsync(&file);
 }		/* **************** end of SD card demo functions  ****************** */

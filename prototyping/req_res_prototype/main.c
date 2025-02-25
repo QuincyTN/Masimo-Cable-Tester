@@ -142,7 +142,9 @@ void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t request
 		len = sprintf(command, "get %s.%s.%s%c%c%c", page, ID, field, 0xFF, 0xFF, 0xFF);
 	}
 	else {		//MCU update text box in HMI
-		len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, value, 0xFF, 0xFF, 0xFF);
+		//len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, value, 0xFF, 0xFF, 0xFF);
+		int my_int = atoi(value);
+		len = sprintf(command, "%s.%s.val=%d%c%c%c", page, ID, my_int, 0xFF, 0xFF, 0xFF);
 	}
 	for(int i = 0; i < len; i++){
 		while(!(USART2.STATUS & (USART_DREIF_bm)));	//wait until all data in buffer is sent
@@ -318,7 +320,8 @@ int main(void)
 		}
 
 		if(newTerminalMessage){
-			parseTerminalData(terminalBuffer);
+			//parseTerminalData(terminalBuffer);
+			transmitHmi("page0", "c0", NULL, terminalBuffer, 0);
 			newTerminalMessage = 0;	//reset flag
 		}
     }

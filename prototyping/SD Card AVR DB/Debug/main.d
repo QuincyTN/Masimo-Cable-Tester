@@ -23,8 +23,9 @@ main.d main.o: .././main.c \
  c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stdbool.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\cpufunc.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\delay.h \
- .././utils.h .././uart.h .././AVR_sd.h .././fat.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h \
+ .././utils.h .././uart.h .././AVR_sd.h .././fat.h
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h:
 
@@ -74,6 +75,10 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\cpufunc.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\delay.h:
 
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h:
+
 .././utils.h:
 
 .././uart.h:
@@ -81,5 +86,3 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\delay.h:
 .././AVR_sd.h:
 
 .././fat.h:
-
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h:

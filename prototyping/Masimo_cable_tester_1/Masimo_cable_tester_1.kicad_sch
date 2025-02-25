@@ -6326,7 +6326,7 @@
 	)
 	(global_label "MP10"
 		(shape input)
-		(at 166.37 92.71 0)
+		(at 166.37 105.41 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6336,7 +6336,7 @@
 		)
 		(uuid "090c5744-c14e-45eb-b11a-09a23c17b7b0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 174.4956 92.71 0)
+			(at 174.4956 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6502,22 +6502,22 @@
 	)
 	(global_label "MP3"
 		(shape input)
-		(at 140.97 87.63 180)
+		(at 166.37 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "2539f8ce-2409-4c8c-a984-a451f65fa547")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.0539 87.63 0)
+			(at 173.2861 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -6678,7 +6678,7 @@
 	)
 	(global_label "MP7"
 		(shape input)
-		(at 166.37 85.09 0)
+		(at 166.37 97.79 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6688,7 +6688,7 @@
 		)
 		(uuid "439d0b56-78f9-41c7-b8a9-a67023e57409")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.2861 85.09 0)
+			(at 173.2861 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6810,22 +6810,22 @@
 	)
 	(global_label "MP4"
 		(shape input)
-		(at 140.97 90.17 180)
+		(at 166.37 90.17 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "53ba6b78-cdfb-4664-82d9-9c278690f478")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.0539 90.17 0)
+			(at 173.2861 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -7272,22 +7272,22 @@
 	)
 	(global_label "MP5"
 		(shape input)
-		(at 140.97 92.71 180)
+		(at 166.37 92.71 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "7f1aec3d-bd03-44b9-a131-f5253c83d448")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.0539 92.71 0)
+			(at 173.2861 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -7360,7 +7360,7 @@
 	)
 	(global_label "MP6"
 		(shape input)
-		(at 166.37 82.55 0)
+		(at 166.37 95.25 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7370,7 +7370,7 @@
 		)
 		(uuid "8b96550e-041f-4e8c-bfd5-6f3b207454b8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.2861 82.55 0)
+			(at 173.2861 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7778,29 +7778,29 @@
 	)
 	(global_label "MP2"
 		(shape input)
-		(at 140.97 85.09 180)
+		(at 166.37 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "c5b64572-6b08-4bbf-9a44-75c6c73492c6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.0539 85.09 0)
+			(at 173.2861 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
 	)
 	(global_label "MP9"
 		(shape input)
-		(at 166.37 90.17 0)
+		(at 166.37 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7810,7 +7810,7 @@
 		)
 		(uuid "c9723da3-152c-4f47-9d2e-faa044e16747")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.2861 90.17 0)
+			(at 173.2861 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7910,7 +7910,7 @@
 	)
 	(global_label "MP8"
 		(shape input)
-		(at 166.37 87.63 0)
+		(at 166.37 100.33 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7920,7 +7920,7 @@
 		)
 		(uuid "d5c72610-3e82-4abd-9a05-4ff556e45ba8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.2861 87.63 0)
+			(at 173.2861 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8152,22 +8152,22 @@
 	)
 	(global_label "MP1"
 		(shape input)
-		(at 140.97 82.55 180)
+		(at 166.37 82.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "ea4075f4-37ee-4956-a1ec-c24bc6a0d910")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 134.0539 82.55 0)
+			(at 173.2861 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -8716,13 +8716,12 @@
 		(dnp no)
 		(uuid "12d58c1d-36d7-4244-a51d-3854d3321bf7")
 		(property "Reference" "C2"
-			(at 93.98 43.1799 0)
+			(at 90.678 42.418 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "0.1 µF ±10% 10V"
@@ -8852,7 +8851,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1fc5b6a6-034d-4fbc-8370-59672f025254")
 		(property "Reference" "J8"
 			(at 102.87 34.9249 90)
@@ -8864,8 +8862,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "Jumper Pins 5V"
-			(at 102.87 37.4649 90)
+		(property "Value" "Board Power"
+			(at 94.488 33.782 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9760,13 +9758,12 @@
 		(dnp no)
 		(uuid "9fef6b2e-335b-4eb0-bf16-9086a4c53d5d")
 		(property "Reference" "C1"
-			(at 67.31 43.1799 0)
+			(at 70.866 42.164 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "1 µF ±10% 10V"
@@ -10195,7 +10192,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "Conn_01x08"
+		(property "Value" "MicroSD PinHeader"
 			(at 139.7 33.02 0)
 			(effects
 				(font
@@ -10705,7 +10702,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "e1217ddb-c6b3-4c60-b265-d84bb0a94e82")
 		(property "Reference" "J9"
 			(at 91.44 114.9349 90)
@@ -10717,8 +10713,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VOFF Jumper"
-			(at 91.44 117.4749 90)
+		(property "Value" "VOFF Toggle"
+			(at 83.566 113.792 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10989,7 +10985,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "HMI Power Toggle"
 			(at 78.74 86.3599 0)
 			(effects
 				(font
@@ -11331,7 +11327,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "fd9c4751-a216-4285-98e5-71693d39cbd9")
 		(property "Reference" "J10"
 			(at 86.36 136.5251 90)
@@ -11343,8 +11338,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "5V Jumper"
-			(at 91.44 135.2549 90)
+		(property "Value" "MCU Board Power"
+			(at 81.026 137.668 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11414,7 +11409,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "Conn_01x28_Socket"
+		(property "Value" "Curiosity Nano AVR128DB48"
 			(at 49.53 153.6699 0)
 			(effects
 				(font

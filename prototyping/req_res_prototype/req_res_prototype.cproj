@@ -120,9 +120,31 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Headers\debug_term_mcu_com.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Headers\global_consts_vars.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Headers\hmi_mcu_com.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Sources\debug_term_mcu_com.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sources\global_consts_vars.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sources\hmi_mcu_com.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Headers\" />
+    <Folder Include="Sources\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

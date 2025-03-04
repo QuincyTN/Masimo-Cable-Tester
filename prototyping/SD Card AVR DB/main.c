@@ -330,7 +330,7 @@ int main(void)
 	//if(FAT_getFileSize(&file) >= 10) {
 	//	transmitHmi("page0", "c0", NULL, "1", 0);
 	//}
-	
+
 	//transmitHmi("page0", "c0", NULL, "0", 0);
     while (1){  // inner loop.  Only broken out of back to main loop if the 
 				// SD card has been removed and re-inserted
@@ -357,7 +357,7 @@ int main(void)
 			}
 		else{
 			if(!CARD_OUT) {
-				transmitHmi("page0", "c0", NULL, "0", 0); // changed requirement to false since sd card was removed
+				//transmitHmi("page0", "c0", NULL, "0", 0); // changed requirement to false since sd card was removed
 				UART_sendString("Card disconnected\n");
 				CARD_OUT = true;
 				CARD_IN = false;
@@ -703,7 +703,7 @@ void SD_card_read_test(char input[]){
 	
 void SD_demo(void){
 // Mount the memory card
-	_delay_ms(100);
+	_delay_ms(200);
 	return_code = FAT_mountVolume();
 	//sprintf(return_code);
 
@@ -849,6 +849,8 @@ void SD_demo(void){
 			
 			UART_sendString("File new size: ");
 			UART_sendInt(FAT_getFileSize(&file));
+			UART_sendString("Next thing is total bytes");
+			UART_sendInt(FAT_volumeCapacity());
 			UART_sendString(" bytes.\n");
 			
 		}else if(return_code == FR_NOT_FOUND){

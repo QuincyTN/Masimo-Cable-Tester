@@ -14,31 +14,15 @@ The attribute is in the form of "[page].[ID].[field]" (eg "mcu.n0.val")
 #define VAL "val"	//used to get the value attribute of a number
 #define TXT "txt"	//used to get the text attribute of a text field
 
-//home page and attributes
-#define PAGE_HOME "home"
+//mcu page and attributes
+#define PAGE_MCU "mcu"
+#define N0 "n0"
+#define N1 "n1"
+#define T2 "t2"
+#define T3 "t3"
 
-//settings page and attributes
-#define PAGE_SETTINGS "settings"
-#define RECORD_RATE "rate"
-#define RECORD_UNIT "unit"
-#define MODE "mode"
-
-//char_in_prog page and attributes
-#define PAGE_CHAR_IN_PROG "char_in_prog"
-
-//char_fail page and attributes
-#define PAGE_CHAR_FAIL "char_fail"
-
-//char_success page and attributes
-#define PAGE_CHAR_SUCCESS "char_success"
-
-//testing page and attributes
-#define PAGE_TESTING "testing"
-#define START_TIME_TXT "start_time"
-
-//fault_detected page and attributes
-#define PAGE_FAULT_DETECTED "fault_detected"
-#define FAULT_TXT "fault_msg"
+//hmi page and attributes
+#define PAGE_HMI "hmi"
 
 //Constant Values
 #define F_CPU 24000000UL
@@ -51,13 +35,8 @@ The attribute is in the form of "[page].[ID].[field]" (eg "mcu.n0.val")
 #define STRING_MESSAGE 0x70		//message has a string
 #define NUM_MESSAGE 0x71		//message is an integer
 #define START_CHAR 0x30			//message to start characterization
-#define START_TEST 0x31			//message to start testing the cable
-#define STOP_TEST  0x32			//message to stop testing the cable
-#define PAUSE_TEST 0x33			//message to pause cable testing
-
-#define UPDATE_RATE 0x34		//message to update data recording rate
-#define UPDATE_RATE_UNIT 0x35	//message to update data recording rate units
-#define UPDATE_MODE 0x36		//message to update mode of operation
+#define START_TEST 0x31			//message to start testing the wire cable
+#define STOP_TEST  0x32			//message to stop testing the wire cable
 
 //USART2 transmitter and receiver buffer
 char transmitData[BUFFER_SIZE];
@@ -88,18 +67,5 @@ char hmiBuffer[BUFFER_SIZE];
 
 //Help menu string
 const char helpMenu[];
-
-//Settings page variables
-uint32_t rate;
-char rate_unit[8];
-uint32_t mode;
-
-//Local MCU time variables
-uint32_t year;
-uint32_t month;
-uint32_t day;
-uint32_t hour;
-uint32_t minute;
-uint32_t second;
 
 #endif /* GLOBAL_CONSTS_VARS_H_ */

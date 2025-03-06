@@ -33,5 +33,18 @@ const char helpMenu[] =
 "led on     - Turns the LED on\n"
 "led off    - Turns the LED off\n"
 "help       - Display a menu of terminal functions\n"
-"get [arg]  - Get data from the MCU page on the HMI\n"
-"	- Valid arguments: n0, n1, t2, t3\n";
+"settings   - Display current settings\n"
+"get time   - Display local MCU time\n";
+
+//Settings page variables
+uint32_t rate = 10;
+char rate_unit[8] = "/sec";
+uint32_t mode = 0;
+
+//Local MCU time variables
+uint32_t year = 0;
+uint32_t month = 0;
+uint32_t day = 0;
+uint32_t hour = 0;
+uint32_t minute = 0;
+uint32_t second = 0;

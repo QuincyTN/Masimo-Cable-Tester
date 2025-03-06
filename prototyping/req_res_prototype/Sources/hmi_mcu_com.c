@@ -34,24 +34,39 @@ void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t request
 		USART2.TXDATAL = (char)command[i];	//send new char
 	}
 }
+char* parseHmiString(char* string){
+	//Return a string in the format of STRING_MESSAGE
+	int dataLength = strlen(string);
+	char* parsedStr = (char*)malloc(dataLength - 3);
+	strncpy(parsedStr, string+1, dataLength+1);
+	parsedStr[dataLength-4] = '\0';
+	
+	return parsedStr;	
+}
+uint32_t parseHmiInt(char* string){
+	//Return a 32 integer number in the format of NUM_MESSAGE
+	return ((uint32_t)string[1]) | ((uint32_t)string[2]<<8) | ((uint32_t)string[3]<<16) | ((uint32_t)string[4]<<24);
+}
 void parseHmiData(char* strData){
 	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
 	//uint8_t dataLength = strlen(strData);		//get length of data
-	int dataLength = strlen(strData);
+	//int dataLength = strlen(strData);
 	if(strData[0] == STRING_MESSAGE){
-		char string[dataLength];
-		strncpy(string, strData+1, dataLength+1);
-		string[dataLength-4] = "\0";
-		transmitTerminal(string);
+		//char string[dataLength];
+		//strncpy(string, strData+1, dataLength+1);
+		//string[dataLength-4] = "\0";
+
+		transmitTerminal(parseHmiString(strData));
 	}
 	else if(strData[0] == NUM_MESSAGE){
 		char number[BUFFER_SIZE];
-		uint32_t intValue = ((uint32_t)strData[1]) | ((uint32_t)strData[2]<<8) | ((uint32_t)strData[3]<<16) | ((uint32_t)strData[4]<<24);
-		sprintf(number, "%lu", intValue);	//convert the integer to a string of characters
+		//uint32_t intValue = ((uint32_t)strData[1]) | ((uint32_t)strData[2]<<8) | ((uint32_t)strData[3]<<16) | ((uint32_t)strData[4]<<24);
+		sprintf(number, "%lu", parseHmiInt(strData));	//convert the integer to a string of characters
 		transmitTerminal(number);
 	}
 	else if(strData[0] == START_CHAR){
 		//TODO: add characterization function
+		//TODO: after characterization, change page to char_success 
 	}
 	else if(strData[0] == START_TEST){
 		testingStart = 1;
@@ -59,6 +74,20 @@ void parseHmiData(char* strData){
 	else if(strData[0] == STOP_TEST){
 		testingStart = 0;
 	}
+	else if(strData[0] == PAUSE_TEST){
+		testingStart = 0;
+		
+	}
+	else if(strData[0] == UPDATE_RATE){
+		rate = parseHmiInt(strData);
+	}
+	else if(strData[0] == UPDATE_RATE_UNIT){
+		strcpy(rate_unit, parseHmiString(strData));
+	}
+	else if(strData[0] == UPDATE_MODE){
+		mode = parseHmiInt(strData);
+	}
+	
 	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
 }
 

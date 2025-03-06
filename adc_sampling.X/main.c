@@ -1,4 +1,6 @@
+//TO DO 
 #include "mcc_generated_files/system/system.h"
+#include <math.h>
 #define TRUNCATED_SHIFT 4
 #define NUM_PINS 4
 
@@ -118,6 +120,7 @@ void characterize(int pin1, int pin2) {
         //printf("Output Pins set\n");
         myArray[pin1][pin2].val_1_00 = 0;
         myArray[pin1][pin2].val_2_00 = 0;
+        
         setHigh(pin1);
         setLow(pin2);
         //printf("High Low test set\n");
@@ -138,6 +141,30 @@ void characterize(int pin1, int pin2) {
         //printf("Input Pins set\n");
     }
 }
+
+bool check_adc_within_range(int pin1, int pin2) {
+    setOutput(pin1);
+    setOutput(pin2);
+    setHigh(pin1);
+    setLow(pin2);
+    if (fabs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_10) > 0.1 ||
+        fabs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_10) > 0.1) {
+         printf(":(\n");
+        return false; // Return false if any of the comparisons exceed the 0.1 threshold
+    }
+    setLow(pin1);
+    setHigh(pin2);
+    if (fabs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_01) > 0.1 ||
+        fabs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_01) > 0.1) {
+        printf(":(\n");
+        return false; // Return false if any of the comparisons exceed the 0.1 threshold
+    }
+
+    setInput(pin1);
+    setInput(pin2);
+    return true;
+}
+
 void printArray() {
     for (int i = 0; i < NUM_PINS; i++) {
         for (int j = 0; j < NUM_PINS; j++) {
@@ -167,15 +194,27 @@ int main(void)
     CTR_1_SetDigitalInput();
     CTR_2_SetDigitalInput();
     CTR_3_SetDigitalInput();
-
-    while(1)
-    {       
-        for (int i = 0; i < NUM_PINS; i++) {
+    for (int i = 0; i < NUM_PINS; i++) {
             for (int j = 0; j < NUM_PINS; j++) {
                 characterize(i, j);
     }
 }
 
+    while(1)
+    {       
         printArray();
+        for (int i = 0; i < NUM_PINS; i++) {
+            for (int j = 0; j < NUM_PINS; j++) {
+                if (i != j) {
+                if (!check_adc_within_range(i, j)) {
+                    printf("Warning: ADC values for pin pair %d, %d are not within 0.1 range!\n", i, j);
+                    }
+                }
+            }
+            
+        }
+        printf("\nConnections unchanged\n\n");
+        
     } 
 } 
+

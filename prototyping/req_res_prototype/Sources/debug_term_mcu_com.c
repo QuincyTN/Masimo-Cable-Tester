@@ -34,13 +34,17 @@ void parseTerminalData(char* strData){
 	else if(strcmp(terminalBuffer, "help") == 0) {
 		transmitTerminal(helpMenu);	//display help menu
 	}
-	else if(strcmp(terminalBuffer, "settings") == 0) {
-		char settings[100];
-		sprintf(settings, "Recording Rate: %lu %s\nMode: %lu", rate, rate_unit, mode);
-		transmitTerminal(settings);	//display test settings
+	else if(strcmp(terminalBuffer, "get n0") == 0) {
+		transmitHmi(PAGE_MCU,N0,VAL,NULL, 1);	//get n0.val value
 	}
-	else if(strcmp(terminalBuffer, "get time") == 0) {
-		//TODO: display local time
+	else if(strcmp(terminalBuffer, "get n1") == 0) {
+		transmitHmi(PAGE_MCU,N1,VAL,NULL, 1);	//get n1.val value
+	}
+	else if(strcmp(terminalBuffer, "get t2") == 0) {
+		transmitHmi(PAGE_MCU,T2,TXT,NULL, 1);	//get t2.txt text
+	}
+	else if(strcmp(terminalBuffer, "get t3") == 0) {
+		transmitHmi(PAGE_MCU,T3,TXT,NULL, 1);	//get t3.txt text
 	}
 	//TODO: add more commands to test MCU functions
 }

@@ -38,7 +38,6 @@ void initTimer1s() {
 
 ISR(TCA0_OVF_vect) {
 	//get a value every second
-	/*
 	switch((timerFlag++)%4){
 		case 0: transmitHmi(PAGE_MCU,N0,VAL,NULL, 1); break;
 		case 1: transmitHmi(PAGE_MCU,N1,VAL,NULL, 1); break;
@@ -46,7 +45,7 @@ ISR(TCA0_OVF_vect) {
 		case 3: transmitHmi(PAGE_MCU,T3,TXT,NULL, 1); break;
 		default: transmitHmi(PAGE_MCU,N0,VAL,NULL, 1); break;
 	}
-	*/
+		
 	TCA0.SINGLE.INTFLAGS = TCA_SINGLE_OVF_bm;	//reset overflow flag
 }
 

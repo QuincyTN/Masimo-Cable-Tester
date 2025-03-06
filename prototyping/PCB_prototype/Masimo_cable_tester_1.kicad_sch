@@ -4747,12 +4747,28 @@
 		(uuid "f3b1a284-f8d2-43d9-8a1b-0a749fbc3462")
 	)
 	(no_connect
+		(at 140.97 102.87)
+		(uuid "06fda43a-0a84-4f5d-be20-f930dff1e638")
+	)
+	(no_connect
 		(at 43.18 151.13)
 		(uuid "0a8c7f98-6d01-4095-8f2f-91982d15e2a5")
 	)
 	(no_connect
+		(at 144.78 52.07)
+		(uuid "0f316b42-791b-49eb-9c3e-5fecc481b278")
+	)
+	(no_connect
 		(at 64.77 123.19)
 		(uuid "14aa492e-57a8-414b-9307-781196c1b67b")
+	)
+	(no_connect
+		(at 166.37 156.21)
+		(uuid "247343a5-38c8-4f64-a1e8-76e6a590b4c3")
+	)
+	(no_connect
+		(at 140.97 87.63)
+		(uuid "25def4ad-2dba-42ac-b99c-41f01f84550d")
 	)
 	(no_connect
 		(at 43.18 128.27)
@@ -4763,12 +4779,24 @@
 		(uuid "326fb3e5-f29c-4975-95ba-316a92fae4a1")
 	)
 	(no_connect
+		(at 140.97 105.41)
+		(uuid "34480d10-f3a4-4973-9c8d-6e878fd9439c")
+	)
+	(no_connect
 		(at 43.18 179.07)
 		(uuid "3da4a1f4-8273-42b8-a53e-544ec7c4dab1")
 	)
 	(no_connect
+		(at 140.97 100.33)
+		(uuid "469cc7ec-25e3-4cae-9aa0-bfb0e31a84ff")
+	)
+	(no_connect
 		(at 43.18 186.69)
 		(uuid "4e46aca3-9ef3-4d73-8b2f-0d25945f6d95")
+	)
+	(no_connect
+		(at 140.97 82.55)
+		(uuid "5be67e57-dd8c-4252-bd7d-8a35f3ec1eb7")
 	)
 	(no_connect
 		(at 43.18 156.21)
@@ -4783,8 +4811,28 @@
 		(uuid "6f7fb626-b5ac-4296-99e8-e7e8d3417325")
 	)
 	(no_connect
+		(at 140.97 97.79)
+		(uuid "70ec77ad-a5da-4170-9d12-9088c7b2fd94")
+	)
+	(no_connect
+		(at 140.97 95.25)
+		(uuid "7ee669da-28eb-4e6b-89f8-741ae380b432")
+	)
+	(no_connect
+		(at 166.37 146.05)
+		(uuid "838713ec-71ca-47e5-8d47-90fdd0951966")
+	)
+	(no_connect
 		(at 43.18 163.83)
 		(uuid "86e77b61-317f-4917-80c3-b82a84a6ea85")
+	)
+	(no_connect
+		(at 41.91 45.72)
+		(uuid "969aef4b-27b6-4fb0-879b-1688b0b56a71")
+	)
+	(no_connect
+		(at 166.37 151.13)
+		(uuid "a88ede77-3ca1-47e6-9a88-1201297b7a88")
 	)
 	(no_connect
 		(at 43.18 130.81)
@@ -4793,6 +4841,14 @@
 	(no_connect
 		(at 64.77 186.69)
 		(uuid "c68f1e08-2707-4922-ab0d-cfe17138dd9a")
+	)
+	(no_connect
+		(at 140.97 85.09)
+		(uuid "cd5ac83e-8762-44b8-be8a-6e0f1d37d7a8")
+	)
+	(no_connect
+		(at 140.97 92.71)
+		(uuid "d0930917-0e69-4964-a186-8835ba7274b5")
 	)
 	(no_connect
 		(at 64.77 184.15)
@@ -4809,6 +4865,10 @@
 	(no_connect
 		(at 43.18 118.11)
 		(uuid "ede34e8c-243f-4354-98fc-849834c82c71")
+	)
+	(no_connect
+		(at 140.97 90.17)
+		(uuid "f45f4069-dbf5-4f57-bfd1-814cefb32421")
 	)
 	(no_connect
 		(at 43.18 166.37)
@@ -8557,7 +8617,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -8625,7 +8684,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -8693,7 +8751,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -8896,7 +8953,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -8965,7 +9021,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "Board Power"
@@ -9034,7 +9089,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "Banana Jack"
@@ -9103,7 +9157,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -9171,7 +9224,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -9306,7 +9358,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "SFML-110-02-L-D-A"
@@ -9659,7 +9710,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "10kΩ ±0.1% 1/4W"
@@ -9793,7 +9843,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "Touchscreen HMI"
@@ -10098,7 +10147,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "Barrel Jack 9V"
@@ -10221,7 +10269,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "LM7805_TO220"
@@ -10294,7 +10341,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "MicroSD PinHeader"
@@ -10380,7 +10426,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -10514,7 +10559,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -10582,7 +10626,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "Debug Connections"
@@ -10660,7 +10703,6 @@
 				(font
 					(size 1.524 1.524)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "J104D2C5VDC.15S"
@@ -10815,7 +10857,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "VOFF Toggle"
@@ -10884,7 +10925,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -11018,7 +11058,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "1kΩ ±0.1% 0.1W"
@@ -11292,7 +11331,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "Conn_01x28_Socket"
@@ -11440,7 +11478,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "MCU Board Power"
@@ -11511,7 +11548,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "Curiosity Nano AVR128DB48"

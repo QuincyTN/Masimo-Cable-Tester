@@ -1,7 +1,7 @@
-//TO DO 
 #include "mcc_generated_files/system/system.h"
 #define TRUNCATED_SHIFT 4
 #define NUM_PINS 4
+
 
 
 //#define TRUNCATED_SHIFT 4  /* Total number of SAMPLES accumulated are 128. Since this is truncated down to 16 bits, dividing ADC result by 16 or right shifting by 4 will give the average 12-bit ADC result */ 
@@ -14,6 +14,18 @@ struct
     uint16_t average_result;
 } adc_data[NUM_PINS];
 float voltage;
+
+typedef struct {
+    float val_1_00;
+    float val_1_01;
+    float val_1_10;
+    float val_1_11;
+    float val_2_00;
+    float val_2_01;
+    float val_2_10;
+    float val_2_11;
+} DataStruct;
+DataStruct myArray[NUM_PINS][NUM_PINS] = {0};
 
 
 void setLow(int n) {
@@ -78,20 +90,20 @@ void setOutput(int n) {
 }
 
 float process_adc_conversion(uint8_t current_channel) {
-    // Wait for the previous ADC conversion to complete
+    // Wait for the previous ADC conversion
     while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));
-    // Clear the result ready flag
+    // Clear result ready flag
     ADC0.INTFLAGS = ADC_RESRDY_bm;
     // Start ADC conversion
     ADC0_StartConversion(current_channel);
     // Wait for the conversion to complete
     while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));
-    // Get the conversion result and store it temporarily
+    // Get conversion result
     uint16_t result = ADC0_GetConversionResult();
     uint16_t average_result = (uint16_t)(result >> TRUNCATED_SHIFT);
     // Calculate the voltage
     float voltage = (float)(average_result * MAX_VOLTAGE) / ADC_RESOLUTION;
-    // Clear all stored ADC-related data for this channel
+    // Clear all stored ADC-related data
     adc_data[current_channel].result = 0;
     adc_data[current_channel].average_result = 0;
     
@@ -99,100 +111,71 @@ float process_adc_conversion(uint8_t current_channel) {
 }
 
 void characterize(int pin1, int pin2) {
-    float test_a;
-    float test_b;
-    float resistance;
-    int connection_type;
-    int confirm;
     if (pin1 != pin2) {
+        //printf("Characterizing pair %d, %d\n", pin1, pin2);
         setOutput(pin1);
         setOutput(pin2);
-        printf("Check for pair %d, %d\n\n", pin1, pin2);
-        // Test 1: i High, j Low
+        //printf("Output Pins set\n");
+        myArray[pin1][pin2].val_1_00 = 0;
+        myArray[pin1][pin2].val_2_00 = 0;
         setHigh(pin1);
         setLow(pin2);
-        test_a = process_adc_conversion(pin1);
-        test_b = process_adc_conversion(pin2);
-        printf("A High, B Low\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n", pin1, test_a, pin2, test_b);
-        if (test_a > (MAX_VOLTAGE - 0.1) && test_b < 0.10) {
-            connection_type = 0;
-        } 
-        else if ((test_b > ((MAX_VOLTAGE / 2) - 0.1) && test_a < ((MAX_VOLTAGE / 2) + 0.1)) && (test_a > ((MAX_VOLTAGE / 2) - 0.1) && test_a < ((MAX_VOLTAGE / 2) + 0.1))) {
-            // short test
-            connection_type = 1;
-        } 
-        else if (test_a < 0.10 && test_b < 0.10) {
-            // diode test
-            connection_type = 2;
-        }
-        else {
-            connection_type = 3;
-        }
-        // Test 2: i Low, j High
+        //printf("High Low test set\n");
+        myArray[pin1][pin2].val_1_10 = process_adc_conversion(pin1);
+        myArray[pin1][pin2].val_2_10 = process_adc_conversion(pin2);
+
         setLow(pin1);
         setHigh(pin2);
-        test_a = process_adc_conversion(pin1);
-        test_b = process_adc_conversion(pin2);
-        printf("A Low, B High\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n\n", pin1, test_a, pin2, test_b);
-        if (test_b > (MAX_VOLTAGE - 0.1) && test_a < 0.10) {
-            confirm = 0;
-        } 
-        else if ((test_b > ((MAX_VOLTAGE / 2) - 0.1) && test_b < ((MAX_VOLTAGE / 2) + 0.1)) && (test_a > ((MAX_VOLTAGE / 2) - 0.1) && test_a < ((MAX_VOLTAGE / 2) + 0.1))) {
-            // short test 
-            confirm = 1;
-        } 
-        else if (test_a > (MAX_VOLTAGE - 0.1) && test_b > (MAX_VOLTAGE - 0.1)) {
-            // diode test
-            confirm = 2;
-        }
-        else {
-            confirm = 3;
-            resistance = (3.3/test_a) - 2;
-            
-        }
-        if (confirm == connection_type) {
-            
-        switch (confirm) {
-            case 0:
-                printf("Connection Type for pair %d %d: Open Circuit\n\n", pin1, pin2);
-                break;
-            case 1:
-                printf("Connection Type for pair %d %d: Short\n\n", pin1, pin2);
-                break;
-            case 2:
-                printf("Connection Type for pair %d %d: Diode\n\n", pin1, pin2);
-                break;
-            case 3:
-                printf("Connection Type for pair %d %d: Resistor: %.2fk\n\n", pin1, pin2, resistance);
-                break;
+        //printf("Low High test set\n");
+        myArray[pin1][pin2].val_1_01 = process_adc_conversion(pin1);
+        myArray[pin1][pin2].val_2_01 = process_adc_conversion(pin2);
+                
+        myArray[pin1][pin2].val_1_11 = 3.3;
+        myArray[pin1][pin2].val_2_11 = 3.3;
 
-}
-        }
-        else {
-            printf("Error");
-        }
         setInput(pin1);
         setInput(pin2);
+        //printf("Input Pins set\n");
     }
 }
-int main(void)
+void printArray() {
+    for (int i = 0; i < NUM_PINS; i++) {
+        for (int j = 0; j < NUM_PINS; j++) {
+            if (i != j) {
+            printf("Characterize pair %d, %d\n", i, j);
+            printf("Output set to 00 :%.2f %.2f\n", 
+                   myArray[i][j].val_1_00, myArray[i][j].val_2_00);
+            printf("Output set to 10 :%.2f %.2f\n", 
+                   myArray[i][j].val_1_10, myArray[i][j].val_2_10);
+            printf("Output set to 01 :%.2f %.2f\n", 
+                   myArray[i][j].val_1_01, myArray[i][j].val_2_01);
+            printf("Output set to 11 :%.2f %.2f\n", 
+                   myArray[i][j].val_1_11, myArray[i][j].val_2_11);
+            }
+        }
+    }
+}
+
+
+int main(void) 
 {   
     ADC0_SetWindowChannel(0);
     SYSTEM_Initialize();
     ADC0_EnableAutoTrigger();
+    
     CTR_0_SetDigitalInput();
     CTR_1_SetDigitalInput();
     CTR_2_SetDigitalInput();
     CTR_3_SetDigitalInput();
-    int i;
-    int j;
+
     while(1)
     {       
-    for (i = 0; i < NUM_PINS; i++) {
-        for (j = 0; j < NUM_PINS; j++) {                  
-            characterize(i, j);        
-        }    
-    }
-    printf("Full Test Complete!!!!!!!!!!!\n\n");
+        for (int i = 0; i < NUM_PINS; i++) {
+            for (int j = 0; j < NUM_PINS; j++) {
+                characterize(i, j);
     }
 }
+
+        printArray();
+    } 
+} 

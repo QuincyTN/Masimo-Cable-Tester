@@ -134,6 +134,111 @@
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="mcc_generated_files\adc\adc0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\adc\src\adc0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\peripheral\evsys.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\peripheral\src\evsys.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\ccp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\clock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\config_bits.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\pins.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\protected_io.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\src\clock.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\src\config_bits.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\src\interrupt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\src\pins.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\src\protected_io.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\src\system.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\system.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\utils\assembler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\utils\assembler\gas.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\utils\assembler\iar.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\utils\atomic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\utils\compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\utils\interrupt_avr8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\utils\utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\system\utils\utils_assert.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\timer\src\tca0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\timer\tca0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\timer\tca0_deprecated.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\uart\src\usart3.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\uart\uart_drv_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\uart\uart_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\uart\usart3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\vref\src\vref.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mcc_generated_files\vref\vref.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="uart.c">
       <SubType>compile</SubType>
     </Compile>
@@ -146,6 +251,23 @@
     <Compile Include="utils.h">
       <SubType>compile</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mcc_generated_files\" />
+    <Folder Include="mcc_generated_files\adc\" />
+    <Folder Include="mcc_generated_files\adc\src\" />
+    <Folder Include="mcc_generated_files\peripheral\" />
+    <Folder Include="mcc_generated_files\peripheral\src\" />
+    <Folder Include="mcc_generated_files\system\" />
+    <Folder Include="mcc_generated_files\system\src\" />
+    <Folder Include="mcc_generated_files\system\utils\" />
+    <Folder Include="mcc_generated_files\system\utils\assembler\" />
+    <Folder Include="mcc_generated_files\timer\" />
+    <Folder Include="mcc_generated_files\timer\src\" />
+    <Folder Include="mcc_generated_files\uart\" />
+    <Folder Include="mcc_generated_files\uart\src\" />
+    <Folder Include="mcc_generated_files\vref\" />
+    <Folder Include="mcc_generated_files\vref\src\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

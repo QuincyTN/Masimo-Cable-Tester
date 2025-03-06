@@ -39,6 +39,8 @@
 #include <inttypes.h>
 #include <string.h>
 
+#include "mcc_generated_files/system/system.h"
+
 #include "utils.h"		// string conversion utilities used to communicate w/ terminal
 #include "uart.h"		// sets and uses up the local debug uart for communication w/ terminal
 #include "AVR_sd.h"		// low-level SD card functions, including init/using the SPI port
@@ -51,6 +53,8 @@ void clk_init(void);	// MCU clocks initialization
 void SD_demo(void);		// gwp 6/12/2024 Demo SD card file functions.  The code has been moved 
 						// to after main() for code readability.  Eventually this will be replaced 
 						// with the SD card functions needed to support the short/break detector.
+//void SD_demo(char* my_string);
+void my_demo(char* test_type, char* pinA, int pinA_num, char* pinB, int pinB_num, float pinA_voltage, float pinB_voltage);
 void SD_card_read(char input[]);
 void SD_card_read_test(char input[]);
 
@@ -69,6 +73,26 @@ extern char USART_ReceiveBuffer[];  // buffer containing received data
 char cmd_buffer[RX_BUF_MAX];		// local buffer to copy a received command into
 
 ///////////////////////////////////////////// **added start** ///////////////////////////////////////////////////////
+
+#include <util/delay.h>
+#include "mcc_generated_files/system/system.h"
+#include <util/delay.h>
+#define TRUNCATED_SHIFT 4
+#define NUM_PINS 4
+
+
+//#define TRUNCATED_SHIFT 4  /* Total number of SAMPLES accumulated are 128. Since this is truncated down to 16 bits, dividing ADC result by 16 or right shifting by 4 will give the average 12-bit ADC result */
+#define MAX_VOLTAGE	 3.3
+#define ADC_RESOLUTION 0x0FFF /* In the test setup, VDD = 3.3V, ADC ref is VDD. 12 bit ADC count is 4095 at 3.3V */
+
+struct
+{
+	uint32_t result;
+	uint16_t average_result;
+} adc_data[NUM_PINS];
+float voltage;
+
+//////////////////////////////////////////////////**ryan stuff above**/////////////////////////////////////////////////////////
 #define VAL "val"	//used to get the value attribute of a number
 #define TXT "txt"	//used to get the text attribute of a text field
 
@@ -297,6 +321,96 @@ void parseTerminalData(char* strData){
 }
 
 
+/////////////////////////////////////**ryan stuff**/////////////////////////////////////////////////////////////////////
+void setLow(int n) {
+	switch (n) {
+		case 0: CTR_0_SetLow(); break;
+		case 1: CTR_1_SetLow(); break;
+		case 2: CTR_2_SetLow(); break;
+		case 3: CTR_3_SetLow(); break;
+		//        case 4: CTR_4_SetLow(); break;
+		//        case 5: CTR_5_SetLow(); break;
+		//        case 6: CTR_6_SetLow(); break;
+		//        case 7: CTR_7_SetLow(); break;
+		//        case 8: CTR_8_SetLow(); break;
+		//        case 9: CTR_9_SetLow(); break;
+		default: printf("Invalid input: %d\n", n); break;
+	}
+}
+void setHigh(int n) {
+	switch (n) {
+		case 0: CTR_0_SetHigh(); break;
+		case 1: CTR_1_SetHigh(); break;
+		case 2: CTR_2_SetHigh(); break;
+		case 3: CTR_3_SetHigh(); break;
+		//        case 4: CTR_4_SetHigh(); break;
+		//        case 5: CTR_5_SetHigh(); break;
+		//        case 6: CTR_6_SetHigh(); break;
+		//        case 7: CTR_7_SetHigh(); break;
+		//        case 8: CTR_8_SetHigh(); break;
+		//        case 9: CTR_9_SetHigh(); break;
+		default: printf("Invalid input: %d\n", n); break;
+	}
+}
+void setInput(int n) {
+	switch (n) {
+		case 0: CTR_0_SetDigitalInput(); break;
+		case 1: CTR_1_SetDigitalInput(); break;
+		case 2: CTR_2_SetDigitalInput(); break;
+		case 3: CTR_3_SetDigitalInput(); break;
+		//        case 4: CTR_4_SetHigh(); break;
+		//        case 5: CTR_5_SetHigh(); break;
+		//        case 6: CTR_6_SetHigh(); break;
+		//        case 7: CTR_7_SetHigh(); break;
+		//        case 8: CTR_8_SetHigh(); break;
+		//        case 9: CTR_9_SetHigh(); break;
+		default: printf("Invalid input: %d\n", n); break;
+	}
+}
+void setOutput(int n) {
+	switch (n) {
+		case 0: CTR_0_SetDigitalOutput(); break;
+		case 1: CTR_1_SetDigitalOutput(); break;
+		case 2: CTR_2_SetDigitalOutput(); break;
+		case 3: CTR_3_SetDigitalOutput(); break;
+		//        case 4: CTR_4_SetHigh(); break;
+		//        case 5: CTR_5_SetHigh(); break;
+		//        case 6: CTR_6_SetHigh(); break;
+		//        case 7: CTR_7_SetHigh(); break;
+		//        case 8: CTR_8_SetHigh(); break;
+		//        case 9: CTR_9_SetHigh(); break;
+		default: printf("Invalid input: %d\n", n); break;
+	}
+}
+
+float process_adc_conversion(uint8_t current_channel) {
+	// Wait for the previous ADC conversion to complete
+	while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));
+	
+	// Clear the result ready flag
+	ADC0.INTFLAGS = ADC_RESRDY_bm;
+	
+	// Start ADC conversion
+	ADC0_StartConversion(current_channel);
+	
+	// Wait for the conversion to complete
+	while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));
+	
+	// Get the conversion result and store it temporarily
+	uint16_t result = ADC0_GetConversionResult();
+	uint16_t average_result = (uint16_t)(result >> TRUNCATED_SHIFT);
+	
+	// Calculate the voltage
+	float voltage = (float)(average_result * MAX_VOLTAGE) / ADC_RESOLUTION;
+	
+	// Clear all stored ADC-related data for this channel
+	adc_data[current_channel].result = 0;
+	adc_data[current_channel].average_result = 0;
+	
+	return voltage;
+}
+
+
 ////////////////////////////////////**added end**////////////////////////////////////////////////////////////////////
 
 
@@ -316,10 +430,30 @@ int main(void)
 
 	UART_sendString("\n\n");	// reset terminal lines
 	
+	
+	ADC0_SetWindowChannel(0);
+	SYSTEM_Initialize();
+	ADC0_EnableAutoTrigger();
+	int open_test = 0;
+	int short_test = 0;
+	int diode_test = 0;
+	int resistor_test = 0;
+	float vcc_A = 3.30;
+	float vcc_B = 3.30;
+	float test_a;
+	float test_b;
+	int i;
+	CTR_0_SetDigitalInput();
+	CTR_1_SetDigitalInput();
+	CTR_2_SetDigitalInput();
+	CTR_3_SetDigitalInput();
+	
 	while(1){  // main loop  
 	//transmitHmi("page0", "c0", NULL, "1", 0);
-
-    SD_demo();			// call the SD card initialization/file write demo functions.
+	
+	SD_demo();
+	//my_demo();
+    //SD_demo("pin pair 1");			// call the SD card initialization/file write demo functions.
 						// this will be replaced by the SD card functions to support the 
 						// short/break detector.  Functions follow main.
 		
@@ -343,8 +477,89 @@ int main(void)
 			if (!CARD_IN){
 				UART_sendString("Card connected\n");
 				CARD_IN = true;
-				//transmitHmi("page0", "c0", NULL, "1", 0); // changes requirement to true since sd card was inserted
-				
+				///* ADC pin pair check start
+					  for (int j = 0; j < NUM_PINS - 1; j++) {
+						  open_test = 0;
+						  short_test = 0;
+						  diode_test = 0;
+						  resistor_test = 0;
+						  setLow(i);
+						  setLow(j);
+						  if (i != j) {
+							  setOutput(i);
+							  setOutput(j);
+							  printf("Check for pair %d, %d\n", i, j);
+							  printf("Pin A Vcc:%.2f    Pin B Vcc:%.2f\n", vcc_A, vcc_B);
+							  //Test 0: Both Low Test
+							  test_a = process_adc_conversion(i);
+							  test_b = process_adc_conversion(j);
+							  printf("Both Low Test\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n", i, test_a, j, test_b);
+							  my_demo("Both Low Test", "Pin ", i, "Pin ", j, test_a, test_b);
+							  if (test_a < 0.10 && test_b < 0.10) {
+								  open_test++;
+								  short_test++;
+								  diode_test++;
+								  resistor_test++;
+							  }
+
+							  // Test 1: i High, j Low
+							  setHigh(i);
+							  setLow(j);
+							  test_a = process_adc_conversion(i);
+							  test_b = process_adc_conversion(j);
+							  printf("A High, B Low\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n", i, test_a, j, test_b);
+							  my_demo("A High, B Low", "Pin ", i, "Pin ", j, test_a, test_b);
+							  if (test_a > (vcc_A - 0.1) && test_b < 0.10) {
+								  open_test++;
+								  } else if ((test_b > ((vcc_B / 2) - 0.1) && test_a < ((vcc_B / 2) + 0.1)) && (test_a > ((vcc_A / 2) - 0.1) && test_a < ((vcc_A / 2) + 0.1))) {
+								  // short test
+								  short_test++;
+								  } else if (test_a < 0.10 && test_b < 0.10) {
+								  // diode test
+								  diode_test++;
+							  }
+
+							  // Test 2: i Low, j High
+							  setLow(i);
+							  setHigh(j);
+							  test_a = process_adc_conversion(i);
+							  test_b = process_adc_conversion(j);
+							  printf("A Low, B High\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n", i, test_a, j, test_b);
+							  my_demo("A Low, B High", "Pin ", i, "Pin ", j, test_a, test_b);
+							  if (test_b > (vcc_B - 0.1) && test_a < 0.10) {
+								  open_test++;
+								  } else if ((test_b > ((vcc_B / 2) - 0.1) && test_b < ((vcc_B / 2) + 0.1)) && (test_a > ((vcc_A / 2) - 0.1) && test_a < ((vcc_A / 2) + 0.1))) {
+								  // short test
+								  short_test++;
+								  } else if (test_a > (vcc_A - 0.1) && test_b > (vcc_B - 0.1)) {
+								  // diode test
+								  diode_test++;
+							  }
+
+							  // Test 3: Both High
+							  setHigh(i);
+							  setHigh(j);
+							  test_a = process_adc_conversion(i);
+							  test_b = process_adc_conversion(j);
+							  printf("Both High\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n", i, test_a, j, test_b);
+							  my_demo("Both High", "Pin ", i, "Pin ", j, test_a, test_b);
+							  if (test_a > (vcc_A - 0.1) && test_b > (vcc_B - 0.1)) {
+								  open_test++;
+								  short_test++;
+								  diode_test++;
+								  resistor_test++;
+							  }
+							  setLow(i);
+							  setLow(j);
+							  printf("Connection Type for pair %d %d:\nOpen:%d\nShort:%d\nDiode:%d\nResistor:%d\n\n", i, j, open_test, short_test, diode_test, resistor_test);
+							  setInput(i);
+							  setInput(j);
+						  }
+					  }
+				  }
+
+				  //printf("Full Test Complete!!!!!!!!!!!\n\n");
+				//*/ //ADC pin pair check end
 				
 				if (CARD_OUT)   // can only get here if SD card was inserted, removed, and reinserted
 					{
@@ -353,7 +568,7 @@ int main(void)
 						break;  // returns to checking for an SD Card
 					}
 				CARD_OUT = false;
-				}
+				//} //comment when using adc pins
 			}
 		else{
 			if(!CARD_OUT) {
@@ -455,7 +670,8 @@ void SD_card_read(char input[]) {
 		
 		if(return_code == FR_OK){
 			// Create a new file in the currently open folder
-			return_code = FAT_makeFile(&dir, "log_1.txt");
+			//return_code = FAT_makeFile(&dir, "log_1.txt");
+			return_code = FAT_makeFile(&dir, "log_1.csv");
 			
 			// Get number of folders and files inside the directory
 			dirItems = FAT_dirCountItems(&dir);
@@ -481,7 +697,8 @@ void SD_card_read(char input[]) {
 		// Open a file for reading or writing
 		// Open the folder containing the file
 		FAT_openDir(&dir, "Logs Folder");
-		return_code = FAT_fopen(&dir, &file, "log_1.txt");
+		//return_code = FAT_fopen(&dir, &file, "log_1.txt");
+		return_code = FAT_fopen(&dir, &file, "log_1.csv");
 			
 		if(return_code == FR_OK){
 			UART_sendString("\nFile open: ");
@@ -701,7 +918,7 @@ void SD_card_read_test(char input[]){
 	
 	
 	
-void SD_demo(void){
+void SD_demo(){
 // Mount the memory card
 	_delay_ms(200);
 	return_code = FAT_mountVolume();
@@ -759,7 +976,8 @@ void SD_demo(void){
 			UART_sendString("\n\n");
 			
 			// Create a new file in the currently open folder
-			return_code = FAT_makeFile(&dir, "log_1.txt");
+			//return_code = FAT_makeFile(&dir, "log_1.txt");
+			return_code = FAT_makeFile(&dir, "log_1.csv");
 			
 			if(return_code == FR_OK){
 				UART_sendString("File created.\n\n");
@@ -813,7 +1031,8 @@ void SD_demo(void){
 		// Open a file for reading or writing
 		// Open the folder containing the file
 		FAT_openDir(&dir, "Logs Folder");
-		return_code = FAT_fopen(&dir, &file, "log_1.txt");
+		//return_code = FAT_fopen(&dir, &file, "log_1.txt");
+		return_code = FAT_fopen(&dir, &file, "log_1.csv");
 			
 		if(return_code == FR_OK){
 			UART_sendString("\nFile open: ");
@@ -831,11 +1050,19 @@ void SD_demo(void){
 			// Move the writing pointer to the end of the file
 			FAT_fseekEnd(&file);
 			
+			
+						
+			//////////////////////////////////////// **EDIT**//////////////////////////////
+			/*
 			// Write a string
-			FAT_fwriteString(&file, "Logging Date: 2024\n");
+			//FAT_fwriteString(&file, "Logging Date: 2024\n");
+			
+			//if()
+			
+			FAT_fwriteString(&file, my_string);
 			
 			// Write sensor output
-			FAT_fwriteFloat(&file, 120.033, 3);
+			FAT_fwriteFloat(&file, 120.030, 3);
 			FAT_fwriteString(&file, ",");
 			FAT_fwriteFloat(&file, -0.221, 3);
 			FAT_fwriteString(&file, ",");
@@ -844,6 +1071,9 @@ void SD_demo(void){
 			FAT_fwriteFloat(&file, 0.023, 3);
 			
 			FAT_fwriteString(&file, "\n");
+			*/
+			///////////////////////////////////////// **EDIT**/////////////////////////////
+			
 			// Synchronize the writing buffer with the card
 			FAT_fsync(&file);
 			
@@ -877,4 +1107,122 @@ void SD_demo(void){
 	}
 	//FAT_fsync(&file);
 }		/* **************** end of SD card demo functions  ****************** */
+
+void my_demo(char* test_type, char* pinA, int pinA_num, char* pinB, int pinB_num, float pinA_voltage, float pinB_voltage) {
+	// Mount the memory card
+	//_delay_ms(200);
+	return_code = FAT_mountVolume();
+	//sprintf(return_code);
+
+	// If no error
+		if(return_code == MR_OK){
+		// Read label and serial number
+		char label[12];
+		char vol_sn_byte[4];
+		uint32_t vol_sn = 0;
+		
+		// Open the created folder
+		return_code = FAT_openDir(&dir, "Logs Folder");
+		
+		if(return_code == FR_OK){
+			UART_sendString("Folder open: ");
+			UART_sendString(FAT_getFilename());
+			UART_sendString("\n\n");			
+		}else{
+			UART_sendString("Could not open folder.\n");
+			UART_sendString("Return code: ");
+			UART_sendInt(return_code);
+			UART_sendString("\n\n");
+		}
+
+		// Open a file for reading or writing
+		// Open the folder containing the file
+		FAT_openDir(&dir, "Logs Folder");
+		//return_code = FAT_fopen(&dir, &file, "log_1.txt");
+		return_code = FAT_fopen(&dir, &file, "log_1.csv");
+			
+		if(return_code == FR_OK){
+			UART_sendString("\nFile open: ");
+			UART_sendString(FAT_getFilename());
+			UART_sendString("\n\n");
+			
+			UART_sendString("File size: ");
+			UART_sendInt(FAT_getFileSize(&file));
+			UART_sendString("\n");
+			
+			// Keep only first 10 bytes of the file (example)
+			//FAT_fseek(&file, 10);
+			//FAT_ftruncate(&file);
+			
+			// Move the writing pointer to the end of the file
+			FAT_fseekEnd(&file);
+			
+			
+						
+			//////////////////////////////////////// **EDIT**//////////////////////////////
+			///*
+			// Write a string
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, test_type);
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, pinA);
+			FAT_fwriteFloat(&file, pinA_num, 0);
+			FAT_fwriteString(&file, ",");
+			FAT_fwriteFloat(&file, pinA_voltage, 3);
+			FAT_fwriteString(&file, ",");
+			FAT_fwriteString(&file, "\n");
+			
+			FAT_fwriteString(&file, pinB);
+			FAT_fwriteFloat(&file, pinB_num, 0);
+			FAT_fwriteString(&file, ",");
+			FAT_fwriteFloat(&file, pinB_voltage, 3);
+			
+			
+			
+			//if()
+			
+			//*/
+			///////////////////////////////////////// **EDIT**/////////////////////////////
+			
+			// Synchronize the writing buffer with the card
+			FAT_fsync(&file);
+			
+			UART_sendString("File new size: ");
+			UART_sendInt(FAT_getFileSize(&file));
+			UART_sendString("Next thing is total bytes");
+			UART_sendInt(FAT_volumeCapacity());
+			UART_sendString(" bytes.\n");
+			
+		}else if(return_code == FR_NOT_FOUND){
+			// Make the file if it doesn't exist
+			// ... code ...
+			
+			UART_sendString("File could not be found.\n");
+			UART_sendString("Return code: ");
+			UART_sendInt(return_code);
+			UART_sendString("\n\n");
+		}else{
+			UART_sendString("File could not be opened.\n");
+			UART_sendString("Return code: ");
+			UART_sendInt(return_code);
+			UART_sendString("\n\n");
+		}
+			
+	}else{ // end if(return_code == MR_OK)
+		UART_sendString("Card not mounted. here2");
+		UART_sendString(" Return code: ");
+		UART_sendInt(return_code);
+		UART_sendString("\n\n");
+		//transmitHmi("page0", "c0", NULL, "0", 0);
+	}
+	//FAT_fsync(&file);
+	
+}
+
+
+
+
+
+
+
 

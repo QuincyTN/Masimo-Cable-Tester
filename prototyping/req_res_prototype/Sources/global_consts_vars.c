@@ -29,12 +29,13 @@ char hmiBuffer[BUFFER_SIZE];
 
 const char helpMenu[] =
 "Terminal Functions\n"
-"__________________________________________________\n"
-"led on     - Turns the LED on\n"
-"led off    - Turns the LED off\n"
-"help       - Display a menu of terminal functions\n"
-"settings   - Display current settings\n"
-"get time   - Display local MCU time\n";
+"_____________________________________________________________________\n"
+"led on          - Turns the LED on\n"
+"led off         - Turns the LED off\n"
+"help            - Display a menu of terminal functions\n"
+"settings        - Display current settings\n"
+"get time(WIP)   - Display local MCU time\n"
+"char done       - Simulate characterization finish, go to respective page";
 
 //Settings page variables
 uint32_t rate = 10;

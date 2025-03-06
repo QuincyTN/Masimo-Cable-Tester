@@ -42,6 +42,11 @@ void parseTerminalData(char* strData){
 	else if(strcmp(terminalBuffer, "get time") == 0) {
 		//TODO: display local time
 	}
+	else if(strcmp(terminalBuffer, "char done") == 0) {
+		//Simulate a successful characterization
+		transmitHmi(PAGE_CHAR_FAIL, NULL, NULL, NULL, 4);
+	}
+	
 	//TODO: add more commands to test MCU functions
 }
 

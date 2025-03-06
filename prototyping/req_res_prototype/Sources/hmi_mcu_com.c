@@ -14,13 +14,13 @@ void initUSART2(){
 
 	USART2.CTRLA = (USART_RXCIE_bm);	//enable receive complete interrupt
 }
-void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t request){
+void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t action){
 	/*
 	This function will send commands to the HMI. page
 	*/
 	char command[50];
 	int len = 0;
-
+	/*
 	if(request){	//if the MCU needs a value from HMI (request is 1)
 		len = sprintf(command, "get %s.%s.%s%c%c%c", page, ID, field, 0xFF, 0xFF, 0xFF);
 	}
@@ -29,6 +29,23 @@ void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t request
 		int my_int = atoi(value);
 		len = sprintf(command, "%s.%s.val=%d%c%c%c", page, ID, my_int, 0xFF, 0xFF, 0xFF);
 	}
+	*/
+
+	
+	if(action == 1){//if the MCU needs a value from HMI (request is 1)
+		len = sprintf(command, "get %s.%s.%s%c%c%c", page, ID, field, 0xFF, 0xFF, 0xFF);
+	}
+	else if(action == 2){//if the MCU update text box in HMI
+		len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, value, 0xFF, 0xFF, 0xFF);
+	}
+	else if(action == 3){ //if the MCU update number value in HMI
+		int my_int = atoi(value);
+		len = sprintf(command, "%s.%s.val=%d%c%c%c", page, ID, my_int, 0xFF, 0xFF, 0xFF);
+	}
+	else if(action == 4){//if the MCU needs to go to another page
+		len = sprintf(command, "page %s%c%c%c", page, 0xFF, 0xFF, 0xFF);
+	}
+	
 	for(int i = 0; i < len; i++){
 		while(!(USART2.STATUS & (USART_DREIF_bm)));	//wait until all data in buffer is sent
 		USART2.TXDATAL = (char)command[i];	//send new char
@@ -51,6 +68,8 @@ void parseHmiData(char* strData){
 	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
 	//uint8_t dataLength = strlen(strData);		//get length of data
 	//int dataLength = strlen(strData);
+	//transmitTerminal(strData[0]);
+	
 	if(strData[0] == STRING_MESSAGE){
 		//char string[dataLength];
 		//strncpy(string, strData+1, dataLength+1);
@@ -76,7 +95,6 @@ void parseHmiData(char* strData){
 	}
 	else if(strData[0] == PAUSE_TEST){
 		testingStart = 0;
-		
 	}
 	else if(strData[0] == UPDATE_RATE){
 		rate = parseHmiInt(strData);

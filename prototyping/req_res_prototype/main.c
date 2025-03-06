@@ -77,7 +77,13 @@ int main(void)
 			//Happens continuously while flag is set
 			//TODO: add testing function 
 			//Testing function should set a fault flag when it is detected
+			
+			PORTB.OUTCLR = PIN3_bm;	//turn on led if test in progress
 		}
+		else{
+			PORTB.OUTSET = PIN3_bm;	//turn off led if no test or test is paused
+		}
+		
     }
 }
 

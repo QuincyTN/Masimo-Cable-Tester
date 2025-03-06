@@ -11,7 +11,7 @@
 #include "global_consts_vars.h"
 
 void initUSART2();
-void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t request);
+void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t action);
 char* parseHmiString(char* string);
 uint32_t parseHmiInt(char* string);
 void parseHmiData(char* strData);

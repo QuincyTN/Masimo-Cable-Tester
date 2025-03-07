@@ -35,7 +35,8 @@ const char helpMenu[] =
 "help            - Display a menu of terminal functions\n"
 "settings        - Display current settings\n"
 "get time(WIP)   - Display local MCU time\n"
-"char done       - Simulate characterization finish, go to respective page";
+"char done       - Simulate characterization finish, go to respective page\n"
+"fault           - Go to the fault_detected\n";
 
 //Settings page variables
 uint32_t rate = 10;
@@ -43,9 +44,9 @@ char rate_unit[8] = "/sec";
 uint32_t mode = 0;
 
 //Local MCU time variables
-uint32_t year = 0;
-uint32_t month = 0;
-uint32_t day = 0;
-uint32_t hour = 0;
-uint32_t minute = 0;
-uint32_t second = 0;
+uint32_t year = 202511;
+uint32_t month = 1;
+uint32_t day = 1;
+uint32_t hour = 1;
+uint32_t minute = 1;
+uint32_t second = 1;

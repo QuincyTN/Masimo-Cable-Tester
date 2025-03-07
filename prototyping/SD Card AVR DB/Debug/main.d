@@ -25,6 +25,36 @@ main.d main.o: .././main.c \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\delay.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h \
+ .././mcc_generated_files/system/system.h \
+ .././mcc_generated_files/system/../system/utils/compiler.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\builtins.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\xc.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\cci.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stddef.h \
+ .././mcc_generated_files/system/../system/utils/interrupt_avr8.h \
+ .././mcc_generated_files/system/config_bits.h \
+ .././mcc_generated_files/system/../system/clock.h \
+ .././mcc_generated_files/system/../system/ccp.h \
+ .././mcc_generated_files/system/../system/../system/utils/compiler.h \
+ .././mcc_generated_files/system/../system/../system/protected_io.h \
+ .././mcc_generated_files/system/../system/pins.h \
+ .././mcc_generated_files/system/../system/./port.h \
+ .././mcc_generated_files/system/../system/./utils/compiler.h \
+ .././mcc_generated_files/system/../adc/adc0.h \
+ .././mcc_generated_files/system/../adc/../system/utils/compiler.h \
+ .././mcc_generated_files/system/../peripheral/evsys.h \
+ .././mcc_generated_files/system/../peripheral/../system/utils/compiler.h \
+ .././mcc_generated_files/system/../uart/usart3.h \
+ .././mcc_generated_files/system/../uart/../system/system.h \
+ .././mcc_generated_files/system/../uart/uart_drv_interface.h \
+ .././mcc_generated_files/system/../uart/uart_types.h \
+ .././mcc_generated_files/system/../vref/vref.h \
+ .././mcc_generated_files/system/../vref/../system/utils/compiler.h \
+ .././mcc_generated_files/system/../system/interrupt.h \
+ .././mcc_generated_files/system/../system/../system/utils/atomic.h \
+ .././mcc_generated_files/system/../timer/tca0.h \
+ .././mcc_generated_files/system/../timer/../system/utils/compiler.h \
+ .././mcc_generated_files/system/../timer/./tca0_deprecated.h \
  .././utils.h .././uart.h .././AVR_sd.h .././fat.h
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h:
@@ -78,6 +108,66 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\delay.h:
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h:
+
+.././mcc_generated_files/system/system.h:
+
+.././mcc_generated_files/system/../system/utils/compiler.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\builtins.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\xc.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\cci.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stddef.h:
+
+.././mcc_generated_files/system/../system/utils/interrupt_avr8.h:
+
+.././mcc_generated_files/system/config_bits.h:
+
+.././mcc_generated_files/system/../system/clock.h:
+
+.././mcc_generated_files/system/../system/ccp.h:
+
+.././mcc_generated_files/system/../system/../system/utils/compiler.h:
+
+.././mcc_generated_files/system/../system/../system/protected_io.h:
+
+.././mcc_generated_files/system/../system/pins.h:
+
+.././mcc_generated_files/system/../system/./port.h:
+
+.././mcc_generated_files/system/../system/./utils/compiler.h:
+
+.././mcc_generated_files/system/../adc/adc0.h:
+
+.././mcc_generated_files/system/../adc/../system/utils/compiler.h:
+
+.././mcc_generated_files/system/../peripheral/evsys.h:
+
+.././mcc_generated_files/system/../peripheral/../system/utils/compiler.h:
+
+.././mcc_generated_files/system/../uart/usart3.h:
+
+.././mcc_generated_files/system/../uart/../system/system.h:
+
+.././mcc_generated_files/system/../uart/uart_drv_interface.h:
+
+.././mcc_generated_files/system/../uart/uart_types.h:
+
+.././mcc_generated_files/system/../vref/vref.h:
+
+.././mcc_generated_files/system/../vref/../system/utils/compiler.h:
+
+.././mcc_generated_files/system/../system/interrupt.h:
+
+.././mcc_generated_files/system/../system/../system/utils/atomic.h:
+
+.././mcc_generated_files/system/../timer/tca0.h:
+
+.././mcc_generated_files/system/../timer/../system/utils/compiler.h:
+
+.././mcc_generated_files/system/../timer/./tca0_deprecated.h:
 
 .././utils.h:
 

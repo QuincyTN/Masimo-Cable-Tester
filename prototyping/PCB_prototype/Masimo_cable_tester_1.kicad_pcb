@@ -1877,12 +1877,7 @@
 			(at 0 0 270)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "Pin_1")
@@ -1893,12 +1888,7 @@
 			(at 0 2.54 270)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 40 "Net-(J3-Pin_27)")
 			(pinfunction "Pin_2")
@@ -2181,12 +2171,7 @@
 			(at 0 0 90)
 			(size 1.524 1.524)
 			(drill 1.016)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 58 "5V")
 			(pinfunction "1")
@@ -2197,12 +2182,7 @@
 			(at 0 7.62 90)
 			(size 1.524 1.524)
 			(drill 1.016)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 60 "Net-(J17-Pin_1)")
 			(pinfunction "2")
@@ -2213,12 +2193,7 @@
 			(at 0 12.7 90)
 			(size 1.524 1.524)
 			(drill 1.016)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 74 "Net-(J17-Pin_2)")
 			(pinfunction "3")
@@ -2229,12 +2204,7 @@
 			(at 0 17.78 90)
 			(size 1.524 1.524)
 			(drill 1.016)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "4")
@@ -2245,12 +2215,7 @@
 			(at 7.62 17.78 90)
 			(size 1.524 1.524)
 			(drill 1.016)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 63 "unconnected-(U1-Pad5)")
 			(pinfunction "5")
@@ -2261,12 +2226,7 @@
 			(at 7.62 12.7 90)
 			(size 1.524 1.524)
 			(drill 1.016)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 61 "unconnected-(U1-Pad6)")
 			(pinfunction "6")
@@ -2277,12 +2237,7 @@
 			(at 7.62 7.62 90)
 			(size 1.524 1.524)
 			(drill 1.016)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 62 "unconnected-(U1-Pad7)")
 			(pinfunction "7")
@@ -2293,12 +2248,7 @@
 			(at 7.62 0 90)
 			(size 1.524 1.524)
 			(drill 1.016)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 4 "Net-(Q1-C)")
 			(pinfunction "8")
@@ -2592,12 +2542,7 @@
 			(at 0 -5.9)
 			(size 4.1 1.4)
 			(drill oval 3.5 0.8)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 2 "9V")
 			(pintype "passive")
@@ -2608,12 +2553,7 @@
 			(at 0 0)
 			(size 3.1 1.4)
 			(drill oval 2.5 0.8)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 56 "unconnected-(J4-PadB)")
 			(pintype "passive+no_connect")
@@ -2624,12 +2564,7 @@
 			(at 4.7 -3.1)
 			(size 1.4 3.1)
 			(drill oval 0.8 2.5)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pintype "passive")
@@ -2862,12 +2797,7 @@
 			(at 0 0 270)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 50 "Net-(J10-Pin_1)")
 			(pinfunction "Pin_1")
@@ -2878,12 +2808,7 @@
 			(at 0 2.54 270)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 58 "5V")
 			(pinfunction "Pin_2")
@@ -3428,12 +3353,7 @@
 			(at 0 0)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 53 "VBUS 5V")
 			(pinfunction "Pin_1")
@@ -3444,12 +3364,7 @@
 			(at 0 2.54)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 5 "Net-(J1-Pin_1)")
 			(pinfunction "Pin_2")
@@ -3460,12 +3375,7 @@
 			(at 0 5.08)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 58 "5V")
 			(pinfunction "Pin_3")
@@ -4001,12 +3911,7 @@
 			(at 0 0)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 13 "unconnected-(J2-Pin_1-Pad1)")
 			(pinfunction "Pin_1")
@@ -4017,12 +3922,7 @@
 			(at 0 2.54)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 21 "unconnected-(J2-Pin_2-Pad2)")
 			(pinfunction "Pin_2")
@@ -4033,12 +3933,7 @@
 			(at 0 5.08)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 19 "Net-(J16-Pin_3)")
 			(pinfunction "Pin_3")
@@ -4049,12 +3944,7 @@
 			(at 0 7.62)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 54 "Net-(J16-Pin_2)")
 			(pinfunction "Pin_4")
@@ -4065,12 +3955,7 @@
 			(at 0 10.16)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 27 "unconnected-(J2-Pin_5-Pad5)")
 			(pinfunction "Pin_5")
@@ -4081,12 +3966,7 @@
 			(at 0 12.7)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 12 "unconnected-(J2-Pin_6-Pad6)")
 			(pinfunction "Pin_6")
@@ -4097,12 +3977,7 @@
 			(at 0 15.24)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 7 "Net-(J1-Pin_3)")
 			(pinfunction "Pin_7")
@@ -4113,12 +3988,7 @@
 			(at 0 17.78)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 6 "Net-(J1-Pin_2)")
 			(pinfunction "Pin_8")
@@ -4129,12 +3999,7 @@
 			(at 0 20.32)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 59 "Net-(J2-Pin_9)")
 			(pinfunction "Pin_9")
@@ -4145,12 +4010,7 @@
 			(at 0 22.86)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 14 "Net-(J2-Pin_10)")
 			(pinfunction "Pin_10")
@@ -4161,12 +4021,7 @@
 			(at 0 25.4)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 26 "Net-(J2-Pin_11)")
 			(pinfunction "Pin_11")
@@ -4177,12 +4032,7 @@
 			(at 0 27.94)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 36 "Net-(J2-Pin_12)")
 			(pinfunction "Pin_12")
@@ -4193,12 +4043,7 @@
 			(at 0 30.48)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 24 "Net-(J2-Pin_13)")
 			(pinfunction "Pin_13")
@@ -4209,12 +4054,7 @@
 			(at 0 33.02)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 31 "unconnected-(J2-Pin_14-Pad14)")
 			(pinfunction "Pin_14")
@@ -4225,12 +4065,7 @@
 			(at 0 35.56)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "Pin_15")
@@ -4241,12 +4076,7 @@
 			(at 0 38.1)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 23 "unconnected-(J2-Pin_16-Pad16)")
 			(pinfunction "Pin_16")
@@ -4257,12 +4087,7 @@
 			(at 0 40.64)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 8 "unconnected-(J2-Pin_17-Pad17)")
 			(pinfunction "Pin_17")
@@ -4273,12 +4098,7 @@
 			(at 0 43.18)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 43 "unconnected-(J2-Pin_18-Pad18)")
 			(pinfunction "Pin_18")
@@ -4289,12 +4109,7 @@
 			(at 0 45.72)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 29 "unconnected-(J2-Pin_19-Pad19)")
 			(pinfunction "Pin_19")
@@ -4305,12 +4120,7 @@
 			(at 0 48.26)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 37 "unconnected-(J2-Pin_20-Pad20)")
 			(pinfunction "Pin_20")
@@ -4321,12 +4131,7 @@
 			(at 0 50.8)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 17 "CTRL 9")
 			(pinfunction "Pin_21")
@@ -4337,12 +4142,7 @@
 			(at 0 53.34)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 25 "CTRL 10")
 			(pinfunction "Pin_22")
@@ -4353,12 +4153,7 @@
 			(at 0 55.88)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 16 "Net-(J2-Pin_23)")
 			(pinfunction "Pin_23")
@@ -4369,12 +4164,7 @@
 			(at 0 58.42)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "Pin_24")
@@ -4385,12 +4175,7 @@
 			(at 0 60.96)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 30 "unconnected-(J2-Pin_25-Pad25)")
 			(pinfunction "Pin_25")
@@ -4401,12 +4186,7 @@
 			(at 0 63.5)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 22 "unconnected-(J2-Pin_26-Pad26)")
 			(pinfunction "Pin_26")
@@ -4417,12 +4197,7 @@
 			(at 0 66.04)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 20 "unconnected-(J2-Pin_27-Pad27)")
 			(pinfunction "Pin_27")
@@ -4433,12 +4208,7 @@
 			(at 0 68.58)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 9 "unconnected-(J2-Pin_28-Pad28)")
 			(pinfunction "Pin_28")
@@ -4683,12 +4453,7 @@
 			(at 0 0 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 10 "unconnected-(J3-Pin_1-Pad1)")
 			(pinfunction "Pin_1")
@@ -4699,12 +4464,7 @@
 			(at 0 2.54 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 51 "unconnected-(J3-Pin_2-Pad2)")
 			(pinfunction "Pin_2")
@@ -4715,12 +4475,7 @@
 			(at 0 5.08 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 18 "CTRL 8")
 			(pinfunction "Pin_3")
@@ -4731,12 +4486,7 @@
 			(at 0 7.62 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 28 "CTRL 7")
 			(pinfunction "Pin_4")
@@ -4747,12 +4497,7 @@
 			(at 0 10.16 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "Pin_5")
@@ -4763,12 +4508,7 @@
 			(at 0 12.7 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 15 "CTRL 6")
 			(pinfunction "Pin_6")
@@ -4779,12 +4519,7 @@
 			(at 0 15.24 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 11 "CTRL 5")
 			(pinfunction "Pin_7")
@@ -4795,12 +4530,7 @@
 			(at 0 17.78 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 48 "CTRL 4")
 			(pinfunction "Pin_8")
@@ -4811,12 +4541,7 @@
 			(at 0 20.32 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 45 "CTRL 3")
 			(pinfunction "Pin_9")
@@ -4827,12 +4552,7 @@
 			(at 0 22.86 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 38 "CTRL 2")
 			(pinfunction "Pin_10")
@@ -4843,12 +4563,7 @@
 			(at 0 25.4 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 44 "CTRL 1")
 			(pinfunction "Pin_11")
@@ -4859,12 +4574,7 @@
 			(at 0 27.94 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 46 "ADC 1")
 			(pinfunction "Pin_12")
@@ -4875,12 +4585,7 @@
 			(at 0 30.48 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 41 "ADC 2")
 			(pinfunction "Pin_13")
@@ -4891,12 +4596,7 @@
 			(at 0 33.02 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "Pin_14")
@@ -4907,12 +4607,7 @@
 			(at 0 35.56 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 39 "ADC 3")
 			(pinfunction "Pin_15")
@@ -4923,12 +4618,7 @@
 			(at 0 38.1 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 49 "ADC 4")
 			(pinfunction "Pin_16")
@@ -4939,12 +4629,7 @@
 			(at 0 40.64 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 32 "ADC 5")
 			(pinfunction "Pin_17")
@@ -4955,12 +4640,7 @@
 			(at 0 43.18 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 52 "ADC 6")
 			(pinfunction "Pin_18")
@@ -4971,12 +4651,7 @@
 			(at 0 45.72 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 34 "ADC 7")
 			(pinfunction "Pin_19")
@@ -4987,12 +4662,7 @@
 			(at 0 48.26 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 47 "ADC 8")
 			(pinfunction "Pin_20")
@@ -5003,12 +4673,7 @@
 			(at 0 50.8 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 33 "ADC 9")
 			(pinfunction "Pin_21")
@@ -5019,12 +4684,7 @@
 			(at 0 53.34 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 35 "ADC 10")
 			(pinfunction "Pin_22")
@@ -5035,12 +4695,7 @@
 			(at 0 55.88 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 50 "Net-(J10-Pin_1)")
 			(pinfunction "Pin_23")
@@ -5051,12 +4706,7 @@
 			(at 0 58.42 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "Pin_24")
@@ -5067,12 +4717,7 @@
 			(at 0 60.96 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 42 "UPDI")
 			(pinfunction "Pin_25")
@@ -5083,12 +4728,7 @@
 			(at 0 63.5 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 55 "unconnected-(J3-Pin_26-Pad26)")
 			(pinfunction "Pin_26")
@@ -5099,12 +4739,7 @@
 			(at 0 66.04 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 40 "Net-(J3-Pin_27)")
 			(pinfunction "Pin_27")
@@ -5115,12 +4750,7 @@
 			(at 0 68.58 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 53 "VBUS 5V")
 			(pinfunction "Pin_28")
@@ -5994,12 +5624,7 @@
 			(at 0 0)
 			(size 1.905 2)
 			(drill 1.1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 2 "9V")
 			(pinfunction "VI")
@@ -6010,12 +5635,7 @@
 			(at 2.54 0)
 			(size 1.905 2)
 			(drill 1.1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "GND")
@@ -6026,12 +5646,7 @@
 			(at 5.08 0)
 			(size 1.905 2)
 			(drill 1.1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 3 "Net-(J8-Pin_2)")
 			(pinfunction "VO")
@@ -6576,12 +6191,7 @@
 			(at 0 0 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 58 "5V")
 			(pinfunction "Pin_1")
@@ -6592,12 +6202,7 @@
 			(at 0 2.54 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 3 "Net-(J8-Pin_2)")
 			(pinfunction "Pin_2")
@@ -7100,24 +6705,14 @@
 			(at -7.305 0 270)
 			(size 1.4 1.4)
 			(drill 1.4)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(uuid "9e0732bc-76e4-4d39-b101-ed29e9dc39cb")
 		)
 		(pad "" np_thru_hole circle
 			(at 7.305 0 270)
 			(size 1.4 1.4)
 			(drill 1.4)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(uuid "eff7d923-57eb-4667-b28b-23a748528852")
 		)
 		(pad "01" smd rect
@@ -7546,12 +7141,7 @@
 			(at 0 0)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 60 "Net-(J17-Pin_1)")
 			(pinfunction "Pin_1")
@@ -7562,12 +7152,7 @@
 			(at 0 2.54)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 74 "Net-(J17-Pin_2)")
 			(pinfunction "Pin_2")
@@ -8287,12 +7872,7 @@
 			(at 0 0 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 42 "UPDI")
 			(pinfunction "Pin_1")
@@ -8303,12 +7883,7 @@
 			(at 0 2.54 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 54 "Net-(J16-Pin_2)")
 			(pinfunction "Pin_2")
@@ -8319,12 +7894,7 @@
 			(at 0 5.08 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 19 "Net-(J16-Pin_3)")
 			(pinfunction "Pin_3")
@@ -8335,12 +7905,7 @@
 			(at 0 7.62 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 58 "5V")
 			(pinfunction "Pin_4")
@@ -8351,12 +7916,7 @@
 			(at 0 10.16 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "Pin_5")
@@ -8554,12 +8114,7 @@
 			(at 0 0)
 			(size 1.05 1.5)
 			(drill 0.75)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "E")
@@ -8570,12 +8125,7 @@
 			(at 1.27 0)
 			(size 1.05 1.5)
 			(drill 0.75)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 75 "Net-(Q1-B)")
 			(pinfunction "B")
@@ -8586,12 +8136,7 @@
 			(at 2.54 0)
 			(size 1.05 1.5)
 			(drill 0.75)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 4 "Net-(Q1-C)")
 			(pinfunction "C")
@@ -9437,12 +8982,7 @@
 			(at 0 0 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 58 "5V")
 			(pinfunction "Pin_1")
@@ -9453,12 +8993,7 @@
 			(at 0 2.54 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 57 "unconnected-(J5-Pin_2-Pad2)")
 			(pinfunction "Pin_2")
@@ -9469,12 +9004,7 @@
 			(at 0 5.08 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "Pin_3")
@@ -9485,12 +9015,7 @@
 			(at 0 7.62 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 24 "Net-(J2-Pin_13)")
 			(pinfunction "Pin_4")
@@ -9501,12 +9026,7 @@
 			(at 0 10.16 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 36 "Net-(J2-Pin_12)")
 			(pinfunction "Pin_5")
@@ -9517,12 +9037,7 @@
 			(at 0 12.7 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 26 "Net-(J2-Pin_11)")
 			(pinfunction "Pin_6")
@@ -9533,12 +9048,7 @@
 			(at 0 15.24 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 14 "Net-(J2-Pin_10)")
 			(pinfunction "Pin_7")
@@ -9549,12 +9059,7 @@
 			(at 0 17.78 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 59 "Net-(J2-Pin_9)")
 			(pinfunction "Pin_8")
@@ -9798,12 +9303,7 @@
 			(at 0 0 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 5 "Net-(J1-Pin_1)")
 			(pinfunction "Pin_1")
@@ -9814,12 +9314,7 @@
 			(at 0 2.54 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 6 "Net-(J1-Pin_2)")
 			(pinfunction "Pin_2")
@@ -9830,12 +9325,7 @@
 			(at 0 5.08 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 7 "Net-(J1-Pin_3)")
 			(pinfunction "Pin_3")
@@ -9846,12 +9336,7 @@
 			(at 0 7.62 180)
 			(size 1.7 1.7)
 			(drill 1)
-			(layers "*.Cu" "*.Mask" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu" "In5.Cu" "In6.Cu"
-				"In7.Cu" "In8.Cu" "In9.Cu" "In10.Cu" "In11.Cu" "In12.Cu" "In13.Cu" "In14.Cu"
-				"In15.Cu" "In16.Cu" "In17.Cu" "In18.Cu" "In19.Cu" "In20.Cu" "In21.Cu"
-				"In22.Cu" "In23.Cu" "In24.Cu" "In25.Cu" "In26.Cu" "In27.Cu" "In28.Cu"
-				"In29.Cu" "In30.Cu"
-			)
+			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net 1 "GND")
 			(pinfunction "Pin_4")
@@ -10299,7 +9784,7 @@
 	(segment
 		(start 90 103.6901)
 		(end 96 97.6901)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "0288900f-00ce-48fe-b95b-6be3e7ca9b08")
@@ -10307,7 +9792,7 @@
 	(segment
 		(start 136.715 61.8)
 		(end 143.7 61.8)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "157b6766-c4cc-4cca-85ce-32f7c20aa530")
@@ -10315,7 +9800,7 @@
 	(segment
 		(start 126.46 65.54)
 		(end 126.46 64)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "4638c2c8-d5af-4baf-8268-b10f74d30d74")
@@ -10323,7 +9808,7 @@
 	(segment
 		(start 129.9072 68.6078)
 		(end 126.46 65.1606)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "482a31c6-d13d-4e31-ba90-816b81c1b429")
@@ -10331,7 +9816,7 @@
 	(segment
 		(start 96 95.32)
 		(end 97.76 93.56)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "72a887d7-6d2e-4820-ab06-fd0946e54749")
@@ -10339,7 +9824,7 @@
 	(segment
 		(start 96 97.6901)
 		(end 96 95.32)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "73948e20-95f1-46d0-a1a3-e286ad4de486")
@@ -10347,7 +9832,7 @@
 	(segment
 		(start 122.8172 69.1828)
 		(end 126.46 65.54)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "7db64171-7fcf-401c-acb4-97609179bc79")
@@ -10363,7 +9848,7 @@
 	(segment
 		(start 129.9072 68.6078)
 		(end 136.715 61.8)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "eb7b28c6-8ad4-48e3-976f-774c7e97f026")
@@ -10371,7 +9856,7 @@
 	(segment
 		(start 128.92 59)
 		(end 139 59)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "a6e90c15-0772-4e16-b216-f59b4e0753db")
@@ -10379,7 +9864,7 @@
 	(segment
 		(start 122.6322 67.5272)
 		(end 122.6322 65.2878)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "dd4f67ea-7206-46c6-bfa2-93d847bd6ccf")
@@ -10387,7 +9872,7 @@
 	(segment
 		(start 122.6322 65.2878)
 		(end 123.92 64)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "ded68507-398e-4540-811c-352a3ef62202")
@@ -10395,7 +9880,7 @@
 	(segment
 		(start 123.92 64)
 		(end 128.92 59)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 2)
 		(uuid "fd6ac0d7-bfc2-4a8b-bc39-c7578ac4ceec")
@@ -10403,7 +9888,7 @@
 	(segment
 		(start 129 66.595)
 		(end 129.9072 67.5022)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "1bb2cc19-9e2d-4948-9958-28f7ff8c9fc4")
@@ -10411,7 +9896,7 @@
 	(segment
 		(start 142.699 60.535372)
 		(end 143.285372 59.949)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "2812fd2b-957f-4e81-90d9-2feb1799b9ef")
@@ -10419,7 +9904,7 @@
 	(segment
 		(start 129 64)
 		(end 129 66.595)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "6151a274-763e-43a9-83b0-c4c9b4eae843")
@@ -10427,7 +9912,7 @@
 	(segment
 		(start 144.114628 59.949)
 		(end 144.701 60.535372)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "9385e507-d78c-4525-9601-b927617d97db")
@@ -10435,7 +9920,7 @@
 	(segment
 		(start 143.285372 59.949)
 		(end 144.114628 59.949)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "99a6f9ce-e613-4137-bd78-5e110fdd6d2e")
@@ -10443,7 +9928,7 @@
 	(segment
 		(start 144.701 70.0268)
 		(end 136.8278 77.9)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "acc577bb-f645-47ad-91cb-30403b0084de")
@@ -10451,7 +9936,7 @@
 	(segment
 		(start 136.874028 60.535372)
 		(end 142.699 60.535372)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "af53fd7b-6852-405c-a5b8-87bea9586ce1")
@@ -10459,7 +9944,7 @@
 	(segment
 		(start 129.9072 67.5022)
 		(end 136.874028 60.535372)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "b699a2e9-5efc-432d-bf04-5aca790cef86")
@@ -10467,7 +9952,7 @@
 	(segment
 		(start 144.701 60.535372)
 		(end 144.701 70.0268)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 3)
 		(uuid "c89c1d3a-4a22-4fe4-be80-796f7b5c5fd3")
@@ -10475,7 +9960,7 @@
 	(segment
 		(start 128.38 116.62)
 		(end 129 116)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 4)
 		(uuid "0451b5e5-3d96-4bf5-a924-eacc45cde573")
@@ -10491,7 +9976,7 @@
 	(segment
 		(start 124.52 123.86)
 		(end 128.38 120)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 4)
 		(uuid "63120bda-2f61-4cf8-983c-7309c15637dc")
@@ -10499,7 +9984,7 @@
 	(segment
 		(start 128.38 120)
 		(end 128.38 116.62)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 4)
 		(uuid "ace86f22-57af-43e9-a7a7-f7353dcca766")
@@ -10507,7 +9992,7 @@
 	(segment
 		(start 90 78.2699)
 		(end 88.849 77.1189)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 5)
 		(uuid "08662adf-f691-48a8-8886-f1bddb04f3d8")
@@ -10515,7 +10000,7 @@
 	(segment
 		(start 88.849 77.1189)
 		(end 88.849 61.691)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 5)
 		(uuid "2f6985ca-02a4-4ccf-b266-7e563bbdfeb2")
@@ -10523,7 +10008,7 @@
 	(segment
 		(start 88.849 61.691)
 		(end 90 60.54)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 5)
 		(uuid "f11f8510-36bd-41b1-a67d-8f8d2f5c8ca6")
@@ -10539,7 +10024,7 @@
 	(segment
 		(start 97.76 75.78)
 		(end 90.0501 75.78)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 6)
 		(uuid "e7e751fe-d701-4e72-8ea3-b84b21256666")
@@ -10547,7 +10032,7 @@
 	(segment
 		(start 97.76 73.24)
 		(end 90.0501 73.24)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 7)
 		(uuid "31caa1ba-d7d9-47e4-ac0a-f855d03b926a")
@@ -10594,27 +10079,27 @@
 	)
 	(segment
 		(start 90 93.5301)
-		(end 91.568 91.9621)
-		(width 0.2)
+		(end 91.999 91.5311)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 14)
-		(uuid "0d73864d-f5df-47df-8ee1-ceb52680a698")
+		(uuid "2420f81a-5f76-4533-83d2-cf60416598db")
 	)
 	(segment
-		(start 91.568 91.9621)
-		(end 91.568 87.052)
-		(width 0.2)
+		(start 91.999 91.5311)
+		(end 91.999 86.621)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 14)
-		(uuid "13407559-1e13-47d2-8878-969ac43c3cc6")
+		(uuid "dae7bc13-bfcc-477e-8ea5-0536bf4057a2")
 	)
 	(segment
-		(start 91.568 87.052)
+		(start 91.999 86.621)
 		(end 97.76 80.86)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 14)
-		(uuid "fa79d6c5-447a-4236-ae8f-b9e160624a47")
+		(uuid "e505981a-7974-428d-98c4-578b767bc98f")
 	)
 	(segment
 		(start 113 113.88)
@@ -10651,7 +10136,7 @@
 	(segment
 		(start 112.38 128.5)
 		(end 121.275 128.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 16)
 		(uuid "3891c8b8-5f8e-432a-96a8-12e3d4745145")
@@ -10659,7 +10144,7 @@
 	(segment
 		(start 97.76 113.88)
 		(end 112.38 128.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 16)
 		(uuid "97627c7e-20a9-4a9c-9ff2-b98af1c9ff59")
@@ -10763,7 +10248,7 @@
 	(segment
 		(start 100.5 100.06776)
 		(end 100.5 65.82)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 19)
 		(uuid "0192a080-3e31-47d3-9044-587026adb259")
@@ -10771,7 +10256,7 @@
 	(segment
 		(start 94 105.85224)
 		(end 97.35224 102.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 19)
 		(uuid "5b1b3229-ce82-4f99-b535-4f0dd35f9cc6")
@@ -10779,7 +10264,7 @@
 	(segment
 		(start 92 119.46)
 		(end 92 111.0671)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 19)
 		(uuid "8b3546b7-3467-4e25-a18f-19a090255bce")
@@ -10787,7 +10272,7 @@
 	(segment
 		(start 98.06776 102.5)
 		(end 100.5 100.06776)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 19)
 		(uuid "91698dea-7770-4259-9575-5304971c8500")
@@ -10795,7 +10280,7 @@
 	(segment
 		(start 90 121.46)
 		(end 92 119.46)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 19)
 		(uuid "bed6f9e2-626e-4000-968b-8bb9c2476455")
@@ -10803,7 +10288,7 @@
 	(segment
 		(start 94 109.0671)
 		(end 94 105.85224)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 19)
 		(uuid "d2ee55f9-11e3-43bb-a713-1f351d0f1a5f")
@@ -10811,7 +10296,7 @@
 	(segment
 		(start 100.5 65.82)
 		(end 97.76 63.08)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 19)
 		(uuid "df48f763-8c70-4907-8960-378aff14156c")
@@ -10819,7 +10304,7 @@
 	(segment
 		(start 97.35224 102.5)
 		(end 98.06776 102.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 19)
 		(uuid "ecf7c084-4bfd-43db-97f5-fce7c73dd9cd")
@@ -10827,34 +10312,34 @@
 	(segment
 		(start 92 111.0671)
 		(end 94 109.0671)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 19)
 		(uuid "f46ea450-1429-4480-a71b-09e92cff2d70")
 	)
 	(segment
+		(start 95 96.1501)
+		(end 95 91.24)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 24)
+		(uuid "2daae9d5-ad1a-45a3-96b2-8af1b9954dbf")
+	)
+	(segment
 		(start 90 101.1501)
-		(end 94.5 96.6501)
-		(width 0.2)
+		(end 95 96.1501)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 24)
-		(uuid "3dabc58c-efbf-4c43-934d-a8163cb0562f")
+		(uuid "5633e9b0-de7c-483a-9c6c-bbb9b18ab241")
 	)
 	(segment
-		(start 94.5 91.74)
+		(start 95 91.24)
 		(end 97.76 88.48)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 24)
-		(uuid "47715d97-1448-4a5e-ba66-d5429de1ed90")
-	)
-	(segment
-		(start 94.5 96.6501)
-		(end 94.5 91.74)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 24)
-		(uuid "69d55cb3-976f-456f-acca-2278ed2568eb")
+		(uuid "74870ca4-9ad9-4c89-912f-5eb8dc199cb1")
 	)
 	(segment
 		(start 121 118.5)
@@ -10905,28 +10390,28 @@
 		(uuid "c68b98c7-2527-49f5-9dc0-705c4fc9afc2")
 	)
 	(segment
-		(start 92.5 93.5701)
-		(end 92.5 88.66)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 26)
-		(uuid "615073d5-8822-43ae-921a-ac12fded5be3")
-	)
-	(segment
-		(start 92.5 88.66)
-		(end 97.76 83.4)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 26)
-		(uuid "6fed0d60-676d-4b83-a16f-a08f55596bac")
-	)
-	(segment
 		(start 90 96.0701)
-		(end 92.5 93.5701)
-		(width 0.2)
+		(end 93 93.0701)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 26)
-		(uuid "ff325c1f-3da8-4b4b-8f45-ef3f2bf78db8")
+		(uuid "00246d4c-982d-4e00-a80a-eceb410994bb")
+	)
+	(segment
+		(start 93 93.0701)
+		(end 93 88.16)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 26)
+		(uuid "607a629f-b4fd-4d28-91de-39428e06da13")
+	)
+	(segment
+		(start 93 88.16)
+		(end 97.76 83.4)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 26)
+		(uuid "e08211bc-7b1e-46bb-9f33-e291668524ed")
 	)
 	(segment
 		(start 119.5 112.46)
@@ -11345,28 +10830,28 @@
 		(uuid "e6de6d8e-6ae8-4f94-930f-0b06107e024e")
 	)
 	(segment
-		(start 93.5 90.2)
-		(end 97.76 85.94)
-		(width 0.2)
+		(start 94 94.6101)
+		(end 94 89.7)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 36)
-		(uuid "5059892c-d9cc-4f0d-87d1-b7e91626440a")
+		(uuid "a298d857-cbad-4f6c-837e-9896d311d957")
 	)
 	(segment
-		(start 93.5 95.1101)
-		(end 93.5 90.2)
-		(width 0.2)
+		(start 94 89.7)
+		(end 97.76 85.94)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 36)
-		(uuid "6917798d-90b4-47d1-9d61-0d4800cfee2b")
+		(uuid "bbd5bb14-1257-4728-9d47-c0ba95d425c6")
 	)
 	(segment
 		(start 90 98.6101)
-		(end 93.5 95.1101)
-		(width 0.2)
+		(end 94 94.6101)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 36)
-		(uuid "a451a7bb-bd8e-43ed-bde1-99faca2b0e74")
+		(uuid "c496fa07-5534-4bce-8691-9bba84fd69dc")
 	)
 	(segment
 		(start 113 103.72)
@@ -11531,7 +11016,7 @@
 	(segment
 		(start 113 61)
 		(end 124.5 72.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 40)
 		(uuid "c7ddeb81-0dfb-448f-923b-9de7a0c6cdbf")
@@ -11659,7 +11144,7 @@
 	(segment
 		(start 93 111)
 		(end 95 109)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 42)
 		(uuid "01d44758-e0e5-4130-b453-aa4f526d17b1")
@@ -11667,7 +11152,7 @@
 	(segment
 		(start 95 107)
 		(end 97.129 104.871)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 42)
 		(uuid "04f74505-ac09-4432-951e-0930b0601e0e")
@@ -11675,7 +11160,7 @@
 	(segment
 		(start 93 123.54)
 		(end 93 111)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 42)
 		(uuid "1b0dceab-2faa-4f6e-b36c-72c707f181fb")
@@ -11683,7 +11168,7 @@
 	(segment
 		(start 90 126.54)
 		(end 93 123.54)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 42)
 		(uuid "2dbfedc9-6089-4f41-a1bb-dda5af01c1c6")
@@ -11691,7 +11176,7 @@
 	(segment
 		(start 97.129 104.871)
 		(end 98.23676 104.871)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 42)
 		(uuid "36057878-aac1-40bc-b7a5-aac914fe9c25")
@@ -11699,7 +11184,7 @@
 	(segment
 		(start 95 109)
 		(end 95 107)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 42)
 		(uuid "7d604554-4b82-47c1-992a-0151f51456b8")
@@ -11707,7 +11192,7 @@
 	(segment
 		(start 101.5 101.60776)
 		(end 101.5 77.12)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 42)
 		(uuid "a369d51e-1850-4c0f-9fe9-7fe3e9b86c53")
@@ -11715,7 +11200,7 @@
 	(segment
 		(start 101.5 77.12)
 		(end 113 65.62)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 42)
 		(uuid "ee0dc1d6-1224-4242-93fb-d00768381c83")
@@ -11723,7 +11208,7 @@
 	(segment
 		(start 98.23676 104.871)
 		(end 101.5 101.60776)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 42)
 		(uuid "ff4e2c87-6849-4df8-90ad-411f6feabe38")
@@ -12123,7 +11608,7 @@
 	(segment
 		(start 126.04 76.5)
 		(end 118.8 76.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 50)
 		(uuid "44f53deb-74ec-4b48-a4e5-7b26f2f5c0d3")
@@ -12131,7 +11616,7 @@
 	(segment
 		(start 127.54 78)
 		(end 126.04 76.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 50)
 		(uuid "507987ba-d345-4ad0-a094-122df414d4f6")
@@ -12139,7 +11624,7 @@
 	(segment
 		(start 113 70.7)
 		(end 118.8 76.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 50)
 		(uuid "a9efed3d-5f08-463f-9036-bcff981d6aed")
@@ -12243,7 +11728,7 @@
 	(segment
 		(start 91.5 56.5)
 		(end 111.5 56.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 53)
 		(uuid "96e67261-bc39-4562-9aa3-1a2b74cdab75")
@@ -12251,7 +11736,7 @@
 	(segment
 		(start 111.5 56.5)
 		(end 113 58)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 53)
 		(uuid "f51da7d9-1800-4582-a82d-e7c770eac6fd")
@@ -12259,87 +11744,87 @@
 	(segment
 		(start 90 58)
 		(end 91.5 56.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 53)
 		(uuid "f5532a44-fa54-4406-8e24-9c9c83b34ae2")
 	)
 	(segment
-		(start 99.5 98.52776)
-		(end 99.5 67.36)
-		(width 0.2)
+		(start 97.28324 99.791)
+		(end 98.23676 99.791)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 54)
-		(uuid "1c7a9d46-42e1-4207-b006-51b158790532")
+		(uuid "036964e3-ee42-4d3d-9aaa-8f718de30e2c")
 	)
 	(segment
-		(start 98.23676 99.791)
-		(end 99.5 98.52776)
-		(width 0.2)
+		(start 88.5 122.5)
+		(end 88.5 113)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 54)
-		(uuid "288a26a6-aa57-47b4-a2d4-4d23cf5b93bb")
-	)
-	(segment
-		(start 90 124)
-		(end 88.5 122.5)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 54)
-		(uuid "345db1d3-bdcf-4b66-a2df-b0d8b8c0cc5d")
+		(uuid "145c9d7c-5789-44c1-9d6c-f491ce41102c")
 	)
 	(segment
 		(start 99.5 67.36)
 		(end 97.76 65.62)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 54)
-		(uuid "3b5a9bba-3b4a-481c-a0f9-6d25168f7a66")
+		(uuid "2e61a81a-c68a-4403-a16b-d96118742101")
 	)
 	(segment
-		(start 88.5 122.5)
-		(end 88.5 114)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 54)
-		(uuid "3fbc9a52-00b6-4e8d-a83d-3fc5839b0c87")
-	)
-	(segment
-		(start 97.28324 99.791)
-		(end 98.23676 99.791)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 54)
-		(uuid "824b17ba-04ce-4665-8731-664581cea7e5")
-	)
-	(segment
-		(start 93.5 109)
-		(end 93.5 103.57424)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 54)
-		(uuid "a2fc99f3-f611-4057-bcde-c23aec35ec3b")
-	)
-	(segment
-		(start 88.5 114)
-		(end 93.5 109)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 54)
-		(uuid "bb2bbd24-748a-44a1-bbba-0d097332751e")
-	)
-	(segment
-		(start 93.5 103.57424)
+		(start 93 104.07424)
 		(end 97.28324 99.791)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 54)
-		(uuid "c07279fc-a995-494d-b63d-b9b1bbb1293f")
+		(uuid "5271b31b-1856-48f5-bed8-ea6e7ee4c4a1")
+	)
+	(segment
+		(start 98.23676 99.791)
+		(end 99.5 98.52776)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 54)
+		(uuid "7e34493a-262f-4758-b008-08d9c3d9d063")
+	)
+	(segment
+		(start 93 108.5)
+		(end 93 104.07424)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 54)
+		(uuid "9388721e-46d8-4a1e-9875-381143f7af66")
+	)
+	(segment
+		(start 88.5 113)
+		(end 93 108.5)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 54)
+		(uuid "95365b26-c6e0-41a7-8389-c1fc8c09c084")
+	)
+	(segment
+		(start 99.5 98.52776)
+		(end 99.5 67.36)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 54)
+		(uuid "b8dd20e1-4d9e-4f3e-a642-ee8a74e91b1e")
+	)
+	(segment
+		(start 90 124)
+		(end 88.5 122.5)
+		(width 0.4)
+		(layer "F.Cu")
+		(net 54)
+		(uuid "dd50e6d9-967d-4284-8581-2d00fb09e1d8")
 	)
 	(segment
 		(start 128.38 127.62)
 		(end 132.15 123.85)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 58)
 		(uuid "1f02fe4f-8766-4a24-94ff-ca9688d8aedd")
@@ -12347,7 +11832,7 @@
 	(segment
 		(start 90.061402 84.645)
 		(end 89.145 84.645)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 58)
 		(uuid "cfdd347e-2a2a-4e4e-a20a-619bdb574d7e")
@@ -12355,7 +11840,7 @@
 	(segment
 		(start 132.15 123.85)
 		(end 132.15 116)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 58)
 		(uuid "ef21f5d7-c92b-4b63-843f-1039b8b2c770")
@@ -12371,7 +11856,7 @@
 	(segment
 		(start 90 63.08)
 		(end 88 65.08)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "15dd7c40-a8eb-44ad-ac73-0860f9fa8d3c")
@@ -12379,7 +11864,7 @@
 	(segment
 		(start 91.5 87)
 		(end 91.5 117.42)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "1be354bd-d4b9-41fd-8bce-54b337ead434")
@@ -12387,7 +11872,7 @@
 	(segment
 		(start 88 83.5)
 		(end 89.145 84.645)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "2662ac63-5e17-4316-9057-ff9ffa7e1cae")
@@ -12395,7 +11880,7 @@
 	(segment
 		(start 136.8278 80.44)
 		(end 127.44 80.44)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "30e20cb2-862a-47d4-8f50-e1ae9db2f8de")
@@ -12403,7 +11888,7 @@
 	(segment
 		(start 123.235 84.645)
 		(end 127.44 80.44)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "597058d9-66e9-40a9-9012-677f2dc19c25")
@@ -12411,7 +11896,7 @@
 	(segment
 		(start 89.145 84.645)
 		(end 91.5 87)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "68a29f6a-1c30-44e5-b425-08b4cdc8c032")
@@ -12419,7 +11904,7 @@
 	(segment
 		(start 91.5 117.42)
 		(end 90 118.92)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "81d67a13-4a13-48b5-a503-e2de8be12d7e")
@@ -12427,7 +11912,7 @@
 	(segment
 		(start 89.145 84.645)
 		(end 123.235 84.645)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "83af99a0-8dca-4b8a-9207-172836e8a4a9")
@@ -12435,7 +11920,7 @@
 	(segment
 		(start 90 108.7701)
 		(end 88 106.7701)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "a8101504-45f2-4e68-a53b-60509a2f45ef")
@@ -12443,7 +11928,7 @@
 	(segment
 		(start 127.44 80.44)
 		(end 125 78)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "bc4f5231-036d-48f1-800b-f484b78fe32c")
@@ -12451,7 +11936,7 @@
 	(segment
 		(start 88 106.7701)
 		(end 88 85.79)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "e27382c8-ebbb-4056-abce-77561bc41c49")
@@ -12459,7 +11944,7 @@
 	(segment
 		(start 88 85.79)
 		(end 89.145 84.645)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "e8c3e186-ee52-40a1-8905-eaafb8abf92e")
@@ -12467,7 +11952,7 @@
 	(segment
 		(start 88 65.08)
 		(end 88 83.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "B.Cu")
 		(net 58)
 		(uuid "f0249e01-caa3-47a8-bf7f-d82f2b58ba76")
@@ -12475,7 +11960,7 @@
 	(segment
 		(start 91.435 84.645)
 		(end 97.76 78.32)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 59)
 		(uuid "00c13eb6-ae63-4957-a92b-9017e89736f7")
@@ -12483,7 +11968,7 @@
 	(segment
 		(start 91.167 84.645)
 		(end 91.167 89.8231)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 59)
 		(uuid "57e0cd64-f072-41c4-80e4-19a5ebc58623")
@@ -12499,7 +11984,7 @@
 	(segment
 		(start 91.167 89.8231)
 		(end 90 90.9901)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 59)
 		(uuid "d807a41f-38cf-4b14-af37-e7e7c702d30f")
@@ -12507,7 +11992,7 @@
 	(segment
 		(start 139.77 126)
 		(end 139.77 117.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 60)
 		(uuid "6f789ae4-e94b-4327-8fd2-c0d74331f92f")
@@ -12515,7 +12000,7 @@
 	(segment
 		(start 138.15 127.62)
 		(end 139.77 126)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 60)
 		(uuid "997f3862-ab8a-403d-9bdb-9bf5e9fd07ea")
@@ -12523,7 +12008,7 @@
 	(segment
 		(start 139.77 117.5)
 		(end 145.77 111.5)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 60)
 		(uuid "9dd6720f-3f20-4b2c-8346-0db2824c23f0")
@@ -12531,7 +12016,7 @@
 	(segment
 		(start 136 127.62)
 		(end 138.15 127.62)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 60)
 		(uuid "d9c8df6d-489b-4dd5-ac5d-68542642a79a")
@@ -12539,7 +12024,7 @@
 	(segment
 		(start 142.143 117.667)
 		(end 145.77 114.04)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 74)
 		(uuid "5be3e348-eb84-4d27-b86d-ad8e4223078c")
@@ -12547,7 +12032,7 @@
 	(segment
 		(start 142.143 126.557)
 		(end 142.143 117.667)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 74)
 		(uuid "af9266a2-622b-423e-aa91-43f1cf3e2337")
@@ -12555,7 +12040,7 @@
 	(segment
 		(start 141.08 127.62)
 		(end 142.143 126.557)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 74)
 		(uuid "ea3a83ff-9028-4cba-8e94-1a8e531ce555")
@@ -12563,7 +12048,7 @@
 	(segment
 		(start 123 126.775)
 		(end 123 123.86)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 75)
 		(uuid "06b2b954-caa7-44bc-94e5-4c2eb7b226fa")
@@ -12571,7 +12056,7 @@
 	(segment
 		(start 124.725 128.5)
 		(end 123 126.775)
-		(width 0.2)
+		(width 0.4)
 		(layer "F.Cu")
 		(net 75)
 		(uuid "8ea04849-e398-4f83-9397-6b287b5ef13b")

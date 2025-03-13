@@ -44,7 +44,7 @@ char rate_unit[8] = "/sec";
 uint32_t mode = 0;
 
 //Local MCU time variables
-uint32_t year = 202511;
+uint32_t year = 2025;
 uint32_t month = 1;
 uint32_t day = 1;
 uint32_t hour = 1;

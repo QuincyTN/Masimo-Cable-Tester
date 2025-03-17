@@ -1,4 +1,4 @@
-25430044519698021
+25437011576846757
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -64407,6 +64407,27 @@ solder jumper open
 5
 3
 KiCad Symbols and Footprints
+CAPC10555_55N_KEM
+
+C0402C103K4RECTU 
+0
+2
+2
+KiCad Symbols and Footprints
+CAPC10555_55N_KEM-L
+
+C0402C103K4RECTU 
+0
+2
+2
+KiCad Symbols and Footprints
+CAPC10555_55N_KEM-M
+
+C0402C103K4RECTU 
+0
+2
+2
+KiCad Symbols and Footprints
 CAP_CL05_SAM
 
 CL05B104KP5NNNC 
@@ -64452,6 +64473,13 @@ KiCad Symbols and Footprints
 CONN_3M_2900
 
 2908-05WB-MG 
+0
+12
+12
+KiCad Symbols and Footprints
+GCT_MEM2061-01-188-00-A_REVA
+
+
 0
 12
 12

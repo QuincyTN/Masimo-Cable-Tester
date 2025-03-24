@@ -2264,7 +2264,7 @@
 		(property "Reference" "J4"
 			(at -0.1722 3 0)
 			(layer "F.SilkS")
-			(uuid "30bca5b5-5b39-47b8-82fe-2dd559a4d43e")
+			(uuid "a6fc5d7d-9ee7-4cf9-bf40-1c73f81ca937")
 			(effects
 				(font
 					(size 1 1)
@@ -2275,7 +2275,7 @@
 		(property "Value" "Barrel Jack 9V"
 			(at 6.8278 1 90)
 			(layer "F.Fab")
-			(uuid "611e3879-451e-4777-a615-6e0ba9120d9d")
+			(uuid "993e20d7-2b89-4ea9-9f84-ad794a6a4647")
 			(effects
 				(font
 					(size 1 1)
@@ -2287,7 +2287,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2f9c89e1-bae3-4c6a-9fdc-29b780f3f890")
+			(uuid "5491708c-6f33-4e84-ae1e-dcc87ea393ab")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2299,7 +2299,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "87b81fdd-e230-43e8-81ea-03a7ddcb8a72")
+			(uuid "9b9dea45-3bb1-4448-84c5-fb8e22525e3b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3138,7 +3138,7 @@
 		(property "Reference" "J7"
 			(at 0 -2.33 0)
 			(layer "F.SilkS")
-			(uuid "91b5ddfb-ad64-4911-ac8f-0074a879cc95")
+			(uuid "eeafe9a6-93cd-4fb0-a24d-c81c10f0327a")
 			(effects
 				(font
 					(size 1 1)
@@ -3149,7 +3149,7 @@
 		(property "Value" "HMI Power Toggle"
 			(at -3.5 2.5 90)
 			(layer "F.Fab")
-			(uuid "79da0f7c-c92c-4099-960c-bf3e00e931dc")
+			(uuid "16bc5590-75a9-4b3e-9b71-ff398a23940e")
 			(effects
 				(font
 					(size 1 1)
@@ -3162,7 +3162,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "619cec2b-d42c-4a03-9787-0f2b261f50be")
+			(uuid "65f3900f-96a5-48b3-aa73-d8dfa51ffdbc")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3175,7 +3175,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ed58bb6f-0b71-4412-b17d-189d617cc410")
+			(uuid "29f0f139-1ffc-48df-a4c5-5135422a0a5d")
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -1,4 +1,4 @@
-25437011576846757
+25440502998487815
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -64477,6 +64477,13 @@ CONN_3M_2900
 12
 12
 KiCad Symbols and Footprints
+CONN_SFML-110-T1-X-D_SAI
+
+SFML-110-T1-S-D 
+0
+20
+20
+KiCad Symbols and Footprints
 GCT_MEM2061-01-188-00-A_REVA
 
 
@@ -64541,6 +64548,13 @@ RES_ERA8AEB152V
 2
 KiCad Symbols and Footprints
 SAMTEC_SFML-110-02-L-D-A
+
+
+0
+20
+20
+KiCad Symbols and Footprints
+SAMTEC_SFML-110-T1-S-D
 
 
 0

@@ -5937,7 +5937,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SFML-110-02-L-D-A:SFML-110-02-L-D-A"
+		(symbol "SFML-110-T1-S-D:SFML-110-T1-S-D"
 			(pin_names
 				(offset 1.016)
 			)
@@ -5953,7 +5953,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Value" "SFML-110-02-L-D-A"
+			(property "Value" "SFML-110-T1-S-D"
 				(at -7.62 -17.78 0)
 				(effects
 					(font
@@ -5962,7 +5962,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" "SFML-110-02-L-D-A:SAMTEC_SFML-110-02-L-D-A"
+			(property "Footprint" "SFML-110-T1-S-D:SAMTEC_SFML-110-T1-S-D"
 				(at 0 0 0)
 				(effects
 					(font
@@ -6020,7 +6020,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SFML-110-02-L-D-A_0_0"
+			(symbol "SFML-110-T1-S-D_0_0"
 				(rectangle
 					(start -7.62 -15.24)
 					(end 7.62 12.7)
@@ -12101,7 +12101,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "LP2985-33DBVR"
@@ -12654,7 +12653,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "54-00129"
@@ -13917,7 +13915,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "58416928-c71d-4417-b9c3-4cfaf1fd6a9b")
-		(property "Reference" "U7"
+		(property "Reference" "U4"
 			(at 119.38 72.39 0)
 			(effects
 				(font
@@ -14052,7 +14050,7 @@
 		(instances
 			(project ""
 				(path "/9839a162-8d53-4cc7-8474-cf7807328c6e"
-					(reference "U7")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -14074,7 +14072,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "AVR128DB64x-xMR"
@@ -15051,159 +15048,6 @@
 		)
 	)
 	(symbol
-		(lib_id "SFML-110-02-L-D-A:SFML-110-02-L-D-A")
-		(at 231.14 113.03 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "708765aa-6469-4902-b1a2-84e255f3aa3d")
-		(property "Reference" "J20"
-			(at 231.14 98.806 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SFML-110-02-L-D-A"
-			(at 231.14 130.556 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "KiCad Symbols and Footprints:SAMTEC_SFML-110-02-L-D-A"
-			(at 231.14 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "JLCPCB Part # C5910777"
-			(at 231.14 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PARTREV" "E"
-			(at 231.14 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "STANDARD" "Manufacturer Recommendations"
-			(at 231.14 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MANUFACTURER" "SAMTEC"
-			(at 231.14 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(pin "20"
-			(uuid "2f79c362-9054-4549-bf4c-f81c480b77cc")
-		)
-		(pin "08"
-			(uuid "b0941e8e-8176-4bc6-a152-c9cd059f0d37")
-		)
-		(pin "09"
-			(uuid "52ac22e0-9c5d-423f-b369-3a87b17d57be")
-		)
-		(pin "11"
-			(uuid "e5a3c00a-17de-4cae-aa72-d6c2a62cc745")
-		)
-		(pin "06"
-			(uuid "02de6014-3e0b-4792-aed0-621e384c0ad6")
-		)
-		(pin "14"
-			(uuid "59e7935f-d3d8-4ace-9070-c9a263d664ed")
-		)
-		(pin "12"
-			(uuid "101d7902-2223-4ffa-b800-3ade9529f209")
-		)
-		(pin "04"
-			(uuid "c0649039-7228-4a77-bc78-38ac5ecd6412")
-		)
-		(pin "15"
-			(uuid "0c0d58c2-985b-4f26-b4e5-eb858b6d8b31")
-		)
-		(pin "18"
-			(uuid "da6956f3-0095-445a-9aab-9d4c83ac156a")
-		)
-		(pin "02"
-			(uuid "500876c3-8d43-4b15-8dc2-283886207907")
-		)
-		(pin "03"
-			(uuid "512efe1c-6366-4f37-a583-eb35224114ec")
-		)
-		(pin "19"
-			(uuid "e9fcf5d1-a0e4-4f2b-abd6-2bc3d17ad16c")
-		)
-		(pin "05"
-			(uuid "f65a5a0a-bf41-4bfb-9487-825fab83cada")
-		)
-		(pin "01"
-			(uuid "ea1f4718-4b23-4ad3-a36e-1aaa720cafb8")
-		)
-		(pin "07"
-			(uuid "370b3265-a5bd-4cb6-a627-cfb1ec77c340")
-		)
-		(pin "17"
-			(uuid "a7d4811a-84d5-4b36-845a-a19932687c52")
-		)
-		(pin "13"
-			(uuid "74914a2a-fd06-4ed1-aa5d-9944cc736e37")
-		)
-		(pin "16"
-			(uuid "f0879201-5201-4298-b4ac-9983746e101f")
-		)
-		(pin "10"
-			(uuid "d5024f79-0b4a-4c6b-ad32-08633c27856f")
-		)
-		(instances
-			(project "Final PCB Design - Cable Tester"
-				(path "/9839a162-8d53-4cc7-8474-cf7807328c6e"
-					(reference "J20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCM_JLCPCB-Capacitors:0402,100nF")
 		(at 180.34 40.64 0)
 		(unit 1)
@@ -15556,7 +15400,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "Value" "LM7805T"
@@ -15958,10 +15801,9 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Value" "Rocker Switch"
+		(property "Value" "1x2 Pin header"
 			(at 147.32 33.02 0)
 			(effects
 				(font
@@ -15987,7 +15829,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Single Pole Single Throw (SPST) switch, separate symbol"
+		(property "Description" "Header to connect to the box switch"
 			(at 147.32 36.83 0)
 			(effects
 				(font
@@ -16095,7 +15937,7 @@
 		(dnp no)
 		(uuid "b6f248e7-b5bf-4b2a-b070-897cdf4a4fbc")
 		(property "Reference" "U6"
-			(at 76.962 46.99 0)
+			(at 57.15 67.31 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -16314,10 +16156,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c3d35e2b-a0ce-4453-ba6c-afe051ff292d")
 		(property "Reference" "D1"
-			(at 57.15 30.48 90)
+			(at 57.15 39.878 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16513,6 +16354,159 @@
 			(project ""
 				(path "/9839a162-8d53-4cc7-8474-cf7807328c6e"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SFML-110-T1-S-D:SFML-110-T1-S-D")
+		(at 231.14 113.03 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d0fce199-22a0-48e6-8049-b4fa596acc87")
+		(property "Reference" "J1"
+			(at 231.14 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SFML-110-T1-S-D"
+			(at 231.14 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "KiCad Symbols and Footprints:SAMTEC_SFML-110-T1-S-D"
+			(at 231.14 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Digikey Part # SAM8241-ND / JLCPCB Part # C5886728"
+			(at 231.14 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "E"
+			(at 231.14 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 231.14 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "SAMTEC"
+			(at 231.14 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "06"
+			(uuid "6730995b-c04f-466c-a7d5-7ffa751df9b2")
+		)
+		(pin "12"
+			(uuid "149cc482-a2e7-4060-99e7-2748fef4434d")
+		)
+		(pin "13"
+			(uuid "f585c712-37c4-451b-8736-c85dc5802b24")
+		)
+		(pin "03"
+			(uuid "fc6c33f9-25ab-4950-982c-1eb014664cc0")
+		)
+		(pin "11"
+			(uuid "42cadbbf-4c18-4345-ae9d-e3377502daae")
+		)
+		(pin "17"
+			(uuid "14031424-00fa-4a81-9454-b448dd19e99c")
+		)
+		(pin "02"
+			(uuid "24f6c526-c948-4b0f-a404-963dd2332b8a")
+		)
+		(pin "05"
+			(uuid "daad76f6-997a-4683-a47c-e0de9b4c8646")
+		)
+		(pin "07"
+			(uuid "17200fc9-5c25-4edd-8186-17726dd0afea")
+		)
+		(pin "09"
+			(uuid "12727b2a-9d78-48c0-b48b-23c620283b42")
+		)
+		(pin "15"
+			(uuid "eed12cf6-05c4-4b66-8a5d-afcbdf42c9c1")
+		)
+		(pin "19"
+			(uuid "affdcb36-2a55-4b4c-8a25-3515f9272c0c")
+		)
+		(pin "04"
+			(uuid "35872a2d-4995-4632-b17b-7139a1e90b8d")
+		)
+		(pin "08"
+			(uuid "ca69c2a1-fe30-49e8-82a9-45fec3a147a1")
+		)
+		(pin "01"
+			(uuid "86c8e718-fc44-4142-8e32-4894eecd2f41")
+		)
+		(pin "10"
+			(uuid "705f3e7a-ab02-4e19-a304-74f0e86fcbe2")
+		)
+		(pin "14"
+			(uuid "92fe7df2-f228-4e4f-b39a-c0ef2faf7101")
+		)
+		(pin "16"
+			(uuid "5b26eb2f-f606-4b7e-85be-7672a8aa1cc8")
+		)
+		(pin "18"
+			(uuid "b1a9a761-c5c2-43df-ac71-33be02562287")
+		)
+		(pin "20"
+			(uuid "b54b2130-c376-48b7-b93b-5cd6b9c7d008")
+		)
+		(instances
+			(project ""
+				(path "/9839a162-8d53-4cc7-8474-cf7807328c6e"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -17280,7 +17274,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f114b483-9b31-4848-928b-e552e6e3cbdb")
-		(property "Reference" "Q2"
+		(property "Reference" "Q1"
 			(at 30.48 30.48 90)
 			(effects
 				(font
@@ -17506,7 +17500,7 @@
 		(instances
 			(project ""
 				(path "/9839a162-8d53-4cc7-8474-cf7807328c6e"
-					(reference "Q2")
+					(reference "Q1")
 					(unit 1)
 				)
 			)

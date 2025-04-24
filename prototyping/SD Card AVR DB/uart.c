@@ -31,6 +31,7 @@ const char hex_array[] = "0123456789ABCDEFx";		// used to convert hex numbers to
 //function to initialize UART
 void uart_init (void)
 {
+	/*
 	// USART1 on an AVR128DA48.  TX is pin PC0, RX PC1 
 	// USART3 on an AVR128DB48.  TX is pin PB0, RX is PB1
 	// USART2 on an AVR128DB48 Curiosity Nano needs to be moved to an alternate pin config
@@ -41,6 +42,18 @@ void uart_init (void)
 	DB_USART.CTRLA |= USART_RXCIE_bm;			// enable receiver interrupt
 	DB_USART.CTRLB |= USART_RXEN_bm;			// enable receiver
 	sei();										// enable global interrupts
+	*/
+	uint16_t B = 64UL * F_CPU / (16UL * 9600);	//calculate aysynchronous baudrate
+	PORTMUX.USARTROUTEA &= 0;	//USART3 using PB0 as TxD and PB1 as RxD
+	PORTB.DIRSET = (1 << 0);    //Set PB0 as output (TxD)
+	PORTB.DIRCLR = (1 << 1);	//Set PB1 as input (RxD)
+
+	USART3.BAUD = B;
+	
+	//USART3.CTRLC |= (1<<6);		//USART is synchronous, no parity bit, 1 stop bit, 8 char data size
+	USART3.CTRLB = (USART_RXEN_bm) | (USART_TXEN_bm); //enable receiver and transmitter
+	
+	USART3.CTRLA = (USART_RXCIE_bm);	//enable receive complete interrupt
 }
 
 /*  Function to receive a character from UART */

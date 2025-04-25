@@ -503,7 +503,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "C:/Users/Masimo/Desktop/",
+      "plot": "./",
       "pos_files": "C:/Users/Masimo/Desktop/",
       "specctra_dsn": "",
       "step": "",

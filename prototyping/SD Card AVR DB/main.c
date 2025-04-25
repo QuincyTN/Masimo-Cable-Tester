@@ -55,6 +55,7 @@ void SD_demo(void);		// gwp 6/12/2024 Demo SD card file functions.  The code has
 						// with the SD card functions needed to support the short/break detector.
 //void SD_demo(char* my_string);
 void my_demo(char* test_type, char* pinA, int pinA_num, char* pinB, int pinB_num, float pinA_voltage, float pinB_voltage);
+//void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t action);
 void SD_card_read(char input[]);
 void SD_card_read_test(char input[]);
 
@@ -144,12 +145,14 @@ char hmiBuffer[BUFFER_SIZE];
 
 const char helpMenu[] =
 "Terminal Functions\n"
-"__________________________________________________\n"
-"led on     - Turns the LED on\n"
-"led off    - Turns the LED off\n"
-"help       - Display a menu of terminal functions\n"
-"get [arg]  - Get data from the MCU page on the HMI\n"
-"	- Valid arguments: n0, n1, t2, t3\n";
+"_____________________________________________________________________\n"
+"led on          - Turns the LED on\n"
+"led off         - Turns the LED off\n"
+"help            - Display a menu of terminal functions\n"
+"settings        - Display current settings\n"
+"get time(WIP)   - Display local MCU time\n"
+"char done       - Simulate characterization finish, go to respective page\n"
+"fault           - Go to the fault_detected\n";
 
 void portInit(){
 	/*
@@ -186,27 +189,64 @@ void initUSART2(){
 	USART2.CTRLA = (USART_RXCIE_bm);	//enable receive complete interrupt
 }
 
+void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t action){
+    ///*
+    //This function will send commands to the HMI. page
+    //
+    char command[50];
+    int len = 0;
+	PORTB.OUTCLR = PIN3_bm;
+
+    if(action == 1){//if the MCU needs a value from HMI (request is 1)
+        len = sprintf(command, "get %s.%s.%s%c%c%c", page, ID, field, 0xFF, 0xFF, 0xFF);
+    }
+    else if(action == 2){//if the MCU update text box in HMI
+        len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, value, 0xFF, 0xFF, 0xFF);
+		//PORTB.OUTCLR = PIN3_bm;
+    }
+    else if(action == 3){ //if the MCU update number value in HMI
+        int my_int = atoi(value);
+        len = sprintf(command, "%s.%s.val=%d%c%c%c", page, ID, my_int, 0xFF, 0xFF, 0xFF);
+    }
+    else if(action == 4){//if the MCU needs to go to another page
+        len = sprintf(command, "page %s%c%c%c", page, 0xFF, 0xFF, 0xFF);
+    }
+
+    for(int i = 0; i < len; i++){
+        while(!(USART2.STATUS & (USART_DREIF_bm)));    //wait until all data in buffer is sent
+        USART2.TXDATAL = (char)command[i];    //send new char
+    }
+}
+
+/*
 void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t request){
-	/*
-	This function will send commands to the HMI. page
-	*/
+	//temp_here
+	
+	//This function will send commands to the HMI. page
+	
 	char command[50];
 	int len = 0;
+	
+	len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, value, 0xFF, 0xFF, 0xFF);
 
+	
 	if(request){	//if the MCU needs a value from HMI (request is 1)
 		len = sprintf(command, "get %s.%s.%s%c%c%c", page, ID, field, 0xFF, 0xFF, 0xFF);
 	}
 	else {		//MCU update text box in HMI
 		//len = sprintf(command, "%s.%s.txt=\"%s\"%c%c%c", page, ID, value, 0xFF, 0xFF, 0xFF);
-		int my_int = atoi(value);
-		len = sprintf(command, "%s.%s.val=%d%c%c%c", page, ID, my_int, 0xFF, 0xFF, 0xFF);
+		len = sprintf(command, "%s.txt=\"%s\"%c%c%c", ID, value, 0xFF, 0xFF, 0xFF);
+		//int my_int = atoi(value);
+		//len = sprintf(command, "%s.%s.val=%d%c%c%c", page, ID, my_int, 0xFF, 0xFF, 0xFF);
 	}
+	
 	for(int i = 0; i < len; i++){
 		while(!(USART2.STATUS & (USART_DREIF_bm)));	//wait until all data in buffer is sent
 		USART2.TXDATAL = (char)command[i];	//send new char
 	}
 		
 }
+*/
 
 void initTimer1s() {
 	//Set the period for 1 second
@@ -308,15 +348,6 @@ void parseTerminalData(char* strData){
 	}
 	else if(strcmp(terminalBuffer, "get n0") == 0) {
 		transmitHmi(PAGE_MCU,N0,VAL,NULL, 1);	//get n0.val value
-	}
-	else if(strcmp(terminalBuffer, "get n1") == 0) {
-		transmitHmi(PAGE_MCU,N1,VAL,NULL, 1);	//get n1.val value
-	}
-	else if(strcmp(terminalBuffer, "get t2") == 0) {
-		transmitHmi(PAGE_MCU,T2,TXT,NULL, 1);	//get t2.txt text
-	}
-	else if(strcmp(terminalBuffer, "get t3") == 0) {
-		transmitHmi(PAGE_MCU,T3,TXT,NULL, 1);	//get t3.txt text
 	}
 }
 
@@ -422,15 +453,17 @@ int main(void)
 {	
 	volatile bool CARD_IN = false;		// variables for determining state of the SD card insertion
     volatile bool CARD_OUT = false;
-
+	
+	ccp_write_io(&(CLKCTRL.OSCHFCTRLA),CLKCTRL_FRQSEL_24M_gc);	//set main clock to 24MHz
 	portInit();
-	clk_init();			// sets up main and peripheral clocks
+	//transmitHmi("home", "t0", NULL, "O", 2);
+	//clk_init();			// sets up main and peripheral clocks
 	uart_init();		// sets up UART 3 - 115200 baud, 1 stop bit,  no parity, no flow control
 	initUSART2();
 
 	UART_sendString("\n\n");	// reset terminal lines
 	
-	
+	transmitTerminal(helpMenu);
 	ADC0_SetWindowChannel(0);
 	SYSTEM_Initialize();
 	ADC0_EnableAutoTrigger();
@@ -448,8 +481,11 @@ int main(void)
 	CTR_2_SetDigitalInput();
 	CTR_3_SetDigitalInput();
 	
+	
 	while(1){  // main loop  
-	//transmitHmi("page0", "c0", NULL, "1", 0);
+		//temp_here
+	//transmitHmi("home", "c0", NULL, "1", 0);
+	//transmitHmi("home", "t4", NULL, "ok", 0);
 	
 	SD_demo();
 	//my_demo();
@@ -458,12 +494,12 @@ int main(void)
 						// short/break detector.  Functions follow main.
 		
 	//if(return_code==1) {					      // makes sure the requirement is not checked off if
-	//	transmitHmi("page0", "c0", NULL, "0", 0); // there was a mounting error
+	//	transmitHmi("page0", "t0", NULL, "0", 0); // there was a mounting error
 	//}
 	
-	//if(FAT_getFileSize(&file) >= 10) {
-	//	transmitHmi("page0", "c0", NULL, "1", 0);
-	//}
+	if(FAT_getFileSize(&file) >= 10) {
+		transmitHmi("settings", "t0", NULL, "okay1", 2);
+	}
 
 	//transmitHmi("page0", "c0", NULL, "0", 0);
     while (1){  // inner loop.  Only broken out of back to main loop if the 
@@ -471,21 +507,20 @@ int main(void)
 		
 		//UART_sendString("Testing delay...\n");	// debug to see delay is working properly
 		 //_delay_ms(1000);						    // execute this loop approximately once per second
-		
-		if(sd_detected()){
-			
-			if (!CARD_IN){
+		if(sd_detected()){//1
+			if (!CARD_IN){//2
 				UART_sendString("Card connected\n");
+				transmitHmi("settings", "t1", NULL, "okay2", 2);
 				CARD_IN = true;
-				///* ADC pin pair check start
-					  for (int j = 0; j < NUM_PINS - 1; j++) {
+				/* ADC pin pair check start
+					  for (int j = 0; j < NUM_PINS - 1; j++) {//3
 						  open_test = 0;
 						  short_test = 0;
 						  diode_test = 0;
 						  resistor_test = 0;
 						  setLow(i);
 						  setLow(j);
-						  if (i != j) {
+						  if (i != j) {//4
 							  setOutput(i);
 							  setOutput(j);
 							  printf("Check for pair %d, %d\n", i, j);
@@ -494,13 +529,14 @@ int main(void)
 							  test_a = process_adc_conversion(i);
 							  test_b = process_adc_conversion(j);
 							  printf("Both Low Test\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n", i, test_a, j, test_b);
+							  transmitHmi("home", "t0", NULL, "ok", 0);
 							  my_demo("Both Low Test", "Pin ", i, "Pin ", j, test_a, test_b);
-							  if (test_a < 0.10 && test_b < 0.10) {
+							  if (test_a < 0.10 && test_b < 0.10) {//5
 								  open_test++;
 								  short_test++;
 								  diode_test++;
 								  resistor_test++;
-							  }
+							  }//5
 
 							  // Test 1: i High, j Low
 							  setHigh(i);
@@ -509,15 +545,15 @@ int main(void)
 							  test_b = process_adc_conversion(j);
 							  printf("A High, B Low\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n", i, test_a, j, test_b);
 							  my_demo("A High, B Low", "Pin ", i, "Pin ", j, test_a, test_b);
-							  if (test_a > (vcc_A - 0.1) && test_b < 0.10) {
+							  if (test_a > (vcc_A - 0.1) && test_b < 0.10) {//6
 								  open_test++;
-								  } else if ((test_b > ((vcc_B / 2) - 0.1) && test_a < ((vcc_B / 2) + 0.1)) && (test_a > ((vcc_A / 2) - 0.1) && test_a < ((vcc_A / 2) + 0.1))) {
+								  } else if ((test_b > ((vcc_B / 2) - 0.1) && test_a < ((vcc_B / 2) + 0.1)) && (test_a > ((vcc_A / 2) - 0.1) && test_a < ((vcc_A / 2) + 0.1))) {//7
 								  // short test
 								  short_test++;
-								  } else if (test_a < 0.10 && test_b < 0.10) {
+								  } else if (test_a < 0.10 && test_b < 0.10) {//8
 								  // diode test
 								  diode_test++;
-							  }
+							  }//8
 
 							  // Test 2: i Low, j High
 							  setLow(i);
@@ -526,15 +562,15 @@ int main(void)
 							  test_b = process_adc_conversion(j);
 							  printf("A Low, B High\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n", i, test_a, j, test_b);
 							  my_demo("A Low, B High", "Pin ", i, "Pin ", j, test_a, test_b);
-							  if (test_b > (vcc_B - 0.1) && test_a < 0.10) {
+							  if (test_b > (vcc_B - 0.1) && test_a < 0.10) {//9
 								  open_test++;
-								  } else if ((test_b > ((vcc_B / 2) - 0.1) && test_b < ((vcc_B / 2) + 0.1)) && (test_a > ((vcc_A / 2) - 0.1) && test_a < ((vcc_A / 2) + 0.1))) {
+								  } else if ((test_b > ((vcc_B / 2) - 0.1) && test_b < ((vcc_B / 2) + 0.1)) && (test_a > ((vcc_A / 2) - 0.1) && test_a < ((vcc_A / 2) + 0.1))) {//10
 								  // short test
 								  short_test++;
-								  } else if (test_a > (vcc_A - 0.1) && test_b > (vcc_B - 0.1)) {
+								  } else if (test_a > (vcc_A - 0.1) && test_b > (vcc_B - 0.1)) {//11
 								  // diode test
 								  diode_test++;
-							  }
+							  }//11     
 
 							  // Test 3: Both High
 							  setHigh(i);
@@ -543,23 +579,23 @@ int main(void)
 							  test_b = process_adc_conversion(j);
 							  printf("Both High\nPin %d Voltage:  %.3f\nPin %d Voltage:  %.3f\n", i, test_a, j, test_b);
 							  my_demo("Both High", "Pin ", i, "Pin ", j, test_a, test_b);
-							  if (test_a > (vcc_A - 0.1) && test_b > (vcc_B - 0.1)) {
+							  if (test_a > (vcc_A - 0.1) && test_b > (vcc_B - 0.1)) {//12
 								  open_test++;
 								  short_test++;
 								  diode_test++;
 								  resistor_test++;
-							  }
+							  }//12
 							  setLow(i);
 							  setLow(j);
 							  printf("Connection Type for pair %d %d:\nOpen:%d\nShort:%d\nDiode:%d\nResistor:%d\n\n", i, j, open_test, short_test, diode_test, resistor_test);
 							  setInput(i);
 							  setInput(j);
-						  }
-					  }
-				  }
+						  }//4
+					  }//3
+					  */ //ADC pin pair check end
+				  }//2
 
 				  //printf("Full Test Complete!!!!!!!!!!!\n\n");
-				//*/ //ADC pin pair check end
 				
 				if (CARD_OUT)   // can only get here if SD card was inserted, removed, and reinserted
 					{
@@ -568,11 +604,10 @@ int main(void)
 						break;  // returns to checking for an SD Card
 					}
 				CARD_OUT = false;
-				//} //comment when using adc pins
-			}
+			}//1
 		else{
 			if(!CARD_OUT) {
-				//transmitHmi("page0", "c0", NULL, "0", 0); // changed requirement to false since sd card was removed
+				transmitHmi("settings", "t2", NULL, "okay3", 2); // changed requirement to false since sd card was removed
 				UART_sendString("Card disconnected\n");
 				CARD_OUT = true;
 				CARD_IN = false;
@@ -1213,7 +1248,7 @@ void my_demo(char* test_type, char* pinA, int pinA_num, char* pinB, int pinB_num
 		UART_sendString(" Return code: ");
 		UART_sendInt(return_code);
 		UART_sendString("\n\n");
-		//transmitHmi("page0", "c0", NULL, "0", 0);
+		//transmitHmi("home", "t0", NULL, "0", 2);
 	}
 	//FAT_fsync(&file);
 	

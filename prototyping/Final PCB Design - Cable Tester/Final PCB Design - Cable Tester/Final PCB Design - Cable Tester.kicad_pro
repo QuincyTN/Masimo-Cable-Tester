@@ -503,7 +503,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "./",
+      "plot": "Gerbers/",
       "pos_files": "C:/Users/Masimo/Desktop/",
       "specctra_dsn": "",
       "step": "",

@@ -2,11 +2,11 @@
 
 manifest_file_version: 1.0.0
 project: adc_sampling
-creation_date: 2025-02-26T23:22:44.588-08:00[America/Los_Angeles]
+creation_date: 2025-04-28T00:50:58.452-07:00[America/Los_Angeles]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
-device_name: AVR128DB48
+device_name: AVR128DB64
 compiler: XC8 2.50
 mcc_version: 5.5.0
 mcc_core_version: 5.7.0

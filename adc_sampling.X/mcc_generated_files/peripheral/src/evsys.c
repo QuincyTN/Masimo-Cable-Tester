@@ -87,6 +87,8 @@ int8_t EVSYS_Initialize(void) {
     // USER OFF; 
     EVSYS.USEREVSYSEVOUTF = 0x0;
     // USER OFF; 
+    EVSYS.USEREVSYSEVOUTG = 0x0;
+    // USER OFF; 
     EVSYS.USEROPAMP0DISABLE = 0x0;
     // USER OFF; 
     EVSYS.USEROPAMP0DRIVE = 0x0;
@@ -135,6 +137,10 @@ int8_t EVSYS_Initialize(void) {
     // USER OFF; 
     EVSYS.USERTCB3COUNT = 0x0;
     // USER OFF; 
+    EVSYS.USERTCB4CAPT = 0x0;
+    // USER OFF; 
+    EVSYS.USERTCB4COUNT = 0x0;
+    // USER OFF; 
     EVSYS.USERTCD0INPUTA = 0x0;
     // USER OFF; 
     EVSYS.USERTCD0INPUTB = 0x0;
@@ -148,5 +154,7 @@ int8_t EVSYS_Initialize(void) {
     EVSYS.USERUSART3IRDA = 0x0;
     // USER OFF; 
     EVSYS.USERUSART4IRDA = 0x0;
+    // USER OFF; 
+    EVSYS.USERUSART5IRDA = 0x0;
     return 0;
 }

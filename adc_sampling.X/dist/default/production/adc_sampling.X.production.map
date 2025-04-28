@@ -4,16 +4,12 @@ c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../av
                               build/default/production/main.o (__subsf3)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3x.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3.o) (__addsf3x)
-c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
-                              build/default/production/main.o (__ltsf2)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3.o)
                               build/default/production/main.o (__divsf3)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3x.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3.o) (__divsf3x)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floatsisf.o)
                               build/default/production/main.o (__floatunsisf)
-c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o) (__fp_cmp)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_inf.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3x.o) (__fp_inf)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_nan.o)
@@ -34,28 +30,32 @@ c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../av
                               build/default/production/main.o (__mulsf3)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3x.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3.o) (__mulsf3x)
+c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(gesf2.o) (__fp_cmp)
+c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+                              build/default/production/main.o (__tablejump2__)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
                               build/default/production/mcc_generated_files/system/src/config_bits.o (__do_copy_data)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
-                              C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o (exit)
-c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
-                              build/default/production/main.o (_printf_cdfFopsuxX)
+                              C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o (exit)
+c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
+                              build/default/production/main.o (_printf_cdfFopuxX)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_doux.o)
                               build/default/production/main.o (_printf_cdopuxX)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_d.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__fmt_d_needed)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__fmt_d_needed)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_fp.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__fmt_f_needed)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__fmt_f_needed)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_o.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__fmt_o_needed)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__fmt_o_needed)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_s.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__fmt_s_needed)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__fmt_s_needed)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_u.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_d.o) (__cvt_u)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_x.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__fmt_x_needed)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__fmt_x_needed)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__pop_int.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__pop_int_needed)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__pop_int_needed)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_d.o) (__pad)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(fputc.o)
@@ -65,7 +65,7 @@ c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../av
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(stdout.o)
                               build/default/production/mcc_generated_files/uart/src/usart3.o (_stdout)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__pop_float.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__pop_float_needed)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__pop_float_needed)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(memset.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_fp.o) (memset)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(strcpy.o)
@@ -81,7 +81,7 @@ c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../av
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o) (_Exit)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__int_vfprintf.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__vfprintf)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__vfprintf)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(fputs.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(puts.o) (fputs)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_divmodhi4.o)
@@ -91,11 +91,13 @@ c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o) (_exit)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_prologue.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__prologue_saves__)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__prologue_saves__)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_epilogue.o)
-                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o) (__epilogue_restores__)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o) (__epilogue_restores__)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_udivmodhi4.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
+                              c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_fp.o) (__eqsf2)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixsfsi.o)
                               c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_fp.o) (__fixsfsi)
 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixunssfsi.o)
@@ -111,8 +113,8 @@ __errno_val         0x2               c:/program files/microchip/xc8/v2.50/avr/b
 
 Discarded input sections
 
- .data          0x0000000000000000        0x0 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .bss           0x0000000000000000        0x0 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
+ .data          0x0000000000000000        0x0 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
+ .bss           0x0000000000000000        0x0 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
  .text          0x0000000000000000        0x0 build/default/production/mcc_generated_files/adc/src/adc0.o
  .data          0x0000000000000000        0x0 build/default/production/mcc_generated_files/adc/src/adc0.o
  .bss           0x0000000000000000        0x0 build/default/production/mcc_generated_files/adc/src/adc0.o
@@ -159,7 +161,31 @@ Discarded input sections
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
  .text.IO_PB0_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
- .text.AIN_0_SetInterruptHandler
+ .text.CTR_1_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_2_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_3_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_4_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_5_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_6_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_7_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_8_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_9_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_10_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_11_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_12_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_13_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
  .text.AIN_1_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
@@ -167,13 +193,53 @@ Discarded input sections
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
  .text.AIN_3_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
- .text.CTR_0_SetInterruptHandler
+ .text.AIN_4_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
- .text.CTR_1_SetInterruptHandler
+ .text.AIN_5_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
- .text.CTR_2_SetInterruptHandler
+ .text.AIN_6_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
- .text.CTR_3_SetInterruptHandler
+ .text.AIN_7_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_8_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_9_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_910_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_11_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_12_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_13_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_14_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_15_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_16_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_17_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_18_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_19_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.AIN_20_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_14_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_15_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_16_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_17_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_18_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_19_SetInterruptHandler
+                0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
+ .text.CTR_20_SetInterruptHandler
                 0x0000000000000000        0xa build/default/production/mcc_generated_files/system/src/pins.o
  .text          0x0000000000000000        0x0 build/default/production/mcc_generated_files/system/src/clock.o
  .data          0x0000000000000000        0x0 build/default/production/mcc_generated_files/system/src/clock.o
@@ -303,10 +369,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3x.o)
  .stack.descriptors
                 0x0000000000000000       0x17 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3x.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
- .stack.descriptors
-                0x0000000000000000       0x6a c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3.o)
  .stack.descriptors
@@ -319,10 +381,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floatsisf.o)
  .stack.descriptors
                 0x0000000000000000       0x34 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floatsisf.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
- .stack.descriptors
-                0x0000000000000000       0x16 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_inf.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_inf.o)
  .stack.descriptors
@@ -363,6 +421,27 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3x.o)
  .stack.descriptors
                 0x0000000000000000       0x31 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3x.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
+ .stack.descriptors
+                0x0000000000000000       0x16 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+ .stack.descriptors
+                0x0000000000000000       0x1c c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
@@ -384,13 +463,13 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
  .stack.descriptors
                 0x0000000000000000       0x73 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
- .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
- .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
- .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
  .stack.descriptors
-                0x0000000000000000       0x3c c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
- .text.__sio_printf_dfosux
-                0x0000000000000000       0x22 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
+                0x0000000000000000       0x3b c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
+ .text.__sio_printf_dfoux
+                0x0000000000000000       0x22 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_doux.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_doux.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_doux.o)
@@ -603,6 +682,10 @@ Discarded input sections
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_udivmodhi4.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
+ .stack.descriptors
+                0x0000000000000000       0x6a c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixsfsi.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixsfsi.o)
  .stack.descriptors
@@ -634,7 +717,7 @@ Linker script and memory map
 
 Address of section .data set to 0x804000
                 0x0000000000008000                __RODATA_PM_OFFSET__ = 0x8000
-LOAD C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
+LOAD C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
                 0x0000000000000001                __MPLAB_BUILD = 0x1
 LOAD build/default/production/mcc_generated_files/adc/src/adc0.o
 LOAD build/default/production/mcc_generated_files/peripheral/src/evsys.o
@@ -655,7 +738,7 @@ START GROUP
 LOAD c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a
 LOAD c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a
 LOAD c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a
-LOAD C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped\libavr128db48.a
+LOAD C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped\libavr128db64.a
 END GROUP
                 [0x0000000000000000]                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
                 [0x0000000000804000]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x802000
@@ -758,53 +841,61 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0x17c
+.text           0x0000000000000000      0x22c
  *(.vectors)
- .vectors       0x0000000000000000       0xf4 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
+ .vectors       0x0000000000000000      0x104 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
                 0x0000000000000000                __vector_default
                 0x0000000000000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
+ .progmem.gcc_sw_table.setLow
+                0x0000000000000104       0x28 build/default/production/main.o
+ .progmem.gcc_sw_table.setHigh
+                0x000000000000012c       0x28 build/default/production/main.o
+ .progmem.gcc_sw_table.setInput
+                0x0000000000000154       0x28 build/default/production/main.o
+ .progmem.gcc_sw_table.setOutput
+                0x000000000000017c       0x28 build/default/production/main.o
  *(.dinit)
- .dinit         0x00000000000000f4       0x1d data_init
-                0x0000000000000112                . = ALIGN (0x2)
- *fill*         0x0000000000000111        0x1 
-                0x0000000000000112                __trampolines_start = .
+ .dinit         0x00000000000001a4       0x1d data_init
+                0x00000000000001c2                . = ALIGN (0x2)
+ *fill*         0x00000000000001c1        0x1 
+                0x00000000000001c2                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x0000000000000112        0x0 linker stubs
+ .trampolines   0x00000000000001c2        0x0 linker stubs
  *(.trampolines*)
-                0x0000000000000112                __trampolines_end = .
+                0x00000000000001c2                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
-                0x0000000000000112                . = ALIGN (0x2)
+                0x00000000000001c2                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x0000000000000112                __ctors_start = .
+                0x00000000000001c2                __ctors_start = .
  *(.ctors)
-                0x0000000000000112                __ctors_end = .
-                0x0000000000000112                __dtors_start = .
+                0x00000000000001c2                __ctors_end = .
+                0x00000000000001c2                __dtors_start = .
  *(.dtors)
-                0x0000000000000112                __dtors_end = .
+                0x00000000000001c2                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000000000000112        0x0 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
-                0x0000000000000112                __init
+ .init0         0x00000000000001c2        0x0 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
+                0x00000000000001c2                __init
  *(.init0)
  *(.init1)
- .init1         0x0000000000000112       0x12 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
+ .init1         0x00000000000001c2       0x12 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
  *(.init1)
  *(.init2)
- .init2         0x0000000000000124        0xc C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
+ .init2         0x00000000000001d4        0xc C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x0000000000000130       0x40 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
-                0x0000000000000130                __do_copy_data
-                0x0000000000000162                __do_clear_bss
+ .init4         0x00000000000001e0       0x40 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_copy_data.o)
+                0x00000000000001e0                __do_copy_data
+                0x0000000000000212                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -815,12 +906,12 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000000000000170        0x8 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
+ .init9         0x0000000000000220        0x8 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
  *(.init9)
-                0x0000000000000178                . = ALIGN (0x2)
+                0x0000000000000228                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000178        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
-                0x0000000000000178                _exit
+ .fini9         0x0000000000000228        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
+                0x0000000000000228                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -839,11 +930,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000178        0x4 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
+ .fini0         0x0000000000000228        0x4 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_exit.o)
  *(.fini0)
-                0x000000000000017c                _etext = .
+                0x000000000000022c                _etext = .
 
-.data           0x0000000000804000        0x0 load address 0x000000000000017c
+.data           0x0000000000804000        0x0 load address 0x000000000000022c
                 [!provide]                        PROVIDE (__data_start, .)
  *(.gnu.linkonce.d*)
  *(.gnu.linkonce.r*)
@@ -857,8 +948,8 @@ END GROUP
  COMMON         0x0000000000804000        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(errno.o)
                 0x0000000000804000                __errno_val
                 [!provide]                        PROVIDE (__bss_end, .)
-                0x000000000000017c                __data_load_start = LOADADDR (.data)
-                0x000000000000017c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000000000000022c                __data_load_start = LOADADDR (.data)
+                0x000000000000022c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0000000000804002        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -924,7 +1015,7 @@ END GROUP
  .comment       0x000000000000002f       0x30 build/default/production/main.o
  .comment       0x000000000000002f       0x2c c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
                                          0x2d (size before relaxing)
- .comment       0x000000000000005b       0x2d c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
+ .comment       0x000000000000005b       0x2d c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
  .comment       0x000000000000005b       0x2d c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_doux.o)
  .comment       0x000000000000005b       0x2d c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_d.o)
  .comment       0x000000000000005b       0x2d c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_fp.o)
@@ -950,45 +1041,45 @@ END GROUP
  .comment       0x000000000000005b       0x2d c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floorf.o)
 
 .stack.descriptors.hdr
-                0x0000000000000000      0x2a0
+                0x0000000000000000      0x2ae
  .stack.descriptors.hdr
                 0x0000000000000000        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3.o)
  .stack.descriptors.hdr
                 0x000000000000000e        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3x.o)
  .stack.descriptors.hdr
-                0x000000000000001c        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
+                0x000000000000001c        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3.o)
  .stack.descriptors.hdr
-                0x000000000000002a        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3.o)
+                0x000000000000002a        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3x.o)
  .stack.descriptors.hdr
-                0x0000000000000038        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3x.o)
+                0x0000000000000038        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floatsisf.o)
  .stack.descriptors.hdr
-                0x0000000000000046        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floatsisf.o)
+                0x0000000000000046        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_inf.o)
  .stack.descriptors.hdr
-                0x0000000000000054        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
+                0x0000000000000054        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_nan.o)
  .stack.descriptors.hdr
-                0x0000000000000062        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_inf.o)
+                0x0000000000000062        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_pscA.o)
  .stack.descriptors.hdr
-                0x0000000000000070        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_nan.o)
+                0x0000000000000070        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_pscB.o)
  .stack.descriptors.hdr
-                0x000000000000007e        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_pscA.o)
+                0x000000000000007e        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_round.o)
  .stack.descriptors.hdr
-                0x000000000000008c        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_pscB.o)
+                0x000000000000008c        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_split3.o)
  .stack.descriptors.hdr
-                0x000000000000009a        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_round.o)
+                0x000000000000009a        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_zero.o)
  .stack.descriptors.hdr
-                0x00000000000000a8        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_split3.o)
+                0x00000000000000a8        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(gesf2.o)
  .stack.descriptors.hdr
-                0x00000000000000b6        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_zero.o)
+                0x00000000000000b6        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3.o)
  .stack.descriptors.hdr
-                0x00000000000000c4        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(gesf2.o)
+                0x00000000000000c4        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3x.o)
  .stack.descriptors.hdr
-                0x00000000000000d2        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3.o)
+                0x00000000000000d2        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
  .stack.descriptors.hdr
-                0x00000000000000e0        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3x.o)
+                0x00000000000000e0        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
  .stack.descriptors.hdr
                 0x00000000000000ee        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
  .stack.descriptors.hdr
-                0x00000000000000fc        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
+                0x00000000000000fc        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
  .stack.descriptors.hdr
                 0x000000000000010a        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_doux.o)
  .stack.descriptors.hdr
@@ -1042,11 +1133,13 @@ END GROUP
  .stack.descriptors.hdr
                 0x0000000000000268        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_udivmodhi4.o)
  .stack.descriptors.hdr
-                0x0000000000000276        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixsfsi.o)
+                0x0000000000000276        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
  .stack.descriptors.hdr
-                0x0000000000000284        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixunssfsi.o)
+                0x0000000000000284        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixsfsi.o)
  .stack.descriptors.hdr
-                0x0000000000000292        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floorf.o)
+                0x0000000000000292        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixunssfsi.o)
+ .stack.descriptors.hdr
+                0x00000000000002a0        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floorf.o)
 
 .note.GNU-stack
                 0x0000000000000000        0x0
@@ -1055,15 +1148,11 @@ END GROUP
  .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3x.o)
  .note.GNU-stack
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
- .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3x.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floatsisf.o)
- .note.GNU-stack
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_inf.o)
  .note.GNU-stack
@@ -1085,9 +1174,11 @@ END GROUP
  .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3x.o)
  .note.GNU-stack
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
+ .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
  .note.GNU-stack
-                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_doux.o)
  .note.GNU-stack
@@ -1133,6 +1224,8 @@ END GROUP
  .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(fputs.o)
  .note.GNU-stack
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
+ .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixsfsi.o)
  .note.GNU-stack
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixunssfsi.o)
@@ -1154,7 +1247,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x4a0
+.debug_aranges  0x0000000000000000      0x6b8
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0xb0 build/default/production/mcc_generated_files/adc/src/adc0.o
@@ -1167,107 +1260,107 @@ END GROUP
  .debug_aranges
                 0x0000000000000108       0x20 build/default/production/mcc_generated_files/system/src/system.o
  .debug_aranges
-                0x0000000000000128       0xf0 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000000128      0x2f8 build/default/production/mcc_generated_files/system/src/pins.o
  .debug_aranges
-                0x0000000000000218       0x30 build/default/production/mcc_generated_files/system/src/clock.o
+                0x0000000000000420       0x30 build/default/production/mcc_generated_files/system/src/clock.o
  .debug_aranges
-                0x0000000000000248       0x20 build/default/production/mcc_generated_files/system/src/interrupt.o
+                0x0000000000000450       0x20 build/default/production/mcc_generated_files/system/src/interrupt.o
  .debug_aranges
-                0x0000000000000268       0xe8 build/default/production/mcc_generated_files/timer/src/tca0.o
+                0x0000000000000470       0xe8 build/default/production/mcc_generated_files/timer/src/tca0.o
  .debug_aranges
-                0x0000000000000350       0xe0 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x0000000000000558       0xe0 build/default/production/mcc_generated_files/uart/src/usart3.o
  .debug_aranges
-                0x0000000000000430       0x20 build/default/production/mcc_generated_files/vref/src/vref.o
+                0x0000000000000638       0x20 build/default/production/mcc_generated_files/vref/src/vref.o
  .debug_aranges
-                0x0000000000000450       0x50 build/default/production/main.o
+                0x0000000000000658       0x60 build/default/production/main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0xa56e
+.debug_info     0x0000000000000000     0xc557
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000     0x3545 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .debug_info    0x0000000000003545      0xb03 build/default/production/mcc_generated_files/adc/src/adc0.o
- .debug_info    0x0000000000004048      0x91f build/default/production/mcc_generated_files/peripheral/src/evsys.o
- .debug_info    0x0000000000004967       0x81 build/default/production/mcc_generated_files/system/src/protected_io.o
- .debug_info    0x00000000000049e8      0x8a7 build/default/production/mcc_generated_files/system/src/config_bits.o
- .debug_info    0x000000000000528f      0x36c build/default/production/mcc_generated_files/system/src/system.o
- .debug_info    0x00000000000055fb      0xe4d build/default/production/mcc_generated_files/system/src/pins.o
- .debug_info    0x0000000000006448      0xf03 build/default/production/mcc_generated_files/system/src/clock.o
- .debug_info    0x000000000000734b      0x3fb build/default/production/mcc_generated_files/system/src/interrupt.o
- .debug_info    0x0000000000007746     0x1314 build/default/production/mcc_generated_files/timer/src/tca0.o
- .debug_info    0x0000000000008a5a      0xf50 build/default/production/mcc_generated_files/uart/src/usart3.o
- .debug_info    0x00000000000099aa      0x367 build/default/production/mcc_generated_files/vref/src/vref.o
- .debug_info    0x0000000000009d11      0x85d build/default/production/main.o
+ .debug_info    0x0000000000000000     0x395a C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
+ .debug_info    0x000000000000395a      0xacf build/default/production/mcc_generated_files/adc/src/adc0.o
+ .debug_info    0x0000000000004429      0x912 build/default/production/mcc_generated_files/peripheral/src/evsys.o
+ .debug_info    0x0000000000004d3b       0x81 build/default/production/mcc_generated_files/system/src/protected_io.o
+ .debug_info    0x0000000000004dbc      0x8a7 build/default/production/mcc_generated_files/system/src/config_bits.o
+ .debug_info    0x0000000000005663      0x36d build/default/production/mcc_generated_files/system/src/system.o
+ .debug_info    0x00000000000059d0     0x26a1 build/default/production/mcc_generated_files/system/src/pins.o
+ .debug_info    0x0000000000008071      0xf03 build/default/production/mcc_generated_files/system/src/clock.o
+ .debug_info    0x0000000000008f74      0x3fb build/default/production/mcc_generated_files/system/src/interrupt.o
+ .debug_info    0x000000000000936f     0x1314 build/default/production/mcc_generated_files/timer/src/tca0.o
+ .debug_info    0x000000000000a683      0xf50 build/default/production/mcc_generated_files/uart/src/usart3.o
+ .debug_info    0x000000000000b5d3      0x367 build/default/production/mcc_generated_files/vref/src/vref.o
+ .debug_info    0x000000000000b93a      0xc1d build/default/production/main.o
 
-.debug_abbrev   0x0000000000000000     0x410a
+.debug_abbrev   0x0000000000000000     0x44e5
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000     0x3274 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .debug_abbrev  0x0000000000003274      0x238 build/default/production/mcc_generated_files/adc/src/adc0.o
- .debug_abbrev  0x00000000000034ac       0x8c build/default/production/mcc_generated_files/peripheral/src/evsys.o
- .debug_abbrev  0x0000000000003538       0x14 build/default/production/mcc_generated_files/system/src/protected_io.o
- .debug_abbrev  0x000000000000354c       0x97 build/default/production/mcc_generated_files/system/src/config_bits.o
- .debug_abbrev  0x00000000000035e3       0x58 build/default/production/mcc_generated_files/system/src/system.o
- .debug_abbrev  0x000000000000363b      0x182 build/default/production/mcc_generated_files/system/src/pins.o
- .debug_abbrev  0x00000000000037bd      0x135 build/default/production/mcc_generated_files/system/src/clock.o
- .debug_abbrev  0x00000000000038f2       0xfa build/default/production/mcc_generated_files/system/src/interrupt.o
- .debug_abbrev  0x00000000000039ec      0x1c3 build/default/production/mcc_generated_files/timer/src/tca0.o
- .debug_abbrev  0x0000000000003baf      0x2d7 build/default/production/mcc_generated_files/uart/src/usart3.o
- .debug_abbrev  0x0000000000003e86       0x8c build/default/production/mcc_generated_files/vref/src/vref.o
- .debug_abbrev  0x0000000000003f12      0x1f8 build/default/production/main.o
+ .debug_abbrev  0x0000000000000000     0x3652 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
+ .debug_abbrev  0x0000000000003652      0x238 build/default/production/mcc_generated_files/adc/src/adc0.o
+ .debug_abbrev  0x000000000000388a       0x8c build/default/production/mcc_generated_files/peripheral/src/evsys.o
+ .debug_abbrev  0x0000000000003916       0x14 build/default/production/mcc_generated_files/system/src/protected_io.o
+ .debug_abbrev  0x000000000000392a       0x97 build/default/production/mcc_generated_files/system/src/config_bits.o
+ .debug_abbrev  0x00000000000039c1       0x6a build/default/production/mcc_generated_files/system/src/system.o
+ .debug_abbrev  0x0000000000003a2b      0x182 build/default/production/mcc_generated_files/system/src/pins.o
+ .debug_abbrev  0x0000000000003bad      0x135 build/default/production/mcc_generated_files/system/src/clock.o
+ .debug_abbrev  0x0000000000003ce2       0xfa build/default/production/mcc_generated_files/system/src/interrupt.o
+ .debug_abbrev  0x0000000000003ddc      0x1c3 build/default/production/mcc_generated_files/timer/src/tca0.o
+ .debug_abbrev  0x0000000000003f9f      0x2d7 build/default/production/mcc_generated_files/uart/src/usart3.o
+ .debug_abbrev  0x0000000000004276       0x8c build/default/production/mcc_generated_files/vref/src/vref.o
+ .debug_abbrev  0x0000000000004302      0x1e3 build/default/production/main.o
 
-.debug_line     0x0000000000000000     0x244b
+.debug_line     0x0000000000000000     0x2df9
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x0000000000000000      0x240 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .debug_line    0x0000000000000240      0x388 build/default/production/mcc_generated_files/adc/src/adc0.o
- .debug_line    0x00000000000005c8      0x28b build/default/production/mcc_generated_files/peripheral/src/evsys.o
- .debug_line    0x0000000000000853       0x73 build/default/production/mcc_generated_files/system/src/protected_io.o
- .debug_line    0x00000000000008c6      0x103 build/default/production/mcc_generated_files/system/src/config_bits.o
- .debug_line    0x00000000000009c9      0x1e2 build/default/production/mcc_generated_files/system/src/system.o
- .debug_line    0x0000000000000bab      0x5b5 build/default/production/mcc_generated_files/system/src/pins.o
- .debug_line    0x0000000000001160      0x1d0 build/default/production/mcc_generated_files/system/src/clock.o
- .debug_line    0x0000000000001330      0x196 build/default/production/mcc_generated_files/system/src/interrupt.o
- .debug_line    0x00000000000014c6      0x4d7 build/default/production/mcc_generated_files/timer/src/tca0.o
- .debug_line    0x000000000000199d      0x505 build/default/production/mcc_generated_files/uart/src/usart3.o
- .debug_line    0x0000000000001ea2      0x122 build/default/production/mcc_generated_files/vref/src/vref.o
- .debug_line    0x0000000000001fc4      0x487 build/default/production/main.o
+ .debug_line    0x0000000000000000      0x258 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
+ .debug_line    0x0000000000000258      0x388 build/default/production/mcc_generated_files/adc/src/adc0.o
+ .debug_line    0x00000000000005e0      0x2a3 build/default/production/mcc_generated_files/peripheral/src/evsys.o
+ .debug_line    0x0000000000000883       0x73 build/default/production/mcc_generated_files/system/src/protected_io.o
+ .debug_line    0x00000000000008f6      0x103 build/default/production/mcc_generated_files/system/src/config_bits.o
+ .debug_line    0x00000000000009f9      0x1e2 build/default/production/mcc_generated_files/system/src/system.o
+ .debug_line    0x0000000000000bdb      0xd4f build/default/production/mcc_generated_files/system/src/pins.o
+ .debug_line    0x000000000000192a      0x1d0 build/default/production/mcc_generated_files/system/src/clock.o
+ .debug_line    0x0000000000001afa      0x196 build/default/production/mcc_generated_files/system/src/interrupt.o
+ .debug_line    0x0000000000001c90      0x4d7 build/default/production/mcc_generated_files/timer/src/tca0.o
+ .debug_line    0x0000000000002167      0x505 build/default/production/mcc_generated_files/uart/src/usart3.o
+ .debug_line    0x000000000000266c      0x122 build/default/production/mcc_generated_files/vref/src/vref.o
+ .debug_line    0x000000000000278e      0x66b build/default/production/main.o
 
-.debug_frame    0x0000000000000000      0xaa4
+.debug_frame    0x0000000000000000     0x1018
  *(.debug_frame)
  .debug_frame   0x0000000000000000      0x1d4 build/default/production/mcc_generated_files/adc/src/adc0.o
  .debug_frame   0x00000000000001d4       0x24 build/default/production/mcc_generated_files/peripheral/src/evsys.o
  .debug_frame   0x00000000000001f8       0x24 build/default/production/mcc_generated_files/system/src/system.o
- .debug_frame   0x000000000000021c      0x2b0 build/default/production/mcc_generated_files/system/src/pins.o
- .debug_frame   0x00000000000004cc       0x44 build/default/production/mcc_generated_files/system/src/clock.o
- .debug_frame   0x0000000000000510       0x24 build/default/production/mcc_generated_files/system/src/interrupt.o
- .debug_frame   0x0000000000000534      0x1b4 build/default/production/mcc_generated_files/timer/src/tca0.o
- .debug_frame   0x00000000000006e8      0x1ac build/default/production/mcc_generated_files/uart/src/usart3.o
- .debug_frame   0x0000000000000894       0x24 build/default/production/mcc_generated_files/vref/src/vref.o
- .debug_frame   0x00000000000008b8      0x1ec build/default/production/main.o
+ .debug_frame   0x000000000000021c      0x7ec build/default/production/mcc_generated_files/system/src/pins.o
+ .debug_frame   0x0000000000000a08       0x44 build/default/production/mcc_generated_files/system/src/clock.o
+ .debug_frame   0x0000000000000a4c       0x24 build/default/production/mcc_generated_files/system/src/interrupt.o
+ .debug_frame   0x0000000000000a70      0x1b4 build/default/production/mcc_generated_files/timer/src/tca0.o
+ .debug_frame   0x0000000000000c24      0x1ac build/default/production/mcc_generated_files/uart/src/usart3.o
+ .debug_frame   0x0000000000000dd0       0x24 build/default/production/mcc_generated_files/vref/src/vref.o
+ .debug_frame   0x0000000000000df4      0x224 build/default/production/main.o
 
-.debug_str      0x0000000000000000     0x18dd
+.debug_str      0x0000000000000000     0x1a8b
  *(.debug_str)
- .debug_str     0x0000000000000000     0x170f C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
- .debug_str     0x000000000000170f        0x8 build/default/production/mcc_generated_files/adc/src/adc0.o
- .debug_str     0x0000000000001717        0x0 build/default/production/mcc_generated_files/peripheral/src/evsys.o
- .debug_str     0x0000000000001717        0x0 build/default/production/mcc_generated_files/system/src/config_bits.o
- .debug_str     0x0000000000001717       0x8d build/default/production/mcc_generated_files/system/src/system.o
- .debug_str     0x00000000000017a4       0x25 build/default/production/mcc_generated_files/system/src/pins.o
- .debug_str     0x00000000000017c9       0x13 build/default/production/mcc_generated_files/system/src/clock.o
- .debug_str     0x00000000000017dc       0x13 build/default/production/mcc_generated_files/system/src/interrupt.o
- .debug_str     0x00000000000017ef       0x62 build/default/production/mcc_generated_files/timer/src/tca0.o
- .debug_str     0x0000000000001851       0x10 build/default/production/mcc_generated_files/uart/src/usart3.o
- .debug_str     0x0000000000001861        0x0 build/default/production/mcc_generated_files/vref/src/vref.o
- .debug_str     0x0000000000001861       0x7c build/default/production/main.o
+ .debug_str     0x0000000000000000     0x18bd C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
+ .debug_str     0x00000000000018bd        0x8 build/default/production/mcc_generated_files/adc/src/adc0.o
+ .debug_str     0x00000000000018c5        0x0 build/default/production/mcc_generated_files/peripheral/src/evsys.o
+ .debug_str     0x00000000000018c5        0x0 build/default/production/mcc_generated_files/system/src/config_bits.o
+ .debug_str     0x00000000000018c5       0x8d build/default/production/mcc_generated_files/system/src/system.o
+ .debug_str     0x0000000000001952       0x25 build/default/production/mcc_generated_files/system/src/pins.o
+ .debug_str     0x0000000000001977       0x13 build/default/production/mcc_generated_files/system/src/clock.o
+ .debug_str     0x000000000000198a       0x13 build/default/production/mcc_generated_files/system/src/interrupt.o
+ .debug_str     0x000000000000199d       0x62 build/default/production/mcc_generated_files/timer/src/tca0.o
+ .debug_str     0x00000000000019ff       0x10 build/default/production/mcc_generated_files/uart/src/usart3.o
+ .debug_str     0x0000000000001a0f        0x0 build/default/production/mcc_generated_files/vref/src/vref.o
+ .debug_str     0x0000000000001a0f       0x7c build/default/production/main.o
 
-.debug_loc      0x0000000000000000      0x753
+.debug_loc      0x0000000000000000     0x1037
  *(.debug_loc)
  .debug_loc     0x0000000000000000       0xa2 build/default/production/mcc_generated_files/adc/src/adc0.o
  .debug_loc     0x00000000000000a2      0x23b build/default/production/mcc_generated_files/system/src/clock.o
  .debug_loc     0x00000000000002dd       0x2a build/default/production/mcc_generated_files/system/src/interrupt.o
  .debug_loc     0x0000000000000307       0x34 build/default/production/mcc_generated_files/timer/src/tca0.o
  .debug_loc     0x000000000000033b       0x9e build/default/production/mcc_generated_files/uart/src/usart3.o
- .debug_loc     0x00000000000003d9      0x37a build/default/production/main.o
+ .debug_loc     0x00000000000003d9      0xc5e build/default/production/main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1287,18 +1380,18 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0x3c8
+.debug_ranges   0x0000000000000000      0x5e0
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0xa0 build/default/production/mcc_generated_files/adc/src/adc0.o
  .debug_ranges  0x00000000000000a0       0x10 build/default/production/mcc_generated_files/peripheral/src/evsys.o
  .debug_ranges  0x00000000000000b0       0x10 build/default/production/mcc_generated_files/system/src/system.o
- .debug_ranges  0x00000000000000c0       0xe0 build/default/production/mcc_generated_files/system/src/pins.o
- .debug_ranges  0x00000000000001a0       0x20 build/default/production/mcc_generated_files/system/src/clock.o
- .debug_ranges  0x00000000000001c0       0x10 build/default/production/mcc_generated_files/system/src/interrupt.o
- .debug_ranges  0x00000000000001d0       0xd8 build/default/production/mcc_generated_files/timer/src/tca0.o
- .debug_ranges  0x00000000000002a8       0xd0 build/default/production/mcc_generated_files/uart/src/usart3.o
- .debug_ranges  0x0000000000000378       0x10 build/default/production/mcc_generated_files/vref/src/vref.o
- .debug_ranges  0x0000000000000388       0x40 build/default/production/main.o
+ .debug_ranges  0x00000000000000c0      0x2e8 build/default/production/mcc_generated_files/system/src/pins.o
+ .debug_ranges  0x00000000000003a8       0x20 build/default/production/mcc_generated_files/system/src/clock.o
+ .debug_ranges  0x00000000000003c8       0x10 build/default/production/mcc_generated_files/system/src/interrupt.o
+ .debug_ranges  0x00000000000003d8       0xd8 build/default/production/mcc_generated_files/timer/src/tca0.o
+ .debug_ranges  0x00000000000004b0       0xd0 build/default/production/mcc_generated_files/uart/src/usart3.o
+ .debug_ranges  0x0000000000000580       0x10 build/default/production/mcc_generated_files/vref/src/vref.o
+ .debug_ranges  0x0000000000000590       0x50 build/default/production/main.o
 
 .debug_macro
  *(.debug_macro)
@@ -1309,724 +1402,1105 @@ LOAD data_init
 .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x40
  .note.gnu.avr.deviceinfo
-                0x0000000000000000       0x40 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
+                0x0000000000000000       0x40 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
 
 .bss.ADC0_resrdy_cb
-                0x000000000080405d        0x2
+                0x00000000008072bd        0x2
  .bss.ADC0_resrdy_cb
-                0x000000000080405d        0x2 build/default/production/mcc_generated_files/adc/src/adc0.o
-                0x000000000080405d                ADC0_resrdy_cb
+                0x00000000008072bd        0x2 build/default/production/mcc_generated_files/adc/src/adc0.o
+                0x00000000008072bd                ADC0_resrdy_cb
 
 .bss.ADC0_window_cb
-                0x000000000080405f        0x2
+                0x00000000008072bf        0x2
  .bss.ADC0_window_cb
-                0x000000000080405f        0x2 build/default/production/mcc_generated_files/adc/src/adc0.o
-                0x000000000080405f                ADC0_window_cb
+                0x00000000008072bf        0x2 build/default/production/mcc_generated_files/adc/src/adc0.o
+                0x00000000008072bf                ADC0_window_cb
 
-.bss.CTR_3_InterruptHandler
-                0x0000000000804061        0x2
- .bss.CTR_3_InterruptHandler
-                0x0000000000804061        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+.bss.CTR_20_InterruptHandler
+                0x00000000008072c1        0x2
+ .bss.CTR_20_InterruptHandler
+                0x00000000008072c1        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
-.bss.CTR_2_InterruptHandler
-                0x0000000000804063        0x2
- .bss.CTR_2_InterruptHandler
-                0x0000000000804063        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+.bss.CTR_19_InterruptHandler
+                0x00000000008072c3        0x2
+ .bss.CTR_19_InterruptHandler
+                0x00000000008072c3        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
-.bss.CTR_1_InterruptHandler
-                0x0000000000804065        0x2
- .bss.CTR_1_InterruptHandler
-                0x0000000000804065        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+.bss.CTR_18_InterruptHandler
+                0x00000000008072c5        0x2
+ .bss.CTR_18_InterruptHandler
+                0x00000000008072c5        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
-.bss.CTR_0_InterruptHandler
-                0x0000000000804067        0x2
- .bss.CTR_0_InterruptHandler
-                0x0000000000804067        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+.bss.CTR_17_InterruptHandler
+                0x00000000008072c7        0x2
+ .bss.CTR_17_InterruptHandler
+                0x00000000008072c7        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_16_InterruptHandler
+                0x00000000008072c9        0x2
+ .bss.CTR_16_InterruptHandler
+                0x00000000008072c9        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_15_InterruptHandler
+                0x00000000008072cb        0x2
+ .bss.CTR_15_InterruptHandler
+                0x00000000008072cb        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_14_InterruptHandler
+                0x00000000008072cd        0x2
+ .bss.CTR_14_InterruptHandler
+                0x00000000008072cd        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_20_InterruptHandler
+                0x00000000008072cf        0x2
+ .bss.AIN_20_InterruptHandler
+                0x00000000008072cf        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_19_InterruptHandler
+                0x00000000008072d1        0x2
+ .bss.AIN_19_InterruptHandler
+                0x00000000008072d1        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_18_InterruptHandler
+                0x00000000008072d3        0x2
+ .bss.AIN_18_InterruptHandler
+                0x00000000008072d3        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_17_InterruptHandler
+                0x00000000008072d5        0x2
+ .bss.AIN_17_InterruptHandler
+                0x00000000008072d5        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_16_InterruptHandler
+                0x00000000008072d7        0x2
+ .bss.AIN_16_InterruptHandler
+                0x00000000008072d7        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_15_InterruptHandler
+                0x00000000008072d9        0x2
+ .bss.AIN_15_InterruptHandler
+                0x00000000008072d9        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_14_InterruptHandler
+                0x00000000008072db        0x2
+ .bss.AIN_14_InterruptHandler
+                0x00000000008072db        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_13_InterruptHandler
+                0x00000000008072dd        0x2
+ .bss.AIN_13_InterruptHandler
+                0x00000000008072dd        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_12_InterruptHandler
+                0x00000000008072df        0x2
+ .bss.AIN_12_InterruptHandler
+                0x00000000008072df        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_11_InterruptHandler
+                0x00000000008072e1        0x2
+ .bss.AIN_11_InterruptHandler
+                0x00000000008072e1        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_910_InterruptHandler
+                0x00000000008072e3        0x2
+ .bss.AIN_910_InterruptHandler
+                0x00000000008072e3        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_9_InterruptHandler
+                0x00000000008072e5        0x2
+ .bss.AIN_9_InterruptHandler
+                0x00000000008072e5        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_8_InterruptHandler
+                0x00000000008072e7        0x2
+ .bss.AIN_8_InterruptHandler
+                0x00000000008072e7        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_7_InterruptHandler
+                0x00000000008072e9        0x2
+ .bss.AIN_7_InterruptHandler
+                0x00000000008072e9        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_6_InterruptHandler
+                0x00000000008072eb        0x2
+ .bss.AIN_6_InterruptHandler
+                0x00000000008072eb        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_5_InterruptHandler
+                0x00000000008072ed        0x2
+ .bss.AIN_5_InterruptHandler
+                0x00000000008072ed        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.AIN_4_InterruptHandler
+                0x00000000008072ef        0x2
+ .bss.AIN_4_InterruptHandler
+                0x00000000008072ef        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
 .bss.AIN_3_InterruptHandler
-                0x0000000000804069        0x2
+                0x00000000008072f1        0x2
  .bss.AIN_3_InterruptHandler
-                0x0000000000804069        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x00000000008072f1        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
 .bss.AIN_2_InterruptHandler
-                0x000000000080406b        0x2
+                0x00000000008072f3        0x2
  .bss.AIN_2_InterruptHandler
-                0x000000000080406b        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x00000000008072f3        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
 .bss.AIN_1_InterruptHandler
-                0x000000000080406d        0x2
+                0x00000000008072f5        0x2
  .bss.AIN_1_InterruptHandler
-                0x000000000080406d        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x00000000008072f5        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
-.bss.AIN_0_InterruptHandler
-                0x000000000080406f        0x2
- .bss.AIN_0_InterruptHandler
-                0x000000000080406f        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+.bss.CTR_13_InterruptHandler
+                0x00000000008072f7        0x2
+ .bss.CTR_13_InterruptHandler
+                0x00000000008072f7        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_12_InterruptHandler
+                0x00000000008072f9        0x2
+ .bss.CTR_12_InterruptHandler
+                0x00000000008072f9        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_11_InterruptHandler
+                0x00000000008072fb        0x2
+ .bss.CTR_11_InterruptHandler
+                0x00000000008072fb        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_10_InterruptHandler
+                0x00000000008072fd        0x2
+ .bss.CTR_10_InterruptHandler
+                0x00000000008072fd        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_9_InterruptHandler
+                0x00000000008072ff        0x2
+ .bss.CTR_9_InterruptHandler
+                0x00000000008072ff        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_8_InterruptHandler
+                0x0000000000807301        0x2
+ .bss.CTR_8_InterruptHandler
+                0x0000000000807301        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_7_InterruptHandler
+                0x0000000000807303        0x2
+ .bss.CTR_7_InterruptHandler
+                0x0000000000807303        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_6_InterruptHandler
+                0x0000000000807305        0x2
+ .bss.CTR_6_InterruptHandler
+                0x0000000000807305        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_5_InterruptHandler
+                0x0000000000807307        0x2
+ .bss.CTR_5_InterruptHandler
+                0x0000000000807307        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_4_InterruptHandler
+                0x0000000000807309        0x2
+ .bss.CTR_4_InterruptHandler
+                0x0000000000807309        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_3_InterruptHandler
+                0x000000000080730b        0x2
+ .bss.CTR_3_InterruptHandler
+                0x000000000080730b        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_2_InterruptHandler
+                0x000000000080730d        0x2
+ .bss.CTR_2_InterruptHandler
+                0x000000000080730d        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+
+.bss.CTR_1_InterruptHandler
+                0x000000000080730f        0x2
+ .bss.CTR_1_InterruptHandler
+                0x000000000080730f        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
 .bss.IO_PB0_InterruptHandler
-                0x0000000000804071        0x2
+                0x0000000000807311        0x2
  .bss.IO_PB0_InterruptHandler
-                0x0000000000804071        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000807311        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
 .bss.IO_PB1_InterruptHandler
-                0x0000000000804073        0x2
+                0x0000000000807313        0x2
  .bss.IO_PB1_InterruptHandler
-                0x0000000000804073        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000807313        0x2 build/default/production/mcc_generated_files/system/src/pins.o
 
 .bss.USART3_ParityErrorHandler
-                0x0000000000804075        0x2
+                0x0000000000807315        0x2
  .bss.USART3_ParityErrorHandler
-                0x0000000000804075        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
-                0x0000000000804075                USART3_ParityErrorHandler
+                0x0000000000807315        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x0000000000807315                USART3_ParityErrorHandler
 
 .bss.USART3_OverrunErrorHandler
-                0x0000000000804077        0x2
+                0x0000000000807317        0x2
  .bss.USART3_OverrunErrorHandler
-                0x0000000000804077        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
-                0x0000000000804077                USART3_OverrunErrorHandler
+                0x0000000000807317        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x0000000000807317                USART3_OverrunErrorHandler
 
 .bss.USART3_FramingErrorHandler
-                0x0000000000804079        0x2
+                0x0000000000807319        0x2
  .bss.USART3_FramingErrorHandler
-                0x0000000000804079        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
-                0x0000000000804079                USART3_FramingErrorHandler
+                0x0000000000807319        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x0000000000807319                USART3_FramingErrorHandler
 
 .bss.usart3RxLastError
-                0x000000000080407b        0x2
+                0x000000000080731b        0x2
  .bss.usart3RxLastError
-                0x000000000080407b        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x000000000080731b        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
 
-.bss.adc_data   0x0000000000804002       0x18
- .bss.adc_data  0x0000000000804002       0x18 build/default/production/main.o
-                0x0000000000804002                adc_data
+.bss.myArray    0x0000000000804002     0x3200
+ .bss.myArray   0x0000000000804002     0x3200 build/default/production/main.o
+                0x0000000000804002                myArray
 
-.bss.__stdout   0x000000000080407f        0x2
- .bss.__stdout  0x000000000080407f        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(stdout.o)
+.bss.adc_data   0x0000000000807202       0x78
+ .bss.adc_data  0x0000000000807202       0x78 build/default/production/main.o
+                0x0000000000807202                adc_data
 
-.rodata         0x000000000080817c      0x178 load address 0x000000000000017c
- .rodata        0x000000000080817c      0x178 build/default/production/main.o
+.bss.__stdout   0x000000000080731f        0x2
+ .bss.__stdout  0x000000000080731f        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(stdout.o)
 
-.text.__fmt_fp  0x00000000000002f4      0x72c
+.rodata         0x000000000080822c       0xff load address 0x000000000000022c
+ .rodata        0x000000000080822c       0xff build/default/production/main.o
+
+.text.__fmt_fp  0x000000000000032c      0x72c
  .text.__fmt_fp
-                0x00000000000002f4      0x72c c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_fp.o)
-                0x00000000000002f4                __fmt_f_needed
-                0x00000000000002f4                __fmt_fp
+                0x000000000000032c      0x72c c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_fp.o)
+                0x000000000000032c                __fmt_f_needed
+                0x000000000000032c                __fmt_fp
 
 .text.vfpfcnvrt
-                0x0000000000000a20      0x3fc
+                0x0000000000000a58      0x3fc
  .text.vfpfcnvrt
-                0x0000000000000a20      0x3fc c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
-                0x0000000000000a20                vfpfcnvrt
-
-.text.characterize
-                0x0000000000000e1c      0x3a8
- .text.characterize
-                0x0000000000000e1c      0x3a8 build/default/production/main.o
-                0x0000000000000e1c                characterize
-
-.text.__fmt_x   0x00000000000011c4      0x1dc
- .text.__fmt_x  0x00000000000011c4      0x1dc c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_x.o)
-                0x00000000000011c4                __fmt_x_needed
-                0x00000000000011c4                __fmt_x
+                0x0000000000000a58      0x3fc c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
+                0x0000000000000a58                vfpfcnvrt
 
 .text.PIN_MANAGER_Initialize
-                0x00000000000013a0      0x174
+                0x0000000000000e54      0x32a
  .text.PIN_MANAGER_Initialize
-                0x00000000000013a0      0x174 build/default/production/mcc_generated_files/system/src/pins.o
-                0x00000000000013a0                PIN_MANAGER_Initialize
+                0x0000000000000e54      0x32a build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000000e54                PIN_MANAGER_Initialize
 
-.text.floorf    0x0000000000001514       0xe6
- .text.floorf   0x0000000000001514       0xe6 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floorf.o)
-                0x0000000000001514                floorf
+.text.__fmt_x   0x000000000000117e      0x1dc
+ .text.__fmt_x  0x000000000000117e      0x1dc c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_x.o)
+                0x000000000000117e                __fmt_x_needed
+                0x000000000000117e                __fmt_x
 
-.text.__fmt_d   0x00000000000015fa       0xe4
- .text.__fmt_d  0x00000000000015fa       0xe4 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_d.o)
-                0x00000000000015fa                __fmt_d
-                0x00000000000015fa                __fmt_d_needed
+.text.printArray
+                0x000000000000135a      0x190
+ .text.printArray
+                0x000000000000135a      0x190 build/default/production/main.o
+                0x000000000000135a                printArray
 
-.text           0x00000000000016de       0xde
- .text          0x00000000000016de       0xde c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3x.o)
-                0x00000000000016de                __divsf3x
-                0x0000000000001706                __divsf3_pse
+.text.check_adc_within_range
+                0x00000000000014ea      0x17e
+ .text.check_adc_within_range
+                0x00000000000014ea      0x17e build/default/production/main.o
+                0x00000000000014ea                check_adc_within_range
 
-.text           0x00000000000017bc       0xd4
- .text          0x00000000000017bc       0xd4 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3x.o)
-                0x00000000000017bc                __mulsf3x
-                0x00000000000017e2                __mulsf3_pse
+.text.floorf    0x0000000000001668       0xe6
+ .text.floorf   0x0000000000001668       0xe6 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floorf.o)
+                0x0000000000001668                floorf
+
+.text.__fmt_d   0x000000000000174e       0xe4
+ .text.__fmt_d  0x000000000000174e       0xe4 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_d.o)
+                0x000000000000174e                __fmt_d
+                0x000000000000174e                __fmt_d_needed
+
+.text           0x0000000000001832       0xde
+ .text          0x0000000000001832       0xde c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3x.o)
+                0x0000000000001832                __divsf3x
+                0x000000000000185a                __divsf3_pse
+
+.text.characterize
+                0x0000000000001910       0xd8
+ .text.characterize
+                0x0000000000001910       0xd8 build/default/production/main.o
+                0x0000000000001910                characterize
+
+.text           0x00000000000019e8       0xd4
+ .text          0x00000000000019e8       0xd4 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3x.o)
+                0x00000000000019e8                __mulsf3x
+                0x0000000000001a0e                __mulsf3_pse
 
 .text.__pop_int
-                0x0000000000001890       0xd0
+                0x0000000000001abc       0xd0
  .text.__pop_int
-                0x0000000000001890       0xd0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__pop_int.o)
-                0x0000000000001890                __pop_int_needed
-                0x0000000000001890                __pop_int
+                0x0000000000001abc       0xd0 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__pop_int.o)
+                0x0000000000001abc                __pop_int_needed
+                0x0000000000001abc                __pop_int
 
-.text           0x0000000000001960       0xce
- .text          0x0000000000001960       0xce c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3x.o)
-                0x0000000000001960                __addsf3x
+.text.setLow    0x0000000000001b8c       0xce
+ .text.setLow   0x0000000000001b8c       0xce build/default/production/main.o
+                0x0000000000001b8c                setLow
 
-.text.__cvt_u   0x0000000000001a2e       0xca
- .text.__cvt_u  0x0000000000001a2e       0xca c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_u.o)
-                0x0000000000001a2e                __cvt_u
+.text.setHigh   0x0000000000001c5a       0xce
+ .text.setHigh  0x0000000000001c5a       0xce build/default/production/main.o
+                0x0000000000001c5a                setHigh
 
-.text.__fmt_o   0x0000000000001af8       0xb2
- .text.__fmt_o  0x0000000000001af8       0xb2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_o.o)
-                0x0000000000001af8                __fmt_o
-                0x0000000000001af8                __fmt_o_needed
-
-.text.EVSYS_Initialize
-                0x0000000000001baa       0xb0
- .text.EVSYS_Initialize
-                0x0000000000001baa       0xb0 build/default/production/mcc_generated_files/peripheral/src/evsys.o
-                0x0000000000001baa                EVSYS_Initialize
-
-.text.fputc     0x0000000000001c5a       0x98
- .text.fputc    0x0000000000001c5a       0x98 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(fputc.o)
-                0x0000000000001c5a                fputc
-                0x0000000000001c5a                putc
-
-.text.CLOCK_Initialize
-                0x0000000000001cf2       0x90
- .text.CLOCK_Initialize
-                0x0000000000001cf2       0x90 build/default/production/mcc_generated_files/system/src/clock.o
-                0x0000000000001cf2                CLOCK_Initialize
-
-.text.__fmt_u   0x0000000000001d82       0x8e
- .text.__fmt_u  0x0000000000001d82       0x8e c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_u.o)
-                0x0000000000001d82                __fmt_u_needed
-                0x0000000000001d82                __fmt_u
-
-.text.__vector_30
-                0x0000000000001e10       0x88
- .text.__vector_30
-                0x0000000000001e10       0x88 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000001e10                __vector_30
-
-.text.__vector_24
-                0x0000000000001e98       0x88
- .text.__vector_24
-                0x0000000000001e98       0x88 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000001e98                __vector_24
-
-.text.process_adc_conversion
-                0x0000000000001f20       0x82
- .text.process_adc_conversion
-                0x0000000000001f20       0x82 build/default/production/main.o
-                0x0000000000001f20                process_adc_conversion
-
-.text           0x0000000000001fa2       0x7a
- .text          0x0000000000001fa2       0x7a c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floatsisf.o)
-                0x0000000000001fa2                __floatunsisf
-                0x0000000000001fa6                __floatsisf
-
-.text.__printf_core
-                0x000000000000201c       0x78
- .text.__printf_core
-                0x000000000000201c       0x78 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
-                0x000000000000201c                __printf_core
-
-.text.__pad     0x0000000000002094       0x72
- .text.__pad    0x0000000000002094       0x72 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
-                0x0000000000002094                __pad
-
-.text.__vector_45
-                0x0000000000002106       0x6c
- .text.__vector_45
-                0x0000000000002106       0x6c build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002106                __vector_45
-
-.text.fputs     0x0000000000002172       0x64
- .text.fputs    0x0000000000002172       0x64 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(fputs.o)
-                0x0000000000002172                fputs
-                0x0000000000002172                fputs_unlocked
-
-.text.__vector_27
-                0x00000000000021d6       0x60
- .text.__vector_27
-                0x00000000000021d6       0x60 build/default/production/mcc_generated_files/adc/src/adc0.o
-                0x00000000000021d6                __vector_27
-
-.text.__vector_26
-                0x0000000000002236       0x60
- .text.__vector_26
-                0x0000000000002236       0x60 build/default/production/mcc_generated_files/adc/src/adc0.o
-                0x0000000000002236                __vector_26
-
-.text           0x0000000000002296       0x5e
- .text          0x0000000000002296       0x5e c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixunssfsi.o)
-                0x0000000000002296                __fixunssfsi
-
-.text.USART3_Initialize
-                0x00000000000022f4       0x5c
- .text.USART3_Initialize
-                0x00000000000022f4       0x5c build/default/production/mcc_generated_files/uart/src/usart3.o
-                0x00000000000022f4                USART3_Initialize
-
-.text.read_prec_or_width
-                0x0000000000002350       0x5c
- .text.read_prec_or_width
-                0x0000000000002350       0x5c c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
-
-.text.setLow    0x00000000000023ac       0x56
- .text.setLow   0x00000000000023ac       0x56 build/default/production/main.o
-                0x00000000000023ac                setLow
-
-.text.setHigh   0x0000000000002402       0x56
- .text.setHigh  0x0000000000002402       0x56 build/default/production/main.o
-                0x0000000000002402                setHigh
-
-.text.setInput  0x0000000000002458       0x56
+.text.setInput  0x0000000000001d28       0xce
  .text.setInput
-                0x0000000000002458       0x56 build/default/production/main.o
-                0x0000000000002458                setInput
+                0x0000000000001d28       0xce build/default/production/main.o
+                0x0000000000001d28                setInput
 
 .text.setOutput
-                0x00000000000024ae       0x56
+                0x0000000000001df6       0xce
  .text.setOutput
-                0x00000000000024ae       0x56 build/default/production/main.o
-                0x00000000000024ae                setOutput
+                0x0000000000001df6       0xce build/default/production/main.o
+                0x0000000000001df6                setOutput
 
-.text.__fmt_s   0x0000000000002504       0x54
- .text.__fmt_s  0x0000000000002504       0x54 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_s.o)
-                0x0000000000002504                __fmt_s
-                0x0000000000002504                __fmt_0_needed
-                0x0000000000002504                __fmt_s_needed
+.text           0x0000000000001ec4       0xce
+ .text          0x0000000000001ec4       0xce c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3x.o)
+                0x0000000000001ec4                __addsf3x
 
-.text.main      0x0000000000002558       0x52
- .text.main     0x0000000000002558       0x52 build/default/production/main.o
-                0x0000000000002558                main
+.text.__cvt_u   0x0000000000001f92       0xca
+ .text.__cvt_u  0x0000000000001f92       0xca c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_u.o)
+                0x0000000000001f92                __cvt_u
 
-.text           0x00000000000025aa       0x48
- .text          0x00000000000025aa       0x48 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
-                0x00000000000025aa                __fp_cmp
+.text.__vector_45
+                0x000000000000205c       0xc0
+ .text.__vector_45
+                0x000000000000205c       0xc0 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000205c                __vector_45
 
-.text           0x00000000000025f2       0x44
- .text          0x00000000000025f2       0x44 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_split3.o)
-                0x00000000000025f2                __fp_split3
-                0x0000000000002602                __fp_splitA
-
-.text.libgcc.div
-                0x0000000000002636       0x44
- .text.libgcc.div
-                0x0000000000002636       0x44 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_udivmodsi4.o)
-                0x0000000000002636                __udivmodsi4
-
-.text.__fmt_state
-                0x000000000000267a       0x40
- .text.__fmt_state
-                0x000000000000267a       0x40 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
-                0x000000000000267a                __fmt_state
-
-.text.__pop_float
-                0x00000000000026ba       0x40
- .text.__pop_float
-                0x00000000000026ba       0x40 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__pop_float.o)
-                0x00000000000026ba                __pop_float_needed
-                0x00000000000026ba                __pop_float
-
-.text.TCA0_Initialize
-                0x00000000000026fa       0x3a
- .text.TCA0_Initialize
-                0x00000000000026fa       0x3a build/default/production/mcc_generated_files/timer/src/tca0.o
-                0x00000000000026fa                TCA0_Initialize
-
-.text.__out     0x0000000000002734       0x3a
- .text.__out    0x0000000000002734       0x3a c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
-                0x0000000000002734                __out
-
-.text.libgcc.prologue
-                0x000000000000276e       0x32
- .text.libgcc.prologue
-                0x000000000000276e       0x32 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_prologue.o)
-                0x000000000000276e                __prologue_saves__
-
-.text.__wrap_printf
-                0x00000000000027a0       0x30
- .text.__wrap_printf
-                0x00000000000027a0       0x30 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfosux.o)
-                0x00000000000027a0                _printf_cdeEfFgGopsuxX
-                0x00000000000027a0                _printf_cdeEopsuxX
-                0x00000000000027a0                _printf_cdfFgGopsuxX
-                0x00000000000027a0                _printf_cdeEgGopsuxX
-                0x00000000000027a0                _printf_cdeEfFopsuxX
-                0x00000000000027a0                _printf_cdfFopsuxX
-                0x00000000000027a0                _printf_cdgGopsuxX
-
-.text.__wrap_printf
-                0x00000000000027d0       0x30
- .text.__wrap_printf
-                0x00000000000027d0       0x30 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_doux.o)
-                0x00000000000027d0                _printf_cdopuxX
-
-.text.__vfprintf
-                0x0000000000002800       0x30
- .text.__vfprintf
-                0x0000000000002800       0x30 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__int_vfprintf.o)
-                0x0000000000002800                __vfprintf
-
-.text.libgcc.prologue
-                0x0000000000002830       0x30
- .text.libgcc.prologue
-                0x0000000000002830       0x30 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_epilogue.o)
-                0x0000000000002830                __epilogue_restores__
-
-.text.ADC0_Initialize
-                0x0000000000002860       0x2e
- .text.ADC0_Initialize
-                0x0000000000002860       0x2e build/default/production/mcc_generated_files/adc/src/adc0.o
-                0x0000000000002860                ADC0_Initialize
-
-.text.libgcc.div
-                0x000000000000288e       0x28
- .text.libgcc.div
-                0x000000000000288e       0x28 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_divmodhi4.o)
-                0x000000000000288e                _div
-                0x000000000000288e                __divmodhi4
-
-.text.libgcc.div
-                0x00000000000028b6       0x28
- .text.libgcc.div
-                0x00000000000028b6       0x28 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_udivmodhi4.o)
-                0x00000000000028b6                __udivmodhi4
-
-.text.SYSTEM_Initialize
-                0x00000000000028de       0x22
- .text.SYSTEM_Initialize
-                0x00000000000028de       0x22 build/default/production/mcc_generated_files/system/src/system.o
-                0x00000000000028de                SYSTEM_Initialize
-
-.text           0x0000000000002900       0x22
- .text          0x0000000000002900       0x22 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_round.o)
-                0x0000000000002900                __fp_round
-
-.text.strlen    0x0000000000002922       0x1c
- .text.strlen   0x0000000000002922       0x1c c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(strlen.o)
-                0x0000000000002922                strlen
-
-.text.CPUINT_Initialize
-                0x000000000000293e       0x18
- .text.CPUINT_Initialize
-                0x000000000000293e       0x18 build/default/production/mcc_generated_files/system/src/interrupt.o
-                0x000000000000293e                CPUINT_Initialize
-
-.text.USART3_printCHAR
-                0x0000000000002956       0x18
- .text.USART3_printCHAR
-                0x0000000000002956       0x18 build/default/production/mcc_generated_files/uart/src/usart3.o
-                0x0000000000002956                USART3_printCHAR
-
-.text.exit      0x000000000000296e       0x16
- .text.exit     0x000000000000296e       0x16 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
-                0x000000000000296e                exit
-
-.text.puts      0x0000000000002984       0x12
- .text.puts     0x0000000000002984       0x12 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(puts.o)
-                0x0000000000002984                puts
-
-.text.memset    0x0000000000002996       0x12
- .text.memset   0x0000000000002996       0x12 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(memset.o)
-                0x0000000000002996                memset
-
-.text.toupper   0x00000000000029a8       0x12
- .text.toupper  0x00000000000029a8       0x12 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(toupper.o)
-                0x00000000000029a8                toupper
-
-.text.VREF_Initialize
-                0x00000000000029ba       0x10
- .text.VREF_Initialize
-                0x00000000000029ba       0x10 build/default/production/mcc_generated_files/vref/src/vref.o
-                0x00000000000029ba                VREF_Initialize
-
-.text.strcpy    0x00000000000029ca       0x10
- .text.strcpy   0x00000000000029ca       0x10 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(strcpy.o)
-                0x00000000000029ca                strcpy
-
-.text.tolower   0x00000000000029da       0x10
- .text.tolower  0x00000000000029da       0x10 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(tolower.o)
-                0x00000000000029da                tolower
-
-.text           0x00000000000029ea        0xe
- .text          0x00000000000029ea        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3.o)
-                0x00000000000029ea                __subsf3
-                0x00000000000029ec                __addsf3
-
-.text           0x00000000000029f8        0xe
- .text          0x00000000000029f8        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_pscA.o)
-                0x00000000000029f8                __fp_pscA
-
-.text           0x0000000000002a06        0xe
- .text          0x0000000000002a06        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_pscB.o)
-                0x0000000000002a06                __fp_pscB
-
-.text           0x0000000000002a14        0xe
- .text          0x0000000000002a14        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_zero.o)
-                0x0000000000002a14                __fp_zero
-                0x0000000000002a16                __fp_szero
-
-.text           0x0000000000002a22        0xe
- .text          0x0000000000002a22        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixsfsi.o)
-                0x0000000000002a22                __fixsfsi
-
-.text.ADC0_EnableAutoTrigger
-                0x0000000000002a30        0xc
- .text.ADC0_EnableAutoTrigger
-                0x0000000000002a30        0xc build/default/production/mcc_generated_files/adc/src/adc0.o
-                0x0000000000002a30                ADC0_EnableAutoTrigger
-
-.text.ADC0_StartConversion
-                0x0000000000002a3c        0xc
- .text.ADC0_StartConversion
-                0x0000000000002a3c        0xc build/default/production/mcc_generated_files/adc/src/adc0.o
-                0x0000000000002a3c                ADC0_StartConversion
-
-.text.USART3_IsTxReady
-                0x0000000000002a48        0xc
- .text.USART3_IsTxReady
-                0x0000000000002a48        0xc build/default/production/mcc_generated_files/uart/src/usart3.o
-                0x0000000000002a48                USART3_IsTxReady
-
-.text           0x0000000000002a54        0xc
- .text          0x0000000000002a54        0xc c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_inf.o)
-                0x0000000000002a54                __fp_inf
-
-.text.ADC0_GetConversionResult
-                0x0000000000002a60        0xa
- .text.ADC0_GetConversionResult
-                0x0000000000002a60        0xa build/default/production/mcc_generated_files/adc/src/adc0.o
-                0x0000000000002a60                ADC0_GetConversionResult
-
-.text.protected_write_io
-                0x0000000000002a6a        0xa
- .text.protected_write_io
-                0x0000000000002a6a        0xa build/default/production/mcc_generated_files/system/src/protected_io.o
-                0x0000000000002a6a                protected_write_io
-
-.text.__vector_8
-                0x0000000000002a74        0xa
- .text.__vector_8
-                0x0000000000002a74        0xa build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002a74                __vector_8
+.text.__vector_24
+                0x000000000000211c       0xc0
+ .text.__vector_24
+                0x000000000000211c       0xc0 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000211c                __vector_24
 
 .text.__vector_46
-                0x0000000000002a7e        0xa
+                0x00000000000021dc       0xc0
  .text.__vector_46
-                0x0000000000002a7e        0xa build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002a7e                __vector_46
+                0x00000000000021dc       0xc0 build/default/production/mcc_generated_files/system/src/pins.o
+                0x00000000000021dc                __vector_46
+
+.text.EVSYS_Initialize
+                0x000000000000229c       0xbc
+ .text.EVSYS_Initialize
+                0x000000000000229c       0xbc build/default/production/mcc_generated_files/peripheral/src/evsys.o
+                0x000000000000229c                EVSYS_Initialize
+
+.text.__vector_59
+                0x0000000000002358       0xb2
+ .text.__vector_59
+                0x0000000000002358       0xb2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000002358                __vector_59
+
+.text.__fmt_o   0x000000000000240a       0xb2
+ .text.__fmt_o  0x000000000000240a       0xb2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_o.o)
+                0x000000000000240a                __fmt_o
+                0x000000000000240a                __fmt_o_needed
+
+.text.main      0x00000000000024bc       0xac
+ .text.main     0x00000000000024bc       0xac build/default/production/main.o
+                0x00000000000024bc                main
+
+.text.__vector_30
+                0x0000000000002568       0xa4
+ .text.__vector_30
+                0x0000000000002568       0xa4 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000002568                __vector_30
+
+.text.fputc     0x000000000000260c       0x98
+ .text.fputc    0x000000000000260c       0x98 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(fputc.o)
+                0x000000000000260c                fputc
+                0x000000000000260c                putc
+
+.text.CLOCK_Initialize
+                0x00000000000026a4       0x90
+ .text.CLOCK_Initialize
+                0x00000000000026a4       0x90 build/default/production/mcc_generated_files/system/src/clock.o
+                0x00000000000026a4                CLOCK_Initialize
+
+.text.__fmt_u   0x0000000000002734       0x8e
+ .text.__fmt_u  0x0000000000002734       0x8e c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_u.o)
+                0x0000000000002734                __fmt_u_needed
+                0x0000000000002734                __fmt_u
 
 .text.__vector_35
-                0x0000000000002a88        0xa
+                0x00000000000027c2       0x88
  .text.__vector_35
-                0x0000000000002a88        0xa build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002a88                __vector_35
+                0x00000000000027c2       0x88 build/default/production/mcc_generated_files/system/src/pins.o
+                0x00000000000027c2                __vector_35
 
-.text           0x0000000000002a92        0xa
- .text          0x0000000000002a92        0xa c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
-                0x0000000000002a92                __nesf2
-                0x0000000000002a92                __eqsf2
-                0x0000000000002a92                __cmpsf2
-                0x0000000000002a92                __ltsf2
-                0x0000000000002a92                __lesf2
+.text.process_adc_conversion
+                0x000000000000284a       0x82
+ .text.process_adc_conversion
+                0x000000000000284a       0x82 build/default/production/main.o
+                0x000000000000284a                process_adc_conversion
 
-.text           0x0000000000002a9c        0xa
- .text          0x0000000000002a9c        0xa c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(gesf2.o)
-                0x0000000000002a9c                __gesf2
-                0x0000000000002a9c                __gtsf2
+.text           0x00000000000028cc       0x7a
+ .text          0x00000000000028cc       0x7a c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(floatsisf.o)
+                0x00000000000028cc                __floatunsisf
+                0x00000000000028d0                __floatsisf
 
-.text           0x0000000000002aa6        0x8
- .text          0x0000000000002aa6        0x8 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3.o)
-                0x0000000000002aa6                __divsf3
+.text.__printf_core
+                0x0000000000002946       0x78
+ .text.__printf_core
+                0x0000000000002946       0x78 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
+                0x0000000000002946                __printf_core
 
-.text           0x0000000000002aae        0x8
- .text          0x0000000000002aae        0x8 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3.o)
-                0x0000000000002aae                __mulsf3
+.text.__pad     0x00000000000029be       0x72
+ .text.__pad    0x00000000000029be       0x72 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
+                0x00000000000029be                __pad
+
+.text.fputs     0x0000000000002a30       0x64
+ .text.fputs    0x0000000000002a30       0x64 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(fputs.o)
+                0x0000000000002a30                fputs
+                0x0000000000002a30                fputs_unlocked
+
+.text.__vector_27
+                0x0000000000002a94       0x60
+ .text.__vector_27
+                0x0000000000002a94       0x60 build/default/production/mcc_generated_files/adc/src/adc0.o
+                0x0000000000002a94                __vector_27
+
+.text.__vector_26
+                0x0000000000002af4       0x60
+ .text.__vector_26
+                0x0000000000002af4       0x60 build/default/production/mcc_generated_files/adc/src/adc0.o
+                0x0000000000002af4                __vector_26
+
+.text.__vector_8
+                0x0000000000002b54       0x5e
+ .text.__vector_8
+                0x0000000000002b54       0x5e build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000002b54                __vector_8
+
+.text           0x0000000000002bb2       0x5e
+ .text          0x0000000000002bb2       0x5e c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixunssfsi.o)
+                0x0000000000002bb2                __fixunssfsi
+
+.text.USART3_Initialize
+                0x0000000000002c10       0x5c
+ .text.USART3_Initialize
+                0x0000000000002c10       0x5c build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x0000000000002c10                USART3_Initialize
+
+.text.read_prec_or_width
+                0x0000000000002c6c       0x5c
+ .text.read_prec_or_width
+                0x0000000000002c6c       0x5c c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
+
+.text.__fmt_s   0x0000000000002cc8       0x54
+ .text.__fmt_s  0x0000000000002cc8       0x54 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_s.o)
+                0x0000000000002cc8                __fmt_s
+                0x0000000000002cc8                __fmt_0_needed
+                0x0000000000002cc8                __fmt_s_needed
+
+.text           0x0000000000002d1c       0x48
+ .text          0x0000000000002d1c       0x48 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_cmp.o)
+                0x0000000000002d1c                __fp_cmp
+
+.text           0x0000000000002d64       0x44
+ .text          0x0000000000002d64       0x44 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_split3.o)
+                0x0000000000002d64                __fp_split3
+                0x0000000000002d74                __fp_splitA
+
+.text.libgcc.div
+                0x0000000000002da8       0x44
+ .text.libgcc.div
+                0x0000000000002da8       0x44 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_udivmodsi4.o)
+                0x0000000000002da8                __udivmodsi4
+
+.text.__fmt_state
+                0x0000000000002dec       0x40
+ .text.__fmt_state
+                0x0000000000002dec       0x40 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
+                0x0000000000002dec                __fmt_state
+
+.text.__pop_float
+                0x0000000000002e2c       0x40
+ .text.__pop_float
+                0x0000000000002e2c       0x40 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__pop_float.o)
+                0x0000000000002e2c                __pop_float_needed
+                0x0000000000002e2c                __pop_float
+
+.text.TCA0_Initialize
+                0x0000000000002e6c       0x3a
+ .text.TCA0_Initialize
+                0x0000000000002e6c       0x3a build/default/production/mcc_generated_files/timer/src/tca0.o
+                0x0000000000002e6c                TCA0_Initialize
+
+.text.__out     0x0000000000002ea6       0x3a
+ .text.__out    0x0000000000002ea6       0x3a c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
+                0x0000000000002ea6                __out
+
+.text.libgcc.prologue
+                0x0000000000002ee0       0x32
+ .text.libgcc.prologue
+                0x0000000000002ee0       0x32 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_prologue.o)
+                0x0000000000002ee0                __prologue_saves__
+
+.text.__wrap_printf
+                0x0000000000002f12       0x30
+ .text.__wrap_printf
+                0x0000000000002f12       0x30 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_dfoux.o)
+                0x0000000000002f12                _printf_cdfFopuxX
+                0x0000000000002f12                _printf_cdgGopuxX
+                0x0000000000002f12                _printf_cdfFgGopuxX
+                0x0000000000002f12                _printf_cdeEfFgGopuxX
+                0x0000000000002f12                _printf_cdeEopuxX
+                0x0000000000002f12                _printf_cdeEfFopuxX
+                0x0000000000002f12                _printf_cdeEgGopuxX
+
+.text.__wrap_printf
+                0x0000000000002f42       0x30
+ .text.__wrap_printf
+                0x0000000000002f42       0x30 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__sio_printf_doux.o)
+                0x0000000000002f42                _printf_cdopuxX
+
+.text.__vfprintf
+                0x0000000000002f72       0x30
+ .text.__vfprintf
+                0x0000000000002f72       0x30 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__int_vfprintf.o)
+                0x0000000000002f72                __vfprintf
+
+.text.libgcc.prologue
+                0x0000000000002fa2       0x30
+ .text.libgcc.prologue
+                0x0000000000002fa2       0x30 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_epilogue.o)
+                0x0000000000002fa2                __epilogue_restores__
+
+.text.ADC0_Initialize
+                0x0000000000002fd2       0x2e
+ .text.ADC0_Initialize
+                0x0000000000002fd2       0x2e build/default/production/mcc_generated_files/adc/src/adc0.o
+                0x0000000000002fd2                ADC0_Initialize
+
+.text.libgcc.div
+                0x0000000000003000       0x28
+ .text.libgcc.div
+                0x0000000000003000       0x28 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_divmodhi4.o)
+                0x0000000000003000                _div
+                0x0000000000003000                __divmodhi4
+
+.text.libgcc.div
+                0x0000000000003028       0x28
+ .text.libgcc.div
+                0x0000000000003028       0x28 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_udivmodhi4.o)
+                0x0000000000003028                __udivmodhi4
+
+.text.SYSTEM_Initialize
+                0x0000000000003050       0x22
+ .text.SYSTEM_Initialize
+                0x0000000000003050       0x22 build/default/production/mcc_generated_files/system/src/system.o
+                0x0000000000003050                SYSTEM_Initialize
+
+.text           0x0000000000003072       0x22
+ .text          0x0000000000003072       0x22 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_round.o)
+                0x0000000000003072                __fp_round
+
+.text.strlen    0x0000000000003094       0x1c
+ .text.strlen   0x0000000000003094       0x1c c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(strlen.o)
+                0x0000000000003094                strlen
+
+.text.CPUINT_Initialize
+                0x00000000000030b0       0x18
+ .text.CPUINT_Initialize
+                0x00000000000030b0       0x18 build/default/production/mcc_generated_files/system/src/interrupt.o
+                0x00000000000030b0                CPUINT_Initialize
+
+.text.USART3_printCHAR
+                0x00000000000030c8       0x18
+ .text.USART3_printCHAR
+                0x00000000000030c8       0x18 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x00000000000030c8                USART3_printCHAR
+
+.text.exit      0x00000000000030e0       0x16
+ .text.exit     0x00000000000030e0       0x16 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
+                0x00000000000030e0                exit
+
+.text.libgcc    0x00000000000030f6       0x12
+ .text.libgcc   0x00000000000030f6       0x12 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped\libgcc.a(_tablejump2.o)
+                0x00000000000030f6                __tablejump2__
+
+.text.puts      0x0000000000003108       0x12
+ .text.puts     0x0000000000003108       0x12 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(puts.o)
+                0x0000000000003108                puts
+
+.text.memset    0x000000000000311a       0x12
+ .text.memset   0x000000000000311a       0x12 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(memset.o)
+                0x000000000000311a                memset
+
+.text.toupper   0x000000000000312c       0x12
+ .text.toupper  0x000000000000312c       0x12 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(toupper.o)
+                0x000000000000312c                toupper
+
+.text.VREF_Initialize
+                0x000000000000313e       0x10
+ .text.VREF_Initialize
+                0x000000000000313e       0x10 build/default/production/mcc_generated_files/vref/src/vref.o
+                0x000000000000313e                VREF_Initialize
+
+.text.strcpy    0x000000000000314e       0x10
+ .text.strcpy   0x000000000000314e       0x10 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(strcpy.o)
+                0x000000000000314e                strcpy
+
+.text.tolower   0x000000000000315e       0x10
+ .text.tolower  0x000000000000315e       0x10 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(tolower.o)
+                0x000000000000315e                tolower
+
+.text           0x000000000000316e        0xe
+ .text          0x000000000000316e        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(addsf3.o)
+                0x000000000000316e                __subsf3
+                0x0000000000003170                __addsf3
+
+.text           0x000000000000317c        0xe
+ .text          0x000000000000317c        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_pscA.o)
+                0x000000000000317c                __fp_pscA
+
+.text           0x000000000000318a        0xe
+ .text          0x000000000000318a        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_pscB.o)
+                0x000000000000318a                __fp_pscB
+
+.text           0x0000000000003198        0xe
+ .text          0x0000000000003198        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_zero.o)
+                0x0000000000003198                __fp_zero
+                0x000000000000319a                __fp_szero
+
+.text           0x00000000000031a6        0xe
+ .text          0x00000000000031a6        0xe c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fixsfsi.o)
+                0x00000000000031a6                __fixsfsi
+
+.text.ADC0_EnableAutoTrigger
+                0x00000000000031b4        0xc
+ .text.ADC0_EnableAutoTrigger
+                0x00000000000031b4        0xc build/default/production/mcc_generated_files/adc/src/adc0.o
+                0x00000000000031b4                ADC0_EnableAutoTrigger
+
+.text.ADC0_StartConversion
+                0x00000000000031c0        0xc
+ .text.ADC0_StartConversion
+                0x00000000000031c0        0xc build/default/production/mcc_generated_files/adc/src/adc0.o
+                0x00000000000031c0                ADC0_StartConversion
+
+.text.USART3_IsTxReady
+                0x00000000000031cc        0xc
+ .text.USART3_IsTxReady
+                0x00000000000031cc        0xc build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x00000000000031cc                USART3_IsTxReady
+
+.text           0x00000000000031d8        0xc
+ .text          0x00000000000031d8        0xc c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_inf.o)
+                0x00000000000031d8                __fp_inf
+
+.text.ADC0_GetConversionResult
+                0x00000000000031e4        0xa
+ .text.ADC0_GetConversionResult
+                0x00000000000031e4        0xa build/default/production/mcc_generated_files/adc/src/adc0.o
+                0x00000000000031e4                ADC0_GetConversionResult
+
+.text.protected_write_io
+                0x00000000000031ee        0xa
+ .text.protected_write_io
+                0x00000000000031ee        0xa build/default/production/mcc_generated_files/system/src/protected_io.o
+                0x00000000000031ee                protected_write_io
+
+.text           0x00000000000031f8        0xa
+ .text          0x00000000000031f8        0xa c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(gesf2.o)
+                0x00000000000031f8                __gesf2
+                0x00000000000031f8                __gtsf2
+
+.text           0x0000000000003202        0xa
+ .text          0x0000000000003202        0xa c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(cmpsf2.o)
+                0x0000000000003202                __nesf2
+                0x0000000000003202                __eqsf2
+                0x0000000000003202                __cmpsf2
+                0x0000000000003202                __ltsf2
+                0x0000000000003202                __lesf2
+
+.text           0x000000000000320c        0x8
+ .text          0x000000000000320c        0x8 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(divsf3.o)
+                0x000000000000320c                __divsf3
+
+.text           0x0000000000003214        0x8
+ .text          0x0000000000003214        0x8 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(mulsf3.o)
+                0x0000000000003214                __mulsf3
 
 .text.ADC0_SetWindowChannel
-                0x0000000000002ab6        0x6
+                0x000000000000321c        0x6
  .text.ADC0_SetWindowChannel
-                0x0000000000002ab6        0x6 build/default/production/mcc_generated_files/adc/src/adc0.o
-                0x0000000000002ab6                ADC0_SetWindowChannel
+                0x000000000000321c        0x6 build/default/production/mcc_generated_files/adc/src/adc0.o
+                0x000000000000321c                ADC0_SetWindowChannel
 
-.text           0x0000000000002abc        0x6
- .text          0x0000000000002abc        0x6 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_nan.o)
-                0x0000000000002abc                __fp_nan
+.text           0x0000000000003222        0x6
+ .text          0x0000000000003222        0x6 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libm.a(fp_nan.o)
+                0x0000000000003222                __fp_nan
 
-.text           0x0000000000002ac2        0x4
- .text          0x0000000000002ac2        0x4 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db48.o
-                0x0000000000002ac2                __vector_38
-                0x0000000000002ac2                __vector_22
-                0x0000000000002ac2                __vector_28
-                0x0000000000002ac2                __vector_1
-                0x0000000000002ac2                __vector_32
-                0x0000000000002ac2                __vector_34
-                0x0000000000002ac2                __vector_12
-                0x0000000000002ac2                __vector_55
-                0x0000000000002ac2                __bad_interrupt
-                0x0000000000002ac2                __vector_6
-                0x0000000000002ac2                __vector_31
-                0x0000000000002ac2                __vector_39
-                0x0000000000002ac2                __vector_3
-                0x0000000000002ac2                __vector_23
-                0x0000000000002ac2                __vector_25
-                0x0000000000002ac2                __vector_11
-                0x0000000000002ac2                __vector_54
-                0x0000000000002ac2                __vector_13
-                0x0000000000002ac2                __vector_17
-                0x0000000000002ac2                __vector_19
-                0x0000000000002ac2                __vector_56
-                0x0000000000002ac2                __vector_7
-                0x0000000000002ac2                __vector_49
-                0x0000000000002ac2                __vector_41
-                0x0000000000002ac2                __vector_43
-                0x0000000000002ac2                __vector_5
-                0x0000000000002ac2                __vector_33
-                0x0000000000002ac2                __vector_47
-                0x0000000000002ac2                __vector_52
-                0x0000000000002ac2                __vector_37
-                0x0000000000002ac2                __vector_4
-                0x0000000000002ac2                __vector_44
-                0x0000000000002ac2                __vector_51
-                0x0000000000002ac2                __vector_9
-                0x0000000000002ac2                __vector_2
-                0x0000000000002ac2                __vector_21
-                0x0000000000002ac2                __vector_15
-                0x0000000000002ac2                __vector_36
-                0x0000000000002ac2                __vector_58
-                0x0000000000002ac2                __vector_29
-                0x0000000000002ac2                __vector_60
-                0x0000000000002ac2                __vector_40
-                0x0000000000002ac2                __vector_48
-                0x0000000000002ac2                __vector_14
-                0x0000000000002ac2                __vector_57
-                0x0000000000002ac2                __vector_53
-                0x0000000000002ac2                __vector_10
-                0x0000000000002ac2                __vector_50
-                0x0000000000002ac2                __vector_16
-                0x0000000000002ac2                __vector_59
-                0x0000000000002ac2                __vector_18
-                0x0000000000002ac2                __vector_20
-                0x0000000000002ac2                __vector_42
+.text           0x0000000000003228        0x4
+ .text          0x0000000000003228        0x4 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db64.o
+                0x0000000000003228                __vector_38
+                0x0000000000003228                __vector_22
+                0x0000000000003228                __vector_63
+                0x0000000000003228                __vector_28
+                0x0000000000003228                __vector_1
+                0x0000000000003228                __vector_32
+                0x0000000000003228                __vector_34
+                0x0000000000003228                __vector_62
+                0x0000000000003228                __vector_12
+                0x0000000000003228                __vector_55
+                0x0000000000003228                __bad_interrupt
+                0x0000000000003228                __vector_6
+                0x0000000000003228                __vector_31
+                0x0000000000003228                __vector_39
+                0x0000000000003228                __vector_3
+                0x0000000000003228                __vector_23
+                0x0000000000003228                __vector_25
+                0x0000000000003228                __vector_61
+                0x0000000000003228                __vector_11
+                0x0000000000003228                __vector_54
+                0x0000000000003228                __vector_13
+                0x0000000000003228                __vector_17
+                0x0000000000003228                __vector_19
+                0x0000000000003228                __vector_56
+                0x0000000000003228                __vector_7
+                0x0000000000003228                __vector_49
+                0x0000000000003228                __vector_41
+                0x0000000000003228                __vector_64
+                0x0000000000003228                __vector_43
+                0x0000000000003228                __vector_5
+                0x0000000000003228                __vector_33
+                0x0000000000003228                __vector_47
+                0x0000000000003228                __vector_52
+                0x0000000000003228                __vector_37
+                0x0000000000003228                __vector_4
+                0x0000000000003228                __vector_44
+                0x0000000000003228                __vector_51
+                0x0000000000003228                __vector_9
+                0x0000000000003228                __vector_2
+                0x0000000000003228                __vector_21
+                0x0000000000003228                __vector_15
+                0x0000000000003228                __vector_36
+                0x0000000000003228                __vector_58
+                0x0000000000003228                __vector_29
+                0x0000000000003228                __vector_60
+                0x0000000000003228                __vector_40
+                0x0000000000003228                __vector_48
+                0x0000000000003228                __vector_14
+                0x0000000000003228                __vector_57
+                0x0000000000003228                __vector_53
+                0x0000000000003228                __vector_10
+                0x0000000000003228                __vector_50
+                0x0000000000003228                __vector_16
+                0x0000000000003228                __vector_18
+                0x0000000000003228                __vector_20
+                0x0000000000003228                __vector_42
 
-.text._Exit     0x0000000000002ac6        0x4
- .text._Exit    0x0000000000002ac6        0x4 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
-                0x0000000000002ac6                _Exit
+.text._Exit     0x000000000000322c        0x4
+ .text._Exit    0x000000000000322c        0x4 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(_Exit.o)
+                0x000000000000322c                _Exit
 
 .text.IO_PB1_DefaultInterruptHandler
-                0x0000000000002aca        0x2
+                0x0000000000003230        0x2
  .text.IO_PB1_DefaultInterruptHandler
-                0x0000000000002aca        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002aca                IO_PB1_DefaultInterruptHandler
+                0x0000000000003230        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003230                IO_PB1_DefaultInterruptHandler
 
 .text.IO_PB0_DefaultInterruptHandler
-                0x0000000000002acc        0x2
+                0x0000000000003232        0x2
  .text.IO_PB0_DefaultInterruptHandler
-                0x0000000000002acc        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002acc                IO_PB0_DefaultInterruptHandler
-
-.text.AIN_0_DefaultInterruptHandler
-                0x0000000000002ace        0x2
- .text.AIN_0_DefaultInterruptHandler
-                0x0000000000002ace        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002ace                AIN_0_DefaultInterruptHandler
-
-.text.AIN_1_DefaultInterruptHandler
-                0x0000000000002ad0        0x2
- .text.AIN_1_DefaultInterruptHandler
-                0x0000000000002ad0        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002ad0                AIN_1_DefaultInterruptHandler
-
-.text.AIN_2_DefaultInterruptHandler
-                0x0000000000002ad2        0x2
- .text.AIN_2_DefaultInterruptHandler
-                0x0000000000002ad2        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002ad2                AIN_2_DefaultInterruptHandler
-
-.text.AIN_3_DefaultInterruptHandler
-                0x0000000000002ad4        0x2
- .text.AIN_3_DefaultInterruptHandler
-                0x0000000000002ad4        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002ad4                AIN_3_DefaultInterruptHandler
-
-.text.CTR_0_DefaultInterruptHandler
-                0x0000000000002ad6        0x2
- .text.CTR_0_DefaultInterruptHandler
-                0x0000000000002ad6        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002ad6                CTR_0_DefaultInterruptHandler
+                0x0000000000003232        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003232                IO_PB0_DefaultInterruptHandler
 
 .text.CTR_1_DefaultInterruptHandler
-                0x0000000000002ad8        0x2
+                0x0000000000003234        0x2
  .text.CTR_1_DefaultInterruptHandler
-                0x0000000000002ad8        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002ad8                CTR_1_DefaultInterruptHandler
+                0x0000000000003234        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003234                CTR_1_DefaultInterruptHandler
 
 .text.CTR_2_DefaultInterruptHandler
-                0x0000000000002ada        0x2
+                0x0000000000003236        0x2
  .text.CTR_2_DefaultInterruptHandler
-                0x0000000000002ada        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002ada                CTR_2_DefaultInterruptHandler
+                0x0000000000003236        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003236                CTR_2_DefaultInterruptHandler
 
 .text.CTR_3_DefaultInterruptHandler
-                0x0000000000002adc        0x2
+                0x0000000000003238        0x2
  .text.CTR_3_DefaultInterruptHandler
-                0x0000000000002adc        0x2 build/default/production/mcc_generated_files/system/src/pins.o
-                0x0000000000002adc                CTR_3_DefaultInterruptHandler
+                0x0000000000003238        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003238                CTR_3_DefaultInterruptHandler
+
+.text.CTR_4_DefaultInterruptHandler
+                0x000000000000323a        0x2
+ .text.CTR_4_DefaultInterruptHandler
+                0x000000000000323a        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000323a                CTR_4_DefaultInterruptHandler
+
+.text.CTR_5_DefaultInterruptHandler
+                0x000000000000323c        0x2
+ .text.CTR_5_DefaultInterruptHandler
+                0x000000000000323c        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000323c                CTR_5_DefaultInterruptHandler
+
+.text.CTR_6_DefaultInterruptHandler
+                0x000000000000323e        0x2
+ .text.CTR_6_DefaultInterruptHandler
+                0x000000000000323e        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000323e                CTR_6_DefaultInterruptHandler
+
+.text.CTR_7_DefaultInterruptHandler
+                0x0000000000003240        0x2
+ .text.CTR_7_DefaultInterruptHandler
+                0x0000000000003240        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003240                CTR_7_DefaultInterruptHandler
+
+.text.CTR_8_DefaultInterruptHandler
+                0x0000000000003242        0x2
+ .text.CTR_8_DefaultInterruptHandler
+                0x0000000000003242        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003242                CTR_8_DefaultInterruptHandler
+
+.text.CTR_9_DefaultInterruptHandler
+                0x0000000000003244        0x2
+ .text.CTR_9_DefaultInterruptHandler
+                0x0000000000003244        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003244                CTR_9_DefaultInterruptHandler
+
+.text.CTR_10_DefaultInterruptHandler
+                0x0000000000003246        0x2
+ .text.CTR_10_DefaultInterruptHandler
+                0x0000000000003246        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003246                CTR_10_DefaultInterruptHandler
+
+.text.CTR_11_DefaultInterruptHandler
+                0x0000000000003248        0x2
+ .text.CTR_11_DefaultInterruptHandler
+                0x0000000000003248        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003248                CTR_11_DefaultInterruptHandler
+
+.text.CTR_12_DefaultInterruptHandler
+                0x000000000000324a        0x2
+ .text.CTR_12_DefaultInterruptHandler
+                0x000000000000324a        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000324a                CTR_12_DefaultInterruptHandler
+
+.text.CTR_13_DefaultInterruptHandler
+                0x000000000000324c        0x2
+ .text.CTR_13_DefaultInterruptHandler
+                0x000000000000324c        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000324c                CTR_13_DefaultInterruptHandler
+
+.text.AIN_1_DefaultInterruptHandler
+                0x000000000000324e        0x2
+ .text.AIN_1_DefaultInterruptHandler
+                0x000000000000324e        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000324e                AIN_1_DefaultInterruptHandler
+
+.text.AIN_2_DefaultInterruptHandler
+                0x0000000000003250        0x2
+ .text.AIN_2_DefaultInterruptHandler
+                0x0000000000003250        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003250                AIN_2_DefaultInterruptHandler
+
+.text.AIN_3_DefaultInterruptHandler
+                0x0000000000003252        0x2
+ .text.AIN_3_DefaultInterruptHandler
+                0x0000000000003252        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003252                AIN_3_DefaultInterruptHandler
+
+.text.AIN_4_DefaultInterruptHandler
+                0x0000000000003254        0x2
+ .text.AIN_4_DefaultInterruptHandler
+                0x0000000000003254        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003254                AIN_4_DefaultInterruptHandler
+
+.text.AIN_5_DefaultInterruptHandler
+                0x0000000000003256        0x2
+ .text.AIN_5_DefaultInterruptHandler
+                0x0000000000003256        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003256                AIN_5_DefaultInterruptHandler
+
+.text.AIN_6_DefaultInterruptHandler
+                0x0000000000003258        0x2
+ .text.AIN_6_DefaultInterruptHandler
+                0x0000000000003258        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003258                AIN_6_DefaultInterruptHandler
+
+.text.AIN_7_DefaultInterruptHandler
+                0x000000000000325a        0x2
+ .text.AIN_7_DefaultInterruptHandler
+                0x000000000000325a        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000325a                AIN_7_DefaultInterruptHandler
+
+.text.AIN_8_DefaultInterruptHandler
+                0x000000000000325c        0x2
+ .text.AIN_8_DefaultInterruptHandler
+                0x000000000000325c        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000325c                AIN_8_DefaultInterruptHandler
+
+.text.AIN_9_DefaultInterruptHandler
+                0x000000000000325e        0x2
+ .text.AIN_9_DefaultInterruptHandler
+                0x000000000000325e        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000325e                AIN_9_DefaultInterruptHandler
+
+.text.AIN_910_DefaultInterruptHandler
+                0x0000000000003260        0x2
+ .text.AIN_910_DefaultInterruptHandler
+                0x0000000000003260        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003260                AIN_910_DefaultInterruptHandler
+
+.text.AIN_11_DefaultInterruptHandler
+                0x0000000000003262        0x2
+ .text.AIN_11_DefaultInterruptHandler
+                0x0000000000003262        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003262                AIN_11_DefaultInterruptHandler
+
+.text.AIN_12_DefaultInterruptHandler
+                0x0000000000003264        0x2
+ .text.AIN_12_DefaultInterruptHandler
+                0x0000000000003264        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003264                AIN_12_DefaultInterruptHandler
+
+.text.AIN_13_DefaultInterruptHandler
+                0x0000000000003266        0x2
+ .text.AIN_13_DefaultInterruptHandler
+                0x0000000000003266        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003266                AIN_13_DefaultInterruptHandler
+
+.text.AIN_14_DefaultInterruptHandler
+                0x0000000000003268        0x2
+ .text.AIN_14_DefaultInterruptHandler
+                0x0000000000003268        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003268                AIN_14_DefaultInterruptHandler
+
+.text.AIN_15_DefaultInterruptHandler
+                0x000000000000326a        0x2
+ .text.AIN_15_DefaultInterruptHandler
+                0x000000000000326a        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000326a                AIN_15_DefaultInterruptHandler
+
+.text.AIN_16_DefaultInterruptHandler
+                0x000000000000326c        0x2
+ .text.AIN_16_DefaultInterruptHandler
+                0x000000000000326c        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000326c                AIN_16_DefaultInterruptHandler
+
+.text.AIN_17_DefaultInterruptHandler
+                0x000000000000326e        0x2
+ .text.AIN_17_DefaultInterruptHandler
+                0x000000000000326e        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000326e                AIN_17_DefaultInterruptHandler
+
+.text.AIN_18_DefaultInterruptHandler
+                0x0000000000003270        0x2
+ .text.AIN_18_DefaultInterruptHandler
+                0x0000000000003270        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003270                AIN_18_DefaultInterruptHandler
+
+.text.AIN_19_DefaultInterruptHandler
+                0x0000000000003272        0x2
+ .text.AIN_19_DefaultInterruptHandler
+                0x0000000000003272        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003272                AIN_19_DefaultInterruptHandler
+
+.text.AIN_20_DefaultInterruptHandler
+                0x0000000000003274        0x2
+ .text.AIN_20_DefaultInterruptHandler
+                0x0000000000003274        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003274                AIN_20_DefaultInterruptHandler
+
+.text.CTR_14_DefaultInterruptHandler
+                0x0000000000003276        0x2
+ .text.CTR_14_DefaultInterruptHandler
+                0x0000000000003276        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003276                CTR_14_DefaultInterruptHandler
+
+.text.CTR_15_DefaultInterruptHandler
+                0x0000000000003278        0x2
+ .text.CTR_15_DefaultInterruptHandler
+                0x0000000000003278        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003278                CTR_15_DefaultInterruptHandler
+
+.text.CTR_16_DefaultInterruptHandler
+                0x000000000000327a        0x2
+ .text.CTR_16_DefaultInterruptHandler
+                0x000000000000327a        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000327a                CTR_16_DefaultInterruptHandler
+
+.text.CTR_17_DefaultInterruptHandler
+                0x000000000000327c        0x2
+ .text.CTR_17_DefaultInterruptHandler
+                0x000000000000327c        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000327c                CTR_17_DefaultInterruptHandler
+
+.text.CTR_18_DefaultInterruptHandler
+                0x000000000000327e        0x2
+ .text.CTR_18_DefaultInterruptHandler
+                0x000000000000327e        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x000000000000327e                CTR_18_DefaultInterruptHandler
+
+.text.CTR_19_DefaultInterruptHandler
+                0x0000000000003280        0x2
+ .text.CTR_19_DefaultInterruptHandler
+                0x0000000000003280        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003280                CTR_19_DefaultInterruptHandler
+
+.text.CTR_20_DefaultInterruptHandler
+                0x0000000000003282        0x2
+ .text.CTR_20_DefaultInterruptHandler
+                0x0000000000003282        0x2 build/default/production/mcc_generated_files/system/src/pins.o
+                0x0000000000003282                CTR_20_DefaultInterruptHandler
 
 .text.USART3_DefaultFramingErrorCallback
-                0x0000000000002ade        0x2
+                0x0000000000003284        0x2
  .text.USART3_DefaultFramingErrorCallback
-                0x0000000000002ade        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x0000000000003284        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
 
 .text.USART3_DefaultOverrunErrorCallback
-                0x0000000000002ae0        0x2
+                0x0000000000003286        0x2
  .text.USART3_DefaultOverrunErrorCallback
-                0x0000000000002ae0        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x0000000000003286        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
 
 .text.USART3_DefaultParityErrorCallback
-                0x0000000000002ae2        0x2
+                0x0000000000003288        0x2
  .text.USART3_DefaultParityErrorCallback
-                0x0000000000002ae2        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x0000000000003288        0x2 build/default/production/mcc_generated_files/uart/src/usart3.o
 
 .text.__dummy_fini
-                0x0000000000002ae4        0x2
+                0x000000000000328a        0x2
  .text.__dummy_fini
-                0x0000000000002ae4        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
-                0x0000000000002ae4                _fini
+                0x000000000000328a        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
+                0x000000000000328a                _fini
 
 .text.__dummy_funcs_on_exit
-                0x0000000000002ae6        0x2
+                0x000000000000328c        0x2
  .text.__dummy_funcs_on_exit
-                0x0000000000002ae6        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
-                0x0000000000002ae6                __funcs_on_exit
+                0x000000000000328c        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
+                0x000000000000328c                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x0000000000002ae8        0x2
+                0x000000000000328e        0x2
  .text.__dummy_simulator_exit
-                0x0000000000002ae8        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
-                0x0000000000002ae8                __simulator_exit
+                0x000000000000328e        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(exit.o)
+                0x000000000000328e                __simulator_exit
 
 .rodata.state_table
-                0x000000000080401a       0x16 load address 0x0000000000002aea
+                0x000000000080727a       0x16 load address 0x0000000000003290
  .rodata.state_table
-                0x000000000080401a       0x16 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
+                0x000000000080727a       0x16 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
 
 .data.USART3_stream
-                0x0000000000804030       0x10 load address 0x0000000000002b00
+                0x0000000000807290       0x10 load address 0x00000000000032a6
  .data.USART3_stream
-                0x0000000000804030       0x10 build/default/production/mcc_generated_files/uart/src/usart3.o
-                0x0000000000804030                USART3_stream
+                0x0000000000807290       0x10 build/default/production/mcc_generated_files/uart/src/usart3.o
+                0x0000000000807290                USART3_stream
 
-.rodata         0x0000000000804040       0x10 load address 0x0000000000002b10
- .rodata        0x0000000000804040       0x10 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_fp.o)
+.rodata         0x00000000008072a0       0x10 load address 0x00000000000032b6
+ .rodata        0x00000000008072a0       0x10 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_fp.o)
 
 .rodata.nuls.2781
-                0x0000000000804050        0x7 load address 0x0000000000002b20
+                0x00000000008072b0        0x7 load address 0x00000000000032c6
  .rodata.nuls.2781
-                0x0000000000804050        0x7 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_s.o)
+                0x00000000008072b0        0x7 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__fmt_s.o)
 
 .rodata.nilstr.2962
-                0x0000000000804057        0x6 load address 0x0000000000002b27
+                0x00000000008072b7        0x6 load address 0x00000000000032cd
  .rodata.nilstr.2962
-                0x0000000000804057        0x6 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
+                0x00000000008072b7        0x6 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(__printf_core.o)
 
-.data._stdout   0x000000000080407d        0x2 load address 0x0000000000002b2d
- .data._stdout  0x000000000080407d        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(stdout.o)
-                0x000000000080407d                _stdout
+.data._stdout   0x000000000080731d        0x2 load address 0x00000000000032d3
+ .data._stdout  0x000000000080731d        0x2 c:/program files/microchip/xc8/v2.50/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped\libc.a(stdout.o)
+                0x000000000080731d                _stdout

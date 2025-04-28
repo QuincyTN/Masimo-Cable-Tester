@@ -2,7 +2,7 @@
 #include "mcc_generated_files/system/system.h"
 #include <math.h>
 #define TRUNCATED_SHIFT 4
-#define NUM_PINS 4
+#define NUM_PINS 20
 
 
 
@@ -32,61 +32,101 @@ DataStruct myArray[NUM_PINS][NUM_PINS] = {0};
 
 void setLow(int n) {
     switch (n) {
-        case 0: CTR_0_SetLow(); break;
         case 1: CTR_1_SetLow(); break;
         case 2: CTR_2_SetLow(); break;
         case 3: CTR_3_SetLow(); break;
-//        case 4: CTR_4_SetLow(); break;
-//        case 5: CTR_5_SetLow(); break;
-//        case 6: CTR_6_SetLow(); break;
-//        case 7: CTR_7_SetLow(); break;
-//        case 8: CTR_8_SetLow(); break;
-//        case 9: CTR_9_SetLow(); break;
+        case 4: CTR_4_SetLow(); break;
+        case 5: CTR_5_SetLow(); break;
+        case 6: CTR_6_SetLow(); break;
+        case 7: CTR_7_SetLow(); break;
+        case 8: CTR_8_SetLow(); break;
+        case 9: CTR_9_SetLow(); break;
+        case 10: CTR_10_SetLow(); break;
+        case 11: CTR_11_SetLow(); break;
+        case 12: CTR_12_SetLow(); break;
+        case 13: CTR_13_SetLow(); break;
+        case 14: CTR_14_SetLow(); break;
+        case 15: CTR_15_SetLow(); break;
+        case 16: CTR_16_SetLow(); break;
+        case 17: CTR_17_SetLow(); break;
+        case 18: CTR_18_SetLow(); break;
+        case 19: CTR_19_SetLow(); break;
+        case 20: CTR_20_SetLow(); break;
         default: printf("Invalid input: %d\n", n); break;
     }
 }
 void setHigh(int n) {
     switch (n) {
-        case 0: CTR_0_SetHigh(); break;
         case 1: CTR_1_SetHigh(); break;
         case 2: CTR_2_SetHigh(); break;
         case 3: CTR_3_SetHigh(); break;
-//        case 4: CTR_4_SetHigh(); break;
-//        case 5: CTR_5_SetHigh(); break;
-//        case 6: CTR_6_SetHigh(); break;
-//        case 7: CTR_7_SetHigh(); break;
-//        case 8: CTR_8_SetHigh(); break;
-//        case 9: CTR_9_SetHigh(); break;
+        case 4: CTR_4_SetHigh(); break;
+        case 5: CTR_5_SetHigh(); break;
+        case 6: CTR_6_SetHigh(); break;
+        case 7: CTR_7_SetHigh(); break;
+        case 8: CTR_8_SetHigh(); break;
+        case 9: CTR_9_SetHigh(); break;
+        case 10: CTR_10_SetHigh(); break;
+        case 11: CTR_11_SetHigh(); break;
+        case 12: CTR_12_SetHigh(); break;
+        case 13: CTR_13_SetHigh(); break;
+        case 14: CTR_14_SetHigh(); break;
+        case 15: CTR_15_SetHigh(); break;
+        case 16: CTR_16_SetHigh(); break;
+        case 17: CTR_17_SetHigh(); break;
+        case 18: CTR_18_SetHigh(); break;
+        case 19: CTR_19_SetHigh(); break;
+        case 20: CTR_20_SetHigh(); break;
         default: printf("Invalid input: %d\n", n); break;
     }
 }
 void setInput(int n) {
     switch (n) {
-        case 0: CTR_0_SetDigitalInput(); break;
         case 1: CTR_1_SetDigitalInput(); break;
         case 2: CTR_2_SetDigitalInput(); break;
         case 3: CTR_3_SetDigitalInput(); break;
-//        case 4: CTR_4_SetHigh(); break;
-//        case 5: CTR_5_SetHigh(); break;
-//        case 6: CTR_6_SetHigh(); break;
-//        case 7: CTR_7_SetHigh(); break;
-//        case 8: CTR_8_SetHigh(); break;
-//        case 9: CTR_9_SetHigh(); break;
+        case 4: CTR_4_SetDigitalInput(); break;
+        case 5: CTR_5_SetDigitalInput(); break;
+        case 6: CTR_6_SetDigitalInput(); break;
+        case 7: CTR_7_SetDigitalInput(); break;
+        case 8: CTR_8_SetDigitalInput(); break;
+        case 9: CTR_9_SetDigitalInput(); break;
+        case 10: CTR_10_SetDigitalInput(); break;
+        case 11: CTR_11_SetDigitalInput(); break;
+        case 12: CTR_12_SetDigitalInput(); break;
+        case 13: CTR_13_SetDigitalInput(); break;
+        case 14: CTR_14_SetDigitalInput(); break;
+        case 15: CTR_15_SetDigitalInput(); break;
+        case 16: CTR_16_SetDigitalInput(); break;
+        case 17: CTR_17_SetDigitalInput(); break;
+        case 18: CTR_18_SetDigitalInput(); break;
+        case 19: CTR_19_SetDigitalInput(); break;
+        case 20: CTR_20_SetDigitalInput(); break;
         default: printf("Invalid input: %d\n", n); break;
     }
 }
 void setOutput(int n) {
     switch (n) {
-        case 0: CTR_0_SetDigitalOutput(); break;
         case 1: CTR_1_SetDigitalOutput(); break;
         case 2: CTR_2_SetDigitalOutput(); break;
         case 3: CTR_3_SetDigitalOutput(); break;
-//        case 4: CTR_4_SetHigh(); break;
-//        case 5: CTR_5_SetHigh(); break;
-//        case 6: CTR_6_SetHigh(); break;
-//        case 7: CTR_7_SetHigh(); break;
-//        case 8: CTR_8_SetHigh(); break;
-//        case 9: CTR_9_SetHigh(); break;
+        case 4: CTR_4_SetDigitalOutput(); break;
+        case 5: CTR_5_SetDigitalOutput(); break;
+        case 6: CTR_6_SetDigitalOutput(); break;
+        case 7: CTR_7_SetDigitalOutput(); break;
+        case 8: CTR_8_SetDigitalOutput(); break;
+        case 9: CTR_9_SetDigitalOutput(); break;
+        case 10: CTR_10_SetDigitalOutput(); break;
+        case 11: CTR_11_SetDigitalOutput(); break;
+        case 12: CTR_12_SetDigitalOutput(); break;
+        case 13: CTR_13_SetDigitalOutput(); break;
+        case 14: CTR_14_SetDigitalOutput(); break;
+        case 15: CTR_15_SetDigitalOutput(); break;
+        case 16: CTR_16_SetDigitalOutput(); break;
+        case 17: CTR_17_SetDigitalOutput(); break;
+        case 18: CTR_18_SetDigitalOutput(); break;
+        case 19: CTR_19_SetDigitalOutput(); break;
+        case 20: CTR_20_SetDigitalOutput(); break;
         default: printf("Invalid input: %d\n", n); break;
     }
 }
@@ -189,13 +229,15 @@ int main(void)
     ADC0_SetWindowChannel(0);
     SYSTEM_Initialize();
     ADC0_EnableAutoTrigger();
+    int i;
+    int j;
+
     
-    CTR_0_SetDigitalInput();
-    CTR_1_SetDigitalInput();
-    CTR_2_SetDigitalInput();
-    CTR_3_SetDigitalInput();
-    for (int i = 0; i < NUM_PINS; i++) {
-            for (int j = 0; j < NUM_PINS; j++) {
+    for (i = 1; i <= NUM_PINS; i++) {
+        setInput(i);
+    }
+    for (i = 0; i < NUM_PINS; i++) {
+            for (j = 0; j < NUM_PINS; j++) {
                 characterize(i, j);
     }
 }
@@ -203,8 +245,8 @@ int main(void)
     while(1)
     {       
         printArray();
-        for (int i = 0; i < NUM_PINS; i++) {
-            for (int j = 0; j < NUM_PINS; j++) {
+        for (i = 0; i < NUM_PINS; i++) {
+            for (j = 0; j < NUM_PINS; j++) {
                 if (i != j) {
                 if (!check_adc_within_range(i, j)) {
                     printf("Warning: ADC values for pin pair %d, %d are not within 0.1 range!\n", i, j);

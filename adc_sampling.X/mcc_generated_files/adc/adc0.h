@@ -82,11 +82,7 @@ typedef enum
     ADC0_channel_DAC0 =  0x48,
     ADC0_channel_DACREF0 =  0x49,
     ADC0_channel_DACREF1 =  0x4a,
-    ADC0_channel_DACREF2 =  0x4b,
-    ADC0_AIN_0 =  0x0,
-    ADC0_AIN_1 =  0x1,
-    ADC0_AIN_2 =  0x2,
-    ADC0_AIN_3 =  0x3
+    ADC0_channel_DACREF2 =  0x4b
 } ADC0_channel_t;
 
 /**

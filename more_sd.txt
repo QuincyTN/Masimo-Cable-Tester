@@ -1,0 +1,30 @@
+#include <math.h>
+#include <stdio.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <inttypes.h>
+#include <util/delay.h>
+
+#include "utils.h"		// string conversion utilities used to communicate w/ terminal
+#include "AVR_sd.h"		// low-level SD card functions, including init/using the SPI port
+#include "fat.h"		// SD card file functions
+// #include "adc.h"		// ADC functions for all the ADC port pins
+// #include "detector.h"	// wire pair structure and defines for the short/break detector
+
+
+void clk_init(void);	// MCU clocks initialization
+void SD_demo(void);		// gwp 6/12/2024 Demo SD card file functions.  The code has been moved
+// to after main() for code readability.  Eventually this will be replaced
+// with the SD card functions needed to support the short/break detector.
+
+//  variable declarations for reading/writing the SD card.
+//  These were moved outside of main when SD demo functions were moved
+//  after main() so they are globally visable to all functions in this file
+DIR dir;				// directory object, for writing to the SD card
+SD_FILE file;			// file object, for writing to the SD card
+uint8_t return_code = 0;
+uint16_t dirItems = 0;
+
+/* declare the variables used by the USART receive function */
+extern bool new_data;				// set by the receive UART interrupt when
+// new data is received from the terminal

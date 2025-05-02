@@ -1,0 +1,171 @@
+void SD_demo(void){
+// Mount the memory card
+	_delay_ms(100);
+	return_code = FAT_mountVolume();
+	//sprintf(return_code);
+
+	// If no error
+		if(return_code == MR_OK){
+		
+		// Read label and serial number
+		char label[12];
+		char vol_sn_byte[4];
+		uint32_t vol_sn = 0;
+		FAT_getLabel(label, &vol_sn);
+		
+		// Extract serial number
+		vol_sn_byte[0] = (vol_sn >> 24) & 0xFF;
+		vol_sn_byte[1] = (vol_sn >> 16) & 0xFF;
+		vol_sn_byte[2] = (vol_sn >> 8) & 0xFF;
+		vol_sn_byte[3] = vol_sn & 0xFF;
+		
+		
+		
+		// Make a directory in the root folder
+		return_code = FAT_makeDir(&dir, "Logs Folder");
+		
+		if(return_code == FR_OK){
+		}else{
+		}
+		
+		// Open the created folder
+		return_code = FAT_openDir(&dir, "Logs Folder");
+		
+		if(return_code == FR_OK){
+
+			// Create a new file in the currently open folder
+			return_code = FAT_makeFile(&dir, "log_1.csv");
+			
+			if(return_code == FR_OK){
+			}
+			else{
+			}
+			
+			
+			// Get number of folders and files inside the directory
+			dirItems = FAT_dirCountItems(&dir);
+			
+			// Print folder content
+			for(uint16_t i = 0; i < dirItems; i++){
+				
+				return_code = FAT_findNext(&dir, &file);
+				
+				if(FAT_attrIsFolder(&file)){
+				}else{
+				}
+				
+			}
+		}else{
+		}
+
+		
+			
+		// Open a file for reading or writing
+		// Open the folder containing the file
+		FAT_openDir(&dir, "Logs Folder");
+		return_code = FAT_fopen(&dir, &file, "log_1.csv");
+			
+		if(return_code == FR_OK){			
+			// Keep only first 10 bytes of the file (example)
+			//FAT_fseek(&file, 10);
+			//FAT_ftruncate(&file);
+			
+			// Move the writing pointer to the end of the file
+			FAT_fseekEnd(&file);
+			
+			/////////////////////////////EDIT///////////////////////////
+			FAT_fwriteString(&file, "Test 1"); FAT_fwriteString(&file, ",");
+			//sprintf(target, "Pins (%d.%d) Pin %c voltage, ", pin1, pin2, output);
+			char target1[50];
+			char target2[50];
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "Pins (%d.%d) Pin %c voltage, ", i, j, 'A');
+						sprintf(target2, "Pins (%d.%d) Pin %c voltage, ", i, j, 'B');
+						FAT_fwriteString(&file, target1);
+						FAT_fwriteString(&file, target2);
+					}
+				}
+			}
+			
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "Both Low Test,");
+
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "%.2f,", myArray[i][j].val_1_00);
+						FAT_fwriteString(&file, target1);
+						sprintf(target1, "%.2f,", myArray[i][j].val_2_00);
+						FAT_fwriteString(&file, target1);
+					}
+				}
+			}
+			
+			
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "Pin A high/Pin B low,");
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "%.2f,", myArray[i][j].val_1_10);
+						FAT_fwriteString(&file, target1);
+						sprintf(target1, "%.2f,", myArray[i][j].val_2_10);
+						FAT_fwriteString(&file, target1);
+					}
+				}
+			}
+			
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "Pin A low/Pin B high,");
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "%.2f,", myArray[i][j].val_1_01);
+						FAT_fwriteString(&file, target1);
+						sprintf(target1, "%.2f,", myArray[i][j].val_2_01);
+						FAT_fwriteString(&file, target1);
+					}
+				}
+			}
+			
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "Both High Test,");
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "%.2f,", myArray[i][j].val_1_11);
+						FAT_fwriteString(&file, target1);
+						sprintf(target1, "%.2f,", myArray[i][j].val_2_11);
+						FAT_fwriteString(&file, target1);
+					}
+				}
+			}
+
+			
+
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "\n");
+
+			
+			////////////////////////////////////////EDIT//////////////////////////////////////////////
+			
+			
+			
+			
+			// Synchronize the writing buffer with the card
+			FAT_fsync(&file);
+			
+		}else if(return_code == FR_NOT_FOUND){
+			// Make the file if it doesn't exist
+			// ... code ...
+			
+		}else{
+		}
+			
+	}else{ // end if(return_code == MR_OK)
+		
+	}
+	//FAT_fsync(&file);
+}		

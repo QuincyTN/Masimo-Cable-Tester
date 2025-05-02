@@ -1,0 +1,4304 @@
+
+XC8Application2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00804000  00804000  00001587  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         00000220  00000000  00000000  000000f4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .fuse         00000009  00820000  00820000  0000157e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .comment      0000002f  00000000  00000000  00001587  2**0
+                  CONTENTS, READONLY
+  4 .stack.descriptors.hdr 000000ee  00000000  00000000  000015b6  2**0
+                  CONTENTS, READONLY
+  5 .debug_aranges 000005b8  00000000  00000000  000016a8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000beda  00000000  00000000  00001c60  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00004270  00000000  00000000  0000db3a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000262d  00000000  00000000  00011daa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000ce0  00000000  00000000  000143d8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00001a1e  00000000  00000000  000150b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000f7e  00000000  00000000  00016ad6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000508  00000000  00000000  00017a54  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .text         00000004  00001418  00001418  0000150c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00017f5c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .text.process_adc_conversion 0000004a  00001048  00001048  0000113c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.relay_init 0000000c  0000123c  0000123c  00001330  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.setOutput 00000060  00000daa  00000daa  00000e9e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.setInput 00000060  00000e0a  00000e0a  00000efe  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.setHigh 00000060  00000e6a  00000e6a  00000f5e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.setLow  00000060  00000eca  00000eca  00000fbe  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.characterize 000000c8  0000071c  0000071c  00000810  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.main    000000da  0000056e  0000056e  00000662  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .data.adc_channel_map 00000014  00807200  00001476  0000156a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 24 .bss.myArray  00003200  00804000  00804000  0000157e  2**0
+                  ALLOC
+ 25 .text.ADC0_Initialize 0000002c  00001158  00001158  0000124c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 26 .text.__vector_27 00000060  00000f2a  00000f2a  0000101e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 27 .text.__vector_26 00000060  00000f8a  00000f8a  0000107e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 28 .bss.ADC0_resrdy_cb 00000002  00807214  00807214  0000157e  2**0
+                  ALLOC
+ 29 .bss.ADC0_window_cb 00000002  00807216  00807216  0000157e  2**0
+                  ALLOC
+ 30 .text.EVSYS_Initialize 000000bc  00000964  00000964  00000a58  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 31 .text.CLOCK_Initialize 0000008e  00000c1a  00000c1a  00000d0e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 32 .text.CPUINT_Initialize 00000018  000011c4  000011c4  000012b8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 33 .text.CTR_0_DefaultInterruptHandler 00000002  00001420  00001420  00001514  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 34 .text.CTR_1_DefaultInterruptHandler 00000002  00001422  00001422  00001516  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 35 .text.CTR_2_DefaultInterruptHandler 00000002  00001424  00001424  00001518  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 36 .text.CTR_3_DefaultInterruptHandler 00000002  00001426  00001426  0000151a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 37 .text.CTR_4_DefaultInterruptHandler 00000002  00001428  00001428  0000151c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 38 .text.CTR_5_DefaultInterruptHandler 00000002  0000142a  0000142a  0000151e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 39 .text.CTR_6_DefaultInterruptHandler 00000002  0000142c  0000142c  00001520  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 40 .text.CTR_7_DefaultInterruptHandler 00000002  0000142e  0000142e  00001522  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 41 .text.CTR_8_DefaultInterruptHandler 00000002  00001430  00001430  00001524  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 42 .text.CTR_9_DefaultInterruptHandler 00000002  00001432  00001432  00001526  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 43 .text.CTR_10_DefaultInterruptHandler 00000002  00001434  00001434  00001528  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 44 .text.CTR_11_DefaultInterruptHandler 00000002  00001436  00001436  0000152a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 45 .text.CTR_12_DefaultInterruptHandler 00000002  00001438  00001438  0000152c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 46 .text.ADC_0_DefaultInterruptHandler 00000002  0000143a  0000143a  0000152e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 47 .text.ADC_1_DefaultInterruptHandler 00000002  0000143c  0000143c  00001530  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 48 .text.ADC_2_DefaultInterruptHandler 00000002  0000143e  0000143e  00001532  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 49 .text.ADC_3_DefaultInterruptHandler 00000002  00001440  00001440  00001534  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 50 .text.ADC_4_DefaultInterruptHandler 00000002  00001442  00001442  00001536  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 51 .text.ADC_5_DefaultInterruptHandler 00000002  00001444  00001444  00001538  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 52 .text.ADC_6_DefaultInterruptHandler 00000002  00001446  00001446  0000153a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 53 .text.ADC_7_DefaultInterruptHandler 00000002  00001448  00001448  0000153c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 54 .text.ADC_8_DefaultInterruptHandler 00000002  0000144a  0000144a  0000153e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 55 .text.ADC_9_DefaultInterruptHandler 00000002  0000144c  0000144c  00001540  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 56 .text.ADC_10_DefaultInterruptHandler 00000002  0000144e  0000144e  00001542  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 57 .text.ADC_11_DefaultInterruptHandler 00000002  00001450  00001450  00001544  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 58 .text.ADC_12_DefaultInterruptHandler 00000002  00001452  00001452  00001546  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 59 .text.ADC_13_DefaultInterruptHandler 00000002  00001454  00001454  00001548  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 60 .text.ADC_14_DefaultInterruptHandler 00000002  00001456  00001456  0000154a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 61 .text.ADC_15_DefaultInterruptHandler 00000002  00001458  00001458  0000154c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 62 .text.ADC_16_DefaultInterruptHandler 00000002  0000145a  0000145a  0000154e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 63 .text.ADC_17_DefaultInterruptHandler 00000002  0000145c  0000145c  00001550  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 64 .text.ADC_18_DefaultInterruptHandler 00000002  0000145e  0000145e  00001552  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 65 .text.ADC_19_DefaultInterruptHandler 00000002  00001460  00001460  00001554  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 66 .text.CTR_13_DefaultInterruptHandler 00000002  00001462  00001462  00001556  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 67 .text.CTR_14_DefaultInterruptHandler 00000002  00001464  00001464  00001558  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 68 .text.CTR_15_DefaultInterruptHandler 00000002  00001466  00001466  0000155a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 69 .text.CTR_16_DefaultInterruptHandler 00000002  00001468  00001468  0000155c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 70 .text.CTR_17_DefaultInterruptHandler 00000002  0000146a  0000146a  0000155e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 71 .text.CTR_18_DefaultInterruptHandler 00000002  0000146c  0000146c  00001560  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 72 .text.CTR_19_DefaultInterruptHandler 00000002  0000146e  0000146e  00001562  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 73 .text.CTR_0_SetInterruptHandler 0000000a  00001254  00001254  00001348  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 74 .text.CTR_1_SetInterruptHandler 0000000a  0000125e  0000125e  00001352  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 75 .text.CTR_2_SetInterruptHandler 0000000a  00001268  00001268  0000135c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 76 .text.CTR_3_SetInterruptHandler 0000000a  00001272  00001272  00001366  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 77 .text.CTR_4_SetInterruptHandler 0000000a  0000127c  0000127c  00001370  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 78 .text.CTR_5_SetInterruptHandler 0000000a  00001286  00001286  0000137a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 79 .text.CTR_6_SetInterruptHandler 0000000a  00001290  00001290  00001384  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 80 .text.CTR_7_SetInterruptHandler 0000000a  0000129a  0000129a  0000138e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 81 .text.CTR_8_SetInterruptHandler 0000000a  000012a4  000012a4  00001398  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 82 .text.CTR_9_SetInterruptHandler 0000000a  000012ae  000012ae  000013a2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 83 .text.CTR_10_SetInterruptHandler 0000000a  000012b8  000012b8  000013ac  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 84 .text.CTR_11_SetInterruptHandler 0000000a  000012c2  000012c2  000013b6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 85 .text.CTR_12_SetInterruptHandler 0000000a  000012cc  000012cc  000013c0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 86 .text.ADC_0_SetInterruptHandler 0000000a  000012d6  000012d6  000013ca  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 87 .text.ADC_1_SetInterruptHandler 0000000a  000012e0  000012e0  000013d4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 88 .text.ADC_2_SetInterruptHandler 0000000a  000012ea  000012ea  000013de  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 89 .text.ADC_3_SetInterruptHandler 0000000a  000012f4  000012f4  000013e8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 90 .text.ADC_4_SetInterruptHandler 0000000a  000012fe  000012fe  000013f2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 91 .text.ADC_5_SetInterruptHandler 0000000a  00001308  00001308  000013fc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 92 .text.ADC_6_SetInterruptHandler 0000000a  00001312  00001312  00001406  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 93 .text.ADC_7_SetInterruptHandler 0000000a  0000131c  0000131c  00001410  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 94 .text.ADC_8_SetInterruptHandler 0000000a  00001326  00001326  0000141a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 95 .text.ADC_9_SetInterruptHandler 0000000a  00001330  00001330  00001424  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 96 .text.ADC_10_SetInterruptHandler 0000000a  0000133a  0000133a  0000142e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 97 .text.ADC_11_SetInterruptHandler 0000000a  00001344  00001344  00001438  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 98 .text.ADC_12_SetInterruptHandler 0000000a  0000134e  0000134e  00001442  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 99 .text.ADC_13_SetInterruptHandler 0000000a  00001358  00001358  0000144c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+100 .text.ADC_14_SetInterruptHandler 0000000a  00001362  00001362  00001456  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+101 .text.ADC_15_SetInterruptHandler 0000000a  0000136c  0000136c  00001460  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+102 .text.ADC_16_SetInterruptHandler 0000000a  00001376  00001376  0000146a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+103 .text.ADC_17_SetInterruptHandler 0000000a  00001380  00001380  00001474  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+104 .text.ADC_18_SetInterruptHandler 0000000a  0000138a  0000138a  0000147e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+105 .text.ADC_19_SetInterruptHandler 0000000a  00001394  00001394  00001488  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+106 .text.CTR_13_SetInterruptHandler 0000000a  0000139e  0000139e  00001492  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+107 .text.CTR_14_SetInterruptHandler 0000000a  000013a8  000013a8  0000149c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+108 .text.CTR_15_SetInterruptHandler 0000000a  000013b2  000013b2  000014a6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+109 .text.CTR_16_SetInterruptHandler 0000000a  000013bc  000013bc  000014b0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+110 .text.CTR_17_SetInterruptHandler 0000000a  000013c6  000013c6  000014ba  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+111 .text.CTR_18_SetInterruptHandler 0000000a  000013d0  000013d0  000014c4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+112 .text.CTR_19_SetInterruptHandler 0000000a  000013da  000013da  000014ce  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+113 .text.PIN_MANAGER_Initialize 00000270  00000220  00000220  00000314  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+114 .text.__vector_8 0000005e  00000fea  00000fea  000010de  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+115 .text.__vector_45 000000a4  00000ad2  00000ad2  00000bc6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+116 .text.__vector_30 000000a4  00000b76  00000b76  00000c6a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+117 .text.__vector_24 000000c0  000007e4  000007e4  000008d8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+118 .text.__vector_46 000000c0  000008a4  000008a4  00000998  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+119 .text.__vector_35 00000088  00000ca8  00000ca8  00000d9c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+120 .text.__vector_59 000000b2  00000a20  00000a20  00000b14  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+121 .bss.CTR_19_InterruptHandler 00000002  00807218  00807218  0000157e  2**0
+                  ALLOC
+122 .bss.CTR_18_InterruptHandler 00000002  0080721a  0080721a  0000157e  2**0
+                  ALLOC
+123 .bss.CTR_17_InterruptHandler 00000002  0080721c  0080721c  0000157e  2**0
+                  ALLOC
+124 .bss.CTR_16_InterruptHandler 00000002  0080721e  0080721e  0000157e  2**0
+                  ALLOC
+125 .bss.CTR_15_InterruptHandler 00000002  00807220  00807220  0000157e  2**0
+                  ALLOC
+126 .bss.CTR_14_InterruptHandler 00000002  00807222  00807222  0000157e  2**0
+                  ALLOC
+127 .bss.CTR_13_InterruptHandler 00000002  00807224  00807224  0000157e  2**0
+                  ALLOC
+128 .bss.ADC_19_InterruptHandler 00000002  00807226  00807226  0000157e  2**0
+                  ALLOC
+129 .bss.ADC_18_InterruptHandler 00000002  00807228  00807228  0000157e  2**0
+                  ALLOC
+130 .bss.ADC_17_InterruptHandler 00000002  0080722a  0080722a  0000157e  2**0
+                  ALLOC
+131 .bss.ADC_16_InterruptHandler 00000002  0080722c  0080722c  0000157e  2**0
+                  ALLOC
+132 .bss.ADC_15_InterruptHandler 00000002  0080722e  0080722e  0000157e  2**0
+                  ALLOC
+133 .bss.ADC_14_InterruptHandler 00000002  00807230  00807230  0000157e  2**0
+                  ALLOC
+134 .bss.ADC_13_InterruptHandler 00000002  00807232  00807232  0000157e  2**0
+                  ALLOC
+135 .bss.ADC_12_InterruptHandler 00000002  00807234  00807234  0000157e  2**0
+                  ALLOC
+136 .bss.ADC_11_InterruptHandler 00000002  00807236  00807236  0000157e  2**0
+                  ALLOC
+137 .bss.ADC_10_InterruptHandler 00000002  00807238  00807238  0000157e  2**0
+                  ALLOC
+138 .bss.ADC_9_InterruptHandler 00000002  0080723a  0080723a  0000157e  2**0
+                  ALLOC
+139 .bss.ADC_8_InterruptHandler 00000002  0080723c  0080723c  0000157e  2**0
+                  ALLOC
+140 .bss.ADC_7_InterruptHandler 00000002  0080723e  0080723e  0000157e  2**0
+                  ALLOC
+141 .bss.ADC_6_InterruptHandler 00000002  00807240  00807240  0000157e  2**0
+                  ALLOC
+142 .bss.ADC_5_InterruptHandler 00000002  00807242  00807242  0000157e  2**0
+                  ALLOC
+143 .bss.ADC_4_InterruptHandler 00000002  00807244  00807244  0000157e  2**0
+                  ALLOC
+144 .bss.ADC_3_InterruptHandler 00000002  00807246  00807246  0000157e  2**0
+                  ALLOC
+145 .bss.ADC_2_InterruptHandler 00000002  00807248  00807248  0000157e  2**0
+                  ALLOC
+146 .bss.ADC_1_InterruptHandler 00000002  0080724a  0080724a  0000157e  2**0
+                  ALLOC
+147 .bss.ADC_0_InterruptHandler 00000002  0080724c  0080724c  0000157e  2**0
+                  ALLOC
+148 .bss.CTR_12_InterruptHandler 00000002  0080724e  0080724e  0000157e  2**0
+                  ALLOC
+149 .bss.CTR_11_InterruptHandler 00000002  00807250  00807250  0000157e  2**0
+                  ALLOC
+150 .bss.CTR_10_InterruptHandler 00000002  00807252  00807252  0000157e  2**0
+                  ALLOC
+151 .bss.CTR_9_InterruptHandler 00000002  00807254  00807254  0000157e  2**0
+                  ALLOC
+152 .bss.CTR_8_InterruptHandler 00000002  00807256  00807256  0000157e  2**0
+                  ALLOC
+153 .bss.CTR_7_InterruptHandler 00000002  00807258  00807258  0000157e  2**0
+                  ALLOC
+154 .bss.CTR_6_InterruptHandler 00000002  0080725a  0080725a  0000157e  2**0
+                  ALLOC
+155 .bss.CTR_5_InterruptHandler 00000002  0080725c  0080725c  0000157e  2**0
+                  ALLOC
+156 .bss.CTR_4_InterruptHandler 00000002  0080725e  0080725e  0000157e  2**0
+                  ALLOC
+157 .bss.CTR_3_InterruptHandler 00000002  00807260  00807260  0000157e  2**0
+                  ALLOC
+158 .bss.CTR_2_InterruptHandler 00000002  00807262  00807262  0000157e  2**0
+                  ALLOC
+159 .bss.CTR_1_InterruptHandler 00000002  00807264  00807264  0000157e  2**0
+                  ALLOC
+160 .bss.CTR_0_InterruptHandler 00000002  00807266  00807266  0000157e  2**0
+                  ALLOC
+161 .text.protected_write_io 0000000a  000013e4  000013e4  000014d8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+162 .text.SYSTEM_Initialize 0000001e  000011a6  000011a6  0000129a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+163 .text.TCA0_Initialize 0000003a  0000111e  0000111e  00001212  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+164 .text.VREF_Initialize 0000000e  00001204  00001204  000012f8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+165 .text         0000000a  000013ee  000013ee  000014e2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+166 .text         00000008  00001402  00001402  000014f6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+167 .text         000000de  00000490  00000490  00000584  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+168 .text         0000007a  00000d30  00000d30  00000e24  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+169 .text         00000048  00001092  00001092  00001186  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+170 .text         0000000c  00001248  00001248  0000133c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+171 .text         00000006  00001412  00001412  00001506  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+172 .text         0000000e  00001212  00001212  00001306  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+173 .text         0000000e  00001220  00001220  00001314  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+174 .text         00000022  00001184  00001184  00001278  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+175 .text         00000044  000010da  000010da  000011ce  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+176 .text         0000000e  0000122e  0000122e  00001322  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+177 .text         0000000a  000013f8  000013f8  000014ec  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+178 .text         00000008  0000140a  0000140a  000014fe  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+179 .text         000000d4  00000648  00000648  0000073c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+180 .text.libgcc  00000012  000011f2  000011f2  000012e6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+181 .text.__dummy_fini 00000002  00001470  00001470  00001564  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+182 .text.__dummy_funcs_on_exit 00000002  00001472  00001472  00001566  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+183 .text.__dummy_simulator_exit 00000002  00001474  00001474  00001568  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+184 .text.exit    00000016  000011dc  000011dc  000012d0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+185 .text._Exit   00000004  0000141c  0000141c  00001510  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 db 00 	jmp	0x1b6	; 0x1b6 <__ctors_end>
+   4:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+   8:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+   c:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  10:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  14:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  18:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  1c:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  20:	0c 94 f5 07 	jmp	0xfea	; 0xfea <__vector_8>
+  24:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  28:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  2c:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  30:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  34:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  38:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  3c:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  40:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  44:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  48:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  4c:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  50:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  54:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  58:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  5c:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  60:	0c 94 f2 03 	jmp	0x7e4	; 0x7e4 <__vector_24>
+  64:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  68:	0c 94 c5 07 	jmp	0xf8a	; 0xf8a <__vector_26>
+  6c:	0c 94 95 07 	jmp	0xf2a	; 0xf2a <__vector_27>
+  70:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  74:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  78:	0c 94 bb 05 	jmp	0xb76	; 0xb76 <__vector_30>
+  7c:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  80:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  84:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  88:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  8c:	0c 94 54 06 	jmp	0xca8	; 0xca8 <__vector_35>
+  90:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  94:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  98:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  9c:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  a0:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  a4:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  a8:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  ac:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  b0:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  b4:	0c 94 69 05 	jmp	0xad2	; 0xad2 <__vector_45>
+  b8:	0c 94 52 04 	jmp	0x8a4	; 0x8a4 <__vector_46>
+  bc:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  c0:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  c4:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  c8:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  cc:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  d0:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  d4:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  d8:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  dc:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  e0:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  e4:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  e8:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  ec:	0c 94 10 05 	jmp	0xa20	; 0xa20 <__vector_59>
+  f0:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  f4:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  f8:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+  fc:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+ 100:	0c 94 0c 0a 	jmp	0x1418	; 0x1418 <__bad_interrupt>
+ 104:	dd 06       	cpc	r13, r29
+ 106:	e1 06       	cpc	r14, r17
+ 108:	e1 06       	cpc	r14, r17
+ 10a:	e1 06       	cpc	r14, r17
+ 10c:	e1 06       	cpc	r14, r17
+ 10e:	e1 06       	cpc	r14, r17
+ 110:	e1 06       	cpc	r14, r17
+ 112:	ed 06       	cpc	r14, r29
+ 114:	ed 06       	cpc	r14, r29
+ 116:	ed 06       	cpc	r14, r29
+ 118:	ed 06       	cpc	r14, r29
+ 11a:	ed 06       	cpc	r14, r29
+ 11c:	ed 06       	cpc	r14, r29
+ 11e:	f9 06       	cpc	r15, r25
+ 120:	f9 06       	cpc	r15, r25
+ 122:	f9 06       	cpc	r15, r25
+ 124:	f9 06       	cpc	r15, r25
+ 126:	f9 06       	cpc	r15, r25
+ 128:	f9 06       	cpc	r15, r25
+ 12a:	f9 06       	cpc	r15, r25
+ 12c:	0d 07       	cpc	r16, r29
+ 12e:	11 07       	cpc	r17, r17
+ 130:	11 07       	cpc	r17, r17
+ 132:	11 07       	cpc	r17, r17
+ 134:	11 07       	cpc	r17, r17
+ 136:	11 07       	cpc	r17, r17
+ 138:	11 07       	cpc	r17, r17
+ 13a:	1d 07       	cpc	r17, r29
+ 13c:	1d 07       	cpc	r17, r29
+ 13e:	1d 07       	cpc	r17, r29
+ 140:	1d 07       	cpc	r17, r29
+ 142:	1d 07       	cpc	r17, r29
+ 144:	1d 07       	cpc	r17, r29
+ 146:	29 07       	cpc	r18, r25
+ 148:	29 07       	cpc	r18, r25
+ 14a:	29 07       	cpc	r18, r25
+ 14c:	29 07       	cpc	r18, r25
+ 14e:	29 07       	cpc	r18, r25
+ 150:	29 07       	cpc	r18, r25
+ 152:	29 07       	cpc	r18, r25
+ 154:	3d 07       	cpc	r19, r29
+ 156:	41 07       	cpc	r20, r17
+ 158:	41 07       	cpc	r20, r17
+ 15a:	41 07       	cpc	r20, r17
+ 15c:	41 07       	cpc	r20, r17
+ 15e:	41 07       	cpc	r20, r17
+ 160:	41 07       	cpc	r20, r17
+ 162:	4d 07       	cpc	r20, r29
+ 164:	4d 07       	cpc	r20, r29
+ 166:	4d 07       	cpc	r20, r29
+ 168:	4d 07       	cpc	r20, r29
+ 16a:	4d 07       	cpc	r20, r29
+ 16c:	4d 07       	cpc	r20, r29
+ 16e:	59 07       	cpc	r21, r25
+ 170:	59 07       	cpc	r21, r25
+ 172:	59 07       	cpc	r21, r25
+ 174:	59 07       	cpc	r21, r25
+ 176:	59 07       	cpc	r21, r25
+ 178:	59 07       	cpc	r21, r25
+ 17a:	59 07       	cpc	r21, r25
+ 17c:	6d 07       	cpc	r22, r29
+ 17e:	71 07       	cpc	r23, r17
+ 180:	71 07       	cpc	r23, r17
+ 182:	71 07       	cpc	r23, r17
+ 184:	71 07       	cpc	r23, r17
+ 186:	71 07       	cpc	r23, r17
+ 188:	71 07       	cpc	r23, r17
+ 18a:	7d 07       	cpc	r23, r29
+ 18c:	7d 07       	cpc	r23, r29
+ 18e:	7d 07       	cpc	r23, r29
+ 190:	7d 07       	cpc	r23, r29
+ 192:	7d 07       	cpc	r23, r29
+ 194:	7d 07       	cpc	r23, r29
+ 196:	89 07       	cpc	r24, r25
+ 198:	89 07       	cpc	r24, r25
+ 19a:	89 07       	cpc	r24, r25
+ 19c:	89 07       	cpc	r24, r25
+ 19e:	89 07       	cpc	r24, r25
+ 1a0:	89 07       	cpc	r24, r25
+ 1a2:	89 07       	cpc	r24, r25
+
+000001a4 <.dinit>:
+ 1a4:	40 00       	.word	0x0040	; ????
+ 1a6:	72 00       	.word	0x0072	; ????
+ 1a8:	80 72       	andi	r24, 0x20	; 32
+ 1aa:	00 72       	andi	r16, 0x20	; 32
+ 1ac:	14 00       	.word	0x0014	; ????
+ 1ae:	14 76       	andi	r17, 0x64	; 100
+ 1b0:	72 14       	cp	r7, r2
+ 1b2:	72 68       	ori	r23, 0x82	; 130
+ 1b4:	80 00       	.word	0x0080	; ????
+
+000001b6 <__ctors_end>:
+ 1b6:	80 91 01 10 	lds	r24, 0x1001	; 0x801001 <__TEXT_REGION_LENGTH__+0x7e1001>
+ 1ba:	8f 7c       	andi	r24, 0xCF	; 207
+ 1bc:	80 60       	ori	r24, 0x00	; 0
+ 1be:	80 68       	ori	r24, 0x80	; 128
+ 1c0:	98 ed       	ldi	r25, 0xD8	; 216
+ 1c2:	94 bf       	out	0x34, r25	; 52
+ 1c4:	80 93 01 10 	sts	0x1001, r24	; 0x801001 <__TEXT_REGION_LENGTH__+0x7e1001>
+ 1c8:	11 24       	eor	r1, r1
+ 1ca:	1f be       	out	0x3f, r1	; 63
+ 1cc:	cf ef       	ldi	r28, 0xFF	; 255
+ 1ce:	cd bf       	out	0x3d, r28	; 61
+ 1d0:	df e7       	ldi	r29, 0x7F	; 127
+ 1d2:	de bf       	out	0x3e, r29	; 62
+
+000001d4 <__do_copy_data>:
+ 1d4:	e4 ea       	ldi	r30, 0xA4	; 164
+ 1d6:	f1 e0       	ldi	r31, 0x01	; 1
+ 1d8:	41 e0       	ldi	r20, 0x01	; 1
+ 1da:	19 c0       	rjmp	.+50     	; 0x20e <__do_clear_bss+0x8>
+ 1dc:	b7 91       	elpm	r27, Z+
+ 1de:	a7 91       	elpm	r26, Z+
+ 1e0:	37 91       	elpm	r19, Z+
+ 1e2:	27 91       	elpm	r18, Z+
+ 1e4:	07 91       	elpm	r16, Z+
+ 1e6:	07 fd       	sbrc	r16, 7
+ 1e8:	0e c0       	rjmp	.+28     	; 0x206 <__do_clear_bss>
+ 1ea:	97 91       	elpm	r25, Z+
+ 1ec:	87 91       	elpm	r24, Z+
+ 1ee:	ef 01       	movw	r28, r30
+ 1f0:	f9 2f       	mov	r31, r25
+ 1f2:	e8 2f       	mov	r30, r24
+ 1f4:	0b bf       	out	0x3b, r16	; 59
+ 1f6:	07 90       	elpm	r0, Z+
+ 1f8:	0d 92       	st	X+, r0
+ 1fa:	a2 17       	cp	r26, r18
+ 1fc:	b3 07       	cpc	r27, r19
+ 1fe:	d9 f7       	brne	.-10     	; 0x1f6 <__do_copy_data+0x22>
+ 200:	fe 01       	movw	r30, r28
+ 202:	1b be       	out	0x3b, r1	; 59
+ 204:	04 c0       	rjmp	.+8      	; 0x20e <__do_clear_bss+0x8>
+
+00000206 <__do_clear_bss>:
+ 206:	1d 92       	st	X+, r1
+ 208:	a2 17       	cp	r26, r18
+ 20a:	b3 07       	cpc	r27, r19
+ 20c:	e1 f7       	brne	.-8      	; 0x206 <__do_clear_bss>
+ 20e:	e5 3b       	cpi	r30, 0xB5	; 181
+ 210:	f4 07       	cpc	r31, r20
+ 212:	21 f7       	brne	.-56     	; 0x1dc <__do_copy_data+0x8>
+ 214:	0e 94 b7 02 	call	0x56e	; 0x56e <main>
+ 218:	0c 94 ee 08 	jmp	0x11dc	; 0x11dc <exit>
+
+0000021c <_exit>:
+ 21c:	f8 94       	cli
+
+0000021e <__stop_program>:
+ 21e:	ff cf       	rjmp	.-2      	; 0x21e <__stop_program>
+
+Disassembly of section .text:
+
+00001418 <__bad_interrupt>:
+    1418:	0c 94 00 00 	jmp	0	; 0x0 <__FLMAP_SECTION0__>
+
+Disassembly of section .text.process_adc_conversion:
+
+00001048 <process_adc_conversion>:
+	ADC_MUXPOS_AIN12_gc, ADC_MUXPOS_AIN13_gc, ADC_MUXPOS_AIN14_gc, ADC_MUXPOS_AIN15_gc,
+	ADC_MUXPOS_AIN18_gc, ADC_MUXPOS_AIN19_gc, ADC_MUXPOS_AIN20_gc, ADC_MUXPOS_AIN21_gc
+};
+
+float process_adc_conversion(uint8_t current_channel) {
+	ADC0.MUXPOS = adc_channel_map[current_channel];
+    1048:	e8 2f       	mov	r30, r24
+    104a:	f0 e0       	ldi	r31, 0x00	; 0
+    104c:	e0 50       	subi	r30, 0x00	; 0
+    104e:	fe 48       	sbci	r31, 0x8E	; 142
+    1050:	80 81       	ld	r24, Z
+    1052:	e0 e0       	ldi	r30, 0x00	; 0
+    1054:	f6 e0       	ldi	r31, 0x06	; 6
+    1056:	80 87       	std	Z+8, r24	; 0x08
+	ADC0.COMMAND = ADC_STCONV_bm;
+    1058:	81 e0       	ldi	r24, 0x01	; 1
+    105a:	82 87       	std	Z+10, r24	; 0x0a
+	while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));
+    105c:	80 91 0d 06 	lds	r24, 0x060D	; 0x80060d <__TEXT_REGION_LENGTH__+0x7e060d>
+    1060:	80 ff       	sbrs	r24, 0
+    1062:	fc cf       	rjmp	.-8      	; 0x105c <process_adc_conversion+0x14>
+	ADC0.INTFLAGS = ADC_RESRDY_bm;
+    1064:	e0 e0       	ldi	r30, 0x00	; 0
+    1066:	f6 e0       	ldi	r31, 0x06	; 6
+    1068:	81 e0       	ldi	r24, 0x01	; 1
+    106a:	85 87       	std	Z+13, r24	; 0x0d
+	uint16_t result = ADC0.RES;
+    106c:	60 89       	ldd	r22, Z+16	; 0x10
+    106e:	71 89       	ldd	r23, Z+17	; 0x11
+	float voltage = (result * MAX_VOLTAGE) / ADC_RESOLUTION;
+    1070:	80 e0       	ldi	r24, 0x00	; 0
+    1072:	90 e0       	ldi	r25, 0x00	; 0
+    1074:	0e 94 98 06 	call	0xd30	; 0xd30 <__floatunsisf>
+    1078:	23 e3       	ldi	r18, 0x33	; 51
+    107a:	33 e3       	ldi	r19, 0x33	; 51
+    107c:	43 e5       	ldi	r20, 0x53	; 83
+    107e:	50 e4       	ldi	r21, 0x40	; 64
+    1080:	0e 94 05 0a 	call	0x140a	; 0x140a <__mulsf3>
+    1084:	20 e0       	ldi	r18, 0x00	; 0
+    1086:	30 ef       	ldi	r19, 0xF0	; 240
+    1088:	4f e7       	ldi	r20, 0x7F	; 127
+    108a:	55 e4       	ldi	r21, 0x45	; 69
+    108c:	0e 94 01 0a 	call	0x1402	; 0x1402 <__divsf3>
+	return voltage;
+}
+    1090:	08 95       	ret
+
+Disassembly of section .text.relay_init:
+
+0000123c <relay_init>:
+	setInput(pin2);
+	return true;
+}
+
+void relay_init() {
+	PORTG.DIRSET = PIN0_bm;
+    123c:	e0 ec       	ldi	r30, 0xC0	; 192
+    123e:	f4 e0       	ldi	r31, 0x04	; 4
+    1240:	81 e0       	ldi	r24, 0x01	; 1
+    1242:	81 83       	std	Z+1, r24	; 0x01
+	PORTG.OUTSET = PIN0_bm;
+    1244:	85 83       	std	Z+5, r24	; 0x05
+    1246:	08 95       	ret
+
+Disassembly of section .text.setOutput:
+
+00000daa <setOutput>:
+}
+
+void setOutput(int n) {
+	switch (n) {
+ daa:	84 31       	cpi	r24, 0x14	; 20
+ dac:	91 05       	cpc	r25, r1
+ dae:	60 f5       	brcc	.+88     	; 0xe08 <setOutput+0x5e>
+ db0:	fc 01       	movw	r30, r24
+ db2:	ee 57       	subi	r30, 0x7E	; 126
+ db4:	ff 4f       	sbci	r31, 0xFF	; 255
+ db6:	0c 94 f9 08 	jmp	0x11f2	; 0x11f2 <__tablejump2__>
+		case 0: PORTA.DIRSET = PIN7_bm; break;
+ dba:	80 e8       	ldi	r24, 0x80	; 128
+ dbc:	80 93 01 04 	sts	0x0401, r24	; 0x800401 <__TEXT_REGION_LENGTH__+0x7e0401>
+ dc0:	08 95       	ret
+		case 1 ... 6: PORTB.DIRSET = (1 << (n + 1)); break;
+ dc2:	01 96       	adiw	r24, 0x01	; 1
+ dc4:	21 e0       	ldi	r18, 0x01	; 1
+ dc6:	30 e0       	ldi	r19, 0x00	; 0
+ dc8:	a9 01       	movw	r20, r18
+ dca:	02 c0       	rjmp	.+4      	; 0xdd0 <setOutput+0x26>
+ dcc:	44 0f       	add	r20, r20
+ dce:	55 1f       	adc	r21, r21
+ dd0:	8a 95       	dec	r24
+ dd2:	e2 f7       	brpl	.-8      	; 0xdcc <setOutput+0x22>
+ dd4:	40 93 21 04 	sts	0x0421, r20	; 0x800421 <__TEXT_REGION_LENGTH__+0x7e0421>
+ dd8:	08 95       	ret
+		case 7 ... 12: PORTC.DIRSET = (1 << (n - 5)); break;
+ dda:	05 97       	sbiw	r24, 0x05	; 5
+ ddc:	21 e0       	ldi	r18, 0x01	; 1
+ dde:	30 e0       	ldi	r19, 0x00	; 0
+ de0:	a9 01       	movw	r20, r18
+ de2:	02 c0       	rjmp	.+4      	; 0xde8 <setOutput+0x3e>
+ de4:	44 0f       	add	r20, r20
+ de6:	55 1f       	adc	r21, r21
+ de8:	8a 95       	dec	r24
+ dea:	e2 f7       	brpl	.-8      	; 0xde4 <setOutput+0x3a>
+ dec:	40 93 41 04 	sts	0x0441, r20	; 0x800441 <__TEXT_REGION_LENGTH__+0x7e0441>
+ df0:	08 95       	ret
+		case 13 ... 19: PORTG.DIRSET = (1 << (n - 12)); break;
+ df2:	0c 97       	sbiw	r24, 0x0c	; 12
+ df4:	21 e0       	ldi	r18, 0x01	; 1
+ df6:	30 e0       	ldi	r19, 0x00	; 0
+ df8:	a9 01       	movw	r20, r18
+ dfa:	02 c0       	rjmp	.+4      	; 0xe00 <setOutput+0x56>
+ dfc:	44 0f       	add	r20, r20
+ dfe:	55 1f       	adc	r21, r21
+ e00:	8a 95       	dec	r24
+ e02:	e2 f7       	brpl	.-8      	; 0xdfc <setOutput+0x52>
+ e04:	40 93 c1 04 	sts	0x04C1, r20	; 0x8004c1 <__TEXT_REGION_LENGTH__+0x7e04c1>
+ e08:	08 95       	ret
+
+Disassembly of section .text.setInput:
+
+00000e0a <setInput>:
+	}
+}
+
+void setInput(int n) {
+	switch (n) {
+ e0a:	84 31       	cpi	r24, 0x14	; 20
+ e0c:	91 05       	cpc	r25, r1
+ e0e:	60 f5       	brcc	.+88     	; 0xe68 <setInput+0x5e>
+ e10:	fc 01       	movw	r30, r24
+ e12:	ea 56       	subi	r30, 0x6A	; 106
+ e14:	ff 4f       	sbci	r31, 0xFF	; 255
+ e16:	0c 94 f9 08 	jmp	0x11f2	; 0x11f2 <__tablejump2__>
+		case 0: PORTA.DIRCLR = PIN7_bm; break;
+ e1a:	80 e8       	ldi	r24, 0x80	; 128
+ e1c:	80 93 02 04 	sts	0x0402, r24	; 0x800402 <__TEXT_REGION_LENGTH__+0x7e0402>
+ e20:	08 95       	ret
+		case 1 ... 6: PORTB.DIRCLR = (1 << (n + 1)); break;
+ e22:	01 96       	adiw	r24, 0x01	; 1
+ e24:	21 e0       	ldi	r18, 0x01	; 1
+ e26:	30 e0       	ldi	r19, 0x00	; 0
+ e28:	a9 01       	movw	r20, r18
+ e2a:	02 c0       	rjmp	.+4      	; 0xe30 <setInput+0x26>
+ e2c:	44 0f       	add	r20, r20
+ e2e:	55 1f       	adc	r21, r21
+ e30:	8a 95       	dec	r24
+ e32:	e2 f7       	brpl	.-8      	; 0xe2c <setInput+0x22>
+ e34:	40 93 22 04 	sts	0x0422, r20	; 0x800422 <__TEXT_REGION_LENGTH__+0x7e0422>
+ e38:	08 95       	ret
+		case 7 ... 12: PORTC.DIRCLR = (1 << (n - 5)); break;
+ e3a:	05 97       	sbiw	r24, 0x05	; 5
+ e3c:	21 e0       	ldi	r18, 0x01	; 1
+ e3e:	30 e0       	ldi	r19, 0x00	; 0
+ e40:	a9 01       	movw	r20, r18
+ e42:	02 c0       	rjmp	.+4      	; 0xe48 <setInput+0x3e>
+ e44:	44 0f       	add	r20, r20
+ e46:	55 1f       	adc	r21, r21
+ e48:	8a 95       	dec	r24
+ e4a:	e2 f7       	brpl	.-8      	; 0xe44 <setInput+0x3a>
+ e4c:	40 93 42 04 	sts	0x0442, r20	; 0x800442 <__TEXT_REGION_LENGTH__+0x7e0442>
+ e50:	08 95       	ret
+		case 13 ... 19: PORTG.DIRCLR = (1 << (n - 12)); break;
+ e52:	0c 97       	sbiw	r24, 0x0c	; 12
+ e54:	21 e0       	ldi	r18, 0x01	; 1
+ e56:	30 e0       	ldi	r19, 0x00	; 0
+ e58:	a9 01       	movw	r20, r18
+ e5a:	02 c0       	rjmp	.+4      	; 0xe60 <setInput+0x56>
+ e5c:	44 0f       	add	r20, r20
+ e5e:	55 1f       	adc	r21, r21
+ e60:	8a 95       	dec	r24
+ e62:	e2 f7       	brpl	.-8      	; 0xe5c <setInput+0x52>
+ e64:	40 93 c2 04 	sts	0x04C2, r20	; 0x8004c2 <__TEXT_REGION_LENGTH__+0x7e04c2>
+ e68:	08 95       	ret
+
+Disassembly of section .text.setHigh:
+
+00000e6a <setHigh>:
+	}
+}
+
+void setHigh(int n) {
+	switch (n) {
+ e6a:	84 31       	cpi	r24, 0x14	; 20
+ e6c:	91 05       	cpc	r25, r1
+ e6e:	60 f5       	brcc	.+88     	; 0xec8 <setHigh+0x5e>
+ e70:	fc 01       	movw	r30, r24
+ e72:	e6 55       	subi	r30, 0x56	; 86
+ e74:	ff 4f       	sbci	r31, 0xFF	; 255
+ e76:	0c 94 f9 08 	jmp	0x11f2	; 0x11f2 <__tablejump2__>
+		case 0: PORTA.OUTSET = PIN7_bm; break;
+ e7a:	80 e8       	ldi	r24, 0x80	; 128
+ e7c:	80 93 05 04 	sts	0x0405, r24	; 0x800405 <__TEXT_REGION_LENGTH__+0x7e0405>
+ e80:	08 95       	ret
+		case 1 ... 6: PORTB.OUTSET = (1 << (n + 1)); break;
+ e82:	01 96       	adiw	r24, 0x01	; 1
+ e84:	21 e0       	ldi	r18, 0x01	; 1
+ e86:	30 e0       	ldi	r19, 0x00	; 0
+ e88:	a9 01       	movw	r20, r18
+ e8a:	02 c0       	rjmp	.+4      	; 0xe90 <setHigh+0x26>
+ e8c:	44 0f       	add	r20, r20
+ e8e:	55 1f       	adc	r21, r21
+ e90:	8a 95       	dec	r24
+ e92:	e2 f7       	brpl	.-8      	; 0xe8c <setHigh+0x22>
+ e94:	40 93 25 04 	sts	0x0425, r20	; 0x800425 <__TEXT_REGION_LENGTH__+0x7e0425>
+ e98:	08 95       	ret
+		case 7 ... 12: PORTC.OUTSET = (1 << (n - 5)); break;
+ e9a:	05 97       	sbiw	r24, 0x05	; 5
+ e9c:	21 e0       	ldi	r18, 0x01	; 1
+ e9e:	30 e0       	ldi	r19, 0x00	; 0
+ ea0:	a9 01       	movw	r20, r18
+ ea2:	02 c0       	rjmp	.+4      	; 0xea8 <setHigh+0x3e>
+ ea4:	44 0f       	add	r20, r20
+ ea6:	55 1f       	adc	r21, r21
+ ea8:	8a 95       	dec	r24
+ eaa:	e2 f7       	brpl	.-8      	; 0xea4 <setHigh+0x3a>
+ eac:	40 93 45 04 	sts	0x0445, r20	; 0x800445 <__TEXT_REGION_LENGTH__+0x7e0445>
+ eb0:	08 95       	ret
+		case 13 ... 19: PORTG.OUTSET = (1 << (n - 12)); break;
+ eb2:	0c 97       	sbiw	r24, 0x0c	; 12
+ eb4:	21 e0       	ldi	r18, 0x01	; 1
+ eb6:	30 e0       	ldi	r19, 0x00	; 0
+ eb8:	a9 01       	movw	r20, r18
+ eba:	02 c0       	rjmp	.+4      	; 0xec0 <setHigh+0x56>
+ ebc:	44 0f       	add	r20, r20
+ ebe:	55 1f       	adc	r21, r21
+ ec0:	8a 95       	dec	r24
+ ec2:	e2 f7       	brpl	.-8      	; 0xebc <setHigh+0x52>
+ ec4:	40 93 c5 04 	sts	0x04C5, r20	; 0x8004c5 <__TEXT_REGION_LENGTH__+0x7e04c5>
+ ec8:	08 95       	ret
+
+Disassembly of section .text.setLow:
+
+00000eca <setLow>:
+	}
+}
+
+void setLow(int n) {
+	switch (n) {
+ eca:	84 31       	cpi	r24, 0x14	; 20
+ ecc:	91 05       	cpc	r25, r1
+ ece:	60 f5       	brcc	.+88     	; 0xf28 <setLow+0x5e>
+ ed0:	fc 01       	movw	r30, r24
+ ed2:	e2 54       	subi	r30, 0x42	; 66
+ ed4:	ff 4f       	sbci	r31, 0xFF	; 255
+ ed6:	0c 94 f9 08 	jmp	0x11f2	; 0x11f2 <__tablejump2__>
+		case 0: PORTA.OUTCLR = PIN7_bm; break;
+ eda:	80 e8       	ldi	r24, 0x80	; 128
+ edc:	80 93 06 04 	sts	0x0406, r24	; 0x800406 <__TEXT_REGION_LENGTH__+0x7e0406>
+ ee0:	08 95       	ret
+		case 1 ... 6: PORTB.OUTCLR = (1 << (n + 1)); break;
+ ee2:	01 96       	adiw	r24, 0x01	; 1
+ ee4:	21 e0       	ldi	r18, 0x01	; 1
+ ee6:	30 e0       	ldi	r19, 0x00	; 0
+ ee8:	a9 01       	movw	r20, r18
+ eea:	02 c0       	rjmp	.+4      	; 0xef0 <setLow+0x26>
+ eec:	44 0f       	add	r20, r20
+ eee:	55 1f       	adc	r21, r21
+ ef0:	8a 95       	dec	r24
+ ef2:	e2 f7       	brpl	.-8      	; 0xeec <setLow+0x22>
+ ef4:	40 93 26 04 	sts	0x0426, r20	; 0x800426 <__TEXT_REGION_LENGTH__+0x7e0426>
+ ef8:	08 95       	ret
+		case 7 ... 12: PORTC.OUTCLR = (1 << (n - 5)); break;
+ efa:	05 97       	sbiw	r24, 0x05	; 5
+ efc:	21 e0       	ldi	r18, 0x01	; 1
+ efe:	30 e0       	ldi	r19, 0x00	; 0
+ f00:	a9 01       	movw	r20, r18
+ f02:	02 c0       	rjmp	.+4      	; 0xf08 <setLow+0x3e>
+ f04:	44 0f       	add	r20, r20
+ f06:	55 1f       	adc	r21, r21
+ f08:	8a 95       	dec	r24
+ f0a:	e2 f7       	brpl	.-8      	; 0xf04 <setLow+0x3a>
+ f0c:	40 93 46 04 	sts	0x0446, r20	; 0x800446 <__TEXT_REGION_LENGTH__+0x7e0446>
+ f10:	08 95       	ret
+		case 13 ... 19: PORTG.OUTCLR = (1 << (n - 12)); break;
+ f12:	0c 97       	sbiw	r24, 0x0c	; 12
+ f14:	21 e0       	ldi	r18, 0x01	; 1
+ f16:	30 e0       	ldi	r19, 0x00	; 0
+ f18:	a9 01       	movw	r20, r18
+ f1a:	02 c0       	rjmp	.+4      	; 0xf20 <setLow+0x56>
+ f1c:	44 0f       	add	r20, r20
+ f1e:	55 1f       	adc	r21, r21
+ f20:	8a 95       	dec	r24
+ f22:	e2 f7       	brpl	.-8      	; 0xf1c <setLow+0x52>
+ f24:	40 93 c6 04 	sts	0x04C6, r20	; 0x8004c6 <__TEXT_REGION_LENGTH__+0x7e04c6>
+ f28:	08 95       	ret
+
+Disassembly of section .text.characterize:
+
+0000071c <characterize>:
+	return voltage;
+}
+
+void setOutput(int n); void setInput(int n); void setHigh(int n); void setLow(int n);
+
+void characterize(int pin1, int pin2) {
+ 71c:	ef 92       	push	r14
+ 71e:	ff 92       	push	r15
+ 720:	0f 93       	push	r16
+ 722:	1f 93       	push	r17
+ 724:	cf 93       	push	r28
+ 726:	df 93       	push	r29
+	if (pin1 != pin2) {
+ 728:	86 17       	cp	r24, r22
+ 72a:	97 07       	cpc	r25, r23
+ 72c:	09 f4       	brne	.+2      	; 0x730 <characterize+0x14>
+ 72e:	53 c0       	rjmp	.+166    	; 0x7d6 <characterize+0xba>
+ 730:	8b 01       	movw	r16, r22
+ 732:	7c 01       	movw	r14, r24
+		setOutput(pin1);
+ 734:	0e 94 d5 06 	call	0xdaa	; 0xdaa <setOutput>
+		setOutput(pin2);
+ 738:	c8 01       	movw	r24, r16
+ 73a:	0e 94 d5 06 	call	0xdaa	; 0xdaa <setOutput>
+		setHigh(pin1);
+ 73e:	c7 01       	movw	r24, r14
+ 740:	0e 94 35 07 	call	0xe6a	; 0xe6a <setHigh>
+		setLow(pin2);
+ 744:	c8 01       	movw	r24, r16
+ 746:	0e 94 65 07 	call	0xeca	; 0xeca <setLow>
+		myArray[pin1][pin2].val_1_10 = process_adc_conversion(pin1);
+ 74a:	8e 2d       	mov	r24, r14
+ 74c:	0e 94 24 08 	call	0x1048	; 0x1048 <process_adc_conversion>
+ 750:	24 e1       	ldi	r18, 0x14	; 20
+ 752:	2e 9d       	mul	r18, r14
+ 754:	e0 01       	movw	r28, r0
+ 756:	2f 9d       	mul	r18, r15
+ 758:	d0 0d       	add	r29, r0
+ 75a:	11 24       	eor	r1, r1
+ 75c:	c0 0f       	add	r28, r16
+ 75e:	d1 1f       	adc	r29, r17
+ 760:	cc 0f       	add	r28, r28
+ 762:	dd 1f       	adc	r29, r29
+ 764:	c2 95       	swap	r28
+ 766:	d2 95       	swap	r29
+ 768:	d0 7f       	andi	r29, 0xF0	; 240
+ 76a:	dc 27       	eor	r29, r28
+ 76c:	c0 7f       	andi	r28, 0xF0	; 240
+ 76e:	dc 27       	eor	r29, r28
+ 770:	c0 50       	subi	r28, 0x00	; 0
+ 772:	d0 4c       	sbci	r29, 0xC0	; 192
+ 774:	68 87       	std	Y+8, r22	; 0x08
+ 776:	79 87       	std	Y+9, r23	; 0x09
+ 778:	8a 87       	std	Y+10, r24	; 0x0a
+ 77a:	9b 87       	std	Y+11, r25	; 0x0b
+		myArray[pin1][pin2].val_2_10 = process_adc_conversion(pin2);
+ 77c:	80 2f       	mov	r24, r16
+ 77e:	0e 94 24 08 	call	0x1048	; 0x1048 <process_adc_conversion>
+ 782:	68 8f       	std	Y+24, r22	; 0x18
+ 784:	79 8f       	std	Y+25, r23	; 0x19
+ 786:	8a 8f       	std	Y+26, r24	; 0x1a
+ 788:	9b 8f       	std	Y+27, r25	; 0x1b
+		setLow(pin1);
+ 78a:	c7 01       	movw	r24, r14
+ 78c:	0e 94 65 07 	call	0xeca	; 0xeca <setLow>
+		setHigh(pin2);
+ 790:	c8 01       	movw	r24, r16
+ 792:	0e 94 35 07 	call	0xe6a	; 0xe6a <setHigh>
+		myArray[pin1][pin2].val_1_01 = process_adc_conversion(pin1);
+ 796:	8e 2d       	mov	r24, r14
+ 798:	0e 94 24 08 	call	0x1048	; 0x1048 <process_adc_conversion>
+ 79c:	6c 83       	std	Y+4, r22	; 0x04
+ 79e:	7d 83       	std	Y+5, r23	; 0x05
+ 7a0:	8e 83       	std	Y+6, r24	; 0x06
+ 7a2:	9f 83       	std	Y+7, r25	; 0x07
+		myArray[pin1][pin2].val_2_01 = process_adc_conversion(pin2);
+ 7a4:	80 2f       	mov	r24, r16
+ 7a6:	0e 94 24 08 	call	0x1048	; 0x1048 <process_adc_conversion>
+ 7aa:	6c 8b       	std	Y+20, r22	; 0x14
+ 7ac:	7d 8b       	std	Y+21, r23	; 0x15
+ 7ae:	8e 8b       	std	Y+22, r24	; 0x16
+ 7b0:	9f 8b       	std	Y+23, r25	; 0x17
+		myArray[pin1][pin2].val_1_11 = 3.3;
+ 7b2:	83 e3       	ldi	r24, 0x33	; 51
+ 7b4:	93 e3       	ldi	r25, 0x33	; 51
+ 7b6:	a3 e5       	ldi	r26, 0x53	; 83
+ 7b8:	b0 e4       	ldi	r27, 0x40	; 64
+ 7ba:	8c 87       	std	Y+12, r24	; 0x0c
+ 7bc:	9d 87       	std	Y+13, r25	; 0x0d
+ 7be:	ae 87       	std	Y+14, r26	; 0x0e
+ 7c0:	bf 87       	std	Y+15, r27	; 0x0f
+		myArray[pin1][pin2].val_2_11 = 3.3;
+ 7c2:	8c 8f       	std	Y+28, r24	; 0x1c
+ 7c4:	9d 8f       	std	Y+29, r25	; 0x1d
+ 7c6:	ae 8f       	std	Y+30, r26	; 0x1e
+ 7c8:	bf 8f       	std	Y+31, r27	; 0x1f
+		setInput(pin1);
+ 7ca:	c7 01       	movw	r24, r14
+ 7cc:	0e 94 05 07 	call	0xe0a	; 0xe0a <setInput>
+		setInput(pin2);
+ 7d0:	c8 01       	movw	r24, r16
+ 7d2:	0e 94 05 07 	call	0xe0a	; 0xe0a <setInput>
+	}
+}
+ 7d6:	df 91       	pop	r29
+ 7d8:	cf 91       	pop	r28
+ 7da:	1f 91       	pop	r17
+ 7dc:	0f 91       	pop	r16
+ 7de:	ff 90       	pop	r15
+ 7e0:	ef 90       	pop	r14
+ 7e2:	08 95       	ret
+
+Disassembly of section .text.main:
+
+0000056e <main>:
+		case 13 ... 19: PORTG.OUTCLR = (1 << (n - 12)); break;
+	}
+}
+
+int main(void) {
+	SYSTEM_Initialize();
+ 56e:	0e 94 d3 08 	call	0x11a6	; 0x11a6 <SYSTEM_Initialize>
+	relay_init();
+ 572:	0e 94 1e 09 	call	0x123c	; 0x123c <relay_init>
+	for (int i = 0; i < NUM_PINS; i++) {
+ 576:	00 e0       	ldi	r16, 0x00	; 0
+ 578:	10 e0       	ldi	r17, 0x00	; 0
+ 57a:	10 c0       	rjmp	.+32     	; 0x59c <main+0x2e>
+		for (int j = 0; j< NUM_PINS; j++) {
+			if (i != j) {
+ 57c:	0c 17       	cp	r16, r28
+ 57e:	1d 07       	cpc	r17, r29
+ 580:	21 f0       	breq	.+8      	; 0x58a <main+0x1c>
+				characterize(i,j);
+ 582:	be 01       	movw	r22, r28
+ 584:	c8 01       	movw	r24, r16
+ 586:	0e 94 8e 03 	call	0x71c	; 0x71c <characterize>
+
+int main(void) {
+	SYSTEM_Initialize();
+	relay_init();
+	for (int i = 0; i < NUM_PINS; i++) {
+		for (int j = 0; j< NUM_PINS; j++) {
+ 58a:	21 96       	adiw	r28, 0x01	; 1
+ 58c:	02 c0       	rjmp	.+4      	; 0x592 <main+0x24>
+ 58e:	c0 e0       	ldi	r28, 0x00	; 0
+ 590:	d0 e0       	ldi	r29, 0x00	; 0
+ 592:	c4 31       	cpi	r28, 0x14	; 20
+ 594:	d1 05       	cpc	r29, r1
+ 596:	94 f3       	brlt	.-28     	; 0x57c <main+0xe>
+}
+
+int main(void) {
+	SYSTEM_Initialize();
+	relay_init();
+	for (int i = 0; i < NUM_PINS; i++) {
+ 598:	0f 5f       	subi	r16, 0xFF	; 255
+ 59a:	1f 4f       	sbci	r17, 0xFF	; 255
+ 59c:	04 31       	cpi	r16, 0x14	; 20
+ 59e:	11 05       	cpc	r17, r1
+ 5a0:	b4 f3       	brlt	.-20     	; 0x58e <main+0x20>
+ 5a2:	c0 e0       	ldi	r28, 0x00	; 0
+ 5a4:	d0 e0       	ldi	r29, 0x00	; 0
+ 5a6:	07 c0       	rjmp	.+14     	; 0x5b6 <main+0x48>
+			}
+			
+		}
+	}
+	for (int i = 0; i < NUM_PINS; i++) {
+		setOutput(i);
+ 5a8:	ce 01       	movw	r24, r28
+ 5aa:	0e 94 d5 06 	call	0xdaa	; 0xdaa <setOutput>
+		setHigh(i);
+ 5ae:	ce 01       	movw	r24, r28
+ 5b0:	0e 94 35 07 	call	0xe6a	; 0xe6a <setHigh>
+				characterize(i,j);
+			}
+			
+		}
+	}
+	for (int i = 0; i < NUM_PINS; i++) {
+ 5b4:	21 96       	adiw	r28, 0x01	; 1
+ 5b6:	c4 31       	cpi	r28, 0x14	; 20
+ 5b8:	d1 05       	cpc	r29, r1
+ 5ba:	b4 f3       	brlt	.-20     	; 0x5a8 <main+0x3a>
+		setOutput(i);
+		setHigh(i);
+	}
+	
+	while (1) {
+		if (process_adc_conversion(0) > 3 && process_adc_conversion(0) < 4) {
+ 5bc:	80 e0       	ldi	r24, 0x00	; 0
+ 5be:	0e 94 24 08 	call	0x1048	; 0x1048 <process_adc_conversion>
+ 5c2:	20 e0       	ldi	r18, 0x00	; 0
+ 5c4:	30 e0       	ldi	r19, 0x00	; 0
+ 5c6:	40 e4       	ldi	r20, 0x40	; 64
+ 5c8:	50 e4       	ldi	r21, 0x40	; 64
+ 5ca:	0e 94 fc 09 	call	0x13f8	; 0x13f8 <__gesf2>
+ 5ce:	18 16       	cp	r1, r24
+ 5d0:	1c f5       	brge	.+70     	; 0x618 <main+0xaa>
+ 5d2:	80 e0       	ldi	r24, 0x00	; 0
+ 5d4:	0e 94 24 08 	call	0x1048	; 0x1048 <process_adc_conversion>
+ 5d8:	20 e0       	ldi	r18, 0x00	; 0
+ 5da:	30 e0       	ldi	r19, 0x00	; 0
+ 5dc:	40 e8       	ldi	r20, 0x80	; 128
+ 5de:	50 e4       	ldi	r21, 0x40	; 64
+ 5e0:	0e 94 f7 09 	call	0x13ee	; 0x13ee <__cmpsf2>
+ 5e4:	88 23       	and	r24, r24
+ 5e6:	c4 f4       	brge	.+48     	; 0x618 <main+0xaa>
+			PORTG.OUTSET = PIN0_bm;
+ 5e8:	e0 ec       	ldi	r30, 0xC0	; 192
+ 5ea:	f4 e0       	ldi	r31, 0x04	; 4
+ 5ec:	81 e0       	ldi	r24, 0x01	; 1
+ 5ee:	85 83       	std	Z+5, r24	; 0x05
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 5f0:	2f ef       	ldi	r18, 0xFF	; 255
+ 5f2:	34 e3       	ldi	r19, 0x34	; 52
+ 5f4:	9c e0       	ldi	r25, 0x0C	; 12
+ 5f6:	21 50       	subi	r18, 0x01	; 1
+ 5f8:	30 40       	sbci	r19, 0x00	; 0
+ 5fa:	90 40       	sbci	r25, 0x00	; 0
+ 5fc:	e1 f7       	brne	.-8      	; 0x5f6 <main+0x88>
+ 5fe:	00 c0       	rjmp	.+0      	; 0x600 <main+0x92>
+ 600:	00 00       	nop
+			_delay_ms(1000);
+			PORTG.OUTCLR = PIN0_bm;
+ 602:	86 83       	std	Z+6, r24	; 0x06
+ 604:	2f ef       	ldi	r18, 0xFF	; 255
+ 606:	34 e3       	ldi	r19, 0x34	; 52
+ 608:	8c e0       	ldi	r24, 0x0C	; 12
+ 60a:	21 50       	subi	r18, 0x01	; 1
+ 60c:	30 40       	sbci	r19, 0x00	; 0
+ 60e:	80 40       	sbci	r24, 0x00	; 0
+ 610:	e1 f7       	brne	.-8      	; 0x60a <main+0x9c>
+ 612:	00 c0       	rjmp	.+0      	; 0x614 <main+0xa6>
+ 614:	00 00       	nop
+ 616:	d2 cf       	rjmp	.-92     	; 0x5bc <main+0x4e>
+			_delay_ms(1000);
+		} else {
+			PORTG.OUTSET = PIN0_bm;
+ 618:	e0 ec       	ldi	r30, 0xC0	; 192
+ 61a:	f4 e0       	ldi	r31, 0x04	; 4
+ 61c:	81 e0       	ldi	r24, 0x01	; 1
+ 61e:	85 83       	std	Z+5, r24	; 0x05
+ 620:	9f ef       	ldi	r25, 0xFF	; 255
+ 622:	20 e7       	ldi	r18, 0x70	; 112
+ 624:	32 e0       	ldi	r19, 0x02	; 2
+ 626:	91 50       	subi	r25, 0x01	; 1
+ 628:	20 40       	sbci	r18, 0x00	; 0
+ 62a:	30 40       	sbci	r19, 0x00	; 0
+ 62c:	e1 f7       	brne	.-8      	; 0x626 <main+0xb8>
+ 62e:	00 c0       	rjmp	.+0      	; 0x630 <main+0xc2>
+ 630:	00 00       	nop
+			_delay_ms(200);
+			PORTG.OUTCLR = PIN0_bm;
+ 632:	86 83       	std	Z+6, r24	; 0x06
+ 634:	8f ef       	ldi	r24, 0xFF	; 255
+ 636:	90 e7       	ldi	r25, 0x70	; 112
+ 638:	22 e0       	ldi	r18, 0x02	; 2
+ 63a:	81 50       	subi	r24, 0x01	; 1
+ 63c:	90 40       	sbci	r25, 0x00	; 0
+ 63e:	20 40       	sbci	r18, 0x00	; 0
+ 640:	e1 f7       	brne	.-8      	; 0x63a <main+0xcc>
+ 642:	00 c0       	rjmp	.+0      	; 0x644 <main+0xd6>
+ 644:	00 00       	nop
+ 646:	ba cf       	rjmp	.-140    	; 0x5bc <main+0x4e>
+
+Disassembly of section .text.ADC0_Initialize:
+
+00001158 <ADC0_Initialize>:
+adc_irq_cb_t ADC0_resrdy_cb = NULL;
+
+int8_t ADC0_Initialize(void)
+{     
+    // SAMPNUM 128 results accumulated; 
+    ADC0.CTRLB = 0x7;
+    1158:	e0 e0       	ldi	r30, 0x00	; 0
+    115a:	f6 e0       	ldi	r31, 0x06	; 6
+    115c:	87 e0       	ldi	r24, 0x07	; 7
+    115e:	81 83       	std	Z+1, r24	; 0x01
+
+    // PRESC CLK_PER divided by 4; 
+    ADC0.CTRLC = 0x1;
+    1160:	81 e0       	ldi	r24, 0x01	; 1
+    1162:	82 83       	std	Z+2, r24	; 0x02
+
+    // INITDLY DLY0; SAMPDLY DLY0; 
+    ADC0.CTRLD = 0x0;
+    1164:	13 82       	std	Z+3, r1	; 0x03
+
+    // WINCM No Window Comparison; 
+    ADC0.CTRLE = 0x0;
+    1166:	14 82       	std	Z+4, r1	; 0x04
+
+    // DBGRUN disabled; 
+    ADC0.DBGCTRL = 0x0;
+    1168:	16 86       	std	Z+14, r1	; 0x0e
+
+    // STARTEI disabled; 
+    ADC0.EVCTRL = 0x0;
+    116a:	13 86       	std	Z+11, r1	; 0x0b
+
+    // RESRDY disabled; WCMP disabled; 
+    ADC0.INTCTRL = 0x0;
+    116c:	14 86       	std	Z+12, r1	; 0x0c
+
+    // MUXPOS ADC input pin 0; 
+    ADC0.MUXPOS = 0x0;
+    116e:	10 86       	std	Z+8, r1	; 0x08
+
+    // SAMPLEN 0; 
+    ADC0.SAMPCTRL = 0x0;
+    1170:	15 82       	std	Z+5, r1	; 0x05
+
+    // Window comparator high threshold 
+    ADC0.WINHT = 0x1FF;
+    1172:	2f ef       	ldi	r18, 0xFF	; 255
+    1174:	31 e0       	ldi	r19, 0x01	; 1
+    1176:	24 8b       	std	Z+20, r18	; 0x14
+    1178:	35 8b       	std	Z+21, r19	; 0x15
+
+    // Window comparator low threshold 
+    ADC0.WINLT = 0x0;
+    117a:	12 8a       	std	Z+18, r1	; 0x12
+    117c:	13 8a       	std	Z+19, r1	; 0x13
+
+    // ENABLE enabled; FREERUN disabled; RESSEL 12-bit mode; RUNSTBY disabled; CONVMODE SINGLEENDED; LEFTADJ disabled; 
+    ADC0.CTRLA = 0x1;
+    117e:	80 83       	st	Z, r24
+
+    return 0;
+}
+    1180:	80 e0       	ldi	r24, 0x00	; 0
+    1182:	08 95       	ret
+
+Disassembly of section .text.__vector_27:
+
+00000f2a <__vector_27>:
+{
+    ADC0_resrdy_cb = f;
+}
+
+ISR(ADC0_WCMP_vect)
+{        
+ f2a:	1f 92       	push	r1
+ f2c:	0f 92       	push	r0
+ f2e:	0f b6       	in	r0, 0x3f	; 63
+ f30:	0f 92       	push	r0
+ f32:	11 24       	eor	r1, r1
+ f34:	0b b6       	in	r0, 0x3b	; 59
+ f36:	0f 92       	push	r0
+ f38:	2f 93       	push	r18
+ f3a:	3f 93       	push	r19
+ f3c:	4f 93       	push	r20
+ f3e:	5f 93       	push	r21
+ f40:	6f 93       	push	r22
+ f42:	7f 93       	push	r23
+ f44:	8f 93       	push	r24
+ f46:	9f 93       	push	r25
+ f48:	af 93       	push	r26
+ f4a:	bf 93       	push	r27
+ f4c:	ef 93       	push	r30
+ f4e:	ff 93       	push	r31
+    // Clear the interrupt flag
+    ADC0.INTFLAGS = ADC_WCMP_bm;
+ f50:	82 e0       	ldi	r24, 0x02	; 2
+ f52:	80 93 0d 06 	sts	0x060D, r24	; 0x80060d <__TEXT_REGION_LENGTH__+0x7e060d>
+
+    if (ADC0_window_cb != NULL)
+ f56:	e0 91 16 72 	lds	r30, 0x7216	; 0x807216 <ADC0_window_cb>
+ f5a:	f0 91 17 72 	lds	r31, 0x7217	; 0x807217 <ADC0_window_cb+0x1>
+ f5e:	30 97       	sbiw	r30, 0x00	; 0
+ f60:	09 f0       	breq	.+2      	; 0xf64 <__vector_27+0x3a>
+    {
+        ADC0_window_cb();
+ f62:	09 95       	icall
+    }
+}
+ f64:	ff 91       	pop	r31
+ f66:	ef 91       	pop	r30
+ f68:	bf 91       	pop	r27
+ f6a:	af 91       	pop	r26
+ f6c:	9f 91       	pop	r25
+ f6e:	8f 91       	pop	r24
+ f70:	7f 91       	pop	r23
+ f72:	6f 91       	pop	r22
+ f74:	5f 91       	pop	r21
+ f76:	4f 91       	pop	r20
+ f78:	3f 91       	pop	r19
+ f7a:	2f 91       	pop	r18
+ f7c:	0f 90       	pop	r0
+ f7e:	0b be       	out	0x3b, r0	; 59
+ f80:	0f 90       	pop	r0
+ f82:	0f be       	out	0x3f, r0	; 63
+ f84:	0f 90       	pop	r0
+ f86:	1f 90       	pop	r1
+ f88:	18 95       	reti
+
+Disassembly of section .text.__vector_26:
+
+00000f8a <__vector_26>:
+
+ISR(ADC0_RESRDY_vect)
+{
+ f8a:	1f 92       	push	r1
+ f8c:	0f 92       	push	r0
+ f8e:	0f b6       	in	r0, 0x3f	; 63
+ f90:	0f 92       	push	r0
+ f92:	11 24       	eor	r1, r1
+ f94:	0b b6       	in	r0, 0x3b	; 59
+ f96:	0f 92       	push	r0
+ f98:	2f 93       	push	r18
+ f9a:	3f 93       	push	r19
+ f9c:	4f 93       	push	r20
+ f9e:	5f 93       	push	r21
+ fa0:	6f 93       	push	r22
+ fa2:	7f 93       	push	r23
+ fa4:	8f 93       	push	r24
+ fa6:	9f 93       	push	r25
+ fa8:	af 93       	push	r26
+ faa:	bf 93       	push	r27
+ fac:	ef 93       	push	r30
+ fae:	ff 93       	push	r31
+    // Clear the interrupt flag
+    ADC0.INTFLAGS = ADC_RESRDY_bm;
+ fb0:	81 e0       	ldi	r24, 0x01	; 1
+ fb2:	80 93 0d 06 	sts	0x060D, r24	; 0x80060d <__TEXT_REGION_LENGTH__+0x7e060d>
+
+    if (ADC0_resrdy_cb != NULL)
+ fb6:	e0 91 14 72 	lds	r30, 0x7214	; 0x807214 <ADC0_resrdy_cb>
+ fba:	f0 91 15 72 	lds	r31, 0x7215	; 0x807215 <ADC0_resrdy_cb+0x1>
+ fbe:	30 97       	sbiw	r30, 0x00	; 0
+ fc0:	09 f0       	breq	.+2      	; 0xfc4 <__vector_26+0x3a>
+    {
+        ADC0_resrdy_cb();
+ fc2:	09 95       	icall
+    }
+ fc4:	ff 91       	pop	r31
+ fc6:	ef 91       	pop	r30
+ fc8:	bf 91       	pop	r27
+ fca:	af 91       	pop	r26
+ fcc:	9f 91       	pop	r25
+ fce:	8f 91       	pop	r24
+ fd0:	7f 91       	pop	r23
+ fd2:	6f 91       	pop	r22
+ fd4:	5f 91       	pop	r21
+ fd6:	4f 91       	pop	r20
+ fd8:	3f 91       	pop	r19
+ fda:	2f 91       	pop	r18
+ fdc:	0f 90       	pop	r0
+ fde:	0b be       	out	0x3b, r0	; 59
+ fe0:	0f 90       	pop	r0
+ fe2:	0f be       	out	0x3f, r0	; 63
+ fe4:	0f 90       	pop	r0
+ fe6:	1f 90       	pop	r1
+ fe8:	18 95       	reti
+
+Disassembly of section .text.EVSYS_Initialize:
+
+00000964 <EVSYS_Initialize>:
+ 964:	e0 e0       	ldi	r30, 0x00	; 0
+ 966:	f2 e0       	ldi	r31, 0x02	; 2
+ 968:	80 e8       	ldi	r24, 0x80	; 128
+ 96a:	80 8b       	std	Z+16, r24	; 0x10
+ 96c:	11 8a       	std	Z+17, r1	; 0x11
+ 96e:	12 8a       	std	Z+18, r1	; 0x12
+ 970:	13 8a       	std	Z+19, r1	; 0x13
+ 972:	14 8a       	std	Z+20, r1	; 0x14
+ 974:	15 8a       	std	Z+21, r1	; 0x15
+ 976:	16 8a       	std	Z+22, r1	; 0x16
+ 978:	17 8a       	std	Z+23, r1	; 0x17
+ 97a:	10 8e       	std	Z+24, r1	; 0x18
+ 97c:	11 8e       	std	Z+25, r1	; 0x19
+ 97e:	81 e0       	ldi	r24, 0x01	; 1
+ 980:	80 83       	st	Z, r24
+ 982:	81 83       	std	Z+1, r24	; 0x01
+ 984:	84 a7       	std	Z+44, r24	; 0x2c
+ 986:	10 a2       	std	Z+32, r1	; 0x20
+ 988:	11 a2       	std	Z+33, r1	; 0x21
+ 98a:	12 a2       	std	Z+34, r1	; 0x22
+ 98c:	13 a2       	std	Z+35, r1	; 0x23
+ 98e:	14 a2       	std	Z+36, r1	; 0x24
+ 990:	15 a2       	std	Z+37, r1	; 0x25
+ 992:	16 a2       	std	Z+38, r1	; 0x26
+ 994:	17 a2       	std	Z+39, r1	; 0x27
+ 996:	10 a6       	std	Z+40, r1	; 0x28
+ 998:	11 a6       	std	Z+41, r1	; 0x29
+ 99a:	12 a6       	std	Z+42, r1	; 0x2a
+ 99c:	13 a6       	std	Z+43, r1	; 0x2b
+ 99e:	15 a6       	std	Z+45, r1	; 0x2d
+ 9a0:	16 a6       	std	Z+46, r1	; 0x2e
+ 9a2:	17 a6       	std	Z+47, r1	; 0x2f
+ 9a4:	10 aa       	std	Z+48, r1	; 0x30
+ 9a6:	11 aa       	std	Z+49, r1	; 0x31
+ 9a8:	12 aa       	std	Z+50, r1	; 0x32
+ 9aa:	13 aa       	std	Z+51, r1	; 0x33
+ 9ac:	10 92 4b 02 	sts	0x024B, r1	; 0x80024b <__TEXT_REGION_LENGTH__+0x7e024b>
+ 9b0:	10 92 4d 02 	sts	0x024D, r1	; 0x80024d <__TEXT_REGION_LENGTH__+0x7e024d>
+ 9b4:	10 92 4c 02 	sts	0x024C, r1	; 0x80024c <__TEXT_REGION_LENGTH__+0x7e024c>
+ 9b8:	10 92 4a 02 	sts	0x024A, r1	; 0x80024a <__TEXT_REGION_LENGTH__+0x7e024a>
+ 9bc:	10 92 4f 02 	sts	0x024F, r1	; 0x80024f <__TEXT_REGION_LENGTH__+0x7e024f>
+ 9c0:	10 92 51 02 	sts	0x0251, r1	; 0x800251 <__TEXT_REGION_LENGTH__+0x7e0251>
+ 9c4:	10 92 50 02 	sts	0x0250, r1	; 0x800250 <__TEXT_REGION_LENGTH__+0x7e0250>
+ 9c8:	10 92 4e 02 	sts	0x024E, r1	; 0x80024e <__TEXT_REGION_LENGTH__+0x7e024e>
+ 9cc:	10 92 53 02 	sts	0x0253, r1	; 0x800253 <__TEXT_REGION_LENGTH__+0x7e0253>
+ 9d0:	10 92 55 02 	sts	0x0255, r1	; 0x800255 <__TEXT_REGION_LENGTH__+0x7e0255>
+ 9d4:	10 92 54 02 	sts	0x0254, r1	; 0x800254 <__TEXT_REGION_LENGTH__+0x7e0254>
+ 9d8:	10 92 52 02 	sts	0x0252, r1	; 0x800252 <__TEXT_REGION_LENGTH__+0x7e0252>
+ 9dc:	12 ae       	std	Z+58, r1	; 0x3a
+ 9de:	13 ae       	std	Z+59, r1	; 0x3b
+ 9e0:	14 ae       	std	Z+60, r1	; 0x3c
+ 9e2:	15 ae       	std	Z+61, r1	; 0x3d
+ 9e4:	16 ae       	std	Z+62, r1	; 0x3e
+ 9e6:	17 ae       	std	Z+63, r1	; 0x3f
+ 9e8:	10 92 40 02 	sts	0x0240, r1	; 0x800240 <__TEXT_REGION_LENGTH__+0x7e0240>
+ 9ec:	10 92 41 02 	sts	0x0241, r1	; 0x800241 <__TEXT_REGION_LENGTH__+0x7e0241>
+ 9f0:	10 92 42 02 	sts	0x0242, r1	; 0x800242 <__TEXT_REGION_LENGTH__+0x7e0242>
+ 9f4:	10 92 43 02 	sts	0x0243, r1	; 0x800243 <__TEXT_REGION_LENGTH__+0x7e0243>
+ 9f8:	10 92 44 02 	sts	0x0244, r1	; 0x800244 <__TEXT_REGION_LENGTH__+0x7e0244>
+ 9fc:	10 92 45 02 	sts	0x0245, r1	; 0x800245 <__TEXT_REGION_LENGTH__+0x7e0245>
+ a00:	10 92 46 02 	sts	0x0246, r1	; 0x800246 <__TEXT_REGION_LENGTH__+0x7e0246>
+ a04:	10 92 47 02 	sts	0x0247, r1	; 0x800247 <__TEXT_REGION_LENGTH__+0x7e0247>
+ a08:	10 92 48 02 	sts	0x0248, r1	; 0x800248 <__TEXT_REGION_LENGTH__+0x7e0248>
+ a0c:	10 92 49 02 	sts	0x0249, r1	; 0x800249 <__TEXT_REGION_LENGTH__+0x7e0249>
+ a10:	14 aa       	std	Z+52, r1	; 0x34
+ a12:	15 aa       	std	Z+53, r1	; 0x35
+ a14:	16 aa       	std	Z+54, r1	; 0x36
+ a16:	17 aa       	std	Z+55, r1	; 0x37
+ a18:	10 ae       	std	Z+56, r1	; 0x38
+ a1a:	11 ae       	std	Z+57, r1	; 0x39
+ a1c:	80 e0       	ldi	r24, 0x00	; 0
+ a1e:	08 95       	ret
+
+Disassembly of section .text.CLOCK_Initialize:
+
+00000c1a <CLOCK_Initialize>:
+ * NOTE: Using IAR Embedded workbench, the choice of memory model has an impact on calling convention.
+ * Memory model must be defined in the Assembler preprocessor directives to be visible to the preprocessor.
+ */
+static inline void ccp_write_io(void *addr, uint8_t value)
+{
+	protected_write_io(addr, CCP_IOREG_gc, value);
+ c1a:	40 e0       	ldi	r20, 0x00	; 0
+ c1c:	68 ed       	ldi	r22, 0xD8	; 216
+ c1e:	80 e6       	ldi	r24, 0x60	; 96
+ c20:	90 e0       	ldi	r25, 0x00	; 0
+ c22:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c26:	40 e0       	ldi	r20, 0x00	; 0
+ c28:	68 ed       	ldi	r22, 0xD8	; 216
+ c2a:	81 e6       	ldi	r24, 0x61	; 97
+ c2c:	90 e0       	ldi	r25, 0x00	; 0
+ c2e:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c32:	40 e0       	ldi	r20, 0x00	; 0
+ c34:	68 ed       	ldi	r22, 0xD8	; 216
+ c36:	88 e7       	ldi	r24, 0x78	; 120
+ c38:	90 e0       	ldi	r25, 0x00	; 0
+ c3a:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c3e:	4c e0       	ldi	r20, 0x0C	; 12
+ c40:	68 ed       	ldi	r22, 0xD8	; 216
+ c42:	88 e6       	ldi	r24, 0x68	; 104
+ c44:	90 e0       	ldi	r25, 0x00	; 0
+ c46:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c4a:	40 e0       	ldi	r20, 0x00	; 0
+ c4c:	68 ed       	ldi	r22, 0xD8	; 216
+ c4e:	89 e6       	ldi	r24, 0x69	; 105
+ c50:	90 e0       	ldi	r25, 0x00	; 0
+ c52:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c56:	40 e0       	ldi	r20, 0x00	; 0
+ c58:	68 ed       	ldi	r22, 0xD8	; 216
+ c5a:	80 e7       	ldi	r24, 0x70	; 112
+ c5c:	90 e0       	ldi	r25, 0x00	; 0
+ c5e:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c62:	40 e0       	ldi	r20, 0x00	; 0
+ c64:	68 ed       	ldi	r22, 0xD8	; 216
+ c66:	8c e7       	ldi	r24, 0x7C	; 124
+ c68:	90 e0       	ldi	r25, 0x00	; 0
+ c6a:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c6e:	40 e0       	ldi	r20, 0x00	; 0
+ c70:	68 ed       	ldi	r22, 0xD8	; 216
+ c72:	82 e6       	ldi	r24, 0x62	; 98
+ c74:	90 e0       	ldi	r25, 0x00	; 0
+ c76:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c7a:	40 e0       	ldi	r20, 0x00	; 0
+ c7c:	68 ed       	ldi	r22, 0xD8	; 216
+ c7e:	83 e6       	ldi	r24, 0x63	; 99
+ c80:	90 e0       	ldi	r25, 0x00	; 0
+ c82:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c86:	40 e0       	ldi	r20, 0x00	; 0
+ c88:	68 ed       	ldi	r22, 0xD8	; 216
+ c8a:	84 e6       	ldi	r24, 0x64	; 100
+ c8c:	90 e0       	ldi	r25, 0x00	; 0
+ c8e:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+ c92:	40 e0       	ldi	r20, 0x00	; 0
+ c94:	68 ed       	ldi	r22, 0xD8	; 216
+ c96:	80 e8       	ldi	r24, 0x80	; 128
+ c98:	90 e0       	ldi	r25, 0x00	; 0
+ c9a:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+            | (0 << CLKCTRL_RUNSTBY_bp)   // RUNSTBY disabled
+            | CLKCTRL_SELHF_XTAL_gc   // SELHF XTAL
+            );
+
+    // System clock stability check by polling the status register.
+    while(!(CLKCTRL.MCLKSTATUS & CLKCTRL_OSCHFS_bm))
+ c9e:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <__TEXT_REGION_LENGTH__+0x7e0065>
+ ca2:	81 ff       	sbrs	r24, 1
+ ca4:	fc cf       	rjmp	.-8      	; 0xc9e <CLOCK_Initialize+0x84>
+    {
+    }
+
+}
+ ca6:	08 95       	ret
+
+Disassembly of section .text.CPUINT_Initialize:
+
+000011c4 <CPUINT_Initialize>:
+    11c4:	40 e0       	ldi	r20, 0x00	; 0
+    11c6:	68 ed       	ldi	r22, 0xD8	; 216
+    11c8:	80 e1       	ldi	r24, 0x10	; 16
+    11ca:	91 e0       	ldi	r25, 0x01	; 1
+    11cc:	0e 94 f2 09 	call	0x13e4	; 0x13e4 <protected_write_io>
+
+    //CVT disabled; IVSEL disabled; LVL0RR disabled; 
+    ccp_write_io((void*)&(CPUINT.CTRLA),0x0);
+    
+    //LVL0PRI 0; 
+    CPUINT.LVL0PRI = 0x0;
+    11d0:	e0 e1       	ldi	r30, 0x10	; 16
+    11d2:	f1 e0       	ldi	r31, 0x01	; 1
+    11d4:	12 82       	std	Z+2, r1	; 0x02
+    
+    //LVL1VEC 0; 
+    CPUINT.LVL1VEC = 0x0;
+    11d6:	13 82       	std	Z+3, r1	; 0x03
+
+        
+    return 0;
+    11d8:	80 e0       	ldi	r24, 0x00	; 0
+    11da:	08 95       	ret
+
+Disassembly of section .text.CTR_0_DefaultInterruptHandler:
+
+00001420 <CTR_0_DefaultInterruptHandler>:
+{
+    CTR_0_InterruptHandler = interruptHandler;
+}
+
+void CTR_0_DefaultInterruptHandler(void)
+{
+    1420:	08 95       	ret
+
+Disassembly of section .text.CTR_1_DefaultInterruptHandler:
+
+00001422 <CTR_1_DefaultInterruptHandler>:
+{
+    CTR_1_InterruptHandler = interruptHandler;
+}
+
+void CTR_1_DefaultInterruptHandler(void)
+{
+    1422:	08 95       	ret
+
+Disassembly of section .text.CTR_2_DefaultInterruptHandler:
+
+00001424 <CTR_2_DefaultInterruptHandler>:
+{
+    CTR_2_InterruptHandler = interruptHandler;
+}
+
+void CTR_2_DefaultInterruptHandler(void)
+{
+    1424:	08 95       	ret
+
+Disassembly of section .text.CTR_3_DefaultInterruptHandler:
+
+00001426 <CTR_3_DefaultInterruptHandler>:
+{
+    CTR_3_InterruptHandler = interruptHandler;
+}
+
+void CTR_3_DefaultInterruptHandler(void)
+{
+    1426:	08 95       	ret
+
+Disassembly of section .text.CTR_4_DefaultInterruptHandler:
+
+00001428 <CTR_4_DefaultInterruptHandler>:
+{
+    CTR_4_InterruptHandler = interruptHandler;
+}
+
+void CTR_4_DefaultInterruptHandler(void)
+{
+    1428:	08 95       	ret
+
+Disassembly of section .text.CTR_5_DefaultInterruptHandler:
+
+0000142a <CTR_5_DefaultInterruptHandler>:
+{
+    CTR_5_InterruptHandler = interruptHandler;
+}
+
+void CTR_5_DefaultInterruptHandler(void)
+{
+    142a:	08 95       	ret
+
+Disassembly of section .text.CTR_6_DefaultInterruptHandler:
+
+0000142c <CTR_6_DefaultInterruptHandler>:
+{
+    CTR_6_InterruptHandler = interruptHandler;
+}
+
+void CTR_6_DefaultInterruptHandler(void)
+{
+    142c:	08 95       	ret
+
+Disassembly of section .text.CTR_7_DefaultInterruptHandler:
+
+0000142e <CTR_7_DefaultInterruptHandler>:
+{
+    CTR_7_InterruptHandler = interruptHandler;
+}
+
+void CTR_7_DefaultInterruptHandler(void)
+{
+    142e:	08 95       	ret
+
+Disassembly of section .text.CTR_8_DefaultInterruptHandler:
+
+00001430 <CTR_8_DefaultInterruptHandler>:
+{
+    CTR_8_InterruptHandler = interruptHandler;
+}
+
+void CTR_8_DefaultInterruptHandler(void)
+{
+    1430:	08 95       	ret
+
+Disassembly of section .text.CTR_9_DefaultInterruptHandler:
+
+00001432 <CTR_9_DefaultInterruptHandler>:
+{
+    CTR_9_InterruptHandler = interruptHandler;
+}
+
+void CTR_9_DefaultInterruptHandler(void)
+{
+    1432:	08 95       	ret
+
+Disassembly of section .text.CTR_10_DefaultInterruptHandler:
+
+00001434 <CTR_10_DefaultInterruptHandler>:
+{
+    CTR_10_InterruptHandler = interruptHandler;
+}
+
+void CTR_10_DefaultInterruptHandler(void)
+{
+    1434:	08 95       	ret
+
+Disassembly of section .text.CTR_11_DefaultInterruptHandler:
+
+00001436 <CTR_11_DefaultInterruptHandler>:
+{
+    CTR_11_InterruptHandler = interruptHandler;
+}
+
+void CTR_11_DefaultInterruptHandler(void)
+{
+    1436:	08 95       	ret
+
+Disassembly of section .text.CTR_12_DefaultInterruptHandler:
+
+00001438 <CTR_12_DefaultInterruptHandler>:
+{
+    CTR_12_InterruptHandler = interruptHandler;
+}
+
+void CTR_12_DefaultInterruptHandler(void)
+{
+    1438:	08 95       	ret
+
+Disassembly of section .text.ADC_0_DefaultInterruptHandler:
+
+0000143a <ADC_0_DefaultInterruptHandler>:
+{
+    ADC_0_InterruptHandler = interruptHandler;
+}
+
+void ADC_0_DefaultInterruptHandler(void)
+{
+    143a:	08 95       	ret
+
+Disassembly of section .text.ADC_1_DefaultInterruptHandler:
+
+0000143c <ADC_1_DefaultInterruptHandler>:
+{
+    ADC_1_InterruptHandler = interruptHandler;
+}
+
+void ADC_1_DefaultInterruptHandler(void)
+{
+    143c:	08 95       	ret
+
+Disassembly of section .text.ADC_2_DefaultInterruptHandler:
+
+0000143e <ADC_2_DefaultInterruptHandler>:
+{
+    ADC_2_InterruptHandler = interruptHandler;
+}
+
+void ADC_2_DefaultInterruptHandler(void)
+{
+    143e:	08 95       	ret
+
+Disassembly of section .text.ADC_3_DefaultInterruptHandler:
+
+00001440 <ADC_3_DefaultInterruptHandler>:
+{
+    ADC_3_InterruptHandler = interruptHandler;
+}
+
+void ADC_3_DefaultInterruptHandler(void)
+{
+    1440:	08 95       	ret
+
+Disassembly of section .text.ADC_4_DefaultInterruptHandler:
+
+00001442 <ADC_4_DefaultInterruptHandler>:
+{
+    ADC_4_InterruptHandler = interruptHandler;
+}
+
+void ADC_4_DefaultInterruptHandler(void)
+{
+    1442:	08 95       	ret
+
+Disassembly of section .text.ADC_5_DefaultInterruptHandler:
+
+00001444 <ADC_5_DefaultInterruptHandler>:
+{
+    ADC_5_InterruptHandler = interruptHandler;
+}
+
+void ADC_5_DefaultInterruptHandler(void)
+{
+    1444:	08 95       	ret
+
+Disassembly of section .text.ADC_6_DefaultInterruptHandler:
+
+00001446 <ADC_6_DefaultInterruptHandler>:
+{
+    ADC_6_InterruptHandler = interruptHandler;
+}
+
+void ADC_6_DefaultInterruptHandler(void)
+{
+    1446:	08 95       	ret
+
+Disassembly of section .text.ADC_7_DefaultInterruptHandler:
+
+00001448 <ADC_7_DefaultInterruptHandler>:
+{
+    ADC_7_InterruptHandler = interruptHandler;
+}
+
+void ADC_7_DefaultInterruptHandler(void)
+{
+    1448:	08 95       	ret
+
+Disassembly of section .text.ADC_8_DefaultInterruptHandler:
+
+0000144a <ADC_8_DefaultInterruptHandler>:
+{
+    ADC_8_InterruptHandler = interruptHandler;
+}
+
+void ADC_8_DefaultInterruptHandler(void)
+{
+    144a:	08 95       	ret
+
+Disassembly of section .text.ADC_9_DefaultInterruptHandler:
+
+0000144c <ADC_9_DefaultInterruptHandler>:
+{
+    ADC_9_InterruptHandler = interruptHandler;
+}
+
+void ADC_9_DefaultInterruptHandler(void)
+{
+    144c:	08 95       	ret
+
+Disassembly of section .text.ADC_10_DefaultInterruptHandler:
+
+0000144e <ADC_10_DefaultInterruptHandler>:
+{
+    ADC_10_InterruptHandler = interruptHandler;
+}
+
+void ADC_10_DefaultInterruptHandler(void)
+{
+    144e:	08 95       	ret
+
+Disassembly of section .text.ADC_11_DefaultInterruptHandler:
+
+00001450 <ADC_11_DefaultInterruptHandler>:
+{
+    ADC_11_InterruptHandler = interruptHandler;
+}
+
+void ADC_11_DefaultInterruptHandler(void)
+{
+    1450:	08 95       	ret
+
+Disassembly of section .text.ADC_12_DefaultInterruptHandler:
+
+00001452 <ADC_12_DefaultInterruptHandler>:
+{
+    ADC_12_InterruptHandler = interruptHandler;
+}
+
+void ADC_12_DefaultInterruptHandler(void)
+{
+    1452:	08 95       	ret
+
+Disassembly of section .text.ADC_13_DefaultInterruptHandler:
+
+00001454 <ADC_13_DefaultInterruptHandler>:
+{
+    ADC_13_InterruptHandler = interruptHandler;
+}
+
+void ADC_13_DefaultInterruptHandler(void)
+{
+    1454:	08 95       	ret
+
+Disassembly of section .text.ADC_14_DefaultInterruptHandler:
+
+00001456 <ADC_14_DefaultInterruptHandler>:
+{
+    ADC_14_InterruptHandler = interruptHandler;
+}
+
+void ADC_14_DefaultInterruptHandler(void)
+{
+    1456:	08 95       	ret
+
+Disassembly of section .text.ADC_15_DefaultInterruptHandler:
+
+00001458 <ADC_15_DefaultInterruptHandler>:
+{
+    ADC_15_InterruptHandler = interruptHandler;
+}
+
+void ADC_15_DefaultInterruptHandler(void)
+{
+    1458:	08 95       	ret
+
+Disassembly of section .text.ADC_16_DefaultInterruptHandler:
+
+0000145a <ADC_16_DefaultInterruptHandler>:
+{
+    ADC_16_InterruptHandler = interruptHandler;
+}
+
+void ADC_16_DefaultInterruptHandler(void)
+{
+    145a:	08 95       	ret
+
+Disassembly of section .text.ADC_17_DefaultInterruptHandler:
+
+0000145c <ADC_17_DefaultInterruptHandler>:
+{
+    ADC_17_InterruptHandler = interruptHandler;
+}
+
+void ADC_17_DefaultInterruptHandler(void)
+{
+    145c:	08 95       	ret
+
+Disassembly of section .text.ADC_18_DefaultInterruptHandler:
+
+0000145e <ADC_18_DefaultInterruptHandler>:
+{
+    ADC_18_InterruptHandler = interruptHandler;
+}
+
+void ADC_18_DefaultInterruptHandler(void)
+{
+    145e:	08 95       	ret
+
+Disassembly of section .text.ADC_19_DefaultInterruptHandler:
+
+00001460 <ADC_19_DefaultInterruptHandler>:
+{
+    ADC_19_InterruptHandler = interruptHandler;
+}
+
+void ADC_19_DefaultInterruptHandler(void)
+{
+    1460:	08 95       	ret
+
+Disassembly of section .text.CTR_13_DefaultInterruptHandler:
+
+00001462 <CTR_13_DefaultInterruptHandler>:
+{
+    CTR_13_InterruptHandler = interruptHandler;
+}
+
+void CTR_13_DefaultInterruptHandler(void)
+{
+    1462:	08 95       	ret
+
+Disassembly of section .text.CTR_14_DefaultInterruptHandler:
+
+00001464 <CTR_14_DefaultInterruptHandler>:
+{
+    CTR_14_InterruptHandler = interruptHandler;
+}
+
+void CTR_14_DefaultInterruptHandler(void)
+{
+    1464:	08 95       	ret
+
+Disassembly of section .text.CTR_15_DefaultInterruptHandler:
+
+00001466 <CTR_15_DefaultInterruptHandler>:
+{
+    CTR_15_InterruptHandler = interruptHandler;
+}
+
+void CTR_15_DefaultInterruptHandler(void)
+{
+    1466:	08 95       	ret
+
+Disassembly of section .text.CTR_16_DefaultInterruptHandler:
+
+00001468 <CTR_16_DefaultInterruptHandler>:
+{
+    CTR_16_InterruptHandler = interruptHandler;
+}
+
+void CTR_16_DefaultInterruptHandler(void)
+{
+    1468:	08 95       	ret
+
+Disassembly of section .text.CTR_17_DefaultInterruptHandler:
+
+0000146a <CTR_17_DefaultInterruptHandler>:
+{
+    CTR_17_InterruptHandler = interruptHandler;
+}
+
+void CTR_17_DefaultInterruptHandler(void)
+{
+    146a:	08 95       	ret
+
+Disassembly of section .text.CTR_18_DefaultInterruptHandler:
+
+0000146c <CTR_18_DefaultInterruptHandler>:
+{
+    CTR_18_InterruptHandler = interruptHandler;
+}
+
+void CTR_18_DefaultInterruptHandler(void)
+{
+    146c:	08 95       	ret
+
+Disassembly of section .text.CTR_19_DefaultInterruptHandler:
+
+0000146e <CTR_19_DefaultInterruptHandler>:
+{
+    CTR_19_InterruptHandler = interruptHandler;
+}
+
+void CTR_19_DefaultInterruptHandler(void)
+{
+    146e:	08 95       	ret
+
+Disassembly of section .text.CTR_0_SetInterruptHandler:
+
+00001254 <CTR_0_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_0 at application runtime
+*/
+void CTR_0_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_0_InterruptHandler = interruptHandler;
+    1254:	80 93 66 72 	sts	0x7266, r24	; 0x807266 <CTR_0_InterruptHandler>
+    1258:	90 93 67 72 	sts	0x7267, r25	; 0x807267 <CTR_0_InterruptHandler+0x1>
+    125c:	08 95       	ret
+
+Disassembly of section .text.CTR_1_SetInterruptHandler:
+
+0000125e <CTR_1_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_1 at application runtime
+*/
+void CTR_1_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_1_InterruptHandler = interruptHandler;
+    125e:	80 93 64 72 	sts	0x7264, r24	; 0x807264 <CTR_1_InterruptHandler>
+    1262:	90 93 65 72 	sts	0x7265, r25	; 0x807265 <CTR_1_InterruptHandler+0x1>
+    1266:	08 95       	ret
+
+Disassembly of section .text.CTR_2_SetInterruptHandler:
+
+00001268 <CTR_2_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_2 at application runtime
+*/
+void CTR_2_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_2_InterruptHandler = interruptHandler;
+    1268:	80 93 62 72 	sts	0x7262, r24	; 0x807262 <CTR_2_InterruptHandler>
+    126c:	90 93 63 72 	sts	0x7263, r25	; 0x807263 <CTR_2_InterruptHandler+0x1>
+    1270:	08 95       	ret
+
+Disassembly of section .text.CTR_3_SetInterruptHandler:
+
+00001272 <CTR_3_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_3 at application runtime
+*/
+void CTR_3_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_3_InterruptHandler = interruptHandler;
+    1272:	80 93 60 72 	sts	0x7260, r24	; 0x807260 <CTR_3_InterruptHandler>
+    1276:	90 93 61 72 	sts	0x7261, r25	; 0x807261 <CTR_3_InterruptHandler+0x1>
+    127a:	08 95       	ret
+
+Disassembly of section .text.CTR_4_SetInterruptHandler:
+
+0000127c <CTR_4_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_4 at application runtime
+*/
+void CTR_4_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_4_InterruptHandler = interruptHandler;
+    127c:	80 93 5e 72 	sts	0x725E, r24	; 0x80725e <CTR_4_InterruptHandler>
+    1280:	90 93 5f 72 	sts	0x725F, r25	; 0x80725f <CTR_4_InterruptHandler+0x1>
+    1284:	08 95       	ret
+
+Disassembly of section .text.CTR_5_SetInterruptHandler:
+
+00001286 <CTR_5_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_5 at application runtime
+*/
+void CTR_5_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_5_InterruptHandler = interruptHandler;
+    1286:	80 93 5c 72 	sts	0x725C, r24	; 0x80725c <CTR_5_InterruptHandler>
+    128a:	90 93 5d 72 	sts	0x725D, r25	; 0x80725d <CTR_5_InterruptHandler+0x1>
+    128e:	08 95       	ret
+
+Disassembly of section .text.CTR_6_SetInterruptHandler:
+
+00001290 <CTR_6_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_6 at application runtime
+*/
+void CTR_6_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_6_InterruptHandler = interruptHandler;
+    1290:	80 93 5a 72 	sts	0x725A, r24	; 0x80725a <CTR_6_InterruptHandler>
+    1294:	90 93 5b 72 	sts	0x725B, r25	; 0x80725b <CTR_6_InterruptHandler+0x1>
+    1298:	08 95       	ret
+
+Disassembly of section .text.CTR_7_SetInterruptHandler:
+
+0000129a <CTR_7_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_7 at application runtime
+*/
+void CTR_7_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_7_InterruptHandler = interruptHandler;
+    129a:	80 93 58 72 	sts	0x7258, r24	; 0x807258 <CTR_7_InterruptHandler>
+    129e:	90 93 59 72 	sts	0x7259, r25	; 0x807259 <CTR_7_InterruptHandler+0x1>
+    12a2:	08 95       	ret
+
+Disassembly of section .text.CTR_8_SetInterruptHandler:
+
+000012a4 <CTR_8_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_8 at application runtime
+*/
+void CTR_8_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_8_InterruptHandler = interruptHandler;
+    12a4:	80 93 56 72 	sts	0x7256, r24	; 0x807256 <CTR_8_InterruptHandler>
+    12a8:	90 93 57 72 	sts	0x7257, r25	; 0x807257 <CTR_8_InterruptHandler+0x1>
+    12ac:	08 95       	ret
+
+Disassembly of section .text.CTR_9_SetInterruptHandler:
+
+000012ae <CTR_9_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_9 at application runtime
+*/
+void CTR_9_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_9_InterruptHandler = interruptHandler;
+    12ae:	80 93 54 72 	sts	0x7254, r24	; 0x807254 <CTR_9_InterruptHandler>
+    12b2:	90 93 55 72 	sts	0x7255, r25	; 0x807255 <CTR_9_InterruptHandler+0x1>
+    12b6:	08 95       	ret
+
+Disassembly of section .text.CTR_10_SetInterruptHandler:
+
+000012b8 <CTR_10_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_10 at application runtime
+*/
+void CTR_10_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_10_InterruptHandler = interruptHandler;
+    12b8:	80 93 52 72 	sts	0x7252, r24	; 0x807252 <CTR_10_InterruptHandler>
+    12bc:	90 93 53 72 	sts	0x7253, r25	; 0x807253 <CTR_10_InterruptHandler+0x1>
+    12c0:	08 95       	ret
+
+Disassembly of section .text.CTR_11_SetInterruptHandler:
+
+000012c2 <CTR_11_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_11 at application runtime
+*/
+void CTR_11_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_11_InterruptHandler = interruptHandler;
+    12c2:	80 93 50 72 	sts	0x7250, r24	; 0x807250 <CTR_11_InterruptHandler>
+    12c6:	90 93 51 72 	sts	0x7251, r25	; 0x807251 <CTR_11_InterruptHandler+0x1>
+    12ca:	08 95       	ret
+
+Disassembly of section .text.CTR_12_SetInterruptHandler:
+
+000012cc <CTR_12_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_12 at application runtime
+*/
+void CTR_12_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_12_InterruptHandler = interruptHandler;
+    12cc:	80 93 4e 72 	sts	0x724E, r24	; 0x80724e <CTR_12_InterruptHandler>
+    12d0:	90 93 4f 72 	sts	0x724F, r25	; 0x80724f <CTR_12_InterruptHandler+0x1>
+    12d4:	08 95       	ret
+
+Disassembly of section .text.ADC_0_SetInterruptHandler:
+
+000012d6 <ADC_0_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_0 at application runtime
+*/
+void ADC_0_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_0_InterruptHandler = interruptHandler;
+    12d6:	80 93 4c 72 	sts	0x724C, r24	; 0x80724c <ADC_0_InterruptHandler>
+    12da:	90 93 4d 72 	sts	0x724D, r25	; 0x80724d <ADC_0_InterruptHandler+0x1>
+    12de:	08 95       	ret
+
+Disassembly of section .text.ADC_1_SetInterruptHandler:
+
+000012e0 <ADC_1_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_1 at application runtime
+*/
+void ADC_1_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_1_InterruptHandler = interruptHandler;
+    12e0:	80 93 4a 72 	sts	0x724A, r24	; 0x80724a <ADC_1_InterruptHandler>
+    12e4:	90 93 4b 72 	sts	0x724B, r25	; 0x80724b <ADC_1_InterruptHandler+0x1>
+    12e8:	08 95       	ret
+
+Disassembly of section .text.ADC_2_SetInterruptHandler:
+
+000012ea <ADC_2_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_2 at application runtime
+*/
+void ADC_2_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_2_InterruptHandler = interruptHandler;
+    12ea:	80 93 48 72 	sts	0x7248, r24	; 0x807248 <ADC_2_InterruptHandler>
+    12ee:	90 93 49 72 	sts	0x7249, r25	; 0x807249 <ADC_2_InterruptHandler+0x1>
+    12f2:	08 95       	ret
+
+Disassembly of section .text.ADC_3_SetInterruptHandler:
+
+000012f4 <ADC_3_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_3 at application runtime
+*/
+void ADC_3_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_3_InterruptHandler = interruptHandler;
+    12f4:	80 93 46 72 	sts	0x7246, r24	; 0x807246 <ADC_3_InterruptHandler>
+    12f8:	90 93 47 72 	sts	0x7247, r25	; 0x807247 <ADC_3_InterruptHandler+0x1>
+    12fc:	08 95       	ret
+
+Disassembly of section .text.ADC_4_SetInterruptHandler:
+
+000012fe <ADC_4_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_4 at application runtime
+*/
+void ADC_4_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_4_InterruptHandler = interruptHandler;
+    12fe:	80 93 44 72 	sts	0x7244, r24	; 0x807244 <ADC_4_InterruptHandler>
+    1302:	90 93 45 72 	sts	0x7245, r25	; 0x807245 <ADC_4_InterruptHandler+0x1>
+    1306:	08 95       	ret
+
+Disassembly of section .text.ADC_5_SetInterruptHandler:
+
+00001308 <ADC_5_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_5 at application runtime
+*/
+void ADC_5_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_5_InterruptHandler = interruptHandler;
+    1308:	80 93 42 72 	sts	0x7242, r24	; 0x807242 <ADC_5_InterruptHandler>
+    130c:	90 93 43 72 	sts	0x7243, r25	; 0x807243 <ADC_5_InterruptHandler+0x1>
+    1310:	08 95       	ret
+
+Disassembly of section .text.ADC_6_SetInterruptHandler:
+
+00001312 <ADC_6_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_6 at application runtime
+*/
+void ADC_6_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_6_InterruptHandler = interruptHandler;
+    1312:	80 93 40 72 	sts	0x7240, r24	; 0x807240 <ADC_6_InterruptHandler>
+    1316:	90 93 41 72 	sts	0x7241, r25	; 0x807241 <ADC_6_InterruptHandler+0x1>
+    131a:	08 95       	ret
+
+Disassembly of section .text.ADC_7_SetInterruptHandler:
+
+0000131c <ADC_7_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_7 at application runtime
+*/
+void ADC_7_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_7_InterruptHandler = interruptHandler;
+    131c:	80 93 3e 72 	sts	0x723E, r24	; 0x80723e <ADC_7_InterruptHandler>
+    1320:	90 93 3f 72 	sts	0x723F, r25	; 0x80723f <ADC_7_InterruptHandler+0x1>
+    1324:	08 95       	ret
+
+Disassembly of section .text.ADC_8_SetInterruptHandler:
+
+00001326 <ADC_8_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_8 at application runtime
+*/
+void ADC_8_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_8_InterruptHandler = interruptHandler;
+    1326:	80 93 3c 72 	sts	0x723C, r24	; 0x80723c <ADC_8_InterruptHandler>
+    132a:	90 93 3d 72 	sts	0x723D, r25	; 0x80723d <ADC_8_InterruptHandler+0x1>
+    132e:	08 95       	ret
+
+Disassembly of section .text.ADC_9_SetInterruptHandler:
+
+00001330 <ADC_9_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_9 at application runtime
+*/
+void ADC_9_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_9_InterruptHandler = interruptHandler;
+    1330:	80 93 3a 72 	sts	0x723A, r24	; 0x80723a <ADC_9_InterruptHandler>
+    1334:	90 93 3b 72 	sts	0x723B, r25	; 0x80723b <ADC_9_InterruptHandler+0x1>
+    1338:	08 95       	ret
+
+Disassembly of section .text.ADC_10_SetInterruptHandler:
+
+0000133a <ADC_10_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_10 at application runtime
+*/
+void ADC_10_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_10_InterruptHandler = interruptHandler;
+    133a:	80 93 38 72 	sts	0x7238, r24	; 0x807238 <ADC_10_InterruptHandler>
+    133e:	90 93 39 72 	sts	0x7239, r25	; 0x807239 <ADC_10_InterruptHandler+0x1>
+    1342:	08 95       	ret
+
+Disassembly of section .text.ADC_11_SetInterruptHandler:
+
+00001344 <ADC_11_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_11 at application runtime
+*/
+void ADC_11_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_11_InterruptHandler = interruptHandler;
+    1344:	80 93 36 72 	sts	0x7236, r24	; 0x807236 <ADC_11_InterruptHandler>
+    1348:	90 93 37 72 	sts	0x7237, r25	; 0x807237 <ADC_11_InterruptHandler+0x1>
+    134c:	08 95       	ret
+
+Disassembly of section .text.ADC_12_SetInterruptHandler:
+
+0000134e <ADC_12_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_12 at application runtime
+*/
+void ADC_12_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_12_InterruptHandler = interruptHandler;
+    134e:	80 93 34 72 	sts	0x7234, r24	; 0x807234 <ADC_12_InterruptHandler>
+    1352:	90 93 35 72 	sts	0x7235, r25	; 0x807235 <ADC_12_InterruptHandler+0x1>
+    1356:	08 95       	ret
+
+Disassembly of section .text.ADC_13_SetInterruptHandler:
+
+00001358 <ADC_13_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_13 at application runtime
+*/
+void ADC_13_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_13_InterruptHandler = interruptHandler;
+    1358:	80 93 32 72 	sts	0x7232, r24	; 0x807232 <ADC_13_InterruptHandler>
+    135c:	90 93 33 72 	sts	0x7233, r25	; 0x807233 <ADC_13_InterruptHandler+0x1>
+    1360:	08 95       	ret
+
+Disassembly of section .text.ADC_14_SetInterruptHandler:
+
+00001362 <ADC_14_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_14 at application runtime
+*/
+void ADC_14_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_14_InterruptHandler = interruptHandler;
+    1362:	80 93 30 72 	sts	0x7230, r24	; 0x807230 <ADC_14_InterruptHandler>
+    1366:	90 93 31 72 	sts	0x7231, r25	; 0x807231 <ADC_14_InterruptHandler+0x1>
+    136a:	08 95       	ret
+
+Disassembly of section .text.ADC_15_SetInterruptHandler:
+
+0000136c <ADC_15_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_15 at application runtime
+*/
+void ADC_15_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_15_InterruptHandler = interruptHandler;
+    136c:	80 93 2e 72 	sts	0x722E, r24	; 0x80722e <ADC_15_InterruptHandler>
+    1370:	90 93 2f 72 	sts	0x722F, r25	; 0x80722f <ADC_15_InterruptHandler+0x1>
+    1374:	08 95       	ret
+
+Disassembly of section .text.ADC_16_SetInterruptHandler:
+
+00001376 <ADC_16_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_16 at application runtime
+*/
+void ADC_16_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_16_InterruptHandler = interruptHandler;
+    1376:	80 93 2c 72 	sts	0x722C, r24	; 0x80722c <ADC_16_InterruptHandler>
+    137a:	90 93 2d 72 	sts	0x722D, r25	; 0x80722d <ADC_16_InterruptHandler+0x1>
+    137e:	08 95       	ret
+
+Disassembly of section .text.ADC_17_SetInterruptHandler:
+
+00001380 <ADC_17_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_17 at application runtime
+*/
+void ADC_17_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_17_InterruptHandler = interruptHandler;
+    1380:	80 93 2a 72 	sts	0x722A, r24	; 0x80722a <ADC_17_InterruptHandler>
+    1384:	90 93 2b 72 	sts	0x722B, r25	; 0x80722b <ADC_17_InterruptHandler+0x1>
+    1388:	08 95       	ret
+
+Disassembly of section .text.ADC_18_SetInterruptHandler:
+
+0000138a <ADC_18_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_18 at application runtime
+*/
+void ADC_18_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_18_InterruptHandler = interruptHandler;
+    138a:	80 93 28 72 	sts	0x7228, r24	; 0x807228 <ADC_18_InterruptHandler>
+    138e:	90 93 29 72 	sts	0x7229, r25	; 0x807229 <ADC_18_InterruptHandler+0x1>
+    1392:	08 95       	ret
+
+Disassembly of section .text.ADC_19_SetInterruptHandler:
+
+00001394 <ADC_19_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for ADC_19 at application runtime
+*/
+void ADC_19_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    ADC_19_InterruptHandler = interruptHandler;
+    1394:	80 93 26 72 	sts	0x7226, r24	; 0x807226 <ADC_19_InterruptHandler>
+    1398:	90 93 27 72 	sts	0x7227, r25	; 0x807227 <ADC_19_InterruptHandler+0x1>
+    139c:	08 95       	ret
+
+Disassembly of section .text.CTR_13_SetInterruptHandler:
+
+0000139e <CTR_13_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_13 at application runtime
+*/
+void CTR_13_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_13_InterruptHandler = interruptHandler;
+    139e:	80 93 24 72 	sts	0x7224, r24	; 0x807224 <CTR_13_InterruptHandler>
+    13a2:	90 93 25 72 	sts	0x7225, r25	; 0x807225 <CTR_13_InterruptHandler+0x1>
+    13a6:	08 95       	ret
+
+Disassembly of section .text.CTR_14_SetInterruptHandler:
+
+000013a8 <CTR_14_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_14 at application runtime
+*/
+void CTR_14_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_14_InterruptHandler = interruptHandler;
+    13a8:	80 93 22 72 	sts	0x7222, r24	; 0x807222 <CTR_14_InterruptHandler>
+    13ac:	90 93 23 72 	sts	0x7223, r25	; 0x807223 <CTR_14_InterruptHandler+0x1>
+    13b0:	08 95       	ret
+
+Disassembly of section .text.CTR_15_SetInterruptHandler:
+
+000013b2 <CTR_15_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_15 at application runtime
+*/
+void CTR_15_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_15_InterruptHandler = interruptHandler;
+    13b2:	80 93 20 72 	sts	0x7220, r24	; 0x807220 <CTR_15_InterruptHandler>
+    13b6:	90 93 21 72 	sts	0x7221, r25	; 0x807221 <CTR_15_InterruptHandler+0x1>
+    13ba:	08 95       	ret
+
+Disassembly of section .text.CTR_16_SetInterruptHandler:
+
+000013bc <CTR_16_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_16 at application runtime
+*/
+void CTR_16_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_16_InterruptHandler = interruptHandler;
+    13bc:	80 93 1e 72 	sts	0x721E, r24	; 0x80721e <CTR_16_InterruptHandler>
+    13c0:	90 93 1f 72 	sts	0x721F, r25	; 0x80721f <CTR_16_InterruptHandler+0x1>
+    13c4:	08 95       	ret
+
+Disassembly of section .text.CTR_17_SetInterruptHandler:
+
+000013c6 <CTR_17_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_17 at application runtime
+*/
+void CTR_17_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_17_InterruptHandler = interruptHandler;
+    13c6:	80 93 1c 72 	sts	0x721C, r24	; 0x80721c <CTR_17_InterruptHandler>
+    13ca:	90 93 1d 72 	sts	0x721D, r25	; 0x80721d <CTR_17_InterruptHandler+0x1>
+    13ce:	08 95       	ret
+
+Disassembly of section .text.CTR_18_SetInterruptHandler:
+
+000013d0 <CTR_18_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_18 at application runtime
+*/
+void CTR_18_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_18_InterruptHandler = interruptHandler;
+    13d0:	80 93 1a 72 	sts	0x721A, r24	; 0x80721a <CTR_18_InterruptHandler>
+    13d4:	90 93 1b 72 	sts	0x721B, r25	; 0x80721b <CTR_18_InterruptHandler+0x1>
+    13d8:	08 95       	ret
+
+Disassembly of section .text.CTR_19_SetInterruptHandler:
+
+000013da <CTR_19_SetInterruptHandler>:
+/**
+  Allows selecting an interrupt handler for CTR_19 at application runtime
+*/
+void CTR_19_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    CTR_19_InterruptHandler = interruptHandler;
+    13da:	80 93 18 72 	sts	0x7218, r24	; 0x807218 <CTR_19_InterruptHandler>
+    13de:	90 93 19 72 	sts	0x7219, r25	; 0x807219 <CTR_19_InterruptHandler+0x1>
+    13e2:	08 95       	ret
+
+Disassembly of section .text.PIN_MANAGER_Initialize:
+
+00000220 <PIN_MANAGER_Initialize>:
+static void (*CTR_17_InterruptHandler)(void);
+static void (*CTR_18_InterruptHandler)(void);
+static void (*CTR_19_InterruptHandler)(void);
+
+void PIN_MANAGER_Initialize()
+{
+ 220:	ef 92       	push	r14
+ 222:	ff 92       	push	r15
+ 224:	0f 93       	push	r16
+ 226:	1f 93       	push	r17
+ 228:	cf 93       	push	r28
+ 22a:	df 93       	push	r29
+
+  /* OUT Registers Initialization */
+    PORTA.OUT = 0x0;
+ 22c:	00 e0       	ldi	r16, 0x00	; 0
+ 22e:	14 e0       	ldi	r17, 0x04	; 4
+ 230:	f8 01       	movw	r30, r16
+ 232:	14 82       	std	Z+4, r1	; 0x04
+    PORTB.OUT = 0x0;
+ 234:	60 e2       	ldi	r22, 0x20	; 32
+ 236:	74 e0       	ldi	r23, 0x04	; 4
+ 238:	fb 01       	movw	r30, r22
+ 23a:	14 82       	std	Z+4, r1	; 0x04
+    PORTC.OUT = 0x0;
+ 23c:	40 e4       	ldi	r20, 0x40	; 64
+ 23e:	54 e0       	ldi	r21, 0x04	; 4
+ 240:	fa 01       	movw	r30, r20
+ 242:	14 82       	std	Z+4, r1	; 0x04
+    PORTD.OUT = 0x0;
+ 244:	20 e6       	ldi	r18, 0x60	; 96
+ 246:	34 e0       	ldi	r19, 0x04	; 4
+ 248:	f9 01       	movw	r30, r18
+ 24a:	14 82       	std	Z+4, r1	; 0x04
+    PORTE.OUT = 0x0;
+ 24c:	c0 e8       	ldi	r28, 0x80	; 128
+ 24e:	d4 e0       	ldi	r29, 0x04	; 4
+ 250:	1c 82       	std	Y+4, r1	; 0x04
+    PORTF.OUT = 0x0;
+ 252:	a0 ea       	ldi	r26, 0xA0	; 160
+ 254:	b4 e0       	ldi	r27, 0x04	; 4
+ 256:	14 96       	adiw	r26, 0x04	; 4
+ 258:	1c 92       	st	X, r1
+ 25a:	14 97       	sbiw	r26, 0x04	; 4
+    PORTG.OUT = 0x0;
+ 25c:	0f 2e       	mov	r0, r31
+ 25e:	f0 ec       	ldi	r31, 0xC0	; 192
+ 260:	ef 2e       	mov	r14, r31
+ 262:	f4 e0       	ldi	r31, 0x04	; 4
+ 264:	ff 2e       	mov	r15, r31
+ 266:	f0 2d       	mov	r31, r0
+ 268:	f7 01       	movw	r30, r14
+ 26a:	14 82       	std	Z+4, r1	; 0x04
+
+  /* DIR Registers Initialization */
+    PORTA.DIR = 0x80;
+ 26c:	80 e8       	ldi	r24, 0x80	; 128
+ 26e:	f8 01       	movw	r30, r16
+ 270:	80 83       	st	Z, r24
+    PORTB.DIR = 0xFC;
+ 272:	8c ef       	ldi	r24, 0xFC	; 252
+ 274:	fb 01       	movw	r30, r22
+ 276:	80 83       	st	Z, r24
+    PORTC.DIR = 0xFC;
+ 278:	fa 01       	movw	r30, r20
+ 27a:	80 83       	st	Z, r24
+    PORTD.DIR = 0xFF;
+ 27c:	8f ef       	ldi	r24, 0xFF	; 255
+ 27e:	f9 01       	movw	r30, r18
+ 280:	80 83       	st	Z, r24
+    PORTE.DIR = 0xFF;
+ 282:	88 83       	st	Y, r24
+    PORTF.DIR = 0x3C;
+ 284:	8c e3       	ldi	r24, 0x3C	; 60
+ 286:	8c 93       	st	X, r24
+    PORTG.DIR = 0xFE;
+ 288:	8e ef       	ldi	r24, 0xFE	; 254
+ 28a:	f7 01       	movw	r30, r14
+ 28c:	80 83       	st	Z, r24
+
+  /* PINxCTRL registers Initialization */
+    PORTA.PIN0CTRL = 0x0;
+ 28e:	f8 01       	movw	r30, r16
+ 290:	10 8a       	std	Z+16, r1	; 0x10
+    PORTA.PIN1CTRL = 0x0;
+ 292:	11 8a       	std	Z+17, r1	; 0x11
+    PORTA.PIN2CTRL = 0x0;
+ 294:	12 8a       	std	Z+18, r1	; 0x12
+    PORTA.PIN3CTRL = 0x0;
+ 296:	13 8a       	std	Z+19, r1	; 0x13
+    PORTA.PIN4CTRL = 0x0;
+ 298:	14 8a       	std	Z+20, r1	; 0x14
+    PORTA.PIN5CTRL = 0x0;
+ 29a:	15 8a       	std	Z+21, r1	; 0x15
+    PORTA.PIN6CTRL = 0x0;
+ 29c:	16 8a       	std	Z+22, r1	; 0x16
+    PORTA.PIN7CTRL = 0x4;
+ 29e:	84 e0       	ldi	r24, 0x04	; 4
+ 2a0:	87 8b       	std	Z+23, r24	; 0x17
+    PORTB.PIN0CTRL = 0x0;
+ 2a2:	fb 01       	movw	r30, r22
+ 2a4:	10 8a       	std	Z+16, r1	; 0x10
+    PORTB.PIN1CTRL = 0x0;
+ 2a6:	11 8a       	std	Z+17, r1	; 0x11
+    PORTB.PIN2CTRL = 0x4;
+ 2a8:	82 8b       	std	Z+18, r24	; 0x12
+    PORTB.PIN3CTRL = 0x4;
+ 2aa:	83 8b       	std	Z+19, r24	; 0x13
+    PORTB.PIN4CTRL = 0x4;
+ 2ac:	84 8b       	std	Z+20, r24	; 0x14
+    PORTB.PIN5CTRL = 0x4;
+ 2ae:	85 8b       	std	Z+21, r24	; 0x15
+    PORTB.PIN6CTRL = 0x4;
+ 2b0:	86 8b       	std	Z+22, r24	; 0x16
+    PORTB.PIN7CTRL = 0x4;
+ 2b2:	87 8b       	std	Z+23, r24	; 0x17
+    PORTC.PIN0CTRL = 0x0;
+ 2b4:	fa 01       	movw	r30, r20
+ 2b6:	10 8a       	std	Z+16, r1	; 0x10
+    PORTC.PIN1CTRL = 0x0;
+ 2b8:	11 8a       	std	Z+17, r1	; 0x11
+    PORTC.PIN2CTRL = 0x4;
+ 2ba:	82 8b       	std	Z+18, r24	; 0x12
+    PORTC.PIN3CTRL = 0x4;
+ 2bc:	83 8b       	std	Z+19, r24	; 0x13
+    PORTC.PIN4CTRL = 0x4;
+ 2be:	84 8b       	std	Z+20, r24	; 0x14
+    PORTC.PIN5CTRL = 0x4;
+ 2c0:	85 8b       	std	Z+21, r24	; 0x15
+    PORTC.PIN6CTRL = 0x4;
+ 2c2:	86 8b       	std	Z+22, r24	; 0x16
+    PORTC.PIN7CTRL = 0x4;
+ 2c4:	87 8b       	std	Z+23, r24	; 0x17
+    PORTD.PIN0CTRL = 0x4;
+ 2c6:	f9 01       	movw	r30, r18
+ 2c8:	80 8b       	std	Z+16, r24	; 0x10
+    PORTD.PIN1CTRL = 0x4;
+ 2ca:	81 8b       	std	Z+17, r24	; 0x11
+    PORTD.PIN2CTRL = 0x4;
+ 2cc:	82 8b       	std	Z+18, r24	; 0x12
+    PORTD.PIN3CTRL = 0x4;
+ 2ce:	83 8b       	std	Z+19, r24	; 0x13
+    PORTD.PIN4CTRL = 0x4;
+ 2d0:	84 8b       	std	Z+20, r24	; 0x14
+    PORTD.PIN5CTRL = 0x4;
+ 2d2:	85 8b       	std	Z+21, r24	; 0x15
+    PORTD.PIN6CTRL = 0x4;
+ 2d4:	86 8b       	std	Z+22, r24	; 0x16
+    PORTD.PIN7CTRL = 0x4;
+ 2d6:	87 8b       	std	Z+23, r24	; 0x17
+    PORTE.PIN0CTRL = 0x4;
+ 2d8:	88 8b       	std	Y+16, r24	; 0x10
+    PORTE.PIN1CTRL = 0x4;
+ 2da:	89 8b       	std	Y+17, r24	; 0x11
+    PORTE.PIN2CTRL = 0x4;
+ 2dc:	8a 8b       	std	Y+18, r24	; 0x12
+    PORTE.PIN3CTRL = 0x4;
+ 2de:	8b 8b       	std	Y+19, r24	; 0x13
+    PORTE.PIN4CTRL = 0x4;
+ 2e0:	8c 8b       	std	Y+20, r24	; 0x14
+    PORTE.PIN5CTRL = 0x4;
+ 2e2:	8d 8b       	std	Y+21, r24	; 0x15
+    PORTE.PIN6CTRL = 0x4;
+ 2e4:	8e 8b       	std	Y+22, r24	; 0x16
+    PORTE.PIN7CTRL = 0x4;
+ 2e6:	8f 8b       	std	Y+23, r24	; 0x17
+    PORTF.PIN0CTRL = 0x0;
+ 2e8:	50 96       	adiw	r26, 0x10	; 16
+ 2ea:	1c 92       	st	X, r1
+ 2ec:	50 97       	sbiw	r26, 0x10	; 16
+    PORTF.PIN1CTRL = 0x0;
+ 2ee:	51 96       	adiw	r26, 0x11	; 17
+ 2f0:	1c 92       	st	X, r1
+ 2f2:	51 97       	sbiw	r26, 0x11	; 17
+    PORTF.PIN2CTRL = 0x4;
+ 2f4:	52 96       	adiw	r26, 0x12	; 18
+ 2f6:	8c 93       	st	X, r24
+ 2f8:	52 97       	sbiw	r26, 0x12	; 18
+    PORTF.PIN3CTRL = 0x4;
+ 2fa:	53 96       	adiw	r26, 0x13	; 19
+ 2fc:	8c 93       	st	X, r24
+ 2fe:	53 97       	sbiw	r26, 0x13	; 19
+    PORTF.PIN4CTRL = 0x4;
+ 300:	54 96       	adiw	r26, 0x14	; 20
+ 302:	8c 93       	st	X, r24
+ 304:	54 97       	sbiw	r26, 0x14	; 20
+    PORTF.PIN5CTRL = 0x4;
+ 306:	55 96       	adiw	r26, 0x15	; 21
+ 308:	8c 93       	st	X, r24
+ 30a:	55 97       	sbiw	r26, 0x15	; 21
+    PORTF.PIN6CTRL = 0x0;
+ 30c:	56 96       	adiw	r26, 0x16	; 22
+ 30e:	1c 92       	st	X, r1
+ 310:	56 97       	sbiw	r26, 0x16	; 22
+    PORTF.PIN7CTRL = 0x0;
+ 312:	57 96       	adiw	r26, 0x17	; 23
+ 314:	1c 92       	st	X, r1
+    PORTG.PIN0CTRL = 0x0;
+ 316:	f7 01       	movw	r30, r14
+ 318:	10 8a       	std	Z+16, r1	; 0x10
+    PORTG.PIN1CTRL = 0x4;
+ 31a:	81 8b       	std	Z+17, r24	; 0x11
+    PORTG.PIN2CTRL = 0x4;
+ 31c:	82 8b       	std	Z+18, r24	; 0x12
+    PORTG.PIN3CTRL = 0x4;
+ 31e:	83 8b       	std	Z+19, r24	; 0x13
+    PORTG.PIN4CTRL = 0x4;
+ 320:	84 8b       	std	Z+20, r24	; 0x14
+    PORTG.PIN5CTRL = 0x4;
+ 322:	85 8b       	std	Z+21, r24	; 0x15
+    PORTG.PIN6CTRL = 0x4;
+ 324:	86 8b       	std	Z+22, r24	; 0x16
+    PORTG.PIN7CTRL = 0x4;
+ 326:	87 8b       	std	Z+23, r24	; 0x17
+
+  /* PORTMUX Initialization */
+    PORTMUX.ACROUTEA = 0x0;
+ 328:	e0 ee       	ldi	r30, 0xE0	; 224
+ 32a:	f5 e0       	ldi	r31, 0x05	; 5
+ 32c:	11 86       	std	Z+9, r1	; 0x09
+    PORTMUX.CCLROUTEA = 0x0;
+ 32e:	11 82       	std	Z+1, r1	; 0x01
+    PORTMUX.EVSYSROUTEA = 0x0;
+ 330:	10 82       	st	Z, r1
+    PORTMUX.SPIROUTEA = 0x0;
+ 332:	14 82       	std	Z+4, r1	; 0x04
+    PORTMUX.TCAROUTEA = 0x0;
+ 334:	16 82       	std	Z+6, r1	; 0x06
+    PORTMUX.TCBROUTEA = 0x0;
+ 336:	17 82       	std	Z+7, r1	; 0x07
+    PORTMUX.TCDROUTEA = 0x0;
+ 338:	10 86       	std	Z+8, r1	; 0x08
+    PORTMUX.TWIROUTEA = 0x0;
+ 33a:	15 82       	std	Z+5, r1	; 0x05
+    PORTMUX.USARTROUTEA = 0x0;
+ 33c:	12 82       	std	Z+2, r1	; 0x02
+    PORTMUX.USARTROUTEB = 0x0;
+ 33e:	13 82       	std	Z+3, r1	; 0x03
+    PORTMUX.ZCDROUTEA = 0x0;
+ 340:	12 86       	std	Z+10, r1	; 0x0a
+
+  // register default ISC callback functions at runtime; use these methods to register a custom function
+    CTR_0_SetInterruptHandler(CTR_0_DefaultInterruptHandler);
+ 342:	80 e1       	ldi	r24, 0x10	; 16
+ 344:	9a e0       	ldi	r25, 0x0A	; 10
+ 346:	0e 94 2a 09 	call	0x1254	; 0x1254 <CTR_0_SetInterruptHandler>
+    CTR_1_SetInterruptHandler(CTR_1_DefaultInterruptHandler);
+ 34a:	81 e1       	ldi	r24, 0x11	; 17
+ 34c:	9a e0       	ldi	r25, 0x0A	; 10
+ 34e:	0e 94 2f 09 	call	0x125e	; 0x125e <CTR_1_SetInterruptHandler>
+    CTR_2_SetInterruptHandler(CTR_2_DefaultInterruptHandler);
+ 352:	82 e1       	ldi	r24, 0x12	; 18
+ 354:	9a e0       	ldi	r25, 0x0A	; 10
+ 356:	0e 94 34 09 	call	0x1268	; 0x1268 <CTR_2_SetInterruptHandler>
+    CTR_3_SetInterruptHandler(CTR_3_DefaultInterruptHandler);
+ 35a:	83 e1       	ldi	r24, 0x13	; 19
+ 35c:	9a e0       	ldi	r25, 0x0A	; 10
+ 35e:	0e 94 39 09 	call	0x1272	; 0x1272 <CTR_3_SetInterruptHandler>
+    CTR_4_SetInterruptHandler(CTR_4_DefaultInterruptHandler);
+ 362:	84 e1       	ldi	r24, 0x14	; 20
+ 364:	9a e0       	ldi	r25, 0x0A	; 10
+ 366:	0e 94 3e 09 	call	0x127c	; 0x127c <CTR_4_SetInterruptHandler>
+    CTR_5_SetInterruptHandler(CTR_5_DefaultInterruptHandler);
+ 36a:	85 e1       	ldi	r24, 0x15	; 21
+ 36c:	9a e0       	ldi	r25, 0x0A	; 10
+ 36e:	0e 94 43 09 	call	0x1286	; 0x1286 <CTR_5_SetInterruptHandler>
+    CTR_6_SetInterruptHandler(CTR_6_DefaultInterruptHandler);
+ 372:	86 e1       	ldi	r24, 0x16	; 22
+ 374:	9a e0       	ldi	r25, 0x0A	; 10
+ 376:	0e 94 48 09 	call	0x1290	; 0x1290 <CTR_6_SetInterruptHandler>
+    CTR_7_SetInterruptHandler(CTR_7_DefaultInterruptHandler);
+ 37a:	87 e1       	ldi	r24, 0x17	; 23
+ 37c:	9a e0       	ldi	r25, 0x0A	; 10
+ 37e:	0e 94 4d 09 	call	0x129a	; 0x129a <CTR_7_SetInterruptHandler>
+    CTR_8_SetInterruptHandler(CTR_8_DefaultInterruptHandler);
+ 382:	88 e1       	ldi	r24, 0x18	; 24
+ 384:	9a e0       	ldi	r25, 0x0A	; 10
+ 386:	0e 94 52 09 	call	0x12a4	; 0x12a4 <CTR_8_SetInterruptHandler>
+    CTR_9_SetInterruptHandler(CTR_9_DefaultInterruptHandler);
+ 38a:	89 e1       	ldi	r24, 0x19	; 25
+ 38c:	9a e0       	ldi	r25, 0x0A	; 10
+ 38e:	0e 94 57 09 	call	0x12ae	; 0x12ae <CTR_9_SetInterruptHandler>
+    CTR_10_SetInterruptHandler(CTR_10_DefaultInterruptHandler);
+ 392:	8a e1       	ldi	r24, 0x1A	; 26
+ 394:	9a e0       	ldi	r25, 0x0A	; 10
+ 396:	0e 94 5c 09 	call	0x12b8	; 0x12b8 <CTR_10_SetInterruptHandler>
+    CTR_11_SetInterruptHandler(CTR_11_DefaultInterruptHandler);
+ 39a:	8b e1       	ldi	r24, 0x1B	; 27
+ 39c:	9a e0       	ldi	r25, 0x0A	; 10
+ 39e:	0e 94 61 09 	call	0x12c2	; 0x12c2 <CTR_11_SetInterruptHandler>
+    CTR_12_SetInterruptHandler(CTR_12_DefaultInterruptHandler);
+ 3a2:	8c e1       	ldi	r24, 0x1C	; 28
+ 3a4:	9a e0       	ldi	r25, 0x0A	; 10
+ 3a6:	0e 94 66 09 	call	0x12cc	; 0x12cc <CTR_12_SetInterruptHandler>
+    ADC_0_SetInterruptHandler(ADC_0_DefaultInterruptHandler);
+ 3aa:	8d e1       	ldi	r24, 0x1D	; 29
+ 3ac:	9a e0       	ldi	r25, 0x0A	; 10
+ 3ae:	0e 94 6b 09 	call	0x12d6	; 0x12d6 <ADC_0_SetInterruptHandler>
+    ADC_1_SetInterruptHandler(ADC_1_DefaultInterruptHandler);
+ 3b2:	8e e1       	ldi	r24, 0x1E	; 30
+ 3b4:	9a e0       	ldi	r25, 0x0A	; 10
+ 3b6:	0e 94 70 09 	call	0x12e0	; 0x12e0 <ADC_1_SetInterruptHandler>
+    ADC_2_SetInterruptHandler(ADC_2_DefaultInterruptHandler);
+ 3ba:	8f e1       	ldi	r24, 0x1F	; 31
+ 3bc:	9a e0       	ldi	r25, 0x0A	; 10
+ 3be:	0e 94 75 09 	call	0x12ea	; 0x12ea <ADC_2_SetInterruptHandler>
+    ADC_3_SetInterruptHandler(ADC_3_DefaultInterruptHandler);
+ 3c2:	80 e2       	ldi	r24, 0x20	; 32
+ 3c4:	9a e0       	ldi	r25, 0x0A	; 10
+ 3c6:	0e 94 7a 09 	call	0x12f4	; 0x12f4 <ADC_3_SetInterruptHandler>
+    ADC_4_SetInterruptHandler(ADC_4_DefaultInterruptHandler);
+ 3ca:	81 e2       	ldi	r24, 0x21	; 33
+ 3cc:	9a e0       	ldi	r25, 0x0A	; 10
+ 3ce:	0e 94 7f 09 	call	0x12fe	; 0x12fe <ADC_4_SetInterruptHandler>
+    ADC_5_SetInterruptHandler(ADC_5_DefaultInterruptHandler);
+ 3d2:	82 e2       	ldi	r24, 0x22	; 34
+ 3d4:	9a e0       	ldi	r25, 0x0A	; 10
+ 3d6:	0e 94 84 09 	call	0x1308	; 0x1308 <ADC_5_SetInterruptHandler>
+    ADC_6_SetInterruptHandler(ADC_6_DefaultInterruptHandler);
+ 3da:	83 e2       	ldi	r24, 0x23	; 35
+ 3dc:	9a e0       	ldi	r25, 0x0A	; 10
+ 3de:	0e 94 89 09 	call	0x1312	; 0x1312 <ADC_6_SetInterruptHandler>
+    ADC_7_SetInterruptHandler(ADC_7_DefaultInterruptHandler);
+ 3e2:	84 e2       	ldi	r24, 0x24	; 36
+ 3e4:	9a e0       	ldi	r25, 0x0A	; 10
+ 3e6:	0e 94 8e 09 	call	0x131c	; 0x131c <ADC_7_SetInterruptHandler>
+    ADC_8_SetInterruptHandler(ADC_8_DefaultInterruptHandler);
+ 3ea:	85 e2       	ldi	r24, 0x25	; 37
+ 3ec:	9a e0       	ldi	r25, 0x0A	; 10
+ 3ee:	0e 94 93 09 	call	0x1326	; 0x1326 <ADC_8_SetInterruptHandler>
+    ADC_9_SetInterruptHandler(ADC_9_DefaultInterruptHandler);
+ 3f2:	86 e2       	ldi	r24, 0x26	; 38
+ 3f4:	9a e0       	ldi	r25, 0x0A	; 10
+ 3f6:	0e 94 98 09 	call	0x1330	; 0x1330 <ADC_9_SetInterruptHandler>
+    ADC_10_SetInterruptHandler(ADC_10_DefaultInterruptHandler);
+ 3fa:	87 e2       	ldi	r24, 0x27	; 39
+ 3fc:	9a e0       	ldi	r25, 0x0A	; 10
+ 3fe:	0e 94 9d 09 	call	0x133a	; 0x133a <ADC_10_SetInterruptHandler>
+    ADC_11_SetInterruptHandler(ADC_11_DefaultInterruptHandler);
+ 402:	88 e2       	ldi	r24, 0x28	; 40
+ 404:	9a e0       	ldi	r25, 0x0A	; 10
+ 406:	0e 94 a2 09 	call	0x1344	; 0x1344 <ADC_11_SetInterruptHandler>
+    ADC_12_SetInterruptHandler(ADC_12_DefaultInterruptHandler);
+ 40a:	89 e2       	ldi	r24, 0x29	; 41
+ 40c:	9a e0       	ldi	r25, 0x0A	; 10
+ 40e:	0e 94 a7 09 	call	0x134e	; 0x134e <ADC_12_SetInterruptHandler>
+    ADC_13_SetInterruptHandler(ADC_13_DefaultInterruptHandler);
+ 412:	8a e2       	ldi	r24, 0x2A	; 42
+ 414:	9a e0       	ldi	r25, 0x0A	; 10
+ 416:	0e 94 ac 09 	call	0x1358	; 0x1358 <ADC_13_SetInterruptHandler>
+    ADC_14_SetInterruptHandler(ADC_14_DefaultInterruptHandler);
+ 41a:	8b e2       	ldi	r24, 0x2B	; 43
+ 41c:	9a e0       	ldi	r25, 0x0A	; 10
+ 41e:	0e 94 b1 09 	call	0x1362	; 0x1362 <ADC_14_SetInterruptHandler>
+    ADC_15_SetInterruptHandler(ADC_15_DefaultInterruptHandler);
+ 422:	8c e2       	ldi	r24, 0x2C	; 44
+ 424:	9a e0       	ldi	r25, 0x0A	; 10
+ 426:	0e 94 b6 09 	call	0x136c	; 0x136c <ADC_15_SetInterruptHandler>
+    ADC_16_SetInterruptHandler(ADC_16_DefaultInterruptHandler);
+ 42a:	8d e2       	ldi	r24, 0x2D	; 45
+ 42c:	9a e0       	ldi	r25, 0x0A	; 10
+ 42e:	0e 94 bb 09 	call	0x1376	; 0x1376 <ADC_16_SetInterruptHandler>
+    ADC_17_SetInterruptHandler(ADC_17_DefaultInterruptHandler);
+ 432:	8e e2       	ldi	r24, 0x2E	; 46
+ 434:	9a e0       	ldi	r25, 0x0A	; 10
+ 436:	0e 94 c0 09 	call	0x1380	; 0x1380 <ADC_17_SetInterruptHandler>
+    ADC_18_SetInterruptHandler(ADC_18_DefaultInterruptHandler);
+ 43a:	8f e2       	ldi	r24, 0x2F	; 47
+ 43c:	9a e0       	ldi	r25, 0x0A	; 10
+ 43e:	0e 94 c5 09 	call	0x138a	; 0x138a <ADC_18_SetInterruptHandler>
+    ADC_19_SetInterruptHandler(ADC_19_DefaultInterruptHandler);
+ 442:	80 e3       	ldi	r24, 0x30	; 48
+ 444:	9a e0       	ldi	r25, 0x0A	; 10
+ 446:	0e 94 ca 09 	call	0x1394	; 0x1394 <ADC_19_SetInterruptHandler>
+    CTR_13_SetInterruptHandler(CTR_13_DefaultInterruptHandler);
+ 44a:	81 e3       	ldi	r24, 0x31	; 49
+ 44c:	9a e0       	ldi	r25, 0x0A	; 10
+ 44e:	0e 94 cf 09 	call	0x139e	; 0x139e <CTR_13_SetInterruptHandler>
+    CTR_14_SetInterruptHandler(CTR_14_DefaultInterruptHandler);
+ 452:	82 e3       	ldi	r24, 0x32	; 50
+ 454:	9a e0       	ldi	r25, 0x0A	; 10
+ 456:	0e 94 d4 09 	call	0x13a8	; 0x13a8 <CTR_14_SetInterruptHandler>
+    CTR_15_SetInterruptHandler(CTR_15_DefaultInterruptHandler);
+ 45a:	83 e3       	ldi	r24, 0x33	; 51
+ 45c:	9a e0       	ldi	r25, 0x0A	; 10
+ 45e:	0e 94 d9 09 	call	0x13b2	; 0x13b2 <CTR_15_SetInterruptHandler>
+    CTR_16_SetInterruptHandler(CTR_16_DefaultInterruptHandler);
+ 462:	84 e3       	ldi	r24, 0x34	; 52
+ 464:	9a e0       	ldi	r25, 0x0A	; 10
+ 466:	0e 94 de 09 	call	0x13bc	; 0x13bc <CTR_16_SetInterruptHandler>
+    CTR_17_SetInterruptHandler(CTR_17_DefaultInterruptHandler);
+ 46a:	85 e3       	ldi	r24, 0x35	; 53
+ 46c:	9a e0       	ldi	r25, 0x0A	; 10
+ 46e:	0e 94 e3 09 	call	0x13c6	; 0x13c6 <CTR_17_SetInterruptHandler>
+    CTR_18_SetInterruptHandler(CTR_18_DefaultInterruptHandler);
+ 472:	86 e3       	ldi	r24, 0x36	; 54
+ 474:	9a e0       	ldi	r25, 0x0A	; 10
+ 476:	0e 94 e8 09 	call	0x13d0	; 0x13d0 <CTR_18_SetInterruptHandler>
+    CTR_19_SetInterruptHandler(CTR_19_DefaultInterruptHandler);
+ 47a:	87 e3       	ldi	r24, 0x37	; 55
+ 47c:	9a e0       	ldi	r25, 0x0A	; 10
+ 47e:	0e 94 ed 09 	call	0x13da	; 0x13da <CTR_19_SetInterruptHandler>
+}
+ 482:	df 91       	pop	r29
+ 484:	cf 91       	pop	r28
+ 486:	1f 91       	pop	r17
+ 488:	0f 91       	pop	r16
+ 48a:	ff 90       	pop	r15
+ 48c:	ef 90       	pop	r14
+ 48e:	08 95       	ret
+
+Disassembly of section .text.__vector_8:
+
+00000fea <__vector_8>:
+{
+    // add your CTR_19 interrupt custom code
+    // or set custom function using CTR_19_SetInterruptHandler()
+}
+ISR(PORTA_PORT_vect)
+{ 
+     fea:	1f 92       	push	r1
+     fec:	0f 92       	push	r0
+     fee:	0f b6       	in	r0, 0x3f	; 63
+     ff0:	0f 92       	push	r0
+     ff2:	11 24       	eor	r1, r1
+     ff4:	0b b6       	in	r0, 0x3b	; 59
+     ff6:	0f 92       	push	r0
+     ff8:	2f 93       	push	r18
+     ffa:	3f 93       	push	r19
+     ffc:	4f 93       	push	r20
+     ffe:	5f 93       	push	r21
+    1000:	6f 93       	push	r22
+    1002:	7f 93       	push	r23
+    1004:	8f 93       	push	r24
+    1006:	9f 93       	push	r25
+    1008:	af 93       	push	r26
+    100a:	bf 93       	push	r27
+    100c:	ef 93       	push	r30
+    100e:	ff 93       	push	r31
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTA.INTFLAGS & PORT_INT7_bm)
+    1010:	1f 9b       	sbis	0x03, 7	; 3
+    1012:	05 c0       	rjmp	.+10     	; 0x101e <__vector_8+0x34>
+    {
+       CTR_0_InterruptHandler(); 
+    1014:	e0 91 66 72 	lds	r30, 0x7266	; 0x807266 <CTR_0_InterruptHandler>
+    1018:	f0 91 67 72 	lds	r31, 0x7267	; 0x807267 <CTR_0_InterruptHandler+0x1>
+    101c:	09 95       	icall
+    }
+    /* Clear interrupt flags */
+    VPORTA.INTFLAGS = 0xff;
+    101e:	8f ef       	ldi	r24, 0xFF	; 255
+    1020:	83 b9       	out	0x03, r24	; 3
+}
+    1022:	ff 91       	pop	r31
+    1024:	ef 91       	pop	r30
+    1026:	bf 91       	pop	r27
+    1028:	af 91       	pop	r26
+    102a:	9f 91       	pop	r25
+    102c:	8f 91       	pop	r24
+    102e:	7f 91       	pop	r23
+    1030:	6f 91       	pop	r22
+    1032:	5f 91       	pop	r21
+    1034:	4f 91       	pop	r20
+    1036:	3f 91       	pop	r19
+    1038:	2f 91       	pop	r18
+    103a:	0f 90       	pop	r0
+    103c:	0b be       	out	0x3b, r0	; 59
+    103e:	0f 90       	pop	r0
+    1040:	0f be       	out	0x3f, r0	; 63
+    1042:	0f 90       	pop	r0
+    1044:	1f 90       	pop	r1
+    1046:	18 95       	reti
+
+Disassembly of section .text.__vector_45:
+
+00000ad2 <__vector_45>:
+
+ISR(PORTB_PORT_vect)
+{ 
+ ad2:	1f 92       	push	r1
+ ad4:	0f 92       	push	r0
+ ad6:	0f b6       	in	r0, 0x3f	; 63
+ ad8:	0f 92       	push	r0
+ ada:	11 24       	eor	r1, r1
+ adc:	0b b6       	in	r0, 0x3b	; 59
+ ade:	0f 92       	push	r0
+ ae0:	2f 93       	push	r18
+ ae2:	3f 93       	push	r19
+ ae4:	4f 93       	push	r20
+ ae6:	5f 93       	push	r21
+ ae8:	6f 93       	push	r22
+ aea:	7f 93       	push	r23
+ aec:	8f 93       	push	r24
+ aee:	9f 93       	push	r25
+ af0:	af 93       	push	r26
+ af2:	bf 93       	push	r27
+ af4:	ef 93       	push	r30
+ af6:	ff 93       	push	r31
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTB.INTFLAGS & PORT_INT2_bm)
+ af8:	3a 9b       	sbis	0x07, 2	; 7
+ afa:	05 c0       	rjmp	.+10     	; 0xb06 <__vector_45+0x34>
+    {
+       CTR_1_InterruptHandler(); 
+ afc:	e0 91 64 72 	lds	r30, 0x7264	; 0x807264 <CTR_1_InterruptHandler>
+ b00:	f0 91 65 72 	lds	r31, 0x7265	; 0x807265 <CTR_1_InterruptHandler+0x1>
+ b04:	09 95       	icall
+    }
+    if(VPORTB.INTFLAGS & PORT_INT3_bm)
+ b06:	3b 9b       	sbis	0x07, 3	; 7
+ b08:	05 c0       	rjmp	.+10     	; 0xb14 <__vector_45+0x42>
+    {
+       CTR_2_InterruptHandler(); 
+ b0a:	e0 91 62 72 	lds	r30, 0x7262	; 0x807262 <CTR_2_InterruptHandler>
+ b0e:	f0 91 63 72 	lds	r31, 0x7263	; 0x807263 <CTR_2_InterruptHandler+0x1>
+ b12:	09 95       	icall
+    }
+    if(VPORTB.INTFLAGS & PORT_INT4_bm)
+ b14:	3c 9b       	sbis	0x07, 4	; 7
+ b16:	05 c0       	rjmp	.+10     	; 0xb22 <__vector_45+0x50>
+    {
+       CTR_3_InterruptHandler(); 
+ b18:	e0 91 60 72 	lds	r30, 0x7260	; 0x807260 <CTR_3_InterruptHandler>
+ b1c:	f0 91 61 72 	lds	r31, 0x7261	; 0x807261 <CTR_3_InterruptHandler+0x1>
+ b20:	09 95       	icall
+    }
+    if(VPORTB.INTFLAGS & PORT_INT5_bm)
+ b22:	3d 9b       	sbis	0x07, 5	; 7
+ b24:	05 c0       	rjmp	.+10     	; 0xb30 <__vector_45+0x5e>
+    {
+       CTR_4_InterruptHandler(); 
+ b26:	e0 91 5e 72 	lds	r30, 0x725E	; 0x80725e <CTR_4_InterruptHandler>
+ b2a:	f0 91 5f 72 	lds	r31, 0x725F	; 0x80725f <CTR_4_InterruptHandler+0x1>
+ b2e:	09 95       	icall
+    }
+    if(VPORTB.INTFLAGS & PORT_INT6_bm)
+ b30:	3e 9b       	sbis	0x07, 6	; 7
+ b32:	05 c0       	rjmp	.+10     	; 0xb3e <__vector_45+0x6c>
+    {
+       CTR_5_InterruptHandler(); 
+ b34:	e0 91 5c 72 	lds	r30, 0x725C	; 0x80725c <CTR_5_InterruptHandler>
+ b38:	f0 91 5d 72 	lds	r31, 0x725D	; 0x80725d <CTR_5_InterruptHandler+0x1>
+ b3c:	09 95       	icall
+    }
+    if(VPORTB.INTFLAGS & PORT_INT7_bm)
+ b3e:	3f 9b       	sbis	0x07, 7	; 7
+ b40:	05 c0       	rjmp	.+10     	; 0xb4c <__vector_45+0x7a>
+    {
+       CTR_6_InterruptHandler(); 
+ b42:	e0 91 5a 72 	lds	r30, 0x725A	; 0x80725a <CTR_6_InterruptHandler>
+ b46:	f0 91 5b 72 	lds	r31, 0x725B	; 0x80725b <CTR_6_InterruptHandler+0x1>
+ b4a:	09 95       	icall
+    }
+    /* Clear interrupt flags */
+    VPORTB.INTFLAGS = 0xff;
+ b4c:	8f ef       	ldi	r24, 0xFF	; 255
+ b4e:	87 b9       	out	0x07, r24	; 7
+}
+ b50:	ff 91       	pop	r31
+ b52:	ef 91       	pop	r30
+ b54:	bf 91       	pop	r27
+ b56:	af 91       	pop	r26
+ b58:	9f 91       	pop	r25
+ b5a:	8f 91       	pop	r24
+ b5c:	7f 91       	pop	r23
+ b5e:	6f 91       	pop	r22
+ b60:	5f 91       	pop	r21
+ b62:	4f 91       	pop	r20
+ b64:	3f 91       	pop	r19
+ b66:	2f 91       	pop	r18
+ b68:	0f 90       	pop	r0
+ b6a:	0b be       	out	0x3b, r0	; 59
+ b6c:	0f 90       	pop	r0
+ b6e:	0f be       	out	0x3f, r0	; 63
+ b70:	0f 90       	pop	r0
+ b72:	1f 90       	pop	r1
+ b74:	18 95       	reti
+
+Disassembly of section .text.__vector_30:
+
+00000b76 <__vector_30>:
+
+ISR(PORTC_PORT_vect)
+{ 
+ b76:	1f 92       	push	r1
+ b78:	0f 92       	push	r0
+ b7a:	0f b6       	in	r0, 0x3f	; 63
+ b7c:	0f 92       	push	r0
+ b7e:	11 24       	eor	r1, r1
+ b80:	0b b6       	in	r0, 0x3b	; 59
+ b82:	0f 92       	push	r0
+ b84:	2f 93       	push	r18
+ b86:	3f 93       	push	r19
+ b88:	4f 93       	push	r20
+ b8a:	5f 93       	push	r21
+ b8c:	6f 93       	push	r22
+ b8e:	7f 93       	push	r23
+ b90:	8f 93       	push	r24
+ b92:	9f 93       	push	r25
+ b94:	af 93       	push	r26
+ b96:	bf 93       	push	r27
+ b98:	ef 93       	push	r30
+ b9a:	ff 93       	push	r31
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTC.INTFLAGS & PORT_INT2_bm)
+ b9c:	5a 9b       	sbis	0x0b, 2	; 11
+ b9e:	05 c0       	rjmp	.+10     	; 0xbaa <__vector_30+0x34>
+    {
+       CTR_7_InterruptHandler(); 
+ ba0:	e0 91 58 72 	lds	r30, 0x7258	; 0x807258 <CTR_7_InterruptHandler>
+ ba4:	f0 91 59 72 	lds	r31, 0x7259	; 0x807259 <CTR_7_InterruptHandler+0x1>
+ ba8:	09 95       	icall
+    }
+    if(VPORTC.INTFLAGS & PORT_INT3_bm)
+ baa:	5b 9b       	sbis	0x0b, 3	; 11
+ bac:	05 c0       	rjmp	.+10     	; 0xbb8 <__vector_30+0x42>
+    {
+       CTR_8_InterruptHandler(); 
+ bae:	e0 91 56 72 	lds	r30, 0x7256	; 0x807256 <CTR_8_InterruptHandler>
+ bb2:	f0 91 57 72 	lds	r31, 0x7257	; 0x807257 <CTR_8_InterruptHandler+0x1>
+ bb6:	09 95       	icall
+    }
+    if(VPORTC.INTFLAGS & PORT_INT4_bm)
+ bb8:	5c 9b       	sbis	0x0b, 4	; 11
+ bba:	05 c0       	rjmp	.+10     	; 0xbc6 <__vector_30+0x50>
+    {
+       CTR_9_InterruptHandler(); 
+ bbc:	e0 91 54 72 	lds	r30, 0x7254	; 0x807254 <CTR_9_InterruptHandler>
+ bc0:	f0 91 55 72 	lds	r31, 0x7255	; 0x807255 <CTR_9_InterruptHandler+0x1>
+ bc4:	09 95       	icall
+    }
+    if(VPORTC.INTFLAGS & PORT_INT5_bm)
+ bc6:	5d 9b       	sbis	0x0b, 5	; 11
+ bc8:	05 c0       	rjmp	.+10     	; 0xbd4 <__vector_30+0x5e>
+    {
+       CTR_10_InterruptHandler(); 
+ bca:	e0 91 52 72 	lds	r30, 0x7252	; 0x807252 <CTR_10_InterruptHandler>
+ bce:	f0 91 53 72 	lds	r31, 0x7253	; 0x807253 <CTR_10_InterruptHandler+0x1>
+ bd2:	09 95       	icall
+    }
+    if(VPORTC.INTFLAGS & PORT_INT6_bm)
+ bd4:	5e 9b       	sbis	0x0b, 6	; 11
+ bd6:	05 c0       	rjmp	.+10     	; 0xbe2 <__vector_30+0x6c>
+    {
+       CTR_11_InterruptHandler(); 
+ bd8:	e0 91 50 72 	lds	r30, 0x7250	; 0x807250 <CTR_11_InterruptHandler>
+ bdc:	f0 91 51 72 	lds	r31, 0x7251	; 0x807251 <CTR_11_InterruptHandler+0x1>
+ be0:	09 95       	icall
+    }
+    if(VPORTC.INTFLAGS & PORT_INT7_bm)
+ be2:	5f 9b       	sbis	0x0b, 7	; 11
+ be4:	05 c0       	rjmp	.+10     	; 0xbf0 <__vector_30+0x7a>
+    {
+       CTR_12_InterruptHandler(); 
+ be6:	e0 91 4e 72 	lds	r30, 0x724E	; 0x80724e <CTR_12_InterruptHandler>
+ bea:	f0 91 4f 72 	lds	r31, 0x724F	; 0x80724f <CTR_12_InterruptHandler+0x1>
+ bee:	09 95       	icall
+    }
+    /* Clear interrupt flags */
+    VPORTC.INTFLAGS = 0xff;
+ bf0:	8f ef       	ldi	r24, 0xFF	; 255
+ bf2:	8b b9       	out	0x0b, r24	; 11
+}
+ bf4:	ff 91       	pop	r31
+ bf6:	ef 91       	pop	r30
+ bf8:	bf 91       	pop	r27
+ bfa:	af 91       	pop	r26
+ bfc:	9f 91       	pop	r25
+ bfe:	8f 91       	pop	r24
+ c00:	7f 91       	pop	r23
+ c02:	6f 91       	pop	r22
+ c04:	5f 91       	pop	r21
+ c06:	4f 91       	pop	r20
+ c08:	3f 91       	pop	r19
+ c0a:	2f 91       	pop	r18
+ c0c:	0f 90       	pop	r0
+ c0e:	0b be       	out	0x3b, r0	; 59
+ c10:	0f 90       	pop	r0
+ c12:	0f be       	out	0x3f, r0	; 63
+ c14:	0f 90       	pop	r0
+ c16:	1f 90       	pop	r1
+ c18:	18 95       	reti
+
+Disassembly of section .text.__vector_24:
+
+000007e4 <__vector_24>:
+
+ISR(PORTD_PORT_vect)
+{ 
+ 7e4:	1f 92       	push	r1
+ 7e6:	0f 92       	push	r0
+ 7e8:	0f b6       	in	r0, 0x3f	; 63
+ 7ea:	0f 92       	push	r0
+ 7ec:	11 24       	eor	r1, r1
+ 7ee:	0b b6       	in	r0, 0x3b	; 59
+ 7f0:	0f 92       	push	r0
+ 7f2:	2f 93       	push	r18
+ 7f4:	3f 93       	push	r19
+ 7f6:	4f 93       	push	r20
+ 7f8:	5f 93       	push	r21
+ 7fa:	6f 93       	push	r22
+ 7fc:	7f 93       	push	r23
+ 7fe:	8f 93       	push	r24
+ 800:	9f 93       	push	r25
+ 802:	af 93       	push	r26
+ 804:	bf 93       	push	r27
+ 806:	ef 93       	push	r30
+ 808:	ff 93       	push	r31
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTD.INTFLAGS & PORT_INT0_bm)
+ 80a:	78 9b       	sbis	0x0f, 0	; 15
+ 80c:	05 c0       	rjmp	.+10     	; 0x818 <__vector_24+0x34>
+    {
+       ADC_0_InterruptHandler(); 
+ 80e:	e0 91 4c 72 	lds	r30, 0x724C	; 0x80724c <ADC_0_InterruptHandler>
+ 812:	f0 91 4d 72 	lds	r31, 0x724D	; 0x80724d <ADC_0_InterruptHandler+0x1>
+ 816:	09 95       	icall
+    }
+    if(VPORTD.INTFLAGS & PORT_INT1_bm)
+ 818:	79 9b       	sbis	0x0f, 1	; 15
+ 81a:	05 c0       	rjmp	.+10     	; 0x826 <__vector_24+0x42>
+    {
+       ADC_1_InterruptHandler(); 
+ 81c:	e0 91 4a 72 	lds	r30, 0x724A	; 0x80724a <ADC_1_InterruptHandler>
+ 820:	f0 91 4b 72 	lds	r31, 0x724B	; 0x80724b <ADC_1_InterruptHandler+0x1>
+ 824:	09 95       	icall
+    }
+    if(VPORTD.INTFLAGS & PORT_INT2_bm)
+ 826:	7a 9b       	sbis	0x0f, 2	; 15
+ 828:	05 c0       	rjmp	.+10     	; 0x834 <__vector_24+0x50>
+    {
+       ADC_2_InterruptHandler(); 
+ 82a:	e0 91 48 72 	lds	r30, 0x7248	; 0x807248 <ADC_2_InterruptHandler>
+ 82e:	f0 91 49 72 	lds	r31, 0x7249	; 0x807249 <ADC_2_InterruptHandler+0x1>
+ 832:	09 95       	icall
+    }
+    if(VPORTD.INTFLAGS & PORT_INT3_bm)
+ 834:	7b 9b       	sbis	0x0f, 3	; 15
+ 836:	05 c0       	rjmp	.+10     	; 0x842 <__vector_24+0x5e>
+    {
+       ADC_3_InterruptHandler(); 
+ 838:	e0 91 46 72 	lds	r30, 0x7246	; 0x807246 <ADC_3_InterruptHandler>
+ 83c:	f0 91 47 72 	lds	r31, 0x7247	; 0x807247 <ADC_3_InterruptHandler+0x1>
+ 840:	09 95       	icall
+    }
+    if(VPORTD.INTFLAGS & PORT_INT4_bm)
+ 842:	7c 9b       	sbis	0x0f, 4	; 15
+ 844:	05 c0       	rjmp	.+10     	; 0x850 <__vector_24+0x6c>
+    {
+       ADC_4_InterruptHandler(); 
+ 846:	e0 91 44 72 	lds	r30, 0x7244	; 0x807244 <ADC_4_InterruptHandler>
+ 84a:	f0 91 45 72 	lds	r31, 0x7245	; 0x807245 <ADC_4_InterruptHandler+0x1>
+ 84e:	09 95       	icall
+    }
+    if(VPORTD.INTFLAGS & PORT_INT5_bm)
+ 850:	7d 9b       	sbis	0x0f, 5	; 15
+ 852:	05 c0       	rjmp	.+10     	; 0x85e <__vector_24+0x7a>
+    {
+       ADC_5_InterruptHandler(); 
+ 854:	e0 91 42 72 	lds	r30, 0x7242	; 0x807242 <ADC_5_InterruptHandler>
+ 858:	f0 91 43 72 	lds	r31, 0x7243	; 0x807243 <ADC_5_InterruptHandler+0x1>
+ 85c:	09 95       	icall
+    }
+    if(VPORTD.INTFLAGS & PORT_INT6_bm)
+ 85e:	7e 9b       	sbis	0x0f, 6	; 15
+ 860:	05 c0       	rjmp	.+10     	; 0x86c <__vector_24+0x88>
+    {
+       ADC_6_InterruptHandler(); 
+ 862:	e0 91 40 72 	lds	r30, 0x7240	; 0x807240 <ADC_6_InterruptHandler>
+ 866:	f0 91 41 72 	lds	r31, 0x7241	; 0x807241 <ADC_6_InterruptHandler+0x1>
+ 86a:	09 95       	icall
+    }
+    if(VPORTD.INTFLAGS & PORT_INT7_bm)
+ 86c:	7f 9b       	sbis	0x0f, 7	; 15
+ 86e:	05 c0       	rjmp	.+10     	; 0x87a <__vector_24+0x96>
+    {
+       ADC_7_InterruptHandler(); 
+ 870:	e0 91 3e 72 	lds	r30, 0x723E	; 0x80723e <ADC_7_InterruptHandler>
+ 874:	f0 91 3f 72 	lds	r31, 0x723F	; 0x80723f <ADC_7_InterruptHandler+0x1>
+ 878:	09 95       	icall
+    }
+    /* Clear interrupt flags */
+    VPORTD.INTFLAGS = 0xff;
+ 87a:	8f ef       	ldi	r24, 0xFF	; 255
+ 87c:	8f b9       	out	0x0f, r24	; 15
+}
+ 87e:	ff 91       	pop	r31
+ 880:	ef 91       	pop	r30
+ 882:	bf 91       	pop	r27
+ 884:	af 91       	pop	r26
+ 886:	9f 91       	pop	r25
+ 888:	8f 91       	pop	r24
+ 88a:	7f 91       	pop	r23
+ 88c:	6f 91       	pop	r22
+ 88e:	5f 91       	pop	r21
+ 890:	4f 91       	pop	r20
+ 892:	3f 91       	pop	r19
+ 894:	2f 91       	pop	r18
+ 896:	0f 90       	pop	r0
+ 898:	0b be       	out	0x3b, r0	; 59
+ 89a:	0f 90       	pop	r0
+ 89c:	0f be       	out	0x3f, r0	; 63
+ 89e:	0f 90       	pop	r0
+ 8a0:	1f 90       	pop	r1
+ 8a2:	18 95       	reti
+
+Disassembly of section .text.__vector_46:
+
+000008a4 <__vector_46>:
+
+ISR(PORTE_PORT_vect)
+{ 
+ 8a4:	1f 92       	push	r1
+ 8a6:	0f 92       	push	r0
+ 8a8:	0f b6       	in	r0, 0x3f	; 63
+ 8aa:	0f 92       	push	r0
+ 8ac:	11 24       	eor	r1, r1
+ 8ae:	0b b6       	in	r0, 0x3b	; 59
+ 8b0:	0f 92       	push	r0
+ 8b2:	2f 93       	push	r18
+ 8b4:	3f 93       	push	r19
+ 8b6:	4f 93       	push	r20
+ 8b8:	5f 93       	push	r21
+ 8ba:	6f 93       	push	r22
+ 8bc:	7f 93       	push	r23
+ 8be:	8f 93       	push	r24
+ 8c0:	9f 93       	push	r25
+ 8c2:	af 93       	push	r26
+ 8c4:	bf 93       	push	r27
+ 8c6:	ef 93       	push	r30
+ 8c8:	ff 93       	push	r31
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTE.INTFLAGS & PORT_INT0_bm)
+ 8ca:	98 9b       	sbis	0x13, 0	; 19
+ 8cc:	05 c0       	rjmp	.+10     	; 0x8d8 <__vector_46+0x34>
+    {
+       ADC_8_InterruptHandler(); 
+ 8ce:	e0 91 3c 72 	lds	r30, 0x723C	; 0x80723c <ADC_8_InterruptHandler>
+ 8d2:	f0 91 3d 72 	lds	r31, 0x723D	; 0x80723d <ADC_8_InterruptHandler+0x1>
+ 8d6:	09 95       	icall
+    }
+    if(VPORTE.INTFLAGS & PORT_INT1_bm)
+ 8d8:	99 9b       	sbis	0x13, 1	; 19
+ 8da:	05 c0       	rjmp	.+10     	; 0x8e6 <__vector_46+0x42>
+    {
+       ADC_9_InterruptHandler(); 
+ 8dc:	e0 91 3a 72 	lds	r30, 0x723A	; 0x80723a <ADC_9_InterruptHandler>
+ 8e0:	f0 91 3b 72 	lds	r31, 0x723B	; 0x80723b <ADC_9_InterruptHandler+0x1>
+ 8e4:	09 95       	icall
+    }
+    if(VPORTE.INTFLAGS & PORT_INT2_bm)
+ 8e6:	9a 9b       	sbis	0x13, 2	; 19
+ 8e8:	05 c0       	rjmp	.+10     	; 0x8f4 <__vector_46+0x50>
+    {
+       ADC_10_InterruptHandler(); 
+ 8ea:	e0 91 38 72 	lds	r30, 0x7238	; 0x807238 <ADC_10_InterruptHandler>
+ 8ee:	f0 91 39 72 	lds	r31, 0x7239	; 0x807239 <ADC_10_InterruptHandler+0x1>
+ 8f2:	09 95       	icall
+    }
+    if(VPORTE.INTFLAGS & PORT_INT3_bm)
+ 8f4:	9b 9b       	sbis	0x13, 3	; 19
+ 8f6:	05 c0       	rjmp	.+10     	; 0x902 <__vector_46+0x5e>
+    {
+       ADC_11_InterruptHandler(); 
+ 8f8:	e0 91 36 72 	lds	r30, 0x7236	; 0x807236 <ADC_11_InterruptHandler>
+ 8fc:	f0 91 37 72 	lds	r31, 0x7237	; 0x807237 <ADC_11_InterruptHandler+0x1>
+ 900:	09 95       	icall
+    }
+    if(VPORTE.INTFLAGS & PORT_INT4_bm)
+ 902:	9c 9b       	sbis	0x13, 4	; 19
+ 904:	05 c0       	rjmp	.+10     	; 0x910 <__vector_46+0x6c>
+    {
+       ADC_12_InterruptHandler(); 
+ 906:	e0 91 34 72 	lds	r30, 0x7234	; 0x807234 <ADC_12_InterruptHandler>
+ 90a:	f0 91 35 72 	lds	r31, 0x7235	; 0x807235 <ADC_12_InterruptHandler+0x1>
+ 90e:	09 95       	icall
+    }
+    if(VPORTE.INTFLAGS & PORT_INT5_bm)
+ 910:	9d 9b       	sbis	0x13, 5	; 19
+ 912:	05 c0       	rjmp	.+10     	; 0x91e <__vector_46+0x7a>
+    {
+       ADC_13_InterruptHandler(); 
+ 914:	e0 91 32 72 	lds	r30, 0x7232	; 0x807232 <ADC_13_InterruptHandler>
+ 918:	f0 91 33 72 	lds	r31, 0x7233	; 0x807233 <ADC_13_InterruptHandler+0x1>
+ 91c:	09 95       	icall
+    }
+    if(VPORTE.INTFLAGS & PORT_INT6_bm)
+ 91e:	9e 9b       	sbis	0x13, 6	; 19
+ 920:	05 c0       	rjmp	.+10     	; 0x92c <__vector_46+0x88>
+    {
+       ADC_14_InterruptHandler(); 
+ 922:	e0 91 30 72 	lds	r30, 0x7230	; 0x807230 <ADC_14_InterruptHandler>
+ 926:	f0 91 31 72 	lds	r31, 0x7231	; 0x807231 <ADC_14_InterruptHandler+0x1>
+ 92a:	09 95       	icall
+    }
+    if(VPORTE.INTFLAGS & PORT_INT7_bm)
+ 92c:	9f 9b       	sbis	0x13, 7	; 19
+ 92e:	05 c0       	rjmp	.+10     	; 0x93a <__vector_46+0x96>
+    {
+       ADC_15_InterruptHandler(); 
+ 930:	e0 91 2e 72 	lds	r30, 0x722E	; 0x80722e <ADC_15_InterruptHandler>
+ 934:	f0 91 2f 72 	lds	r31, 0x722F	; 0x80722f <ADC_15_InterruptHandler+0x1>
+ 938:	09 95       	icall
+    }
+    /* Clear interrupt flags */
+    VPORTE.INTFLAGS = 0xff;
+ 93a:	8f ef       	ldi	r24, 0xFF	; 255
+ 93c:	83 bb       	out	0x13, r24	; 19
+}
+ 93e:	ff 91       	pop	r31
+ 940:	ef 91       	pop	r30
+ 942:	bf 91       	pop	r27
+ 944:	af 91       	pop	r26
+ 946:	9f 91       	pop	r25
+ 948:	8f 91       	pop	r24
+ 94a:	7f 91       	pop	r23
+ 94c:	6f 91       	pop	r22
+ 94e:	5f 91       	pop	r21
+ 950:	4f 91       	pop	r20
+ 952:	3f 91       	pop	r19
+ 954:	2f 91       	pop	r18
+ 956:	0f 90       	pop	r0
+ 958:	0b be       	out	0x3b, r0	; 59
+ 95a:	0f 90       	pop	r0
+ 95c:	0f be       	out	0x3f, r0	; 63
+ 95e:	0f 90       	pop	r0
+ 960:	1f 90       	pop	r1
+ 962:	18 95       	reti
+
+Disassembly of section .text.__vector_35:
+
+00000ca8 <__vector_35>:
+
+ISR(PORTF_PORT_vect)
+{ 
+ ca8:	1f 92       	push	r1
+ caa:	0f 92       	push	r0
+ cac:	0f b6       	in	r0, 0x3f	; 63
+ cae:	0f 92       	push	r0
+ cb0:	11 24       	eor	r1, r1
+ cb2:	0b b6       	in	r0, 0x3b	; 59
+ cb4:	0f 92       	push	r0
+ cb6:	2f 93       	push	r18
+ cb8:	3f 93       	push	r19
+ cba:	4f 93       	push	r20
+ cbc:	5f 93       	push	r21
+ cbe:	6f 93       	push	r22
+ cc0:	7f 93       	push	r23
+ cc2:	8f 93       	push	r24
+ cc4:	9f 93       	push	r25
+ cc6:	af 93       	push	r26
+ cc8:	bf 93       	push	r27
+ cca:	ef 93       	push	r30
+ ccc:	ff 93       	push	r31
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTF.INTFLAGS & PORT_INT2_bm)
+ cce:	ba 9b       	sbis	0x17, 2	; 23
+ cd0:	05 c0       	rjmp	.+10     	; 0xcdc <__vector_35+0x34>
+    {
+       ADC_16_InterruptHandler(); 
+ cd2:	e0 91 2c 72 	lds	r30, 0x722C	; 0x80722c <ADC_16_InterruptHandler>
+ cd6:	f0 91 2d 72 	lds	r31, 0x722D	; 0x80722d <ADC_16_InterruptHandler+0x1>
+ cda:	09 95       	icall
+    }
+    if(VPORTF.INTFLAGS & PORT_INT3_bm)
+ cdc:	bb 9b       	sbis	0x17, 3	; 23
+ cde:	05 c0       	rjmp	.+10     	; 0xcea <__vector_35+0x42>
+    {
+       ADC_17_InterruptHandler(); 
+ ce0:	e0 91 2a 72 	lds	r30, 0x722A	; 0x80722a <ADC_17_InterruptHandler>
+ ce4:	f0 91 2b 72 	lds	r31, 0x722B	; 0x80722b <ADC_17_InterruptHandler+0x1>
+ ce8:	09 95       	icall
+    }
+    if(VPORTF.INTFLAGS & PORT_INT4_bm)
+ cea:	bc 9b       	sbis	0x17, 4	; 23
+ cec:	05 c0       	rjmp	.+10     	; 0xcf8 <__vector_35+0x50>
+    {
+       ADC_18_InterruptHandler(); 
+ cee:	e0 91 28 72 	lds	r30, 0x7228	; 0x807228 <ADC_18_InterruptHandler>
+ cf2:	f0 91 29 72 	lds	r31, 0x7229	; 0x807229 <ADC_18_InterruptHandler+0x1>
+ cf6:	09 95       	icall
+    }
+    if(VPORTF.INTFLAGS & PORT_INT5_bm)
+ cf8:	bd 9b       	sbis	0x17, 5	; 23
+ cfa:	05 c0       	rjmp	.+10     	; 0xd06 <__vector_35+0x5e>
+    {
+       ADC_19_InterruptHandler(); 
+ cfc:	e0 91 26 72 	lds	r30, 0x7226	; 0x807226 <ADC_19_InterruptHandler>
+ d00:	f0 91 27 72 	lds	r31, 0x7227	; 0x807227 <ADC_19_InterruptHandler+0x1>
+ d04:	09 95       	icall
+    }
+    /* Clear interrupt flags */
+    VPORTF.INTFLAGS = 0xff;
+ d06:	8f ef       	ldi	r24, 0xFF	; 255
+ d08:	87 bb       	out	0x17, r24	; 23
+}
+ d0a:	ff 91       	pop	r31
+ d0c:	ef 91       	pop	r30
+ d0e:	bf 91       	pop	r27
+ d10:	af 91       	pop	r26
+ d12:	9f 91       	pop	r25
+ d14:	8f 91       	pop	r24
+ d16:	7f 91       	pop	r23
+ d18:	6f 91       	pop	r22
+ d1a:	5f 91       	pop	r21
+ d1c:	4f 91       	pop	r20
+ d1e:	3f 91       	pop	r19
+ d20:	2f 91       	pop	r18
+ d22:	0f 90       	pop	r0
+ d24:	0b be       	out	0x3b, r0	; 59
+ d26:	0f 90       	pop	r0
+ d28:	0f be       	out	0x3f, r0	; 63
+ d2a:	0f 90       	pop	r0
+ d2c:	1f 90       	pop	r1
+ d2e:	18 95       	reti
+
+Disassembly of section .text.__vector_59:
+
+00000a20 <__vector_59>:
+
+ISR(PORTG_PORT_vect)
+{ 
+ a20:	1f 92       	push	r1
+ a22:	0f 92       	push	r0
+ a24:	0f b6       	in	r0, 0x3f	; 63
+ a26:	0f 92       	push	r0
+ a28:	11 24       	eor	r1, r1
+ a2a:	0b b6       	in	r0, 0x3b	; 59
+ a2c:	0f 92       	push	r0
+ a2e:	2f 93       	push	r18
+ a30:	3f 93       	push	r19
+ a32:	4f 93       	push	r20
+ a34:	5f 93       	push	r21
+ a36:	6f 93       	push	r22
+ a38:	7f 93       	push	r23
+ a3a:	8f 93       	push	r24
+ a3c:	9f 93       	push	r25
+ a3e:	af 93       	push	r26
+ a40:	bf 93       	push	r27
+ a42:	ef 93       	push	r30
+ a44:	ff 93       	push	r31
+    // Call the interrupt handler for the callback registered at runtime
+    if(VPORTG.INTFLAGS & PORT_INT1_bm)
+ a46:	d9 9b       	sbis	0x1b, 1	; 27
+ a48:	05 c0       	rjmp	.+10     	; 0xa54 <__vector_59+0x34>
+    {
+       CTR_13_InterruptHandler(); 
+ a4a:	e0 91 24 72 	lds	r30, 0x7224	; 0x807224 <CTR_13_InterruptHandler>
+ a4e:	f0 91 25 72 	lds	r31, 0x7225	; 0x807225 <CTR_13_InterruptHandler+0x1>
+ a52:	09 95       	icall
+    }
+    if(VPORTG.INTFLAGS & PORT_INT2_bm)
+ a54:	da 9b       	sbis	0x1b, 2	; 27
+ a56:	05 c0       	rjmp	.+10     	; 0xa62 <__vector_59+0x42>
+    {
+       CTR_14_InterruptHandler(); 
+ a58:	e0 91 22 72 	lds	r30, 0x7222	; 0x807222 <CTR_14_InterruptHandler>
+ a5c:	f0 91 23 72 	lds	r31, 0x7223	; 0x807223 <CTR_14_InterruptHandler+0x1>
+ a60:	09 95       	icall
+    }
+    if(VPORTG.INTFLAGS & PORT_INT3_bm)
+ a62:	db 9b       	sbis	0x1b, 3	; 27
+ a64:	05 c0       	rjmp	.+10     	; 0xa70 <__vector_59+0x50>
+    {
+       CTR_15_InterruptHandler(); 
+ a66:	e0 91 20 72 	lds	r30, 0x7220	; 0x807220 <CTR_15_InterruptHandler>
+ a6a:	f0 91 21 72 	lds	r31, 0x7221	; 0x807221 <CTR_15_InterruptHandler+0x1>
+ a6e:	09 95       	icall
+    }
+    if(VPORTG.INTFLAGS & PORT_INT4_bm)
+ a70:	dc 9b       	sbis	0x1b, 4	; 27
+ a72:	05 c0       	rjmp	.+10     	; 0xa7e <__vector_59+0x5e>
+    {
+       CTR_16_InterruptHandler(); 
+ a74:	e0 91 1e 72 	lds	r30, 0x721E	; 0x80721e <CTR_16_InterruptHandler>
+ a78:	f0 91 1f 72 	lds	r31, 0x721F	; 0x80721f <CTR_16_InterruptHandler+0x1>
+ a7c:	09 95       	icall
+    }
+    if(VPORTG.INTFLAGS & PORT_INT5_bm)
+ a7e:	dd 9b       	sbis	0x1b, 5	; 27
+ a80:	05 c0       	rjmp	.+10     	; 0xa8c <__vector_59+0x6c>
+    {
+       CTR_17_InterruptHandler(); 
+ a82:	e0 91 1c 72 	lds	r30, 0x721C	; 0x80721c <CTR_17_InterruptHandler>
+ a86:	f0 91 1d 72 	lds	r31, 0x721D	; 0x80721d <CTR_17_InterruptHandler+0x1>
+ a8a:	09 95       	icall
+    }
+    if(VPORTG.INTFLAGS & PORT_INT6_bm)
+ a8c:	de 9b       	sbis	0x1b, 6	; 27
+ a8e:	05 c0       	rjmp	.+10     	; 0xa9a <__vector_59+0x7a>
+    {
+       CTR_18_InterruptHandler(); 
+ a90:	e0 91 1a 72 	lds	r30, 0x721A	; 0x80721a <CTR_18_InterruptHandler>
+ a94:	f0 91 1b 72 	lds	r31, 0x721B	; 0x80721b <CTR_18_InterruptHandler+0x1>
+ a98:	09 95       	icall
+    }
+    if(VPORTG.INTFLAGS & PORT_INT7_bm)
+ a9a:	df 9b       	sbis	0x1b, 7	; 27
+ a9c:	05 c0       	rjmp	.+10     	; 0xaa8 <__vector_59+0x88>
+    {
+       CTR_19_InterruptHandler(); 
+ a9e:	e0 91 18 72 	lds	r30, 0x7218	; 0x807218 <CTR_19_InterruptHandler>
+ aa2:	f0 91 19 72 	lds	r31, 0x7219	; 0x807219 <CTR_19_InterruptHandler+0x1>
+ aa6:	09 95       	icall
+    }
+    /* Clear interrupt flags */
+    VPORTG.INTFLAGS = 0xff;
+ aa8:	8f ef       	ldi	r24, 0xFF	; 255
+ aaa:	8b bb       	out	0x1b, r24	; 27
+}
+ aac:	ff 91       	pop	r31
+ aae:	ef 91       	pop	r30
+ ab0:	bf 91       	pop	r27
+ ab2:	af 91       	pop	r26
+ ab4:	9f 91       	pop	r25
+ ab6:	8f 91       	pop	r24
+ ab8:	7f 91       	pop	r23
+ aba:	6f 91       	pop	r22
+ abc:	5f 91       	pop	r21
+ abe:	4f 91       	pop	r20
+ ac0:	3f 91       	pop	r19
+ ac2:	2f 91       	pop	r18
+ ac4:	0f 90       	pop	r0
+ ac6:	0b be       	out	0x3b, r0	; 59
+ ac8:	0f 90       	pop	r0
+ aca:	0f be       	out	0x3f, r0	; 63
+ acc:	0f 90       	pop	r0
+ ace:	1f 90       	pop	r1
+ ad0:	18 95       	reti
+
+Disassembly of section .text.protected_write_io:
+
+000013e4 <protected_write_io>:
+	PUBLIC_FUNCTION(protected_write_io)
+
+#if defined(__GNUC__)
+  
+#ifdef RAMPZ
+	out     _SFR_IO_ADDR(RAMPZ), r1         // Clear bits 23:16 of Z
+    13e4:	1b be       	out	0x3b, r1	; 59
+#endif
+	movw    r30, r24                // Load addr into Z
+    13e6:	fc 01       	movw	r30, r24
+	out     CCP, r22                // Start CCP handshake
+    13e8:	64 bf       	out	0x34, r22	; 52
+	st      Z, r20                  // Write value to I/O register
+    13ea:	40 83       	st	Z, r20
+	ret                             // Return to caller
+    13ec:	08 95       	ret
+
+Disassembly of section .text.SYSTEM_Initialize:
+
+000011a6 <SYSTEM_Initialize>:
+
+#include "../system.h"
+
+void SYSTEM_Initialize(void)
+{
+    CLOCK_Initialize();
+    11a6:	0e 94 0d 06 	call	0xc1a	; 0xc1a <CLOCK_Initialize>
+    PIN_MANAGER_Initialize();
+    11aa:	0e 94 10 01 	call	0x220	; 0x220 <__data_load_end>
+    TCA0_Initialize();
+    11ae:	0e 94 8f 08 	call	0x111e	; 0x111e <TCA0_Initialize>
+    ADC0_Initialize();
+    11b2:	0e 94 ac 08 	call	0x1158	; 0x1158 <ADC0_Initialize>
+    EVSYS_Initialize();
+    11b6:	0e 94 b2 04 	call	0x964	; 0x964 <EVSYS_Initialize>
+    VREF_Initialize();
+    11ba:	0e 94 02 09 	call	0x1204	; 0x1204 <VREF_Initialize>
+    CPUINT_Initialize();
+    11be:	0e 94 e2 08 	call	0x11c4	; 0x11c4 <CPUINT_Initialize>
+    11c2:	08 95       	ret
+
+Disassembly of section .text.TCA0_Initialize:
+
+0000111e <TCA0_Initialize>:
+static void (*TCA0_CMP2Callback)(void) = NULL;
+static void (*TCA0_OVFCallback)(void) = NULL;
+
+void TCA0_Initialize(void) 
+{
+    TCA0.SINGLE.CMP0 = 0x0;  // CMP0 0x0
+    111e:	e0 e0       	ldi	r30, 0x00	; 0
+    1120:	fa e0       	ldi	r31, 0x0A	; 10
+    1122:	10 a6       	std	Z+40, r1	; 0x28
+    1124:	11 a6       	std	Z+41, r1	; 0x29
+
+    TCA0.SINGLE.CMP1 = 0x0;  // CMP1 0x0
+    1126:	12 a6       	std	Z+42, r1	; 0x2a
+    1128:	13 a6       	std	Z+43, r1	; 0x2b
+
+    TCA0.SINGLE.CMP2 = 0x0;  // CMP2 0x0
+    112a:	14 a6       	std	Z+44, r1	; 0x2c
+    112c:	15 a6       	std	Z+45, r1	; 0x2d
+
+    TCA0.SINGLE.CNT = 0x0;  // CNT 0x0
+    112e:	10 a2       	std	Z+32, r1	; 0x20
+    1130:	11 a2       	std	Z+33, r1	; 0x21
+
+    TCA0.SINGLE.CTRLB = (0 << TCA_SINGLE_ALUPD_bp)   // ALUPD disabled
+    1132:	11 82       	std	Z+1, r1	; 0x01
+        | (0 << TCA_SINGLE_CMP0EN_bp)   // CMP0EN disabled
+        | (0 << TCA_SINGLE_CMP1EN_bp)   // CMP1EN disabled
+        | (0 << TCA_SINGLE_CMP2EN_bp)   // CMP2EN disabled
+        | (TCA_SINGLE_WGMODE_NORMAL_gc);  // WGMODE NORMAL
+
+    TCA0.SINGLE.CTRLC = (0 << TCA_SINGLE_CMP0OV_bp)   // CMP0OV disabled
+    1134:	12 82       	std	Z+2, r1	; 0x02
+        | (0 << TCA_SINGLE_CMP1OV_bp)   // CMP1OV disabled
+        | (0 << TCA_SINGLE_CMP2OV_bp);  // CMP2OV disabled
+
+    TCA0.SINGLE.CTRLD = (0 << TCA_SINGLE_SPLITM_bp);  // SPLITM disabled
+    1136:	13 82       	std	Z+3, r1	; 0x03
+
+    TCA0.SINGLE.CTRLECLR = (TCA_SINGLE_CMD_NONE_gc)   // CMD NONE
+    1138:	14 82       	std	Z+4, r1	; 0x04
+        | (0 << TCA_SINGLE_DIR_bp)   // DIR disabled
+        | (0 << TCA_SINGLE_LUPD_bp);  // LUPD disabled
+
+    TCA0.SINGLE.CTRLESET = (TCA_SINGLE_CMD_NONE_gc)   // CMD NONE
+    113a:	15 82       	std	Z+5, r1	; 0x05
+        | (TCA_SINGLE_DIR_UP_gc)   // DIR UP
+        | (0 << TCA_SINGLE_LUPD_bp);  // LUPD disabled
+
+    TCA0.SINGLE.CTRLFCLR = (0 << TCA_SINGLE_CMP0BV_bp)   // CMP0BV disabled
+    113c:	16 82       	std	Z+6, r1	; 0x06
+        | (0 << TCA_SINGLE_CMP1BV_bp)   // CMP1BV disabled
+        | (0 << TCA_SINGLE_CMP2BV_bp)   // CMP2BV disabled
+        | (0 << TCA_SINGLE_PERBV_bp);  // PERBV disabled
+
+    TCA0.SINGLE.CTRLFSET = (0 << TCA_SINGLE_CMP0BV_bp)   // CMP0BV disabled
+    113e:	17 82       	std	Z+7, r1	; 0x07
+        | (0 << TCA_SINGLE_CMP1BV_bp)   // CMP1BV disabled
+        | (0 << TCA_SINGLE_CMP2BV_bp)   // CMP2BV disabled
+        | (0 << TCA_SINGLE_PERBV_bp);  // PERBV disabled
+
+    TCA0.SINGLE.DBGCTRL = (0 << TCA_SINGLE_DBGRUN_bp);  // DBGRUN disabled
+    1140:	16 86       	std	Z+14, r1	; 0x0e
+
+    TCA0.SINGLE.EVCTRL = (0 << TCA_SINGLE_CNTAEI_bp)   // CNTAEI disabled
+    1142:	11 86       	std	Z+9, r1	; 0x09
+        | (0 << TCA_SINGLE_CNTBEI_bp)   // CNTBEI disabled
+        | (TCA_SINGLE_EVACTA_CNT_POSEDGE_gc)   // EVACTA CNT_POSEDGE
+        | (TCA_SINGLE_EVACTB_NONE_gc);  // EVACTB NONE
+
+    TCA0.SINGLE.INTCTRL = (0 << TCA_SINGLE_CMP0_bp)   // CMP0 disabled
+    1144:	12 86       	std	Z+10, r1	; 0x0a
+        | (0 << TCA_SINGLE_CMP1_bp)   // CMP1 disabled
+        | (0 << TCA_SINGLE_CMP2_bp)   // CMP2 disabled
+        | (0 << TCA_SINGLE_OVF_bp);  // OVF disabled
+
+    TCA0.SINGLE.INTFLAGS = (0 << TCA_SINGLE_CMP0_bp)   // CMP0 disabled
+    1146:	13 86       	std	Z+11, r1	; 0x0b
+        | (0 << TCA_SINGLE_CMP1_bp)   // CMP1 disabled
+        | (0 << TCA_SINGLE_CMP2_bp)   // CMP2 disabled
+        | (0 << TCA_SINGLE_OVF_bp);  // OVF disabled
+
+    TCA0.SINGLE.PER = 0xFFFFU;  // PER 0xFFFF
+    1148:	8f ef       	ldi	r24, 0xFF	; 255
+    114a:	9f ef       	ldi	r25, 0xFF	; 255
+    114c:	86 a3       	std	Z+38, r24	; 0x26
+    114e:	97 a3       	std	Z+39, r25	; 0x27
+
+    TCA0.SINGLE.TEMP = 0x0;  // TEMP 0x0
+    1150:	17 86       	std	Z+15, r1	; 0x0f
+
+    TCA0.SINGLE.CTRLA = (TCA_SINGLE_CLKSEL_DIV4_gc)   // CLKSEL DIV4
+    1152:	85 e0       	ldi	r24, 0x05	; 5
+    1154:	80 83       	st	Z, r24
+    1156:	08 95       	ret
+
+Disassembly of section .text.VREF_Initialize:
+
+00001204 <VREF_Initialize>:
+#include "../vref.h"
+
+int8_t VREF_Initialize(void)
+{
+    // ALWAYSON disabled; REFSEL Internal 1.024V reference; 
+    VREF.ACREF = 0x0;
+    1204:	e0 eb       	ldi	r30, 0xB0	; 176
+    1206:	f0 e0       	ldi	r31, 0x00	; 0
+    1208:	14 82       	std	Z+4, r1	; 0x04
+    
+    // ALWAYSON disabled; REFSEL Internal 1.024V reference; 
+    VREF.ADC0REF = 0x0;
+    120a:	10 82       	st	Z, r1
+    
+    // ALWAYSON disabled; REFSEL Internal 1.024V reference; 
+    VREF.DAC0REF = 0x0;
+    120c:	12 82       	std	Z+2, r1	; 0x02
+    
+	return 0;
+    120e:	80 e0       	ldi	r24, 0x00	; 0
+    1210:	08 95       	ret
+
+Disassembly of section .text:
+
+000013ee <__cmpsf2>:
+    13ee:	0e 94 49 08 	call	0x1092	; 0x1092 <__fp_cmp>
+    13f2:	08 f4       	brcc	.+2      	; 0x13f6 <__cmpsf2+0x8>
+    13f4:	81 e0       	ldi	r24, 0x01	; 1
+    13f6:	08 95       	ret
+
+Disassembly of section .text:
+
+00001402 <__divsf3>:
+    1402:	0e 94 48 02 	call	0x490	; 0x490 <__divsf3x>
+    1406:	0c 94 c2 08 	jmp	0x1184	; 0x1184 <__fp_round>
+
+Disassembly of section .text:
+
+00000490 <__divsf3x>:
+ 490:	10 c0       	rjmp	.+32     	; 0x4b2 <__divsf3x+0x22>
+ 492:	0e 94 10 09 	call	0x1220	; 0x1220 <__fp_pscB>
+ 496:	58 f0       	brcs	.+22     	; 0x4ae <__divsf3x+0x1e>
+ 498:	0e 94 09 09 	call	0x1212	; 0x1212 <__fp_pscA>
+ 49c:	40 f0       	brcs	.+16     	; 0x4ae <__divsf3x+0x1e>
+ 49e:	29 f4       	brne	.+10     	; 0x4aa <__divsf3x+0x1a>
+ 4a0:	5f 3f       	cpi	r21, 0xFF	; 255
+ 4a2:	29 f0       	breq	.+10     	; 0x4ae <__divsf3x+0x1e>
+ 4a4:	0c 94 24 09 	jmp	0x1248	; 0x1248 <__fp_inf>
+ 4a8:	51 11       	cpse	r21, r1
+ 4aa:	0c 94 18 09 	jmp	0x1230	; 0x1230 <__fp_szero>
+ 4ae:	0c 94 09 0a 	jmp	0x1412	; 0x1412 <__fp_nan>
+ 4b2:	0e 94 6d 08 	call	0x10da	; 0x10da <__fp_split3>
+ 4b6:	68 f3       	brcs	.-38     	; 0x492 <__divsf3x+0x2>
+
+000004b8 <__divsf3_pse>:
+ 4b8:	99 23       	and	r25, r25
+ 4ba:	b1 f3       	breq	.-20     	; 0x4a8 <__divsf3x+0x18>
+ 4bc:	55 23       	and	r21, r21
+ 4be:	91 f3       	breq	.-28     	; 0x4a4 <__divsf3x+0x14>
+ 4c0:	95 1b       	sub	r25, r21
+ 4c2:	55 0b       	sbc	r21, r21
+ 4c4:	bb 27       	eor	r27, r27
+ 4c6:	aa 27       	eor	r26, r26
+ 4c8:	62 17       	cp	r22, r18
+ 4ca:	73 07       	cpc	r23, r19
+ 4cc:	84 07       	cpc	r24, r20
+ 4ce:	38 f0       	brcs	.+14     	; 0x4de <__divsf3_pse+0x26>
+ 4d0:	9f 5f       	subi	r25, 0xFF	; 255
+ 4d2:	5f 4f       	sbci	r21, 0xFF	; 255
+ 4d4:	22 0f       	add	r18, r18
+ 4d6:	33 1f       	adc	r19, r19
+ 4d8:	44 1f       	adc	r20, r20
+ 4da:	aa 1f       	adc	r26, r26
+ 4dc:	a9 f3       	breq	.-22     	; 0x4c8 <__divsf3_pse+0x10>
+ 4de:	35 d0       	rcall	.+106    	; 0x54a <__divsf3_pse+0x92>
+ 4e0:	0e 2e       	mov	r0, r30
+ 4e2:	3a f0       	brmi	.+14     	; 0x4f2 <__divsf3_pse+0x3a>
+ 4e4:	e0 e8       	ldi	r30, 0x80	; 128
+ 4e6:	32 d0       	rcall	.+100    	; 0x54c <__divsf3_pse+0x94>
+ 4e8:	91 50       	subi	r25, 0x01	; 1
+ 4ea:	50 40       	sbci	r21, 0x00	; 0
+ 4ec:	e6 95       	lsr	r30
+ 4ee:	00 1c       	adc	r0, r0
+ 4f0:	ca f7       	brpl	.-14     	; 0x4e4 <__divsf3_pse+0x2c>
+ 4f2:	2b d0       	rcall	.+86     	; 0x54a <__divsf3_pse+0x92>
+ 4f4:	fe 2f       	mov	r31, r30
+ 4f6:	29 d0       	rcall	.+82     	; 0x54a <__divsf3_pse+0x92>
+ 4f8:	66 0f       	add	r22, r22
+ 4fa:	77 1f       	adc	r23, r23
+ 4fc:	88 1f       	adc	r24, r24
+ 4fe:	bb 1f       	adc	r27, r27
+ 500:	26 17       	cp	r18, r22
+ 502:	37 07       	cpc	r19, r23
+ 504:	48 07       	cpc	r20, r24
+ 506:	ab 07       	cpc	r26, r27
+ 508:	b0 e8       	ldi	r27, 0x80	; 128
+ 50a:	09 f0       	breq	.+2      	; 0x50e <__divsf3_pse+0x56>
+ 50c:	bb 0b       	sbc	r27, r27
+ 50e:	80 2d       	mov	r24, r0
+ 510:	bf 01       	movw	r22, r30
+ 512:	ff 27       	eor	r31, r31
+ 514:	93 58       	subi	r25, 0x83	; 131
+ 516:	5f 4f       	sbci	r21, 0xFF	; 255
+ 518:	3a f0       	brmi	.+14     	; 0x528 <__divsf3_pse+0x70>
+ 51a:	9e 3f       	cpi	r25, 0xFE	; 254
+ 51c:	51 05       	cpc	r21, r1
+ 51e:	78 f0       	brcs	.+30     	; 0x53e <__divsf3_pse+0x86>
+ 520:	0c 94 24 09 	jmp	0x1248	; 0x1248 <__fp_inf>
+ 524:	0c 94 18 09 	jmp	0x1230	; 0x1230 <__fp_szero>
+ 528:	5f 3f       	cpi	r21, 0xFF	; 255
+ 52a:	e4 f3       	brlt	.-8      	; 0x524 <__divsf3_pse+0x6c>
+ 52c:	98 3e       	cpi	r25, 0xE8	; 232
+ 52e:	d4 f3       	brlt	.-12     	; 0x524 <__divsf3_pse+0x6c>
+ 530:	86 95       	lsr	r24
+ 532:	77 95       	ror	r23
+ 534:	67 95       	ror	r22
+ 536:	b7 95       	ror	r27
+ 538:	f7 95       	ror	r31
+ 53a:	9f 5f       	subi	r25, 0xFF	; 255
+ 53c:	c9 f7       	brne	.-14     	; 0x530 <__divsf3_pse+0x78>
+ 53e:	88 0f       	add	r24, r24
+ 540:	91 1d       	adc	r25, r1
+ 542:	96 95       	lsr	r25
+ 544:	87 95       	ror	r24
+ 546:	97 f9       	bld	r25, 7
+ 548:	08 95       	ret
+ 54a:	e1 e0       	ldi	r30, 0x01	; 1
+ 54c:	66 0f       	add	r22, r22
+ 54e:	77 1f       	adc	r23, r23
+ 550:	88 1f       	adc	r24, r24
+ 552:	bb 1f       	adc	r27, r27
+ 554:	62 17       	cp	r22, r18
+ 556:	73 07       	cpc	r23, r19
+ 558:	84 07       	cpc	r24, r20
+ 55a:	ba 07       	cpc	r27, r26
+ 55c:	20 f0       	brcs	.+8      	; 0x566 <__divsf3_pse+0xae>
+ 55e:	62 1b       	sub	r22, r18
+ 560:	73 0b       	sbc	r23, r19
+ 562:	84 0b       	sbc	r24, r20
+ 564:	ba 0b       	sbc	r27, r26
+ 566:	ee 1f       	adc	r30, r30
+ 568:	88 f7       	brcc	.-30     	; 0x54c <__divsf3_pse+0x94>
+ 56a:	e0 95       	com	r30
+ 56c:	08 95       	ret
+
+Disassembly of section .text:
+
+00000d30 <__floatunsisf>:
+ d30:	e8 94       	clt
+ d32:	09 c0       	rjmp	.+18     	; 0xd46 <__floatsisf+0x12>
+
+00000d34 <__floatsisf>:
+ d34:	97 fb       	bst	r25, 7
+ d36:	3e f4       	brtc	.+14     	; 0xd46 <__floatsisf+0x12>
+ d38:	90 95       	com	r25
+ d3a:	80 95       	com	r24
+ d3c:	70 95       	com	r23
+ d3e:	61 95       	neg	r22
+ d40:	7f 4f       	sbci	r23, 0xFF	; 255
+ d42:	8f 4f       	sbci	r24, 0xFF	; 255
+ d44:	9f 4f       	sbci	r25, 0xFF	; 255
+ d46:	99 23       	and	r25, r25
+ d48:	a9 f0       	breq	.+42     	; 0xd74 <__floatsisf+0x40>
+ d4a:	f9 2f       	mov	r31, r25
+ d4c:	96 e9       	ldi	r25, 0x96	; 150
+ d4e:	bb 27       	eor	r27, r27
+ d50:	93 95       	inc	r25
+ d52:	f6 95       	lsr	r31
+ d54:	87 95       	ror	r24
+ d56:	77 95       	ror	r23
+ d58:	67 95       	ror	r22
+ d5a:	b7 95       	ror	r27
+ d5c:	f1 11       	cpse	r31, r1
+ d5e:	f8 cf       	rjmp	.-16     	; 0xd50 <__floatsisf+0x1c>
+ d60:	fa f4       	brpl	.+62     	; 0xda0 <__floatsisf+0x6c>
+ d62:	bb 0f       	add	r27, r27
+ d64:	11 f4       	brne	.+4      	; 0xd6a <__floatsisf+0x36>
+ d66:	60 ff       	sbrs	r22, 0
+ d68:	1b c0       	rjmp	.+54     	; 0xda0 <__floatsisf+0x6c>
+ d6a:	6f 5f       	subi	r22, 0xFF	; 255
+ d6c:	7f 4f       	sbci	r23, 0xFF	; 255
+ d6e:	8f 4f       	sbci	r24, 0xFF	; 255
+ d70:	9f 4f       	sbci	r25, 0xFF	; 255
+ d72:	16 c0       	rjmp	.+44     	; 0xda0 <__floatsisf+0x6c>
+ d74:	88 23       	and	r24, r24
+ d76:	11 f0       	breq	.+4      	; 0xd7c <__floatsisf+0x48>
+ d78:	96 e9       	ldi	r25, 0x96	; 150
+ d7a:	11 c0       	rjmp	.+34     	; 0xd9e <__floatsisf+0x6a>
+ d7c:	77 23       	and	r23, r23
+ d7e:	21 f0       	breq	.+8      	; 0xd88 <__floatsisf+0x54>
+ d80:	9e e8       	ldi	r25, 0x8E	; 142
+ d82:	87 2f       	mov	r24, r23
+ d84:	76 2f       	mov	r23, r22
+ d86:	05 c0       	rjmp	.+10     	; 0xd92 <__floatsisf+0x5e>
+ d88:	66 23       	and	r22, r22
+ d8a:	71 f0       	breq	.+28     	; 0xda8 <__floatsisf+0x74>
+ d8c:	96 e8       	ldi	r25, 0x86	; 134
+ d8e:	86 2f       	mov	r24, r22
+ d90:	70 e0       	ldi	r23, 0x00	; 0
+ d92:	60 e0       	ldi	r22, 0x00	; 0
+ d94:	2a f0       	brmi	.+10     	; 0xda0 <__floatsisf+0x6c>
+ d96:	9a 95       	dec	r25
+ d98:	66 0f       	add	r22, r22
+ d9a:	77 1f       	adc	r23, r23
+ d9c:	88 1f       	adc	r24, r24
+ d9e:	da f7       	brpl	.-10     	; 0xd96 <__floatsisf+0x62>
+ da0:	88 0f       	add	r24, r24
+ da2:	96 95       	lsr	r25
+ da4:	87 95       	ror	r24
+ da6:	97 f9       	bld	r25, 7
+ da8:	08 95       	ret
+
+Disassembly of section .text:
+
+00001092 <__fp_cmp>:
+    1092:	99 0f       	add	r25, r25
+    1094:	00 08       	sbc	r0, r0
+    1096:	55 0f       	add	r21, r21
+    1098:	aa 0b       	sbc	r26, r26
+    109a:	e0 e8       	ldi	r30, 0x80	; 128
+    109c:	fe ef       	ldi	r31, 0xFE	; 254
+    109e:	16 16       	cp	r1, r22
+    10a0:	17 06       	cpc	r1, r23
+    10a2:	e8 07       	cpc	r30, r24
+    10a4:	f9 07       	cpc	r31, r25
+    10a6:	c0 f0       	brcs	.+48     	; 0x10d8 <__fp_cmp+0x46>
+    10a8:	12 16       	cp	r1, r18
+    10aa:	13 06       	cpc	r1, r19
+    10ac:	e4 07       	cpc	r30, r20
+    10ae:	f5 07       	cpc	r31, r21
+    10b0:	98 f0       	brcs	.+38     	; 0x10d8 <__fp_cmp+0x46>
+    10b2:	62 1b       	sub	r22, r18
+    10b4:	73 0b       	sbc	r23, r19
+    10b6:	84 0b       	sbc	r24, r20
+    10b8:	95 0b       	sbc	r25, r21
+    10ba:	39 f4       	brne	.+14     	; 0x10ca <__fp_cmp+0x38>
+    10bc:	0a 26       	eor	r0, r26
+    10be:	61 f0       	breq	.+24     	; 0x10d8 <__fp_cmp+0x46>
+    10c0:	23 2b       	or	r18, r19
+    10c2:	24 2b       	or	r18, r20
+    10c4:	25 2b       	or	r18, r21
+    10c6:	21 f4       	brne	.+8      	; 0x10d0 <__fp_cmp+0x3e>
+    10c8:	08 95       	ret
+    10ca:	0a 26       	eor	r0, r26
+    10cc:	09 f4       	brne	.+2      	; 0x10d0 <__fp_cmp+0x3e>
+    10ce:	a1 40       	sbci	r26, 0x01	; 1
+    10d0:	a6 95       	lsr	r26
+    10d2:	8f ef       	ldi	r24, 0xFF	; 255
+    10d4:	81 1d       	adc	r24, r1
+    10d6:	81 1d       	adc	r24, r1
+    10d8:	08 95       	ret
+
+Disassembly of section .text:
+
+00001248 <__fp_inf>:
+    1248:	97 f9       	bld	r25, 7
+    124a:	9f 67       	ori	r25, 0x7F	; 127
+    124c:	80 e8       	ldi	r24, 0x80	; 128
+    124e:	70 e0       	ldi	r23, 0x00	; 0
+    1250:	60 e0       	ldi	r22, 0x00	; 0
+    1252:	08 95       	ret
+
+Disassembly of section .text:
+
+00001412 <__fp_nan>:
+    1412:	9f ef       	ldi	r25, 0xFF	; 255
+    1414:	80 ec       	ldi	r24, 0xC0	; 192
+    1416:	08 95       	ret
+
+Disassembly of section .text:
+
+00001212 <__fp_pscA>:
+    1212:	00 24       	eor	r0, r0
+    1214:	0a 94       	dec	r0
+    1216:	16 16       	cp	r1, r22
+    1218:	17 06       	cpc	r1, r23
+    121a:	18 06       	cpc	r1, r24
+    121c:	09 06       	cpc	r0, r25
+    121e:	08 95       	ret
+
+Disassembly of section .text:
+
+00001220 <__fp_pscB>:
+    1220:	00 24       	eor	r0, r0
+    1222:	0a 94       	dec	r0
+    1224:	12 16       	cp	r1, r18
+    1226:	13 06       	cpc	r1, r19
+    1228:	14 06       	cpc	r1, r20
+    122a:	05 06       	cpc	r0, r21
+    122c:	08 95       	ret
+
+Disassembly of section .text:
+
+00001184 <__fp_round>:
+    1184:	09 2e       	mov	r0, r25
+    1186:	03 94       	inc	r0
+    1188:	00 0c       	add	r0, r0
+    118a:	11 f4       	brne	.+4      	; 0x1190 <__fp_round+0xc>
+    118c:	88 23       	and	r24, r24
+    118e:	52 f0       	brmi	.+20     	; 0x11a4 <__fp_round+0x20>
+    1190:	bb 0f       	add	r27, r27
+    1192:	40 f4       	brcc	.+16     	; 0x11a4 <__fp_round+0x20>
+    1194:	bf 2b       	or	r27, r31
+    1196:	11 f4       	brne	.+4      	; 0x119c <__fp_round+0x18>
+    1198:	60 ff       	sbrs	r22, 0
+    119a:	04 c0       	rjmp	.+8      	; 0x11a4 <__fp_round+0x20>
+    119c:	6f 5f       	subi	r22, 0xFF	; 255
+    119e:	7f 4f       	sbci	r23, 0xFF	; 255
+    11a0:	8f 4f       	sbci	r24, 0xFF	; 255
+    11a2:	9f 4f       	sbci	r25, 0xFF	; 255
+    11a4:	08 95       	ret
+
+Disassembly of section .text:
+
+000010da <__fp_split3>:
+    10da:	57 fd       	sbrc	r21, 7
+    10dc:	90 58       	subi	r25, 0x80	; 128
+    10de:	44 0f       	add	r20, r20
+    10e0:	55 1f       	adc	r21, r21
+    10e2:	59 f0       	breq	.+22     	; 0x10fa <__fp_splitA+0x10>
+    10e4:	5f 3f       	cpi	r21, 0xFF	; 255
+    10e6:	71 f0       	breq	.+28     	; 0x1104 <__fp_splitA+0x1a>
+    10e8:	47 95       	ror	r20
+
+000010ea <__fp_splitA>:
+    10ea:	88 0f       	add	r24, r24
+    10ec:	97 fb       	bst	r25, 7
+    10ee:	99 1f       	adc	r25, r25
+    10f0:	61 f0       	breq	.+24     	; 0x110a <__fp_splitA+0x20>
+    10f2:	9f 3f       	cpi	r25, 0xFF	; 255
+    10f4:	79 f0       	breq	.+30     	; 0x1114 <__fp_splitA+0x2a>
+    10f6:	87 95       	ror	r24
+    10f8:	08 95       	ret
+    10fa:	12 16       	cp	r1, r18
+    10fc:	13 06       	cpc	r1, r19
+    10fe:	14 06       	cpc	r1, r20
+    1100:	55 1f       	adc	r21, r21
+    1102:	f2 cf       	rjmp	.-28     	; 0x10e8 <__fp_split3+0xe>
+    1104:	46 95       	lsr	r20
+    1106:	f1 df       	rcall	.-30     	; 0x10ea <__fp_splitA>
+    1108:	08 c0       	rjmp	.+16     	; 0x111a <__fp_splitA+0x30>
+    110a:	16 16       	cp	r1, r22
+    110c:	17 06       	cpc	r1, r23
+    110e:	18 06       	cpc	r1, r24
+    1110:	99 1f       	adc	r25, r25
+    1112:	f1 cf       	rjmp	.-30     	; 0x10f6 <__fp_splitA+0xc>
+    1114:	86 95       	lsr	r24
+    1116:	71 05       	cpc	r23, r1
+    1118:	61 05       	cpc	r22, r1
+    111a:	08 94       	sec
+    111c:	08 95       	ret
+
+Disassembly of section .text:
+
+0000122e <__fp_zero>:
+    122e:	e8 94       	clt
+
+00001230 <__fp_szero>:
+    1230:	bb 27       	eor	r27, r27
+    1232:	66 27       	eor	r22, r22
+    1234:	77 27       	eor	r23, r23
+    1236:	cb 01       	movw	r24, r22
+    1238:	97 f9       	bld	r25, 7
+    123a:	08 95       	ret
+
+Disassembly of section .text:
+
+000013f8 <__gesf2>:
+    13f8:	0e 94 49 08 	call	0x1092	; 0x1092 <__fp_cmp>
+    13fc:	08 f4       	brcc	.+2      	; 0x1400 <__gesf2+0x8>
+    13fe:	8f ef       	ldi	r24, 0xFF	; 255
+    1400:	08 95       	ret
+
+Disassembly of section .text:
+
+0000140a <__mulsf3>:
+    140a:	0e 94 24 03 	call	0x648	; 0x648 <__mulsf3x>
+    140e:	0c 94 c2 08 	jmp	0x1184	; 0x1184 <__fp_round>
+
+Disassembly of section .text:
+
+00000648 <__mulsf3x>:
+ 648:	0f c0       	rjmp	.+30     	; 0x668 <__mulsf3x+0x20>
+ 64a:	0e 94 09 09 	call	0x1212	; 0x1212 <__fp_pscA>
+ 64e:	38 f0       	brcs	.+14     	; 0x65e <__mulsf3x+0x16>
+ 650:	0e 94 10 09 	call	0x1220	; 0x1220 <__fp_pscB>
+ 654:	20 f0       	brcs	.+8      	; 0x65e <__mulsf3x+0x16>
+ 656:	95 23       	and	r25, r21
+ 658:	11 f0       	breq	.+4      	; 0x65e <__mulsf3x+0x16>
+ 65a:	0c 94 24 09 	jmp	0x1248	; 0x1248 <__fp_inf>
+ 65e:	0c 94 09 0a 	jmp	0x1412	; 0x1412 <__fp_nan>
+ 662:	11 24       	eor	r1, r1
+ 664:	0c 94 18 09 	jmp	0x1230	; 0x1230 <__fp_szero>
+ 668:	0e 94 6d 08 	call	0x10da	; 0x10da <__fp_split3>
+ 66c:	70 f3       	brcs	.-36     	; 0x64a <__mulsf3x+0x2>
+
+0000066e <__mulsf3_pse>:
+ 66e:	95 9f       	mul	r25, r21
+ 670:	c1 f3       	breq	.-16     	; 0x662 <__mulsf3x+0x1a>
+ 672:	95 0f       	add	r25, r21
+ 674:	50 e0       	ldi	r21, 0x00	; 0
+ 676:	55 1f       	adc	r21, r21
+ 678:	62 9f       	mul	r22, r18
+ 67a:	f0 01       	movw	r30, r0
+ 67c:	72 9f       	mul	r23, r18
+ 67e:	bb 27       	eor	r27, r27
+ 680:	f0 0d       	add	r31, r0
+ 682:	b1 1d       	adc	r27, r1
+ 684:	63 9f       	mul	r22, r19
+ 686:	aa 27       	eor	r26, r26
+ 688:	f0 0d       	add	r31, r0
+ 68a:	b1 1d       	adc	r27, r1
+ 68c:	aa 1f       	adc	r26, r26
+ 68e:	64 9f       	mul	r22, r20
+ 690:	66 27       	eor	r22, r22
+ 692:	b0 0d       	add	r27, r0
+ 694:	a1 1d       	adc	r26, r1
+ 696:	66 1f       	adc	r22, r22
+ 698:	82 9f       	mul	r24, r18
+ 69a:	22 27       	eor	r18, r18
+ 69c:	b0 0d       	add	r27, r0
+ 69e:	a1 1d       	adc	r26, r1
+ 6a0:	62 1f       	adc	r22, r18
+ 6a2:	73 9f       	mul	r23, r19
+ 6a4:	b0 0d       	add	r27, r0
+ 6a6:	a1 1d       	adc	r26, r1
+ 6a8:	62 1f       	adc	r22, r18
+ 6aa:	83 9f       	mul	r24, r19
+ 6ac:	a0 0d       	add	r26, r0
+ 6ae:	61 1d       	adc	r22, r1
+ 6b0:	22 1f       	adc	r18, r18
+ 6b2:	74 9f       	mul	r23, r20
+ 6b4:	33 27       	eor	r19, r19
+ 6b6:	a0 0d       	add	r26, r0
+ 6b8:	61 1d       	adc	r22, r1
+ 6ba:	23 1f       	adc	r18, r19
+ 6bc:	84 9f       	mul	r24, r20
+ 6be:	60 0d       	add	r22, r0
+ 6c0:	21 1d       	adc	r18, r1
+ 6c2:	82 2f       	mov	r24, r18
+ 6c4:	76 2f       	mov	r23, r22
+ 6c6:	6a 2f       	mov	r22, r26
+ 6c8:	11 24       	eor	r1, r1
+ 6ca:	9f 57       	subi	r25, 0x7F	; 127
+ 6cc:	50 40       	sbci	r21, 0x00	; 0
+ 6ce:	9a f0       	brmi	.+38     	; 0x6f6 <__mulsf3_pse+0x88>
+ 6d0:	f1 f0       	breq	.+60     	; 0x70e <__mulsf3_pse+0xa0>
+ 6d2:	88 23       	and	r24, r24
+ 6d4:	4a f0       	brmi	.+18     	; 0x6e8 <__mulsf3_pse+0x7a>
+ 6d6:	ee 0f       	add	r30, r30
+ 6d8:	ff 1f       	adc	r31, r31
+ 6da:	bb 1f       	adc	r27, r27
+ 6dc:	66 1f       	adc	r22, r22
+ 6de:	77 1f       	adc	r23, r23
+ 6e0:	88 1f       	adc	r24, r24
+ 6e2:	91 50       	subi	r25, 0x01	; 1
+ 6e4:	50 40       	sbci	r21, 0x00	; 0
+ 6e6:	a9 f7       	brne	.-22     	; 0x6d2 <__mulsf3_pse+0x64>
+ 6e8:	9e 3f       	cpi	r25, 0xFE	; 254
+ 6ea:	51 05       	cpc	r21, r1
+ 6ec:	80 f0       	brcs	.+32     	; 0x70e <__mulsf3_pse+0xa0>
+ 6ee:	0c 94 24 09 	jmp	0x1248	; 0x1248 <__fp_inf>
+ 6f2:	0c 94 18 09 	jmp	0x1230	; 0x1230 <__fp_szero>
+ 6f6:	5f 3f       	cpi	r21, 0xFF	; 255
+ 6f8:	e4 f3       	brlt	.-8      	; 0x6f2 <__mulsf3_pse+0x84>
+ 6fa:	98 3e       	cpi	r25, 0xE8	; 232
+ 6fc:	d4 f3       	brlt	.-12     	; 0x6f2 <__mulsf3_pse+0x84>
+ 6fe:	86 95       	lsr	r24
+ 700:	77 95       	ror	r23
+ 702:	67 95       	ror	r22
+ 704:	b7 95       	ror	r27
+ 706:	f7 95       	ror	r31
+ 708:	e7 95       	ror	r30
+ 70a:	9f 5f       	subi	r25, 0xFF	; 255
+ 70c:	c1 f7       	brne	.-16     	; 0x6fe <__mulsf3_pse+0x90>
+ 70e:	fe 2b       	or	r31, r30
+ 710:	88 0f       	add	r24, r24
+ 712:	91 1d       	adc	r25, r1
+ 714:	96 95       	lsr	r25
+ 716:	87 95       	ror	r24
+ 718:	97 f9       	bld	r25, 7
+ 71a:	08 95       	ret
+
+Disassembly of section .text.libgcc:
+
+000011f2 <__tablejump2__>:
+    11f2:	ee 0f       	add	r30, r30
+    11f4:	ff 1f       	adc	r31, r31
+    11f6:	00 24       	eor	r0, r0
+    11f8:	00 1c       	adc	r0, r0
+    11fa:	0b be       	out	0x3b, r0	; 59
+    11fc:	07 90       	elpm	r0, Z+
+    11fe:	f6 91       	elpm	r31, Z
+    1200:	e0 2d       	mov	r30, r0
+    1202:	09 94       	ijmp
+
+Disassembly of section .text.__dummy_fini:
+
+00001470 <_fini>:
+    1470:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+00001472 <__funcs_on_exit>:
+    1472:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+00001474 <__simulator_exit>:
+    1474:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+000011dc <exit>:
+    11dc:	ec 01       	movw	r28, r24
+    11de:	0e 94 39 0a 	call	0x1472	; 0x1472 <__funcs_on_exit>
+    11e2:	0e 94 38 0a 	call	0x1470	; 0x1470 <_fini>
+    11e6:	ce 01       	movw	r24, r28
+    11e8:	0e 94 3a 0a 	call	0x1474	; 0x1474 <__simulator_exit>
+    11ec:	ce 01       	movw	r24, r28
+    11ee:	0e 94 0e 0a 	call	0x141c	; 0x141c <_Exit>
+
+Disassembly of section .text._Exit:
+
+0000141c <_Exit>:
+    141c:	0e 94 0e 01 	call	0x21c	; 0x21c <_exit>

@@ -1,0 +1,16 @@
+/*
+ * main.c
+ *
+ * Created: 5/1/2025 12:18:28 PM
+ *  Author: ryanw
+ */ 
+
+#include <xc.h>
+
+int main(void)
+{
+    while(1)
+    {
+        //TODO:: Please write your application code 
+    }
+}

@@ -42,7 +42,7 @@ void parseTerminalData(char* strData){
 	else if(strcmp(terminalBuffer, "get time") == 0) {
 		//TODO: display local time
 		char date[100];
-		sprintf(date, "Local time: %0.2lu/%0.2lu/%lu %0.2lu:%0.2lu", month, day, year, hour, minute);
+		sprintf(date, "Local time: %0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", month, day, year, hour, minute, second);
 		transmitTerminal(date);	//display local MCU time
 	}
 	else if(strcmp(terminalBuffer, "char done") == 0) {
@@ -52,6 +52,14 @@ void parseTerminalData(char* strData){
 	else if(strcmp(terminalBuffer, "fault") == 0) {
 		//Simulate a successful characterization
 		transmitHmi(PAGE_FAULT_DETECTED, NULL, NULL, NULL, 4);
+	}
+	else if(strcmp(terminalBuffer, "label") == 0) {
+		//Simulate a successful characterization
+		transmitHmi(PAGE_HOME, "t0", NULL, "ok", 2);
+	}
+	else if(strcmp(terminalBuffer, "update time") == 0) {
+		//Simulate a successful characterization
+		getTime();
 	}
 	
 	//TODO: add more commands to test MCU functions

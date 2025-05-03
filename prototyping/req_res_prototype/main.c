@@ -37,16 +37,44 @@ void initTimer1s() {
 }
 
 ISR(TCA0_OVF_vect) {
-	//get a value every second
-	/*
-	switch((timerFlag++)%4){
-		case 0: transmitHmi(PAGE_MCU,N0,VAL,NULL, 1); break;
-		case 1: transmitHmi(PAGE_MCU,N1,VAL,NULL, 1); break;
-		case 2: transmitHmi(PAGE_MCU,T2,TXT,NULL, 1); break;
-		case 3: transmitHmi(PAGE_MCU,T3,TXT,NULL, 1); break;
-		default: transmitHmi(PAGE_MCU,N0,VAL,NULL, 1); break;
+	// Update time 
+	//Leap year logic
+	if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+		daysInMonth[2] = 29;
+	else
+		daysInMonth[2] = 28;
+	
+	second++;	//increment seconds
+	
+	if(second >= 60){
+		minute++;
+		second = 0;
 	}
-	*/
+	if(minute >= 60){
+		hour++;
+		minute = 0;
+	}
+	if(hour >= 24){
+		day++;
+		hour = 0;
+	}
+	if(day >= daysInMonth[month]){
+		month++;
+		day = 1;
+	}
+	if(month >= 12){
+		year++;
+		month = 1;
+	}
+	
+	// Sync time with HMI RTC every 15 minutes
+	lastTimeUpdate++;
+	if (lastTimeUpdate >= 900) {
+		getTime(); 
+		lastTimeUpdate = 0;
+	}
+	
+	
 	TCA0.SINGLE.INTFLAGS = TCA_SINGLE_OVF_bm;	//reset overflow flag
 }
 
@@ -56,8 +84,8 @@ int main(void)
     ccp_write_io(&(CLKCTRL.OSCHFCTRLA),CLKCTRL_FRQSEL_24M_gc);	//set main clock to 24MHz
 	portInit();
     initUSART3();	//initialize USART3 to display information received from HMI
-    initUSART2();	//initialize USART2 to transmit and receive from HMI
-	//initTimer1s();	//initialize 1s timer
+    initUSART1();	//initialize USART2 to transmit and receive from HMI
+	initTimer1s();	//initialize 1s timer
     sei();			//turn on global interrupts
 	
 	transmitTerminal(helpMenu);

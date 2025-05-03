@@ -14,6 +14,7 @@ void initUSART3();
 void transmitTerminal(char* str);
 void parseTerminalData(char* strData);
 extern void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t action);
+extern void getTime();
 
 
 #endif

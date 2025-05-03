@@ -95,11 +95,14 @@ char rate_unit[8];
 uint32_t mode;
 
 //Local MCU time variables
+uint32_t updateTime;
 uint32_t year;
 uint32_t month;
 uint32_t day;
 uint32_t hour;
 uint32_t minute;
 uint32_t second;
+uint8_t daysInMonth[13];
+uint32_t lastTimeUpdate;
 
 #endif /* GLOBAL_CONSTS_VARS_H_ */

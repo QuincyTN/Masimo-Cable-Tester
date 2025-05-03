@@ -1,18 +1,23 @@
 #include "../Headers/hmi_mcu_com.h"
 
-void initUSART2(){
-	//Initialize USART2 in ASynchronous mode with baudrate 9600
+void initUSART1(){
+	//Initialize USART1 in ASynchronous mode with baudrate 9600
 		
 	uint16_t BAUDRATE = 64UL * F_CPU / (16UL * BAUDr);	//calculate aysynchronous baudrate
-	PORTMUX.USARTROUTEA = PORTMUX_USART2_ALT1_gc;	//USART2 using PF4 as TxD and PF5 as RxD
-	PORTF.DIRSET = (1 << 4);    //Set PF4 as output (TxD)
-	PORTF.DIRCLR = (1 << 5);	//Set PF5 as input (RxD)
+	//PORTMUX.USARTROUTEA = PORTMUX_USART2_ALT1_gc;	//USART2 using PF4 as TxD and PF5 as RxD
+	PORTMUX.USARTROUTEA = PORTMUX_USART1_DEFAULT_gc;
+	
+	//PORTF.DIRSET = (1 << 4);    //Set PF4 as output (TxD)
+	//PORTF.DIRCLR = (1 << 5);	//Set PF5 as input (RxD)
+	
+	PORTC.DIRSET = PIN0_bm;		//SET PC0 as output (Tx1)
+	PORTC.DIRCLR = PIN1_bm;		//set PC1 as input (Rx1)
 
-	USART2.BAUD = BAUDRATE;
+	USART1.BAUD = BAUDRATE;
 
-	USART2.CTRLB = (USART_RXEN_bm) | (USART_TXEN_bm);	//enable receiver and transmitter
+	USART1.CTRLB = (USART_RXEN_bm) | (USART_TXEN_bm);	//enable receiver and transmitter
 
-	USART2.CTRLA = (USART_RXCIE_bm);	//enable receive complete interrupt
+	USART1.CTRLA = (USART_RXCIE_bm);	//enable receive complete interrupt
 }
 void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t action){
 	/*
@@ -45,10 +50,13 @@ void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t action)
 	else if(action == 4){//if the MCU needs to go to another page
 		len = sprintf(command, "page %s%c%c%c", page, 0xFF, 0xFF, 0xFF);
 	}
+	else if(action == 5){//if the MCU needs a value from a HMI variable
+		len = sprintf(command, "get %s%c%c%c", ID, 0xFF, 0xFF, 0xFF);
+	}
 	
 	for(int i = 0; i < len; i++){
-		while(!(USART2.STATUS & (USART_DREIF_bm)));	//wait until all data in buffer is sent
-		USART2.TXDATAL = (char)command[i];	//send new char
+		while(!(USART1.STATUS & (USART_DREIF_bm)));	//wait until all data in buffer is sent
+		USART1.TXDATAL = (char)command[i];	//send new char
 	}
 }
 char* parseHmiString(char* string){
@@ -80,8 +88,13 @@ void parseHmiData(char* strData){
 	else if(strData[0] == NUM_MESSAGE){
 		char number[BUFFER_SIZE];
 		//uint32_t intValue = ((uint32_t)strData[1]) | ((uint32_t)strData[2]<<8) | ((uint32_t)strData[3]<<16) | ((uint32_t)strData[4]<<24);
-		sprintf(number, "%lu", parseHmiInt(strData));	//convert the integer to a string of characters
+		
+		uint32_t intValue = parseHmiInt(strData);
+
+
+		sprintf(number, "%lu", intValue);	//convert the integer to a string of characters
 		transmitTerminal(number);
+		
 	}
 	else if(strData[0] == START_CHAR){
 		//TODO: add characterization function
@@ -109,12 +122,46 @@ void parseHmiData(char* strData){
 	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
 }
 
-ISR(USART2_RXC_vect){
+void getTime(){
+	// update local MCU time with RTC from HMI
+	updateTime = 1;
+	uint32_t var = updateTime;
+	for(int i = 0; i < 6; i++){
+		
+		char rtcID[BUFFER_SIZE]; 
+		sprintf(rtcID, "func: %lu", updateTime);	//convert the integer to a string of characters
+		transmitTerminal(rtcID);
+		
+		sprintf(rtcID, "rtc%d", i);	
+		transmitHmi(NULL, rtcID, NULL, NULL, 5);	//request rtc values from HMI
+		
+		while (!newHmiMessage);  // wait until flag is set by ISR
+
+		if(hmiBuffer[0] == NUM_MESSAGE){
+			uint32_t val = parseHmiInt(hmiBuffer);  // get value from buffer
+
+			switch(updateTime){
+				case 1: year = val; break;
+				case 2: month = val; break;
+				case 3: day = val; break;
+				case 4: hour = val; break;
+				case 5: minute = val; break;
+				case 6: second = val; break;
+				default: break;
+			}
+		}
+		newHmiMessage = 0;
+		updateTime++;
+	}
+	updateTime = 0;
+}
+
+ISR(USART1_RXC_vect){
 	/*
-	Interrupt occurs when HMI receives data (a command or action) from USART2 receiver
+	Interrupt occurs when HMI receives data (a command or action) from USART1 receiver
 	*/
 	
-	uint8_t data = USART2.RXDATAL;
+	uint8_t data = USART1.RXDATAL;
 
 	//Check for start identifiers (0x70 or 0x71)
 	if ((data != NULL) && !hmiReceiving) {
@@ -130,8 +177,8 @@ ISR(USART2_RXC_vect){
 		receiveData[dataIndexRx - 2] == 0xFF &&
 		receiveData[dataIndexRx - 3] == 0xFF) {
 			
-			USART2.CTRLB &= ~USART_RXEN_bm;	//turn off the receiver
-			USART2.CTRLA &= ~USART_RXCIE_bm;	//turn off the receive interrupt
+			USART1.CTRLB &= ~USART_RXEN_bm;	//turn off the receiver
+			USART1.CTRLA &= ~USART_RXCIE_bm;	//turn off the receive interrupt
 			
 			memset(hmiBuffer, 0, sizeof(hmiBuffer));	//reset buffer
 			strcpy(hmiBuffer, receiveData);			//copy data into buffer
@@ -140,8 +187,8 @@ ISR(USART2_RXC_vect){
 			dataIndexRx = 0;  //Reset buffer index
 			newHmiMessage = 1;	//set flag in main
 
-			USART2.CTRLB |= USART_RXEN_bm;	//turn on the receiver
-			USART2.CTRLA |= USART_RXCIE_bm;	//turn on the receive interrupt
+			USART1.CTRLB |= USART_RXEN_bm;	//turn on the receiver
+			USART1.CTRLA |= USART_RXCIE_bm;	//turn on the receive interrupt
 		}
 		
 		//Prevent buffer overflow

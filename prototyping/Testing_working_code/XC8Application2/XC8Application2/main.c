@@ -72,13 +72,22 @@ void setOutput(int n); void setInput(int n); void setHigh(int n); void setLow(in
 
 
 // Map ADC channel to correct MUXPOS input
+// uint8_t adc_channel_map[NUM_PINS] = {
+// 	ADC_MUXPOS_AIN0_gc, ADC_MUXPOS_AIN1_gc, ADC_MUXPOS_AIN2_gc, ADC_MUXPOS_AIN3_gc,
+// 	ADC_MUXPOS_AIN4_gc, ADC_MUXPOS_AIN5_gc, ADC_MUXPOS_AIN6_gc, ADC_MUXPOS_AIN7_gc,
+// 	ADC_MUXPOS_AIN8_gc, ADC_MUXPOS_AIN9_gc, ADC_MUXPOS_AIN10_gc, ADC_MUXPOS_AIN11_gc,
+// 	ADC_MUXPOS_AIN12_gc, ADC_MUXPOS_AIN13_gc, ADC_MUXPOS_AIN14_gc, ADC_MUXPOS_AIN15_gc,
+// 	ADC_MUXPOS_AIN18_gc, ADC_MUXPOS_AIN19_gc, ADC_MUXPOS_AIN20_gc, ADC_MUXPOS_AIN21_gc
+// };
+
 uint8_t adc_channel_map[NUM_PINS] = {
-	ADC_MUXPOS_AIN0_gc, ADC_MUXPOS_AIN1_gc, ADC_MUXPOS_AIN2_gc, ADC_MUXPOS_AIN3_gc,
-	ADC_MUXPOS_AIN4_gc, ADC_MUXPOS_AIN5_gc, ADC_MUXPOS_AIN6_gc, ADC_MUXPOS_AIN7_gc,
-	ADC_MUXPOS_AIN8_gc, ADC_MUXPOS_AIN9_gc, ADC_MUXPOS_AIN10_gc, ADC_MUXPOS_AIN11_gc,
+	ADC_MUXPOS_AIN9_gc, ADC_MUXPOS_AIN8_gc, ADC_MUXPOS_AIN7_gc, ADC_MUXPOS_AIN6_gc,
+	ADC_MUXPOS_AIN5_gc, ADC_MUXPOS_AIN4_gc, ADC_MUXPOS_AIN3_gc, ADC_MUXPOS_AIN2_gc,
+	ADC_MUXPOS_AIN1_gc, ADC_MUXPOS_AIN0_gc, ADC_MUXPOS_AIN10_gc, ADC_MUXPOS_AIN11_gc,
 	ADC_MUXPOS_AIN12_gc, ADC_MUXPOS_AIN13_gc, ADC_MUXPOS_AIN14_gc, ADC_MUXPOS_AIN15_gc,
 	ADC_MUXPOS_AIN18_gc, ADC_MUXPOS_AIN19_gc, ADC_MUXPOS_AIN20_gc, ADC_MUXPOS_AIN21_gc
 };
+
 
 // float process_adc_conversion(uint8_t current_channel) {
 // 	uint16_t result;
@@ -92,7 +101,7 @@ uint8_t adc_channel_map[NUM_PINS] = {
 // 	return voltage;
 // }
 
-/*
+
 uint16_t process_adc_conversion(uint8_t current_channel) {
 	uint16_t result;
 	ADC0.MUXPOS = adc_channel_map[current_channel];
@@ -103,16 +112,15 @@ uint16_t process_adc_conversion(uint8_t current_channel) {
 	result = ADC0.RES;
 	return result;
 }
-*/
-uint16_t process_adc_conversion(uint8_t adcx) {
-	ADC0.MUXPOS = (0x7F & adcx);	// Set the channel desired for the conversion
-	ADC0.COMMAND = ADC_STCONV_bm;	// start conversion
-	while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));
-	ADC0.INTFLAGS = ADC_RESRDY_bm;
 
-	return ADC0.RES;	// return the converted value to the calling function.
-}
-
+// uint16_t process_adc_conversion(uint8_t adcx) {
+// 	ADC0.MUXPOS = (0x7F & adcx);	// Set the channel desired for the conversion
+// 	ADC0.COMMAND = ADC_STCONV_bm;	// start conversion
+// 	while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));
+// 	ADC0.INTFLAGS = ADC_RESRDY_bm;
+// 
+// 	return ADC0.RES;	// return the converted value to the calling function.
+//
 
 void characterize(int pin1, int pin2) {
 	if (pin1 != pin2) {
@@ -152,13 +160,13 @@ bool check_adc_within_range(int pin1, int pin2) {
 	setOutput(pin2);
 	setHigh(pin1);
 	setLow(pin2);
-	if (fabs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_10) > 0.1 ||
-		fabs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_10) > 0.1)
+	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_10) > 50 ||
+		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_10) > 50)
 		return false;
 	setLow(pin1);
 	setHigh(pin2);
-	if (fabs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_01) > 0.1 ||
-		fabs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_01) > 0.1)
+	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_01) > 50 ||
+		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_01) > 50)
 		return false;
 	setInput(pin1);
 	setInput(pin2);
@@ -303,10 +311,10 @@ int main(void) {
 		//setHigh(i);
 	//}
 	
-	setOutput(0);
-	setOutput(1);
-	setHigh(1);
-	setLow(0);
+	//setOutput(0);
+	//setOutput(1);
+	//setHigh(1);
+	//setLow(0);
 	
  	while(1) {
 		if(return_code==1) {					      // makes sure the requirement is not checked off if
@@ -326,8 +334,8 @@ int main(void) {
 			if (!CARD_IN){
 				//UART_sendString("Card connected\n");
 				transmitHmi("home", "t5", NULL, "OKy", 2);
-				SD_characterization();
-				//SD_demo();
+				//SD_characterization();
+				SD_demo();
 				CARD_IN = true;
 				if (CARD_OUT)   // can only get here if SD card was inserted, removed, and reinserted
 				{
@@ -346,9 +354,9 @@ int main(void) {
 			}
 		} // end of card has been read and is in place
 		
-		//testadc = check_adc_within_range(19,18);
+		testadc = check_adc_within_range(19,18);
 		
-		if (true) {
+		if (testadc) {
 			PORTG.OUTSET = PIN0_bm;
 			_delay_ms(3000);
 			PORTG.OUTCLR = PIN0_bm;
@@ -640,9 +648,9 @@ void SD_demo(void){
 			for(int i = 0; i < NUM_PINS; i++){
 				for(int j = 0; j < NUM_PINS; j++){
 					if (i != j){
-						sprintf(target1, "%.2f,", (float) myArray[i][j].val_1_00);
+						sprintf(target1, "%u,", myArray[i][j].val_1_00);
 						FAT_fwriteString(&file, target1);
-						sprintf(target1, "%.2f,", (float) myArray[i][j].val_2_00);
+						sprintf(target1, "%u,", myArray[i][j].val_2_00);
 						FAT_fwriteString(&file, target1);
 					}
 				}
@@ -654,9 +662,9 @@ void SD_demo(void){
 			for(int i = 0; i < NUM_PINS; i++){
 				for(int j = 0; j < NUM_PINS; j++){
 					if (i != j){
-						sprintf(target1, "%.2f,", (float) myArray[i][j].val_1_10);
+						sprintf(target1, "%u,",  myArray[i][j].val_1_10);
 						FAT_fwriteString(&file, target1);
-						sprintf(target1, "%.2f,", (float) myArray[i][j].val_2_10);
+						sprintf(target1, "%u,", myArray[i][j].val_2_10);
 						FAT_fwriteString(&file, target1);
 					}
 				}
@@ -667,9 +675,9 @@ void SD_demo(void){
 			for(int i = 0; i < NUM_PINS; i++){
 				for(int j = 0; j < NUM_PINS; j++){
 					if (i != j){
-						sprintf(target1, "%.2f,", (float) myArray[i][j].val_1_01);
+						sprintf(target1, "%u,", myArray[i][j].val_1_01);
 						FAT_fwriteString(&file, target1);
-						sprintf(target1, "%.2f,", (float) myArray[i][j].val_2_01);
+						sprintf(target1, "%u,", myArray[i][j].val_2_01);
 						FAT_fwriteString(&file, target1);
 					}
 				}
@@ -680,9 +688,9 @@ void SD_demo(void){
 			for(int i = 0; i < NUM_PINS; i++){
 				for(int j = 0; j < NUM_PINS; j++){
 					if (i != j){
-						sprintf(target1, "%.2f,", (float) myArray[i][j].val_1_11);
+						sprintf(target1, "%u,", myArray[i][j].val_1_11);
 						FAT_fwriteString(&file, target1);
-						sprintf(target1, "%.2f,", (float) myArray[i][j].val_2_11);
+						sprintf(target1, "%u,", myArray[i][j].val_2_11);
 						FAT_fwriteString(&file, target1);
 					}
 				}

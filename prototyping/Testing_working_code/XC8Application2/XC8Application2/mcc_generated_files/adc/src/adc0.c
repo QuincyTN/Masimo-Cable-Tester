@@ -172,24 +172,24 @@ void ADC0_RegisterResrdyCallback(adc_irq_cb_t f)
     ADC0_resrdy_cb = f;
 }
 
-// ISR(ADC0_WCMP_vect)
-// {        
-//     // Clear the interrupt flag
-//     ADC0.INTFLAGS = ADC_WCMP_bm;
-// 
-//     if (ADC0_window_cb != NULL)
-//     {
-//         ADC0_window_cb();
-//     }
-// }
-// 
-// ISR(ADC0_RESRDY_vect)
-// {
-//     // Clear the interrupt flag
-//     ADC0.INTFLAGS = ADC_RESRDY_bm;
-// 
-//     if (ADC0_resrdy_cb != NULL)
-//     {
-//         ADC0_resrdy_cb();
-//     }
-// }
+ISR(ADC0_WCMP_vect)
+{        
+    // Clear the interrupt flag
+    ADC0.INTFLAGS = ADC_WCMP_bm;
+
+    if (ADC0_window_cb != NULL)
+    {
+        ADC0_window_cb();
+    }
+}
+
+ISR(ADC0_RESRDY_vect)
+{
+    // Clear the interrupt flag
+    ADC0.INTFLAGS = ADC_RESRDY_bm;
+
+    if (ADC0_resrdy_cb != NULL)
+    {
+        ADC0_resrdy_cb();
+    }
+}

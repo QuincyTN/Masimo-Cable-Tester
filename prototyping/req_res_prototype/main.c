@@ -84,11 +84,13 @@ int main(void)
     ccp_write_io(&(CLKCTRL.OSCHFCTRLA),CLKCTRL_FRQSEL_24M_gc);	//set main clock to 24MHz
 	portInit();
     initUSART3();	//initialize USART3 to display information received from HMI
-    initUSART1();	//initialize USART2 to transmit and receive from HMI
+    initUSART1();	//initialize USART1 to transmit and receive from HMI
 	initTimer1s();	//initialize 1s timer
     sei();			//turn on global interrupts
 	
 	transmitTerminal(helpMenu);
+	
+	
     while (1) 
     {
 		//Display the message on the terminal using USART3
@@ -106,10 +108,14 @@ int main(void)
 			//TODO: add testing function 
 			//Testing function should set a fault flag when it is detected
 			
-			PORTB.OUTCLR = PIN3_bm;	//turn on led if test in progress
+			//PORTB.OUTCLR = PIN3_bm;	//turn on led if test in progress
+			
+// 			PORTG.OUTSET = 0x01;
+			transmitHmi("home", "t5", NULL, "hi", 2);
 		}
 		else{
-			PORTB.OUTSET = PIN3_bm;	//turn off led if no test or test is paused
+			PORTG.OUTCLR = 0x01;
+			//PORTB.OUTSET = PIN3_bm;	//turn off led if no test or test is paused
 		}
 		
     }

@@ -16,6 +16,8 @@ uint8_t timerFlag = 0;
 uint8_t newHmiMessage = 0;
 uint8_t newTerminalMessage = 0;
 uint8_t testingStart = 0;	
+uint8_t testingPause = 0;
+uint8_t faultDetected = 0;
 
 //USART3 transmitter and receiver buffer
 char transmitData3[BUFFER_SIZE];
@@ -41,7 +43,7 @@ const char helpMenu[] =
 //Settings page variables
 uint32_t rate = 10;
 char rate_unit[8] = "/sec";
-uint32_t mode = 0;
+uint32_t mode = 0;		// 0 = normal, 1 = bypass
 
 //Local MCU time variables
 uint32_t updateTime = 0;

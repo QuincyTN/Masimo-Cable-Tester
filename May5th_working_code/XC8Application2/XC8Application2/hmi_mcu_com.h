@@ -16,6 +16,9 @@ char* parseHmiString(char* string);
 uint32_t parseHmiInt(char* string);
 void parseHmiData(char* strData);
 void getTime();
-extern void transmitTerminal(char* str);
+void initTimer1s();
+//extern void transmitTerminal(char* str);
+extern void SD_characterization(void);
+extern void characterize(int pin1, int pin2);
 
 #endif

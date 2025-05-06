@@ -73,17 +73,13 @@ uint32_t parseHmiInt(char* string){
 	return ((uint32_t)string[1]) | ((uint32_t)string[2]<<8) | ((uint32_t)string[3]<<16) | ((uint32_t)string[4]<<24);
 }
 void parseHmiData(char* strData){
-	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
-	//uint8_t dataLength = strlen(strData);		//get length of data
-	//int dataLength = strlen(strData);
-	//transmitTerminal(strData[0]);
-	
+
 	if(strData[0] == STRING_MESSAGE){
 		//char string[dataLength];
 		//strncpy(string, strData+1, dataLength+1);
 		//string[dataLength-4] = "\0";
 
-		transmitTerminal(parseHmiString(strData));
+		//transmitTerminal(parseHmiString(strData));
 	}
 	else if(strData[0] == NUM_MESSAGE){
 		char number[BUFFER_SIZE];
@@ -93,21 +89,55 @@ void parseHmiData(char* strData){
 
 
 		sprintf(number, "%lu", intValue);	//convert the integer to a string of characters
-		transmitTerminal(number);
+		//transmitTerminal(number);
 		
 	}
 	else if(strData[0] == START_CHAR){
 		//TODO: add characterization function
 		//TODO: after characterization, change page to char_success 
+		
+		//Sets ADC to inputs
+		for (int i = 0; i < NUM_PINS; i++) {
+			setADCInput(i);
+		}
+			
+		for (int i = 0; i < NUM_PINS; i++) {
+			setInput(i);
+		}
+
+		//Characterizes all pin pairs
+		//ADC0.CTRLB = 0x1; //Gets 8 samples
+		for (int i = 0; i < NUM_PINS; i++) {
+			for (int j = 0; j < NUM_PINS; j++) {
+				if(i!=j){
+					characterize(i, j);
+				}
+			}
+		}
+		
+		//SD_characterization();
+		
+		transmitHmi(PAGE_CHAR_SUCCESS, NULL, NULL, NULL, 4);	// display characterization success screen
+		transmitHmi(PAGE_HOME, "t7", NULL, "OK", 2);	// characterization available, set requirement on HMI 
+		
 	}
 	else if(strData[0] == START_TEST){
 		testingStart = 1;
+		
+		char date[100];
+		sprintf(date, "%0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", month, day, year, hour, minute, second);
+		transmitHmi(PAGE_TESTING, START_TIME_TXT, NULL, date, 2);
 	}
 	else if(strData[0] == STOP_TEST){
 		testingStart = 0;
+		testingPause = 0;
 	}
 	else if(strData[0] == PAUSE_TEST){
-		testingStart = 0;
+		//testingStart = 1;
+		testingPause = 1;
+	}
+	else if(strData[0] == UNPAUSE_TEST){
+		testingPause = 0;
 	}
 	else if(strData[0] == UPDATE_RATE){
 		rate = parseHmiInt(strData);
@@ -116,6 +146,8 @@ void parseHmiData(char* strData){
 		strcpy(rate_unit, parseHmiString(strData));
 	}
 	else if(strData[0] == UPDATE_MODE){
+		// 0 = Normal mode
+		// 1 = Bypass mode
 		mode = parseHmiInt(strData);
 	}
 	
@@ -130,7 +162,7 @@ void getTime(){
 		
 		char rtcID[BUFFER_SIZE]; 
 		sprintf(rtcID, "func: %lu", updateTime);	//convert the integer to a string of characters
-		transmitTerminal(rtcID);
+		//transmitTerminal(rtcID);
 		
 		sprintf(rtcID, "rtc%d", i);	
 		transmitHmi(NULL, rtcID, NULL, NULL, 5);	//request rtc values from HMI
@@ -154,6 +186,17 @@ void getTime(){
 		updateTime++;
 	}
 	updateTime = 0;
+}
+
+void initTimer1s() {
+	//Set the period for 1 second
+	TCA0.SINGLE.PER = (F_CPU / PRESCALER) - 1; // 23437 for 1s
+
+	//Enable overflow interrupt
+	TCA0.SINGLE.INTCTRL = TCA_SINGLE_OVF_bm;
+
+	//Set prescaler to 1024 and enable timer
+	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV1024_gc | TCA_SINGLE_ENABLE_bm;
 }
 
 ISR(USART1_RXC_vect){
@@ -198,4 +241,46 @@ ISR(USART1_RXC_vect){
 			newHmiMessage = 1;
 		}
 	}
+}
+
+ISR(TCA0_OVF_vect) {
+	// Update time
+	//Leap year logic
+	if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+	daysInMonth[2] = 29;
+	else
+	daysInMonth[2] = 28;
+	
+	second++;	//increment seconds
+	
+	if(second >= 60){
+		minute++;
+		second = 0;
+	}
+	if(minute >= 60){
+		hour++;
+		minute = 0;
+	}
+	if(hour >= 24){
+		day++;
+		hour = 0;
+	}
+	if(day >= daysInMonth[month]){
+		month++;
+		day = 1;
+	}
+	if(month >= 12){
+		year++;
+		month = 1;
+	}
+	
+	// Sync time with HMI RTC every 15 minutes
+	lastTimeUpdate++;
+	if (lastTimeUpdate >= 900) {
+		getTime();
+		lastTimeUpdate = 0;
+	}
+	
+	
+	TCA0.SINGLE.INTFLAGS = TCA_SINGLE_OVF_bm;	//reset overflow flag
 }

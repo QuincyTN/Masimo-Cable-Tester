@@ -39,12 +39,12 @@ uint16_t dirItems = 0;
 extern bool new_data;				// set by the receive UART interrupt when
 // new data is received from the terminal
 
-#define TRUNCATED_SHIFT 4
-#define NUM_PINS 20
-#define MAX_VOLTAGE 5
-#define ADC_RESOLUTION 4095.0f
-#define ADC_division 1
-#define RANGE 410
+// #define TRUNCATED_SHIFT 4
+// #define NUM_PINS 20
+// #define MAX_VOLTAGE 5
+// #define ADC_RESOLUTION 4095.0f
+// #define ADC_division 1
+// #define RANGE 410
 
 struct {
 	uint32_t result;
@@ -68,6 +68,8 @@ typedef struct {
 DataStruct myArray[NUM_PINS][NUM_PINS] = {0};
 DataStruct myArray2[NUM_PINS][NUM_PINS] = {0};
 //DataStruct testArray[NUM_PINS][NUM_PINS] = {0};
+#define FAULT_TRIP_THRESHOLD 3
+uint8_t	numFaults[NUM_PINS][NUM_PINS] = {0};
 
 void setOutput(int n); void setInput(int n); void setHigh(int n); void setLow(int n);
 
@@ -163,26 +165,26 @@ bool check_adc_within_range(int pin1, int pin2) {
 	setLow(pin1);
 	setLow(pin2);
 	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_00) > RANGE ||
-	abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_00) > RANGE)
-	return false;
+		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_00) > RANGE)
+		{ setInput(pin1); setInput(pin2); return false; } 
 	
 	setHigh(pin1);
 	setLow(pin2);
 	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_10) > RANGE ||
 		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_10) > RANGE)
-		return false;
+		{ setInput(pin1); setInput(pin2); return false; } 
 		
 	setLow(pin1);
 	setHigh(pin2);
 	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_01) > RANGE ||
 		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_01) > RANGE)
-		return false;
+		{ setInput(pin1); setInput(pin2); return false; } 
 		
 	setHigh(pin1);
 	setHigh(pin2);
 	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_11) > RANGE ||
-	abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_11) > RANGE)
-	return false;
+		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_11) > RANGE)
+		{ setInput(pin1); setInput(pin2); return false; } 
 		
 	setInput(pin1);
 	setInput(pin2);
@@ -279,6 +281,7 @@ int main(void) {
 	SYSTEM_Initialize();
 	initUSART1();
 	relay_init();
+	initTimer1s();
 	
 	sei();
 	
@@ -286,6 +289,7 @@ int main(void) {
 	volatile bool CARD_OUT = false;
 	bool testadc = true;
 
+	/*
 	//Sets ADC to inputs
 	for (int i = 0; i < NUM_PINS; i++) {
 		setADCInput(i);
@@ -304,25 +308,29 @@ int main(void) {
 			}
 		}
 	}
+	*/
+	
+	getTime();	//update MCU clock
 	
  	while(1) {
 		if(return_code==1) {					      // makes sure the requirement is not checked off if
-			transmitHmi("home", "t5", NULL, "X", 2); // there was a mounting error
+			transmitHmi(PAGE_HOME, "t5", NULL, "X", 2); // there was a mounting error
 		}
 		
 		if(FAT_getFileSize(&file) >= 10) {
-			transmitHmi("home", "t6", NULL, "S", 2);
+			transmitHmi(PAGE_HOME, "t6", NULL, "OK", 2);
 		}
 		//transmitHmi("home", "t5", NULL, "hii", 2);
 		
 		 
 		//SD_demo();
+		//TODO: MOVE THIS FUNCTION IN THE HMI_MCU_COM.c after done characterization
 		SD_characterization();
 	while (1) {
 		
 		if(sd_detected()){
 			if (!CARD_IN){
-				transmitHmi("home", "t5", NULL, "OKy", 2);
+				transmitHmi(PAGE_HOME, "t5", NULL, "OK", 2);
 				//SD_characterization();
 				//SD_demo();
 				CARD_IN = true;
@@ -337,12 +345,14 @@ int main(void) {
 		else{
 			if(!CARD_OUT) {
 				//UART_sendString("Card disconnected\n");
-				transmitHmi("home", "t5", NULL, "X", 2);
+				transmitHmi(PAGE_HOME, "t5", NULL, "X", 2);	// SD card inserted requirement not met
+				transmitHmi(PAGE_HOME, "t6", NULL, "X", 2);	// SD card capacity requirement not met
+				//transmitHmi(PAGE_HOME, "t7", NULL, "X", 2);	// characterization requirement not met
 				CARD_OUT = true;
 				CARD_IN = false;
 			}
 		} // end of card has been read and is in place
-		
+		/*
 		for (int i = 0; i < NUM_PINS; i++) {
 			for (int j = 0; j < NUM_PINS; j++) {
 				if(i!=j){
@@ -364,7 +374,74 @@ int main(void) {
 					}
 				}
 			}
-	}
+		}
+		*/
+		if(newHmiMessage){
+			parseHmiData(hmiBuffer);
+			newHmiMessage = 0;	//reset flag
+		}
+		
+		if(testingStart && !testingPause){
+			for (int i = 0; i < NUM_PINS && !faultDetected; i++) {
+				for (int j = 0; j < NUM_PINS && !faultDetected; j++) {
+					if(i!=j){
+						testadc = check_adc_within_range(i,j);
+						
+						if (!testadc) {
+							PORTG.OUTSET = PIN0_bm;	// set relay if there is a fault
+							_delay_ms(200);
+							PORTG.OUTCLR = PIN0_bm;
+							_delay_ms(200);
+	
+							numFaults[i][j]++;
+							
+						} 
+						else {
+							//PORTG.OUTSET = PIN0_bm;
+							//_delay_ms(200);
+							//PORTG.OUTCLR = PIN0_bm;	//
+							//_delay_ms(200);
+							//transmitHmi(PAGE_FAULT_DETECTED, NULL, NULL, NULL, 4);
+						}
+						
+						if(numFaults[i][j] >= FAULT_TRIP_THRESHOLD){
+							// Number of faults in a single pin pair has occurred over the threshold, therefore a fault is detected
+							faultDetected = 1;
+							testingStart = 0;
+							
+							char temp[BUFFER_SIZE*2];
+							
+							transmitHmi(PAGE_FAULT_DETECTED, NULL, NULL, NULL, 4);	// go to FAULT_DETECTED page
+						
+							
+							//TODO FIX THIS WHY IS IT TRUNCATED
+							sprintf(temp, "Short/Open between: Pin %d and Pin %d", i, j);	// Print the error message
+							transmitHmi(PAGE_FAULT_DETECTED, FAULT_TXT, NULL, temp, 2);
+
+							
+							
+							PORTG.OUTSET = PIN0_bm;	// set relay, stop the bend cycle tester
+						}
+						
+					}
+				}
+			}
+		}			
+		else if (testingPause){
+			
+		}
+		else{
+			//PORTG.OUTCLR = 0x01;	// relay is open during no test
+			memset(numFaults, 0, sizeof(numFaults));
+			faultDetected = 0;
+			
+			PORTG.OUTSET = PIN0_bm;
+			_delay_ms(1000);
+			PORTG.OUTCLR = PIN0_bm;
+			_delay_ms(1000);
+			
+		}
+		}
 	}
 }
 

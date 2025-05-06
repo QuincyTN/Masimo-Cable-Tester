@@ -11,6 +11,7 @@ commands.
 The definitions below will be used to access relevant attributes and their values from the HMI.
 The attribute is in the form of "[page].[ID].[field]" (eg "mcu.n0.val")
 */
+
 #define VAL "val"	//used to get the value attribute of a number
 #define TXT "txt"	//used to get the text attribute of a text field
 
@@ -46,6 +47,15 @@ The attribute is in the form of "[page].[ID].[field]" (eg "mcu.n0.val")
 #define BUFFER_SIZE 50
 #define PRESCALER 1024
 
+// ADC and Characterization constants
+#define TRUNCATED_SHIFT 4
+#define NUM_PINS 20
+#define MAX_VOLTAGE 5
+#define ADC_RESOLUTION 4095.0f
+#define ADC_division 1
+#define RANGE 410
+
+
 //HMI starting return message
 //Valid range of custom starting bytes: 0x30 - 0x60
 #define STRING_MESSAGE 0x70		//message has a string
@@ -54,6 +64,7 @@ The attribute is in the form of "[page].[ID].[field]" (eg "mcu.n0.val")
 #define START_TEST 0x31			//message to start testing the cable
 #define STOP_TEST  0x32			//message to stop testing the cable
 #define PAUSE_TEST 0x33			//message to pause cable testing
+#define UNPAUSE_TEST 0x37		//message to unpause cable testing
 
 #define UPDATE_RATE 0x34		//message to update data recording rate
 #define UPDATE_RATE_UNIT 0x35	//message to update data recording rate units
@@ -75,6 +86,8 @@ uint8_t timerFlag;
 uint8_t newHmiMessage;			//new HMI message received by ISR, carry out command
 uint8_t newTerminalMessage;		//new terminal message received by ISR, carry out command
 uint8_t testingStart;			//Begin cable testing,
+uint8_t testingPause;			// Cable testing is paused
+uint8_t faultDetected;			// fault is detected, stop loop
 
 //USART3 transmitter and receiver buffer
 char transmitData3[BUFFER_SIZE];

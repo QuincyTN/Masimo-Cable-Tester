@@ -95,7 +95,7 @@ void parseHmiData(char* strData){
 	else if(strData[0] == START_CHAR){
 		//TODO: add characterization function
 		//TODO: after characterization, change page to char_success 
-		
+		/*
 		//Sets ADC to inputs
 		for (int i = 0; i < NUM_PINS; i++) {
 			setADCInput(i);
@@ -119,18 +119,29 @@ void parseHmiData(char* strData){
 		
 		transmitHmi(PAGE_CHAR_SUCCESS, NULL, NULL, NULL, 4);	// display characterization success screen
 		transmitHmi(PAGE_HOME, "t7", NULL, "OK", 2);	// characterization available, set requirement on HMI 
+		*/
+		newCharacterization = 1;
 		
 	}
 	else if(strData[0] == START_TEST){
+		newCharacterization = 0;
 		testingStart = 1;
+		testingPause = 0;
+		lastSdWrite = 0;
+		faultDetected = 0;
 		
-		char date[100];
-		sprintf(date, "%0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", month, day, year, hour, minute, second);
-		transmitHmi(PAGE_TESTING, START_TIME_TXT, NULL, date, 2);
+		char temp[100];
+		sprintf(temp, "%0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", month, day, year, hour, minute, second);
+		transmitHmi(PAGE_TESTING, START_TIME_TXT, NULL, temp, 2);
+		
+// 		sprintf(temp, "%lu, %s", rate, rate_unit);
+// 		transmitHmi(PAGE_TESTING, "t4", NULL, temp, 2);
 	}
 	else if(strData[0] == STOP_TEST){
 		testingStart = 0;
 		testingPause = 0;
+		lastSdWrite = 0;	// reset last written values
+		faultDetected = 0;	// reset flag, no fault is detected
 	}
 	else if(strData[0] == PAUSE_TEST){
 		//testingStart = 1;
@@ -141,9 +152,11 @@ void parseHmiData(char* strData){
 	}
 	else if(strData[0] == UPDATE_RATE){
 		rate = parseHmiInt(strData);
+		convertRate(); //update the rate in seconds
 	}
 	else if(strData[0] == UPDATE_RATE_UNIT){
 		strcpy(rate_unit, parseHmiString(strData));
+		convertRate(); //update the rate in seconds
 	}
 	else if(strData[0] == UPDATE_MODE){
 		// 0 = Normal mode
@@ -161,7 +174,7 @@ void getTime(){
 	for(int i = 0; i < 6; i++){
 		
 		char rtcID[BUFFER_SIZE]; 
-		sprintf(rtcID, "func: %lu", updateTime);	//convert the integer to a string of characters
+		//sprintf(rtcID, "func: %lu", updateTime);	//convert the integer to a string of characters
 		//transmitTerminal(rtcID);
 		
 		sprintf(rtcID, "rtc%d", i);	
@@ -186,6 +199,20 @@ void getTime(){
 		updateTime++;
 	}
 	updateTime = 0;
+}
+
+void convertRate(){
+	// Convert rate and rate units into total number of seconds (minimum of 1 second)
+	
+	if(strcmp(rate_unit, "/sec") == 0){
+		updateRateInS = (uint32_t)ceil(1.0f / rate);	
+	}
+	else if(strcmp(rate_unit, "/min") == 0){
+		updateRateInS = (uint32_t)ceil(60.0f / rate);	
+	}
+	else{
+		updateRateInS = (uint32_t)ceil(3600.0f / rate);
+	}
 }
 
 void initTimer1s() {
@@ -247,9 +274,9 @@ ISR(TCA0_OVF_vect) {
 	// Update time
 	//Leap year logic
 	if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
-	daysInMonth[2] = 29;
+		daysInMonth[2] = 29;
 	else
-	daysInMonth[2] = 28;
+		daysInMonth[2] = 28;
 	
 	second++;	//increment seconds
 	
@@ -279,6 +306,19 @@ ISR(TCA0_OVF_vect) {
 	if (lastTimeUpdate >= 900) {
 		getTime();
 		lastTimeUpdate = 0;
+	}
+	
+	if(testingStart && !testingPause)
+		lastSdWrite++;
+	
+	if(lastSdWrite >= updateRateInS){
+		//write testing values into sd card
+		PORTG.OUTSET = PIN0_bm;	// set relay if there is a fault
+		_delay_ms(200);
+		PORTG.OUTCLR = PIN0_bm;
+		_delay_ms(200);
+		
+		lastSdWrite = 0;
 	}
 	
 	

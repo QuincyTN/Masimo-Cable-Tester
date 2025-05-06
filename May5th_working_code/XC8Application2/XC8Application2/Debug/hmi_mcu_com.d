@@ -17,6 +17,9 @@ hmi_mcu_com.d hmi_mcu_com.o: .././hmi_mcu_com.c .././hmi_mcu_com.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdio.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h \
  .././global_consts_vars.h
 
 .././hmi_mcu_com.h:
@@ -56,5 +59,11 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\string.h:
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdio.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdlib.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h:
 
 .././global_consts_vars.h:

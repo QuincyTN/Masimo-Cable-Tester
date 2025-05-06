@@ -68,7 +68,7 @@ typedef struct {
 DataStruct myArray[NUM_PINS][NUM_PINS] = {0};
 DataStruct myArray2[NUM_PINS][NUM_PINS] = {0};
 //DataStruct testArray[NUM_PINS][NUM_PINS] = {0};
-#define FAULT_TRIP_THRESHOLD 3
+#define FAULT_TRIP_THRESHOLD 25
 uint8_t	numFaults[NUM_PINS][NUM_PINS] = {0};
 
 void setOutput(int n); void setInput(int n); void setHigh(int n); void setLow(int n);
@@ -325,7 +325,7 @@ int main(void) {
 		 
 		//SD_demo();
 		//TODO: MOVE THIS FUNCTION IN THE HMI_MCU_COM.c after done characterization
-		SD_characterization();
+		//SD_characterization();
 	while (1) {
 		
 		if(sd_detected()){
@@ -381,19 +381,44 @@ int main(void) {
 			newHmiMessage = 0;	//reset flag
 		}
 		
+		if(newCharacterization){
+			//Sets ADC to inputs
+			for (int i = 0; i < NUM_PINS; i++) {
+				setADCInput(i);
+			}
+					
+			for (int i = 0; i < NUM_PINS; i++) {
+				setInput(i);
+			}
+
+			//Characterizes all pin pairs
+			//ADC0.CTRLB = 0x1; //Gets 8 samples
+			for (int i = 0; i < NUM_PINS; i++) {
+				for (int j = 0; j < NUM_PINS; j++) {
+					if(i!=j){
+						characterize(i, j);
+					}
+				}
+			}
+					
+			SD_characterization();
+			newCharacterization = 0;
+			transmitHmi(PAGE_CHAR_SUCCESS, NULL, NULL, NULL, 4);	// display characterization success screen
+			transmitHmi(PAGE_HOME, "t7", NULL, "OK", 2);	// characterization available, set requirement on HMI
+		}
 		if(testingStart && !testingPause){
-			for (int i = 0; i < NUM_PINS && !faultDetected; i++) {
-				for (int j = 0; j < NUM_PINS && !faultDetected; j++) {
+			for (uint8_t i = 0; i < NUM_PINS && !faultDetected; i++) {
+				for (uint8_t j = 0; j < NUM_PINS && !faultDetected; j++) {
 					if(i!=j){
 						testadc = check_adc_within_range(i,j);
 						
 						if (!testadc) {
-							PORTG.OUTSET = PIN0_bm;	// set relay if there is a fault
-							_delay_ms(200);
-							PORTG.OUTCLR = PIN0_bm;
-							_delay_ms(200);
+// 							PORTG.OUTSET = PIN0_bm;	// set relay if there is a fault
+// 							_delay_ms(200);
+// 							PORTG.OUTCLR = PIN0_bm;
+// 							_delay_ms(200);
 	
-							numFaults[i][j]++;
+							numFaults[i][j] += 1;	//when fault detected, increment the fault count
 							
 						} 
 						else {
@@ -408,6 +433,7 @@ int main(void) {
 							// Number of faults in a single pin pair has occurred over the threshold, therefore a fault is detected
 							faultDetected = 1;
 							testingStart = 0;
+							testingPause = 0;
 							
 							char temp[BUFFER_SIZE*2];
 							
@@ -415,30 +441,33 @@ int main(void) {
 						
 							
 							//TODO FIX THIS WHY IS IT TRUNCATED
-							sprintf(temp, "Short/Open between: Pin %d and Pin %d", i, j);	// Print the error message
+							sprintf(temp, "Short/Open between:\\rPin %u and Pin %u\\rAt %0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", i, j, month, day, year, hour, minute, second);	// Print the error message
 							transmitHmi(PAGE_FAULT_DETECTED, FAULT_TXT, NULL, temp, 2);
 
 							
 							
 							PORTG.OUTSET = PIN0_bm;	// set relay, stop the bend cycle tester
 						}
-						
 					}
 				}
 			}
 		}			
 		else if (testingPause){
-			
+			//TODO PAUSE SD CARD COUNTING
+			transmitHmi(PAGE_TESTING, "t4", NULL, "PAUSED", 2);
+
 		}
 		else{
 			//PORTG.OUTCLR = 0x01;	// relay is open during no test
-			memset(numFaults, 0, sizeof(numFaults));
+			//memset(numFaults, 0, sizeof(numFaults));
 			faultDetected = 0;
-			
-			PORTG.OUTSET = PIN0_bm;
-			_delay_ms(1000);
+			lastSdWrite = 0;
 			PORTG.OUTCLR = PIN0_bm;
-			_delay_ms(1000);
+			
+// 			PORTG.OUTSET = PIN0_bm;
+// 			_delay_ms(1000);
+// 			PORTG.OUTCLR = PIN0_bm;
+// 			_delay_ms(1000);
 			
 		}
 		}

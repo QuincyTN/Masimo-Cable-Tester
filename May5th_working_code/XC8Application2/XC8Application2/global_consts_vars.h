@@ -45,7 +45,8 @@ The attribute is in the form of "[page].[ID].[field]" (eg "mcu.n0.val")
 #define F_CPU 24000000UL
 #define BAUDr 9600
 #define BUFFER_SIZE 50
-#define PRESCALER 1024
+#define PRESCALER 1024	// timer0 prescaler
+#define RTC_UPDATE 900	// time in seconds to update local MCU time with RTC on HMI
 
 // ADC and Characterization constants
 #define TRUNCATED_SHIFT 4
@@ -88,6 +89,7 @@ uint8_t newTerminalMessage;		//new terminal message received by ISR, carry out c
 uint8_t testingStart;			//Begin cable testing,
 uint8_t testingPause;			// Cable testing is paused
 uint8_t faultDetected;			// fault is detected, stop loop
+uint8_t newCharacterization;
 
 //USART3 transmitter and receiver buffer
 char transmitData3[BUFFER_SIZE];
@@ -106,6 +108,8 @@ const char helpMenu[];
 uint32_t rate;
 char rate_unit[8];
 uint32_t mode;
+uint32_t lastSdWrite;		//time in seconds of the last SD card write
+uint32_t updateRateInS;		//convert rate and units into seconds
 
 //Local MCU time variables
 uint32_t updateTime;

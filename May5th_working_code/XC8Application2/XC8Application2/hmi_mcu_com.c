@@ -23,7 +23,7 @@ void transmitHmi(char* page, char* ID, char* field, char* value, uint8_t action)
 	/*
 	This function will send commands to the HMI. page
 	*/
-	char command[50];
+	char command[BUFFER_SIZE*3];
 	int len = 0;
 	/*
 	if(request){	//if the MCU needs a value from HMI (request is 1)

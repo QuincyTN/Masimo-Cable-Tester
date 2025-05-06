@@ -407,9 +407,10 @@ int main(void) {
 			transmitHmi(PAGE_CHAR_SUCCESS, NULL, NULL, NULL, 4);	// display characterization success screen
 			transmitHmi(PAGE_HOME, "t7", NULL, "OK", 2);	// characterization available, set requirement on HMI
 		}
+		
 		if(testingStart && !testingPause){
-			for (uint8_t i = 0; i < NUM_PINS; i++) {
-				for (uint8_t j = 0; j < NUM_PINS; j++) {
+			for (uint8_t i = 0; i < NUM_PINS && !faultDetected; i++) {
+				for (uint8_t j = 0; j < NUM_PINS && !faultDetected; j++) {
 					if(i!=j){
 						testadc = check_adc_within_range(i,j);
 						
@@ -434,21 +435,21 @@ int main(void) {
 							// Number of faults in a single pin pair has occurred over the threshold, therefore a fault is detected
 							//SD_characterization();
 							
-							faultDetected = 1;
-							testingStart = 0;
-							testingPause = 0;
-							
 							char temp[BUFFER_SIZE*2];
-							
-							transmitHmi(PAGE_FAULT_DETECTED, NULL, NULL, NULL, 4);	// go to FAULT_DETECTED page
-						
 							
 							//TODO FIX THIS WHY IS IT TRUNCATED
 							sprintf(temp, "Short/Open between:\\rPin %u and Pin %u\\rAt %0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", 
 									i, j, month, day, year, hour, minute, second);	// Print the error message
 							transmitHmi(PAGE_FAULT_DETECTED, FAULT_TXT, NULL, temp, 2);
 							
+							transmitHmi(PAGE_FAULT_DETECTED, NULL, NULL, NULL, 4);	// go to FAULT_DETECTED page
+							
+							faultDetected = 1;
+							testingStart = 0;
+							testingPause = 0;
+							
 							afterFault = 1;
+							memset(numFaults, 0, sizeof(numFaults));
 							
 							PORTG.OUTSET = PIN0_bm;	// set relay, stop the bend cycle tester
 						}
@@ -464,20 +465,18 @@ int main(void) {
 		else{
 			//PORTG.OUTCLR = 0x01;	// relay is open during no test
 			//memset(numFaults, 0, sizeof(numFaults));
-			for(int i = 0; i < NUM_PINS; i++){
-				for(int j = 0; j < NUM_PINS; j++){
-					numFaults[i][j] = 0;
-				}
-			}
+// 			for(int i = 0; i < NUM_PINS; i++){
+// 				for(int j = 0; j < NUM_PINS; j++){
+// 					numFaults[i][j] = 0;
+// 				}
+// 			}
 			
+
 			faultDetected = 0;
 			lastSdWrite = 0;
 			PORTG.OUTCLR = PIN0_bm;
 			
-			if(afterFault){
-				SD_characterization();
-				afterFault = 0;
-			}
+			
 			
 // 			PORTG.OUTSET = PIN0_bm;
 // 			_delay_ms(1000);

@@ -122,6 +122,4 @@ uint32_t second;
 uint8_t daysInMonth[13];
 uint32_t lastTimeUpdate;
 
-
-uint8_t afterFault;
 #endif /* GLOBAL_CONSTS_VARS_H_ */

@@ -68,7 +68,7 @@ typedef struct {
 DataStruct myArray[NUM_PINS][NUM_PINS] = {0};
 DataStruct myArray2[NUM_PINS][NUM_PINS] = {0};
 //DataStruct testArray[NUM_PINS][NUM_PINS] = {0};
-#define FAULT_TRIP_THRESHOLD 25
+#define FAULT_TRIP_THRESHOLD 50
 uint8_t	numFaults[NUM_PINS][NUM_PINS] = {0};
 
 void setOutput(int n); void setInput(int n); void setHigh(int n); void setLow(int n);
@@ -310,6 +310,11 @@ int main(void) {
 	}
 	*/
 	
+	//Sets ADC to inputs
+	for (int i = 0; i < NUM_PINS; i++) {
+		setADCInput(i);
+	}
+	
 	getTime();	//update MCU clock
 	
  	while(1) {
@@ -318,7 +323,7 @@ int main(void) {
 		}
 		
 		if(FAT_getFileSize(&file) >= 10) {
-			transmitHmi(PAGE_HOME, "t6", NULL, "OK", 2);
+			//transmitHmi(PAGE_HOME, "t6", NULL, "OK", 2);
 		}
 		//transmitHmi("home", "t5", NULL, "hii", 2);
 		
@@ -346,7 +351,7 @@ int main(void) {
 			if(!CARD_OUT) {
 				//UART_sendString("Card disconnected\n");
 				transmitHmi(PAGE_HOME, "t5", NULL, "X", 2);	// SD card inserted requirement not met
-				transmitHmi(PAGE_HOME, "t6", NULL, "X", 2);	// SD card capacity requirement not met
+				//transmitHmi(PAGE_HOME, "t6", NULL, "X", 2);	// SD card capacity requirement not met
 				//transmitHmi(PAGE_HOME, "t7", NULL, "X", 2);	// characterization requirement not met
 				CARD_OUT = true;
 				CARD_IN = false;
@@ -382,10 +387,6 @@ int main(void) {
 		}
 		
 		if(newCharacterization){
-			//Sets ADC to inputs
-			for (int i = 0; i < NUM_PINS; i++) {
-				setADCInput(i);
-			}
 					
 			for (int i = 0; i < NUM_PINS; i++) {
 				setInput(i);
@@ -407,8 +408,8 @@ int main(void) {
 			transmitHmi(PAGE_HOME, "t7", NULL, "OK", 2);	// characterization available, set requirement on HMI
 		}
 		if(testingStart && !testingPause){
-			for (uint8_t i = 0; i < NUM_PINS && !faultDetected; i++) {
-				for (uint8_t j = 0; j < NUM_PINS && !faultDetected; j++) {
+			for (uint8_t i = 0; i < NUM_PINS; i++) {
+				for (uint8_t j = 0; j < NUM_PINS; j++) {
 					if(i!=j){
 						testadc = check_adc_within_range(i,j);
 						
@@ -431,6 +432,8 @@ int main(void) {
 						
 						if(numFaults[i][j] >= FAULT_TRIP_THRESHOLD){
 							// Number of faults in a single pin pair has occurred over the threshold, therefore a fault is detected
+							//SD_characterization();
+							
 							faultDetected = 1;
 							testingStart = 0;
 							testingPause = 0;
@@ -441,10 +444,11 @@ int main(void) {
 						
 							
 							//TODO FIX THIS WHY IS IT TRUNCATED
-							sprintf(temp, "Short/Open between:\\rPin %u and Pin %u\\rAt %0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", i, j, month, day, year, hour, minute, second);	// Print the error message
+							sprintf(temp, "Short/Open between:\\rPin %u and Pin %u\\rAt %0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", 
+									i, j, month, day, year, hour, minute, second);	// Print the error message
 							transmitHmi(PAGE_FAULT_DETECTED, FAULT_TXT, NULL, temp, 2);
-
 							
+							afterFault = 1;
 							
 							PORTG.OUTSET = PIN0_bm;	// set relay, stop the bend cycle tester
 						}
@@ -460,9 +464,20 @@ int main(void) {
 		else{
 			//PORTG.OUTCLR = 0x01;	// relay is open during no test
 			//memset(numFaults, 0, sizeof(numFaults));
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					numFaults[i][j] = 0;
+				}
+			}
+			
 			faultDetected = 0;
 			lastSdWrite = 0;
 			PORTG.OUTCLR = PIN0_bm;
+			
+			if(afterFault){
+				SD_characterization();
+				afterFault = 0;
+			}
 			
 // 			PORTG.OUTSET = PIN0_bm;
 // 			_delay_ms(1000);
@@ -629,6 +644,17 @@ void SD_characterization(void){
 
 			
 
+// 			FAT_fwriteString(&file, "\n");
+// 			
+// 			for(int i = 0; i < NUM_PINS; i++){
+// 				for(int j = 0; j < NUM_PINS; j++){
+// 					if (i != j){
+// 						sprintf(target1, "%u,", numFaults[i][j]);
+// 						FAT_fwriteString(&file, target1);
+// 					}
+// 				}
+// 			}
+			
 			FAT_fwriteString(&file, "\n");
 			FAT_fwriteString(&file, "\n");
 

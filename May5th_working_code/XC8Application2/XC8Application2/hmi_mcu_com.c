@@ -125,7 +125,6 @@ void parseHmiData(char* strData){
 	}
 	else if(strData[0] == START_TEST){
 		newCharacterization = 0;
-		testingStart = 1;
 		testingPause = 0;
 		lastSdWrite = 0;
 		faultDetected = 0;
@@ -133,7 +132,7 @@ void parseHmiData(char* strData){
 		char temp[100];
 		sprintf(temp, "%0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", month, day, year, hour, minute, second);
 		transmitHmi(PAGE_TESTING, START_TIME_TXT, NULL, temp, 2);
-		
+		testingStart = 1;
 // 		sprintf(temp, "%lu, %s", rate, rate_unit);
 // 		transmitHmi(PAGE_TESTING, "t4", NULL, temp, 2);
 	}
@@ -313,10 +312,10 @@ ISR(TCA0_OVF_vect) {
 	
 	if(lastSdWrite >= updateRateInS){
 		//write testing values into sd card
-		PORTG.OUTSET = PIN0_bm;	// set relay if there is a fault
-		_delay_ms(200);
-		PORTG.OUTCLR = PIN0_bm;
-		_delay_ms(200);
+// 		PORTG.OUTSET = PIN0_bm;	// set relay if there is a fault
+// 		_delay_ms(200);
+// 		PORTG.OUTCLR = PIN0_bm;
+// 		_delay_ms(200);
 		
 		lastSdWrite = 0;
 	}

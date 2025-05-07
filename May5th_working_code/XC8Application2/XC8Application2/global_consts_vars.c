@@ -42,9 +42,9 @@ const char helpMenu[] =
 "fault           - Go to the fault_detected\n";
 
 //Settings page variables
-uint32_t rate = 10;
-char rate_unit[8] = "/sec";
-uint32_t mode = 0;		// 0 = normal, 1 = bypass
+uint32_t rate = 5;
+char rate_unit[8] = "/min";
+uint32_t bypassMode = 0;		// 0 = normal, 1 = bypass
 uint32_t lastSdWrite = 0;
 uint32_t updateRateInS = 22;
 
@@ -59,4 +59,6 @@ uint32_t second = 1;
 uint8_t daysInMonth[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
 uint32_t lastTimeUpdate = 0;
 
-uint8_t afterFault = 0;
+//SD file writing variables
+char fileNum[100];
+uint32_t testNumber = 1;

@@ -107,7 +107,7 @@ const char helpMenu[];
 //Settings page variables
 uint32_t rate;
 char rate_unit[8];
-uint32_t mode;
+uint32_t bypassMode;
 uint32_t lastSdWrite;		//time in seconds of the last SD card write
 uint32_t updateRateInS;		//convert rate and units into seconds
 
@@ -121,5 +121,9 @@ uint32_t minute;
 uint32_t second;
 uint8_t daysInMonth[13];
 uint32_t lastTimeUpdate;
+
+//SD file writing variables
+char fileNum[100];
+uint32_t testNumber;
 
 #endif /* GLOBAL_CONSTS_VARS_H_ */

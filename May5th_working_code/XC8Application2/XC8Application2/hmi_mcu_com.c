@@ -133,8 +133,8 @@ void parseHmiData(char* strData){
 		sprintf(temp, "%0.2lu/%0.2lu/%0.4lu %0.2lu:%0.2lu:%0.2lu", month, day, year, hour, minute, second);
 		transmitHmi(PAGE_TESTING, START_TIME_TXT, NULL, temp, 2);
 		testingStart = 1;
-// 		sprintf(temp, "%lu, %s", rate, rate_unit);
-// 		transmitHmi(PAGE_TESTING, "t4", NULL, temp, 2);
+		sprintf(temp, "%.2lu", updateRateInS);
+		transmitHmi(PAGE_TESTING, "t4", NULL, temp, 2);
 	}
 	else if(strData[0] == STOP_TEST){
 		testingStart = 0;
@@ -160,7 +160,7 @@ void parseHmiData(char* strData){
 	else if(strData[0] == UPDATE_MODE){
 		// 0 = Normal mode
 		// 1 = Bypass mode
-		mode = parseHmiInt(strData);
+		bypassMode = parseHmiInt(strData);
 	}
 	
 	//memset(hmiBuffer, 0, sizeof(hmiBuffer));	//clear the hmiBuffer
@@ -203,15 +203,15 @@ void getTime(){
 void convertRate(){
 	// Convert rate and rate units into total number of seconds (minimum of 1 second)
 	
-	if(strcmp(rate_unit, "/sec") == 0){
-		updateRateInS = (uint32_t)ceil(1.0f / rate);	
-	}
-	else if(strcmp(rate_unit, "/min") == 0){
+	if(strcmp(rate_unit, "/min") == 0){
 		updateRateInS = (uint32_t)ceil(60.0f / rate);	
 	}
 	else{
 		updateRateInS = (uint32_t)ceil(3600.0f / rate);
 	}
+	
+	if(updateRateInS < 5)
+		updateRateInS = 5;
 }
 
 void initTimer1s() {
@@ -307,16 +307,13 @@ ISR(TCA0_OVF_vect) {
 		lastTimeUpdate = 0;
 	}
 	
-	if(testingStart && !testingPause)
+	if(testingStart && !testingPause && !bypassMode)
 		lastSdWrite++;
 	
-	if(lastSdWrite >= updateRateInS){
-		//write testing values into sd card
-// 		PORTG.OUTSET = PIN0_bm;	// set relay if there is a fault
-// 		_delay_ms(200);
-// 		PORTG.OUTCLR = PIN0_bm;
-// 		_delay_ms(200);
-		
+	if(lastSdWrite >= updateRateInS-1){
+		//write testing values into sd card		
+		SD_testing(fileNum);
+		testNumber++;
 		lastSdWrite = 0;
 	}
 	

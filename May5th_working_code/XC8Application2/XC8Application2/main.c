@@ -23,7 +23,8 @@
 
 void clk_init(void);	// MCU clocks initialization
 void SD_demo(void);
-void SD_characterization(void);		// gwp 6/12/2024 Demo SD card file functions.  The code has been moved
+void SD_characterization(char* test_name);		// gwp 6/12/2024 Demo SD card file functions.  The code has been moved
+void SD_testing(char* test_name);	
 // to after main() for code readability.  Eventually this will be replaced
 // with the SD card functions needed to support the short/break detector.
 
@@ -105,6 +106,19 @@ uint8_t adc_channel_map[NUM_PINS] = {
 // }
 
 
+uint16_t ch_process_adc_conversion(uint8_t current_channel) {
+	uint32_t result = 0;
+	for(int i = 0; i < 8; i++){
+		ADC0.MUXPOS = adc_channel_map[current_channel];
+		//_delay_ms(5);
+		ADC0.COMMAND = ADC_STCONV_bm;
+		while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));
+		ADC0.INTFLAGS = ADC_RESRDY_bm;
+		result += ADC0.RES;
+	}
+	return (uint16_t)(result/8);
+}
+
 uint16_t process_adc_conversion(uint8_t current_channel) {
 	uint16_t result;
 	ADC0.MUXPOS = adc_channel_map[current_channel];
@@ -131,25 +145,25 @@ void characterize(int pin1, int pin2) {
 		setOutput(pin2);
 		setLow(pin1);
 		setLow(pin2);
-		myArray[pin1][pin2].val_1_00 = process_adc_conversion(pin1);
-		myArray[pin1][pin2].val_2_00 = process_adc_conversion(pin2);
+		myArray[pin1][pin2].val_1_00 = ch_process_adc_conversion(pin1);
+		myArray[pin1][pin2].val_2_00 = ch_process_adc_conversion(pin2);
 		
 		setHigh(pin1);
 		setLow(pin2);
 		
-		myArray[pin1][pin2].val_1_10 = process_adc_conversion(pin1);
-		myArray[pin1][pin2].val_2_10 = process_adc_conversion(pin2);
+		myArray[pin1][pin2].val_1_10 = ch_process_adc_conversion(pin1);
+		myArray[pin1][pin2].val_2_10 = ch_process_adc_conversion(pin2);
 		
 		setLow(pin1);
 		setHigh(pin2);
-		myArray[pin1][pin2].val_1_01 = process_adc_conversion(pin1);
-		myArray[pin1][pin2].val_2_01 = process_adc_conversion(pin2);
+		myArray[pin1][pin2].val_1_01 = ch_process_adc_conversion(pin1);
+		myArray[pin1][pin2].val_2_01 = ch_process_adc_conversion(pin2);
 		
 		
 		setHigh(pin1);
 		setHigh(pin2);
-		myArray[pin1][pin2].val_1_11 =  process_adc_conversion(pin1);
-		myArray[pin1][pin2].val_2_11 =  process_adc_conversion(pin2);
+		myArray[pin1][pin2].val_1_11 =  ch_process_adc_conversion(pin1);
+		myArray[pin1][pin2].val_2_11 =  ch_process_adc_conversion(pin2);
 		
 		setInput(pin1);
 		setInput(pin2);
@@ -164,27 +178,36 @@ bool check_adc_within_range(int pin1, int pin2) {
 	
 	setLow(pin1);
 	setLow(pin2);
-	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_00) > RANGE ||
-		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_00) > RANGE)
+	
+	myArray2[pin1][pin2].val_1_00 = process_adc_conversion(pin1);
+	myArray2[pin1][pin2].val_2_00 = process_adc_conversion(pin2);
+	if (abs(myArray2[pin1][pin2].val_1_00 - myArray[pin1][pin2].val_1_00) > RANGE ||
+		abs(myArray2[pin1][pin2].val_2_00 - myArray[pin1][pin2].val_2_00) > RANGE)
 		{ setInput(pin1); setInput(pin2); return false; } 
 	
 	setHigh(pin1);
 	setLow(pin2);
-	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_10) > RANGE ||
-		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_10) > RANGE)
-		{ setInput(pin1); setInput(pin2); return false; } 
+	myArray2[pin1][pin2].val_1_10 = process_adc_conversion(pin1);
+	myArray2[pin1][pin2].val_2_10 = process_adc_conversion(pin2);
+	if (abs(myArray2[pin1][pin2].val_1_10 - myArray[pin1][pin2].val_1_10) > RANGE ||
+		abs(myArray2[pin1][pin2].val_2_10 - myArray[pin1][pin2].val_2_10) > RANGE)
+		{ setInput(pin1); setInput(pin2); return false; }
 		
 	setLow(pin1);
 	setHigh(pin2);
-	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_01) > RANGE ||
-		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_01) > RANGE)
+	myArray2[pin1][pin2].val_1_01 = process_adc_conversion(pin1);
+	myArray2[pin1][pin2].val_2_01 = process_adc_conversion(pin2);
+	if (abs(myArray2[pin1][pin2].val_1_01 - myArray[pin1][pin2].val_1_01) > RANGE ||
+		abs(myArray2[pin1][pin2].val_2_01 - myArray[pin1][pin2].val_2_01) > RANGE)
 		{ setInput(pin1); setInput(pin2); return false; } 
 		
 	setHigh(pin1);
 	setHigh(pin2);
-	if (abs(process_adc_conversion(pin1) - myArray[pin1][pin2].val_1_11) > RANGE ||
-		abs(process_adc_conversion(pin2) - myArray[pin1][pin2].val_2_11) > RANGE)
-		{ setInput(pin1); setInput(pin2); return false; } 
+	myArray2[pin1][pin2].val_1_11 = process_adc_conversion(pin1);
+	myArray2[pin1][pin2].val_2_11 = process_adc_conversion(pin2);
+	if (abs(myArray2[pin1][pin2].val_1_11 - myArray[pin1][pin2].val_1_11) > RANGE ||
+		abs(myArray2[pin1][pin2].val_2_11 - myArray[pin1][pin2].val_2_11) > RANGE)
+		{ setInput(pin1); setInput(pin2); return false; }
 		
 	setInput(pin1);
 	setInput(pin2);
@@ -288,7 +311,7 @@ int main(void) {
 	volatile bool CARD_IN = false;		// variables for determining state of the SD card insertion
 	volatile bool CARD_OUT = false;
 	bool testadc = true;
-
+	
 	/*
 	//Sets ADC to inputs
 	for (int i = 0; i < NUM_PINS; i++) {
@@ -352,7 +375,7 @@ int main(void) {
 				//UART_sendString("Card disconnected\n");
 				transmitHmi(PAGE_HOME, "t5", NULL, "X", 2);	// SD card inserted requirement not met
 				//transmitHmi(PAGE_HOME, "t6", NULL, "X", 2);	// SD card capacity requirement not met
-				//transmitHmi(PAGE_HOME, "t7", NULL, "X", 2);	// characterization requirement not met
+				transmitHmi(PAGE_HOME, "t7", NULL, "X", 2);	// characterization requirement not met
 				CARD_OUT = true;
 				CARD_IN = false;
 			}
@@ -401,14 +424,18 @@ int main(void) {
 					}
 				}
 			}
+			
+			testNumber = 1;
 					
-			SD_characterization();
+			sprintf(fileNum, "%0.2lu,%0.2lu,%0.4lu %0.2lu,%0.2lu", month, day, year, hour, minute);
+			SD_characterization(fileNum);
+			
 			newCharacterization = 0;
 			transmitHmi(PAGE_CHAR_SUCCESS, NULL, NULL, NULL, 4);	// display characterization success screen
 			transmitHmi(PAGE_HOME, "t7", NULL, "OK", 2);	// characterization available, set requirement on HMI
 		}
 		
-		if(testingStart && !testingPause){
+		if(testingStart && !testingPause && !bypassMode){
 			for (uint8_t i = 0; i < NUM_PINS && !faultDetected; i++) {
 				for (uint8_t j = 0; j < NUM_PINS && !faultDetected; j++) {
 					if(i!=j){
@@ -448,7 +475,6 @@ int main(void) {
 							testingStart = 0;
 							testingPause = 0;
 							
-							afterFault = 1;
 							memset(numFaults, 0, sizeof(numFaults));
 							
 							PORTG.OUTSET = PIN0_bm;	// set relay, stop the bend cycle tester
@@ -458,8 +484,7 @@ int main(void) {
 			}
 		}			
 		else if (testingPause){
-			//TODO PAUSE SD CARD COUNTING
-			transmitHmi(PAGE_TESTING, "t4", NULL, "PAUSED", 2);
+			
 
 		}
 		else{
@@ -507,11 +532,14 @@ void clk_init (void)
 																						// individual peripherals may need pre-scale settings based on how fast
 }	
 
-void SD_characterization(void){
+void SD_characterization(char* test_name){
 // Mount the memory card
 	_delay_ms(100);
 	return_code = FAT_mountVolume();
 	//sprintf(return_code);
+	
+	char file_name[100];
+	sprintf(file_name, "%s.csv", test_name);
 
 	// If no error
 		if(return_code == MR_OK){
@@ -534,7 +562,7 @@ void SD_characterization(void){
 		if(return_code == FR_OK){
 
 			// Create a new file in the currently open folder
-			return_code = FAT_makeFile(&dir, "log_1.csv");
+			return_code = FAT_makeFile(&dir, file_name);
 			
 			if(return_code == FR_OK){
 			}
@@ -561,7 +589,7 @@ void SD_characterization(void){
 		// Open a file for reading or writing
 		// Open the folder containing the file
 		FAT_openDir(&dir, "Logs Folder");
-		return_code = FAT_fopen(&dir, &file, "log_1.csv");
+		return_code = FAT_fopen(&dir, &file, file_name);
 			
 		if(return_code == FR_OK){			
 			// Keep only first 10 bytes of the file (example)
@@ -572,7 +600,7 @@ void SD_characterization(void){
 			FAT_fseekEnd(&file);
 			
 			/////////////////////////////**EDIT///////////////////////////
-			FAT_fwriteString(&file, "Test 1"); FAT_fwriteString(&file, ",");
+			FAT_fwriteString(&file, "Characterization"); FAT_fwriteString(&file, ",");
 			//sprintf(target, "Pins (%d.%d) Pin %c voltage, ", pin1, pin2, output);
 			char target1[50];
 			char target2[50];
@@ -676,6 +704,169 @@ void SD_characterization(void){
 	//FAT_fsync(&file);
 }		/* **************** end of SD card demo functions  ****************** */
 
+
+void SD_testing(char* test_name){
+// Mount the memory card
+	_delay_ms(100);
+	return_code = FAT_mountVolume();
+	//sprintf(return_code);
+	
+	char file_name[100];
+	sprintf(file_name, "%s.csv", test_name);
+
+	// If no error
+		if(return_code == MR_OK){
+		
+		// Read label and serial number
+		char label[12];
+		uint32_t vol_sn = 0;
+		FAT_getLabel(label, &vol_sn);
+		
+		// Make a directory in the root folder
+		return_code = FAT_makeDir(&dir, "Logs Folder");
+		
+		if(return_code == FR_OK){
+		}else{
+		}
+		
+		// Open the created folder
+		return_code = FAT_openDir(&dir, "Logs Folder");
+		
+		if(return_code == FR_OK){
+
+			// Create a new file in the currently open folder
+			//return_code = FAT_makeFile(&dir, file_name);
+			
+			if(return_code == FR_OK){
+			}
+			else{
+			}
+			
+			
+			// Get number of folders and files inside the directory
+			dirItems = FAT_dirCountItems(&dir);
+			
+			// Print folder content
+			for(uint16_t i = 0; i < dirItems; i++){
+				
+				return_code = FAT_findNext(&dir, &file);
+				
+				if(FAT_attrIsFolder(&file)){
+				}else{
+				}
+				
+			}
+		}else{
+		}
+
+		// Open a file for reading or writing
+		// Open the folder containing the file
+		FAT_openDir(&dir, "Logs Folder");
+		return_code = FAT_fopen(&dir, &file, file_name);
+			
+		if(return_code == FR_OK){			
+			// Keep only first 10 bytes of the file (example)
+			//FAT_fseek(&file, 10);
+			//FAT_ftruncate(&file);
+			
+			// Move the writing pointer to the end of the file
+			FAT_fseekEnd(&file);
+			
+			/////////////////////////////**EDIT///////////////////////////
+			char name[20];
+			sprintf(name, "Test %d", testNumber);
+			FAT_fwriteString(&file, name); FAT_fwriteString(&file, ",");
+			//sprintf(target, "Pins (%d.%d) Pin %c voltage, ", pin1, pin2, output);
+			char target1[50];
+			char target2[50];
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "Pins (%d.%d) Pin %c voltage, ", i, j, 'A');
+						sprintf(target2, "Pins (%d.%d) Pin %c voltage, ", i, j, 'B');
+						FAT_fwriteString(&file, target1);
+						FAT_fwriteString(&file, target2);
+					}
+				}
+			}
+			
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "Both Low Test,");
+
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "%.2f,", (float) (((myArray2[i][j].val_1_00 * MAX_VOLTAGE) / ADC_RESOLUTION)/ADC_division));
+						FAT_fwriteString(&file, target1);
+						sprintf(target1, "%.2f,", (float) (((myArray2[i][j].val_2_00 * MAX_VOLTAGE) / ADC_RESOLUTION)/ADC_division));
+						FAT_fwriteString(&file, target1);
+					}
+				}
+			}
+			
+			
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "Pin A high/Pin B low,");
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "%.2f,", (float) (((myArray2[i][j].val_1_10 * MAX_VOLTAGE) / ADC_RESOLUTION)/ADC_division));
+						FAT_fwriteString(&file, target1);
+						sprintf(target1, "%.2f,", (float) (((myArray2[i][j].val_2_10 * MAX_VOLTAGE) / ADC_RESOLUTION)/ADC_division));
+						FAT_fwriteString(&file, target1);
+					}
+				}
+			}
+			
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "Pin A low/Pin B high,");
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "%.2f,", (float) (((myArray2[i][j].val_1_01 * MAX_VOLTAGE) / ADC_RESOLUTION)/ADC_division));
+						FAT_fwriteString(&file, target1);
+						sprintf(target1, "%.2f,", (float) (((myArray2[i][j].val_2_01 * MAX_VOLTAGE) / ADC_RESOLUTION)/ADC_division));
+						FAT_fwriteString(&file, target1);
+					}
+				}
+			}
+			
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "Both High Test,");
+			for(int i = 0; i < NUM_PINS; i++){
+				for(int j = 0; j < NUM_PINS; j++){
+					if (i != j){
+						sprintf(target1, "%.2f,", (float) (((myArray2[i][j].val_1_11 * MAX_VOLTAGE) / ADC_RESOLUTION)/ADC_division));
+						FAT_fwriteString(&file, target1);
+						sprintf(target1, "%.2f,", (float) (((myArray2[i][j].val_2_11 * MAX_VOLTAGE) / ADC_RESOLUTION)/ADC_division));
+						FAT_fwriteString(&file, target1);
+					}
+				}
+			}
+
+			
+			
+			FAT_fwriteString(&file, "\n");
+			FAT_fwriteString(&file, "\n");
+
+			
+			////////////////////////////////////////**EDIT**//////////////////////////////////////////////
+			
+			// Synchronize the writing buffer with the card
+			FAT_fsync(&file);
+			
+		}else if(return_code == FR_NOT_FOUND){
+			// Make the file if it doesn't exist
+			// ... code ...
+			
+		}else{
+		}
+			
+	}else{ // end if(return_code == MR_OK)
+		
+	}
+	//FAT_fsync(&file);
+}		/* **************** end of SD card demo functions  ****************** */
 
 void SD_demo(void){
 // Mount the memory card

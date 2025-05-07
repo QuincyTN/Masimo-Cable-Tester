@@ -49,7 +49,6 @@ uint32_t lastSdWrite = 0;
 uint32_t updateRateInS = 22;
 
 //Local MCU time variables
-uint32_t updateTime = 0;
 uint32_t year = 2025;
 uint32_t month = 1;
 uint32_t day = 1;
@@ -62,3 +61,6 @@ uint32_t lastTimeUpdate = 0;
 //SD file writing variables
 char fileNum[100];
 uint32_t testNumber = 1;
+
+//Testing variables
+uint32_t totalNumFaults = 0;

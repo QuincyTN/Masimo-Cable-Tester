@@ -36,10 +36,14 @@ The attribute is in the form of "[page].[ID].[field]" (eg "mcu.n0.val")
 //testing page and attributes
 #define PAGE_TESTING "testing"
 #define START_TIME_TXT "start_time"
+#define NUM_FAULTS "num_faults"
 
 //fault_detected page and attributes
 #define PAGE_FAULT_DETECTED "fault_detected"
 #define FAULT_TXT "fault_msg"
+
+//sd_discconect page and attributes
+#define PAGE_SD_DISCONNECT "sd_disconnect"
 
 //Constant Values
 #define F_CPU 24000000UL
@@ -112,7 +116,6 @@ uint32_t lastSdWrite;		//time in seconds of the last SD card write
 uint32_t updateRateInS;		//convert rate and units into seconds
 
 //Local MCU time variables
-uint32_t updateTime;
 uint32_t year;
 uint32_t month;
 uint32_t day;
@@ -125,5 +128,8 @@ uint32_t lastTimeUpdate;
 //SD file writing variables
 char fileNum[100];
 uint32_t testNumber;
+
+//Testing variables
+uint32_t totalNumFaults;
 
 #endif /* GLOBAL_CONSTS_VARS_H_ */

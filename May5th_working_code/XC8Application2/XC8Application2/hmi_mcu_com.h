@@ -20,9 +20,7 @@ void parseHmiData(char* strData);
 void getTime();
 void convertRate();
 void initTimer1s();
-//extern void transmitTerminal(char* str);
-//extern void SD_characterization(void);
-//extern void characterize(int pin1, int pin2);
+
 extern void SD_testing(char* test_name);
 
 #endif
